@@ -1,0 +1,711 @@
+void main()
+{
+	DrawScene( "black", 400 );
+
+	DrawScene( "background/sinryou_sinsatu2", 1000 );
+
+	PlayBGM( 1, "semi", 120, 0 );
+
+	ClearMessage();
+	if (GetGlobalFlag(GADVMode)) { OutputLine("<color=#a59da9>大石</color>", NULL, "<color=#a59da9>Ooishi</color>", NULL, Line_ContinueAfterTyping); }
+	ModPlayVoiceLS(4, 11, "ps3/s20/11/vtk1_oishi1039", 128, TRUE);
+	OutputLine(NULL, "「………………………………。」",
+		   NULL, "\"............\"", Line_Normal);
+	ClearMessage();
+
+	if (GetGlobalFlag(GADVMode)) { OutputLineAll("", NULL, Line_ContinueAfterTyping); }
+	OutputLine(NULL, "　言葉など出ない。",
+		   NULL, "Sono senza parole.", Line_Normal);
+	ClearMessage();
+
+	if (GetGlobalFlag(GADVMode)) { OutputLineAll("", NULL, Line_ContinueAfterTyping); }
+	OutputLine(NULL, "　…何かを口にしたいのだが、何を口にすればいいか言葉が思いつかず、…私はため息に似たものを吐き出す他ない…。",
+		   NULL, "O meglio, le parole ce le avrei anche, solo che non riesco a metterle in ordine.", Line_Normal);
+	ClearMessage();
+
+	PlaySE( 0, "s_M_Door8k", 128, 64 );
+
+	if (GetGlobalFlag(GADVMode)) { OutputLine("<color=#8f6d8f>熊谷</color>", NULL, "<color=#8f6d8f>Kumagai</color>", NULL, Line_ContinueAfterTyping); }
+	ModPlayVoiceLS(4, 19, "ps3/s20/19/vtk1_kumagai1001", 128, TRUE);
+	OutputLine(NULL, "「あ、……大石さん！",
+		   NULL, "\"Ah, Ooishi-san!", Line_WaitForInput);
+	ModPlayVoiceLS(4, 19, "ps3/s20/19/vtk1_kumagai1002", 128, TRUE);
+	OutputLine(NULL, "　探したんすよ！！",
+		   NULL, " La stavo cercando!!", Line_WaitForInput);
+	ModPlayVoiceLS(4, 19, "ps3/s20/19/vtk1_kumagai1003", 128, TRUE);
+	OutputLine(NULL, "　課長から手配写真の、」",
+		   NULL, " Il caposezione mi ha chiesto di quella foto segnaletica...\"", Line_Normal);
+	ClearMessage();
+
+	if (GetGlobalFlag(GADVMode)) { OutputLine("<color=#f5e6d3>鑑識</color>", NULL, "<color=#f5e6d3>Agente Forense</color>", NULL, Line_ContinueAfterTyping); }
+	ModPlayVoiceLS(4, 0, "ps3/s20/00/vtk1_kanshiki1001", 128, TRUE);
+	OutputLine(NULL, "「静かにせい！",
+		   NULL, "\"Silenzio!", Line_WaitForInput);
+	ModPlayVoiceLS(4, 0, "ps3/s20/00/vtk1_kanshiki1002", 128, TRUE);
+	OutputLine(NULL, "　ここは騒ぐ部屋ではないぞ。」",
+		   NULL, " Qui è dove la gente riposa.\"", GetGlobalFlag(GLinemodeSp));
+	if (GetGlobalFlag(GADVMode)) { ClearMessage(); } else { OutputLineAll(NULL, "\n", Line_ContinueAfterTyping); }
+
+	if (GetGlobalFlag(GADVMode)) { OutputLineAll("", NULL, Line_ContinueAfterTyping); }
+	OutputLine(NULL, "　騒がしく飛び込んできた熊谷に、鑑識のじいさまがぴしゃりと言った。",
+		   NULL, "Non appena Kumagai entra nella stanza, il vecchio patologo lo rimette subito in riga.", Line_Normal);
+	ClearMessage();
+
+	if (GetGlobalFlag(GADVMode)) { OutputLine("<color=#8f6d8f>熊谷</color>", NULL, "<color=#8f6d8f>Kumagai</color>", NULL, Line_ContinueAfterTyping); }
+	ModPlayVoiceLS(4, 19, "ps3/s20/19/vtk1_kumagai1004", 128, TRUE);
+	OutputLine(NULL, "「…す、",
+		   NULL, "\"M...", Line_Continue);
+	// (backup) SetValidityOfInput( FALSE );
+	Wait( 800 );
+	// (backup) SetValidityOfInput( TRUE );
+	OutputLine(NULL, "…すみません。",
+		   NULL, " mi scusi.", Line_WaitForInput);
+	ModPlayVoiceLS(4, 19, "ps3/s20/19/vtk1_kumagai1005", 128, TRUE);
+	OutputLine(NULL, "えっとですね、課長が容疑者の手配写真について、」",
+		   NULL, " Ecco, il caposezione voleva sapere di quella foto segnaletica che abbiamo.\"", GetGlobalFlag(GLinemodeSp));
+	if (GetGlobalFlag(GADVMode)) { ClearMessage(); } else { OutputLineAll(NULL, "\n", Line_ContinueAfterTyping); }
+
+	if (GetGlobalFlag(GADVMode)) { OutputLine("<color=#a59da9>大石</color>", NULL, "<color=#a59da9>Ooishi</color>", NULL, Line_ContinueAfterTyping); }
+	ModPlayVoiceLS(4, 11, "ps3/s20/11/vtk1_oishi1040", 128, TRUE);
+	OutputLine(NULL, "「……あー、",
+		   NULL, "\"... ah...", Line_Continue);
+	// (backup) SetValidityOfInput( FALSE );
+	Wait( 800 );
+	// (backup) SetValidityOfInput( TRUE );
+	OutputLine(NULL, "…それ、小宮山くんに相談してくれませんかね。",
+		   NULL, " potresti parlarne con Komiyama-kun?", Line_WaitForInput);
+	ModPlayVoiceLS(4, 11, "ps3/s20/11/vtk1_oishi1041", 128, TRUE);
+	OutputLine(NULL, "ちょいと私、じいさまと話がありまして。",
+		   NULL, " Io sono impegnato con questo signore.", Line_WaitForInput);
+	ModPlayVoiceLS(4, 11, "ps3/s20/11/vtk1_oishi1042", 128, TRUE);
+	OutputLine(NULL, "すぐに上がりますと上に言っといてください。」",
+		   NULL, " Digli che arrivo subito.\"", Line_Normal);
+	ClearMessage();
+
+	if (GetGlobalFlag(GADVMode)) { OutputLine("<color=#8f6d8f>熊谷</color>", NULL, "<color=#8f6d8f>Kumagai</color>", NULL, Line_ContinueAfterTyping); }
+	ModPlayVoiceLS(4, 19, "ps3/s20/19/vtk1_kumagai1006", 128, TRUE);
+	OutputLine(NULL, "「ぇ、",
+		   NULL, "\"Ah...", Line_Continue);
+	// (backup) SetValidityOfInput( FALSE );
+	Wait( 700 );
+	// (backup) SetValidityOfInput( TRUE );
+	OutputLine(NULL, "……ぁ、わかりました！」",
+		   NULL, " r-ricevuto!\"", GetGlobalFlag(GLinemodeSp));
+	if (GetGlobalFlag(GADVMode)) { ClearMessage(); } else { OutputLineAll(NULL, "\n", Line_ContinueAfterTyping); }
+
+	if (GetGlobalFlag(GADVMode)) { OutputLineAll("", NULL, Line_ContinueAfterTyping); }
+	OutputLine(NULL, "　熊谷は来た時と同じように、騒がしく検死室を飛び出していくのだった。",
+		   NULL, "Kumagai si fionda fuori dalla sala autopsie con la stessa foga con cui è entrato.", Line_Normal);
+	ClearMessage();
+
+	if (GetGlobalFlag(GADVMode)) { OutputLine("<color=#f5e6d3>鑑識</color>", NULL, "<color=#f5e6d3>Agente Forense</color>", NULL, Line_ContinueAfterTyping); }
+	ModPlayVoiceLS(4, 0, "ps3/s20/00/vtk1_kanshiki1003", 128, TRUE);
+	OutputLine(NULL, "「賑やかな男だの。」",
+		   NULL, "\"Un tipo arzillo, eh?\"", GetGlobalFlag(GLinemodeSp));
+	if (GetGlobalFlag(GADVMode)) { ClearMessage(); } else { OutputLineAll(NULL, "\n", Line_ContinueAfterTyping); }
+
+	if (GetGlobalFlag(GADVMode)) { OutputLine("<color=#a59da9>大石</color>", NULL, "<color=#a59da9>Ooishi</color>", NULL, Line_ContinueAfterTyping); }
+	ModPlayVoiceLS(4, 11, "ps3/s20/11/vtk1_oishi1043", 128, TRUE);
+	OutputLine(NULL, "「おやっさんだったら、やかましいって言ってゲンコツのひとつも食らわしてるところです。」",
+		   NULL, "\"Il vecchio l'avrebbe preso a schiaffi per tutto quel baccano.\"", Line_Normal);
+	ClearMessage();
+
+	if (GetGlobalFlag(GADVMode)) { OutputLine("<color=#f5e6d3>鑑識</color>", NULL, "<color=#f5e6d3>Agente Forense</color>", NULL, Line_ContinueAfterTyping); }
+	ModPlayVoiceLS(4, 0, "ps3/s20/00/vtk1_kanshiki1004", 128, TRUE);
+	OutputLine(NULL, "「…お前さんも、少し上に戻った方がいいぞい。",
+		   NULL, "\"Faresti meglio ad andare.", Line_WaitForInput);
+	ModPlayVoiceLS(4, 0, "ps3/s20/00/vtk1_kanshiki1005", 128, TRUE);
+	OutputLine(NULL, "ここの空気は慣れんヤツには合わん。」",
+		   NULL, " L'aria che c'è qui non è come quella a cui sei abituato.\"", GetGlobalFlag(GLinemodeSp));
+	if (GetGlobalFlag(GADVMode)) { ClearMessage(); } else { OutputLineAll(NULL, "\n", Line_ContinueAfterTyping); }
+
+	if (GetGlobalFlag(GADVMode)) { OutputLine("<color=#a59da9>大石</color>", NULL, "<color=#a59da9>Ooishi</color>", NULL, Line_ContinueAfterTyping); }
+	ModPlayVoiceLS(4, 11, "ps3/s20/11/vtk1_oishi1044", 128, TRUE);
+	OutputLine(NULL, "「そうですねぇ。",
+		   NULL, "\"Hai ragione.", Line_WaitForInput);
+	ModPlayVoiceLS(4, 11, "ps3/s20/11/vtk1_oishi1045", 128, TRUE);
+	OutputLine(NULL, "あんまりサボってると、私もゲンコツをもらっちまいそうです。」",
+		   NULL, " Anch'io rischio di beccarmi uno schiaffo se batto la fiacca.\"", Line_Normal);
+	ClearMessage();
+
+	if (GetGlobalFlag(GADVMode)) { OutputLine("<color=#f5e6d3>鑑識</color>", NULL, "<color=#f5e6d3>Agente Forense</color>", NULL, Line_ContinueAfterTyping); }
+	ModPlayVoiceLS(4, 0, "ps3/s20/00/vtk1_kanshiki1006", 128, TRUE);
+	OutputLine(NULL, "「……かっかっかっか。",
+		   NULL, "\"... ahahahah.", Line_WaitForInput);
+	ModPlayVoiceLS(4, 0, "ps3/s20/00/vtk1_kanshiki1007", 128, TRUE);
+	OutputLine(NULL, "鹿骨界隈じゃ、チンピラも避けて通るお前さんを、ツモの切り方が悪いとゲンコツ食らわせられたのは、後にも先にもこいつだけだったろうの…。」",
+		   NULL, " Qui a Shishibone i teppisti girano alla larga quando ti vedono, invece lui è stato l'unico ad averti dato un pugno per aver chiamato lo tsumo quando non potevi...\"", GetGlobalFlag(GLinemodeSp));
+	if (GetGlobalFlag(GADVMode)) { ClearMessage(); } else { OutputLineAll(NULL, "\n", Line_ContinueAfterTyping); }
+
+	if (GetGlobalFlag(GADVMode)) { OutputLine("<color=#a59da9>大石</color>", NULL, "<color=#a59da9>Ooishi</color>", NULL, Line_ContinueAfterTyping); }
+	ModPlayVoiceLS(4, 11, "ps3/s20/11/vtk1_oishi1046", 128, TRUE);
+	OutputLine(NULL, "「容赦のない人だったなぁ……。",
+		   NULL, "\"Era un uomo spietato...", Line_WaitForInput);
+	ModPlayVoiceLS(4, 11, "ps3/s20/11/vtk1_oishi1047", 128, TRUE);
+	OutputLine(NULL, "ホントの親父よりゲンコツもらった気がしますよ。」",
+		   NULL, " forse mi ha picchiato più lui del mio vero padre.\"", GetGlobalFlag(GLinemodeSp));
+	if (GetGlobalFlag(GADVMode)) { ClearMessage(); } else { OutputLineAll(NULL, "\n", Line_ContinueAfterTyping); }
+
+	if (GetGlobalFlag(GADVMode)) { OutputLine("<color=#f5e6d3>鑑識</color>", NULL, "<color=#f5e6d3>Agente Forense</color>", NULL, Line_ContinueAfterTyping); }
+	ModPlayVoiceLS(4, 0, "ps3/s20/00/vtk1_kanshiki1008", 128, TRUE);
+	OutputLine(NULL, "「ホントもウソもないわい。",
+		   NULL, "\"Vero o finto poco importa.", Line_WaitForInput);
+	ModPlayVoiceLS(4, 0, "ps3/s20/00/vtk1_kanshiki1009", 128, TRUE);
+	OutputLine(NULL, "…お前さんがホントの親父だと信じてたなら、こいつもホントの親父だ。」",
+		   NULL, " Se in lui vedevi un uomo degno dello stesso rispetto, allora anche lui era come un padre per te.\"", Line_Normal);
+	ClearMessage();
+
+	if (GetGlobalFlag(GADVMode)) { OutputLine("<color=#a59da9>大石</color>", NULL, "<color=#a59da9>Ooishi</color>", NULL, Line_ContinueAfterTyping); }
+	ModPlayVoiceLS(4, 11, "ps3/s20/11/vtk1_oishi1048", 128, TRUE);
+	OutputLine(NULL, "「………………………。」",
+		   NULL, "\".........\"", Line_Normal);
+	ClearMessage();
+
+	FadeOutBGM( 1, 1300, FALSE );
+
+	DrawSceneWithMask( "black", "maskdown", 1, 0, 1300 );
+
+	PlayBGM( 0, "Soul_scour", 120, 0 );
+
+	DrawScene( "background/greyscale/sora5", 400 );
+
+	if (GetGlobalFlag(GADVMode)) { OutputLineAll("", NULL, Line_ContinueAfterTyping); }
+	OutputLine(NULL, "　私の本当の親父は、名古屋で死んだ。",
+		   NULL, "Mio padre morì diverso tempo fa a Nagoya.", Line_Normal);
+	ClearMessage();
+
+	if (GetGlobalFlag(GADVMode)) { OutputLineAll("", NULL, Line_ContinueAfterTyping); }
+	OutputLine(NULL, "　…運がなかった。",
+		   NULL, "... fu sfortunato.", GetGlobalFlag(GLinemodeSp));
+	if (GetGlobalFlag(GADVMode)) { ClearMessage(); } else { OutputLineAll(NULL, "\n", Line_ContinueAfterTyping); }
+
+	if (GetGlobalFlag(GADVMode)) { OutputLineAll("", NULL, Line_ContinueAfterTyping); }
+	OutputLine(NULL, "　名古屋の工場への用事なんか仰せつからなければ、空襲に巻き込まれることもなかったのだ。",
+		   NULL, "Se non gli avessero ordinato di andare alla fabbica di Nagoya, non sarebbe mai morto sotto le bombe dei raid.", GetGlobalFlag(GLinemodeSp));
+	if (GetGlobalFlag(GADVMode)) { ClearMessage(); } else { OutputLineAll(NULL, "\n", Line_ContinueAfterTyping); }
+
+	if (GetGlobalFlag(GADVMode)) { OutputLineAll("", NULL, Line_ContinueAfterTyping); }
+	OutputLine(NULL, "　……もう半年ものらりくらりとやっていれば、終戦を迎えられたのだから。",
+		   NULL, "... gli sarebbe bastato un anno in più per assistere alla fine della guerra.", Line_Normal);
+	ClearMessage();
+
+	if (GetGlobalFlag(GADVMode)) { OutputLineAll("", NULL, Line_ContinueAfterTyping); }
+	OutputLine(NULL, "　当時の私は、もうしっかりとした成人だったから、…もちろん悲しかったが、母のように床に伏せて涙を流すほどには落ち込まなかった。",
+		   NULL, "Mi dispiacque da morire, certo, ma ormai ero abbastanza maturo per non scoppiare in lacrime come fece mia madre.", Line_Normal);
+	ClearMessage();
+
+	if (GetGlobalFlag(GADVMode)) { OutputLineAll("", NULL, Line_ContinueAfterTyping); }
+	OutputLine(NULL, "　でも、……悲しさってのは、人によって違う。",
+		   NULL, "Tuttavia... il dolore è per tutti diverso.", GetGlobalFlag(GLinemodeSp));
+	if (GetGlobalFlag(GADVMode)) { ClearMessage(); } else { OutputLineAll(NULL, "\n", Line_ContinueAfterTyping); }
+
+	if (GetGlobalFlag(GADVMode) == 0) { OutputLineAll(NULL, "\n", Line_ContinueAfterTyping); }
+
+
+	if (GetGlobalFlag(GADVMode)) { OutputLineAll("", NULL, Line_ContinueAfterTyping); }
+	OutputLine(NULL, "　一気に押し寄せる人もいれば、いつまでもじわじわと苛まれる人もいる。",
+		   NULL, "Per alcuni arriva tutto insieme, come un'onda inarrestabile, mentre per altri è come una goccia che scava la roccia.", Line_WaitForInput);
+	OutputLine(NULL, "…多分、私は後者だった。",
+		   NULL, " Per me fu così.", Line_Normal);
+	ClearMessage();
+
+	if (GetGlobalFlag(GADVMode)) { OutputLineAll("", NULL, Line_ContinueAfterTyping); }
+	OutputLine(NULL, "　生きている頃は、うるさい親父だとしか思わず、どうして徴兵から漏れたんだと心の中で悪態をついたこともあった。",
+		   NULL, "Quando era vivo lo ritenevo solo un rompipalle, chiedendomi ogni volta come avesse fatto a evitare la leva.", GetGlobalFlag(GLinemodeSp));
+	if (GetGlobalFlag(GADVMode)) { ClearMessage(); } else { OutputLineAll(NULL, "\n", Line_ContinueAfterTyping); }
+
+	if (GetGlobalFlag(GADVMode)) { OutputLineAll("", NULL, Line_ContinueAfterTyping); }
+	OutputLine(NULL, "　自分でも、その程度のものだと思っていた。",
+		   NULL, "Credevo che i miei sentimenti sarebbero rimasti sempre gli stessi.", Line_Normal);
+	ClearMessage();
+
+	DrawScene( "black", 400 );
+
+	if (GetGlobalFlag(GADVMode)) { OutputLineAll("", NULL, Line_ContinueAfterTyping); }
+	OutputLine(NULL, "　そして終戦。",
+		   NULL, "Poi la guerra finì.", GetGlobalFlag(GLinemodeSp));
+	if (GetGlobalFlag(GADVMode)) { ClearMessage(); } else { OutputLineAll(NULL, "\n", Line_ContinueAfterTyping); }
+
+	if (GetGlobalFlag(GADVMode) == 0) { OutputLineAll(NULL, "\n", Line_ContinueAfterTyping); }
+
+
+	if (GetGlobalFlag(GADVMode)) { OutputLineAll("", NULL, Line_ContinueAfterTyping); }
+	OutputLine(NULL, "　戦地から引き上げて来た人々が、駅で家族と再会するのをうんざりするほど見せ付けられ、",
+		   NULL, "Fu quando vidi le altre famiglie riunirsi con i padri e i mariti che erano stati mandati al fronte", Line_ContinueAfterTyping);
+	SetValidityOfInput( FALSE );
+	Wait( 800 );
+	SetValidityOfInput( TRUE );
+	OutputLine(NULL, "…その時、初めて知ったのだ。",
+		   NULL, " che capii.", GetGlobalFlag(GLinemodeSp));
+	if (GetGlobalFlag(GADVMode)) { ClearMessage(); } else { OutputLineAll(NULL, "\n", Line_ContinueAfterTyping); }
+
+	if (GetGlobalFlag(GADVMode)) { OutputLineAll("", NULL, Line_ContinueAfterTyping); }
+	OutputLine(NULL, "　あぁ、私は親父を失ったのが、悲しかったんだな、悔しかったんだな、と。",
+		   NULL, "Che piansi la morte di mio padre.", Line_Normal);
+	ClearMessage();
+
+	if (GetGlobalFlag(GADVMode)) { OutputLineAll("", NULL, Line_ContinueAfterTyping); }
+	OutputLine(NULL, "　日本中に辛い人や悲しい人が溢れていた。",
+		   NULL, "Il Giappone era stato martoriato dalle perdite durante la guerra.", GetGlobalFlag(GLinemodeSp));
+	if (GetGlobalFlag(GADVMode)) { ClearMessage(); } else { OutputLineAll(NULL, "\n", Line_ContinueAfterTyping); }
+
+	if (GetGlobalFlag(GADVMode)) { OutputLineAll("", NULL, Line_ContinueAfterTyping); }
+	OutputLine(NULL, "　私ひとりが辛い思いをしたなんて甘えるつもりはない。",
+		   NULL, "Sapevo di non essere l'unico a cui era toccata quella sorte.", GetGlobalFlag(GLinemodeSp));
+	if (GetGlobalFlag(GADVMode)) { ClearMessage(); } else { OutputLineAll(NULL, "\n", Line_ContinueAfterTyping); }
+
+	if (GetGlobalFlag(GADVMode) == 0) { OutputLineAll(NULL, "\n", Line_ContinueAfterTyping); }
+
+
+	if (GetGlobalFlag(GADVMode)) { OutputLineAll("", NULL, Line_ContinueAfterTyping); }
+	OutputLine(NULL, "　……でも、とてもとても悲しかったことを覚えている。",
+		   NULL, "Però... ricordo ancora la sensazione del mio cuore che andò in frantumi.", Line_Normal);
+	ClearMessage();
+
+	if (GetGlobalFlag(GADVMode)) { OutputLineAll("", NULL, Line_ContinueAfterTyping); }
+	OutputLine(NULL, "　終戦を境に、国はがらっと変わり、警官であった自分を取り巻く環境も急激に変化した。",
+		   NULL, "Il paese cambiò completamente faccia dopo il conflitto mondiale. Anche l'ambiente poliziesco in cui lavoravo subì pesanti modifiche.", GetGlobalFlag(GLinemodeSp));
+	if (GetGlobalFlag(GADVMode)) { ClearMessage(); } else { OutputLineAll(NULL, "\n", Line_ContinueAfterTyping); }
+
+	if (GetGlobalFlag(GADVMode)) { OutputLineAll("", NULL, Line_ContinueAfterTyping); }
+	OutputLine(NULL, "　私にできることは、日々の仕事に没頭して、忙しさで悲しみを忘れることだけだった。",
+		   NULL, "Per dimenticare la sofferenza, l'unica cosa che potevo fare era dedicarmi al lavoro.", Line_Normal);
+	ClearMessage();
+
+	if (GetGlobalFlag(GADVMode)) { OutputLine("<color=#a59da9>大石</color>", NULL, "<color=#a59da9>Ooishi</color>", NULL, Line_ContinueAfterTyping); }
+	ModPlayVoiceLS(4, 11, "org/ooishi7800", 128, TRUE);
+	OutputLine(NULL, "「……当時、私ゃ闇米の取り締まりばかりやらされてましてね。",
+		   NULL, "\"Al tempo ero incaricato di indagare su quelli che acquistavano riso illegalmente.", Line_WaitForInput);
+	ModPlayVoiceLS(4, 11, "org/ooishi7801", 128, TRUE);
+	OutputLine(NULL, "鉄道主要駅で、旅客を抜き打ち検査するんですよ。",
+		   NULL, " Facevo controlli a campione nelle maggiori stazioni ferroviarie.", Line_WaitForInput);
+	ModPlayVoiceLS(4, 11, "org/ooishi7802", 128, TRUE);
+	OutputLine(NULL, "そりゃあもうぞろぞろ引っ掛かりましたっけ。",
+		   NULL, " Diavolo, quanti ne ho trovati.", GetGlobalFlag(GLinemodeSp));
+	if (GetGlobalFlag(GADVMode)) { OutputLine("<color=#a59da9>大石</color>", NULL, "<color=#a59da9>Ooishi</color>", NULL, Line_ContinueAfterTyping); }
+	ModPlayVoiceLS(4, 11, "org/ooishi7803", 128, TRUE);
+	OutputLine(NULL, "穀倉の辺りはこの辺じゃかなりでかい闇市が立ちましたからね。大阪界隈からはるばる買いに来てる連中も大勢いましたよ。」",
+		   NULL, "A Gogura c'era un mercato nero di dimensioni talmente grandi da attirare gente fin da Oosaka per fare acquisti.\"", Line_Normal);
+	ClearMessage();
+
+	if (GetGlobalFlag(GADVMode)) { OutputLineAll("", NULL, Line_ContinueAfterTyping); }
+	OutputLine(NULL, "　戦後、日本の食糧事情は致命的に悪化した。",
+		   NULL, "Ci fu una grave carestia alla fine della guerra.", GetGlobalFlag(GLinemodeSp));
+	if (GetGlobalFlag(GADVMode)) { ClearMessage(); } else { OutputLineAll(NULL, "\n", Line_ContinueAfterTyping); }
+
+	if (GetGlobalFlag(GADVMode)) { OutputLineAll("", NULL, Line_ContinueAfterTyping); }
+	OutputLine(NULL, "　そのため、国は食料の公平な配給を謳い「食料統制法」を制定する。",
+		   NULL, "Il paese proclamò il razionamento del cibo firmando la Legge sul Monitoraggio Alimentare.", Line_Normal);
+	ClearMessage();
+
+	if (GetGlobalFlag(GADVMode)) { OutputLineAll("", NULL, Line_ContinueAfterTyping); }
+	OutputLine(NULL, "　だが、国の配給する食糧はまったく足りず、人々は日々の糧食を求めるため、非合法の闇市で高額な闇米を買い求める他なかったのである。",
+		   NULL, "Ma le razioni inviate dal governo non bastavano a sfamare le famiglie, così alla gente non restava altra scelta se non cercare qualcosa da mangiare al mercato nero.", GetGlobalFlag(GLinemodeSp));
+	if (GetGlobalFlag(GADVMode)) { ClearMessage(); } else { OutputLineAll(NULL, "\n", Line_ContinueAfterTyping); }
+
+	if (GetGlobalFlag(GADVMode) == 0) { OutputLineAll(NULL, "\n", Line_ContinueAfterTyping); }
+
+
+	if (GetGlobalFlag(GADVMode)) { OutputLineAll("", NULL, Line_ContinueAfterTyping); }
+	OutputLine(NULL, "　国が配給する食糧はまったくないのに、…あるところには唸るほどにあった。",
+		   NULL, "Il governo non aveva cibo a sufficienza mentre il mercato nero abbondava.", GetGlobalFlag(GLinemodeSp));
+	if (GetGlobalFlag(GADVMode)) { ClearMessage(); } else { OutputLineAll(NULL, "\n", Line_ContinueAfterTyping); }
+
+	if (GetGlobalFlag(GADVMode)) { OutputLineAll("", NULL, Line_ContinueAfterTyping); }
+	OutputLine(NULL, "　それを法外な金額で売りさばき、一部の黒幕たちが濡れ手に粟のように荒稼ぎする時代でもあった。",
+		   NULL, "I commercianti vendevano i beni a prezzi allucinanti che permisero a molti di fare la bella vita.", GetGlobalFlag(GLinemodeSp));
+	if (GetGlobalFlag(GADVMode)) { ClearMessage(); } else { OutputLineAll(NULL, "\n", Line_ContinueAfterTyping); }
+
+	if (GetGlobalFlag(GADVMode) == 0) { OutputLineAll(NULL, "\n", Line_ContinueAfterTyping); }
+
+
+	if (GetGlobalFlag(GADVMode)) { OutputLineAll("", NULL, Line_ContinueAfterTyping); }
+	OutputLine(NULL, "　…園崎家が財を成したのもこの闇市でだが、それはここでは割愛する。",
+		   NULL, "... la famiglia Sonozaki fu tra queste, ma lasciamo da parte l'argomento.", Line_Normal);
+	ClearMessage();
+
+	if (GetGlobalFlag(GADVMode)) { OutputLineAll("", NULL, Line_ContinueAfterTyping); }
+	OutputLine(NULL, "　国は、そんな黒幕たちを逮捕しようとはしなかった。",
+		   NULL, "Allo stato non interessava arrestare i venditori.", GetGlobalFlag(GLinemodeSp));
+	if (GetGlobalFlag(GADVMode)) { ClearMessage(); } else { OutputLineAll(NULL, "\n", Line_ContinueAfterTyping); }
+
+	if (GetGlobalFlag(GADVMode)) { OutputLineAll("", NULL, Line_ContinueAfterTyping); }
+	OutputLine(NULL, "　黒幕たちは警察上層部に充分な鼻薬を嗅がせていたからだ。",
+		   NULL, "Anche perché alcuni erano riusciti a comprarsi parecchi piani alti della polizia con i loro guadagni.", GetGlobalFlag(GLinemodeSp));
+	if (GetGlobalFlag(GADVMode)) { ClearMessage(); } else { OutputLineAll(NULL, "\n", Line_ContinueAfterTyping); }
+
+	if (GetGlobalFlag(GADVMode) == 0) { OutputLineAll(NULL, "\n", Line_ContinueAfterTyping); }
+
+
+	if (GetGlobalFlag(GADVMode)) { OutputLineAll("", NULL, Line_ContinueAfterTyping); }
+	OutputLine(NULL, "　……むしろ逆に、嫁入り道具を質に入れてまで闇米を買い求めた庶民の方を取り締まり、その米を没収していたのである。",
+		   NULL, "... così se la rifecero sugli acquirenti, arrivando a confiscare il riso che questi avevano comprato sacrificando risparmi e salute.", Line_Normal);
+	ClearMessage();
+
+	if (GetGlobalFlag(GADVMode)) { OutputLine("<color=#f5e6d3>鑑識</color>", NULL, "<color=#f5e6d3>Agente Forense</color>", NULL, Line_ContinueAfterTyping); }
+	OutputLine(NULL, "「そんな時代もあったの…。",
+		   NULL, "\"Me lo ricordo bene...", Line_WaitForInput);
+	OutputLine(NULL, "どこぞの判事が餓死したなんてこともあったの？」",
+		   NULL, " sbaglio o ci fu un procuratore che morì dopo un lungo sciopero della fame?\"", GetGlobalFlag(GLinemodeSp));
+	if (GetGlobalFlag(GADVMode)) { ClearMessage(); } else { OutputLineAll(NULL, "\n", Line_ContinueAfterTyping); }
+
+	if (GetGlobalFlag(GADVMode)) { OutputLine("<color=#a59da9>大石</color>", NULL, "<color=#a59da9>Ooishi</color>", NULL, Line_ContinueAfterTyping); }
+	ModPlayVoiceLS(4, 11, "org/ooishi7804", 128, TRUE);
+	OutputLine(NULL, "「ありましたねぇ…。",
+		   NULL, "\"Già.", Line_WaitForInput);
+	ModPlayVoiceLS(4, 11, "org/ooishi7805", 128, TRUE);
+	OutputLine(NULL, "闇米は一切食わないと公言した判事が餓死したのが、…昭和２２年でしたっけ？",
+		   NULL, " Quello che disse che non avrebbe mai mangiato riso acquistato illegalmente... era il '47, mi pare?", Line_WaitForInput);
+	ModPlayVoiceLS(4, 11, "org/ooishi7806", 128, TRUE);
+	OutputLine(NULL, "　………酷い話でした。",
+		   NULL, " Che fine tremenda.", GetGlobalFlag(GLinemodeSp));
+	if (GetGlobalFlag(GADVMode)) { OutputLine("<color=#a59da9>大石</color>", NULL, "<color=#a59da9>Ooishi</color>", NULL, Line_ContinueAfterTyping); }
+	ModPlayVoiceLS(4, 11, "org/ooishi7807", 128, TRUE);
+	OutputLine(NULL, "法律に従ってたら生きていけないことを、法の番人である裁判官が自ら示したんですからねぇ…。」",
+		   NULL, "Lui, un uomo di legge, dimostrò con i fatti che il popolo non poteva sopravvivere seguendo le leggi stesse.\"", Line_Normal);
+	ClearMessage();
+
+	if (GetGlobalFlag(GADVMode)) { OutputLineAll("", NULL, Line_ContinueAfterTyping); }
+	OutputLine(NULL, "　生きるために必死な庶民ばかりを次々に検挙する国に嫌気がさし、",
+		   NULL, "Questo procuratore era stufo di vedere il governo accusare la povera gente che stava soltanto cercando di sopravvivere come poteva.", Line_WaitForInput);
+	OutputLine(NULL, "ある判事が、自分は今後一切、闇米を口にしないと宣言。",
+		   NULL, " Annunciò che non avrebbe più comprato riso al mercato nero.", GetGlobalFlag(GLinemodeSp));
+	if (GetGlobalFlag(GADVMode)) { ClearMessage(); } else { OutputLineAll(NULL, "\n", Line_ContinueAfterTyping); }
+
+	if (GetGlobalFlag(GADVMode)) { OutputLineAll("", NULL, Line_ContinueAfterTyping); }
+	OutputLine(NULL, "　……昭和２２年に、まだ３０代半ばという若さで飢えて死んだ。",
+		   NULL, "Morì di inedia poco dopo i trent'anni, nel 1947.", Line_Normal);
+	ClearMessage();
+
+	if (GetGlobalFlag(GADVMode)) { OutputLineAll("", NULL, Line_ContinueAfterTyping); }
+	OutputLine(NULL, "　闇米を買うことは法律で禁じられている。",
+		   NULL, "La legge proibiva l'acquisto di riso sul mercato nero.", GetGlobalFlag(GLinemodeSp));
+	if (GetGlobalFlag(GADVMode)) { ClearMessage(); } else { OutputLineAll(NULL, "\n", Line_ContinueAfterTyping); }
+
+	if (GetGlobalFlag(GADVMode)) { OutputLineAll("", NULL, Line_ContinueAfterTyping); }
+	OutputLine(NULL, "　でも、それでも闇米を求めなければ生きていけない。",
+		   NULL, "Ma era l'unico modo che le persone avevano per campare.", GetGlobalFlag(GLinemodeSp));
+	if (GetGlobalFlag(GADVMode)) { ClearMessage(); } else { OutputLineAll(NULL, "\n", Line_ContinueAfterTyping); }
+
+	if (GetGlobalFlag(GADVMode) == 0) { OutputLineAll(NULL, "\n", Line_ContinueAfterTyping); }
+
+
+	if (GetGlobalFlag(GADVMode)) { OutputLineAll("", NULL, Line_ContinueAfterTyping); }
+	OutputLine(NULL, "　なれば、この食料統制法は悪法ではないのか。",
+		   NULL, "La Legge sul Monitoraggio Alimentare fu un errore?", GetGlobalFlag(GLinemodeSp));
+	if (GetGlobalFlag(GADVMode)) { ClearMessage(); } else { OutputLineAll(NULL, "\n", Line_ContinueAfterTyping); }
+
+	if (GetGlobalFlag(GADVMode)) { OutputLineAll("", NULL, Line_ContinueAfterTyping); }
+	OutputLine(NULL, "　これは、彼が命を賭して訴えた必死のメッセージだったと伝えられている。",
+		   NULL, "La sua morte fu vista come un messaggio disperato che metteva in luce le ingiustizie del paese.", Line_Normal);
+	ClearMessage();
+
+	DrawScene( "background/greyscale/sora", 1000 );
+
+	if (GetGlobalFlag(GADVMode)) { OutputLine("<color=#a59da9>大石</color>", NULL, "<color=#a59da9>Ooishi</color>", NULL, Line_ContinueAfterTyping); }
+	ModPlayVoiceLS(4, 11, "org/ooishi7808", 128, TRUE);
+	OutputLine(NULL, "「……米の袋を抱えた連中を、次々と引っ立てて、駅脇の臨時の検問所に並べましてね。",
+		   NULL, "\"... fermavamo quelli che avevano sacchi di riso sulle spalle e li mettevamo in fila per un'ispezione fuori dalla stazione.", Line_WaitForInput);
+	ModPlayVoiceLS(4, 11, "org/ooishi7809", 128, TRUE);
+	OutputLine(NULL, "まるで戦時法廷みたいな感じなんですよ。",
+		   NULL, " Sembrava un tribunale militare.", GetGlobalFlag(GLinemodeSp));
+	if (GetGlobalFlag(GADVMode)) { OutputLine("<color=#a59da9>大石</color>", NULL, "<color=#a59da9>Ooishi</color>", NULL, Line_ContinueAfterTyping); }
+	ModPlayVoiceLS(4, 11, "org/ooishi7810", 128, TRUE);
+	OutputLine(NULL, "次々ポンポンと没収してひっ捕らえていく感じです。",
+		   NULL, "Aprivamo i sacchi e confiscavamo tutto ciò che avevano comprato sul mercato nero.", Line_WaitForInput);
+	ModPlayVoiceLS(4, 11, "org/ooishi7811", 128, TRUE);
+	OutputLine(NULL, "……ご婦人方はみんな泣かれるんですよ。",
+		   NULL, " Le donne scoppiavano in lacrime.", Line_WaitForInput);
+	ModPlayVoiceLS(4, 11, "org/ooishi7812", 128, TRUE);
+	OutputLine(NULL, "その米を買うために、彼らは家財を売り払ってるんです。",
+		   NULL, " Avevano dato via tutti i loro averi per un pugno di riso.", Line_WaitForInput);
+	ModPlayVoiceLS(4, 11, "org/ooishi7813", 128, TRUE);
+	OutputLine(NULL, "それを没収されたら何も残らないと。",
+		   NULL, " Gridavano che non avrebbero potuto sfamare i loro figli...", GetGlobalFlag(GLinemodeSp));
+	if (GetGlobalFlag(GADVMode)) { OutputLine("<color=#a59da9>大石</color>", NULL, "<color=#a59da9>Ooishi</color>", NULL, Line_ContinueAfterTyping); }
+	ModPlayVoiceLS(4, 11, "org/ooishi7814", 128, TRUE);
+	OutputLine(NULL, "どうやって飢えた子供たちを食わせればいいのかと。」",
+		   NULL, "se avessimo confiscato loro quel riso.\"", GetGlobalFlag(GLinemodeSp));
+	if (GetGlobalFlag(GADVMode)) { ClearMessage(); } else { OutputLineAll(NULL, "\n", Line_ContinueAfterTyping); }
+
+	if (GetGlobalFlag(GADVMode)) { OutputLine("<color=#f5e6d3>鑑識</color>", NULL, "<color=#f5e6d3>Agente Forense</color>", NULL, Line_ContinueAfterTyping); }
+	ModPlayVoiceLS(4, 0, "ps3/s20/00/vtk1_kanshiki1015", 128, TRUE);
+	OutputLine(NULL, "「道理だな。",
+		   NULL, "\"Non ha il minimo senso.", Line_WaitForInput);
+
+	OutputLine(NULL, "それで、闇米を売りつけた側は取り締まらんのだから、庶民はたまったもんではないの。」",
+		   NULL, " E pensare che non vi mandavano a cercare i venditori. Dal punto di vista della popolazione, era un trattamento ingiusto.\"", Line_Normal);
+	ClearMessage();
+
+	if (GetGlobalFlag(GADVMode)) { OutputLine("<color=#a59da9>大石</color>", NULL, "<color=#a59da9>Ooishi</color>", NULL, Line_ContinueAfterTyping); }
+	ModPlayVoiceLS(4, 11, "org/ooishi7816", 128, TRUE);
+	OutputLine(NULL, "「皆さんも敏感でしてね。",
+		   NULL, "\"Avevano tutti i nervi a fior di pelle.", Line_WaitForInput);
+	ModPlayVoiceLS(4, 11, "org/ooishi7817", 128, TRUE);
+	OutputLine(NULL, "駅で検問があるかもしれないと察知すると、途中で列車から飛び降りたりして逃れるんですよ。",
+		   NULL, " Se qualcuno veniva a sapere di un'ispezione in corso nella stazione successiva, scendevano tutti e scappavano all'impazzata.", GetGlobalFlag(GLinemodeSp));
+	if (GetGlobalFlag(GADVMode)) { OutputLine("<color=#a59da9>大石</color>", NULL, "<color=#a59da9>Ooishi</color>", NULL, Line_ContinueAfterTyping); }
+	ModPlayVoiceLS(4, 11, "org/ooishi7818", 128, TRUE);
+	OutputLine(NULL, "…そういう連中も逃さんと、私たちは駅近くの、飛び降り名所に重点的に警官を配備してましてね。",
+		   NULL, "Ma noi lo sapevamo, quindi installavamo dei posti di blocco nei dintorni delle altre stazioni.", Line_WaitForInput);
+	ModPlayVoiceLS(4, 11, "org/ooishi7819", 128, TRUE);
+	OutputLine(NULL, "……何十キロもある米袋を抱えたご婦人をよく追っ掛けましたっけ。」",
+		   NULL, " Ricordo di aver inseguito donne che portavano tra le braccia decine di chili di riso.\"", GetGlobalFlag(GLinemodeSp));
+	if (GetGlobalFlag(GADVMode)) { ClearMessage(); } else { OutputLineAll(NULL, "\n", Line_ContinueAfterTyping); }
+
+	if (GetGlobalFlag(GADVMode)) { OutputLineAll("", NULL, Line_ContinueAfterTyping); }
+	OutputLine(NULL, "　……おやっさんとの出会いはそんな中でだったと思う。",
+		   NULL, "Fu allora che conobbi il vecchio.", Line_Normal);
+	ClearMessage();
+
+	if (GetGlobalFlag(GADVMode)) { OutputLine("<color=#a59da9>大石</color>", NULL, "<color=#a59da9>Ooishi</color>", NULL, Line_ContinueAfterTyping); }
+	ModPlayVoiceLS(4, 11, "org/ooishi7820", 128, TRUE);
+	OutputLine(NULL, "「いやぁ…驚きましたよ。",
+		   NULL, "\"Ragazzi, che sorpresa...", Line_WaitForInput);
+	ModPlayVoiceLS(4, 11, "org/ooishi7821", 128, TRUE);
+	OutputLine(NULL, "…私の親父にね？",
+		   NULL, " ricordi mio padre?", Line_WaitForInput);
+	ModPlayVoiceLS(4, 11, "org/ooishi7822", 128, TRUE);
+	OutputLine(NULL, "　あまりにもそっくりだったんですよ！",
+		   NULL, " Ecco, lui era proprio identico!", Line_WaitForInput);
+	ModPlayVoiceLS(4, 11, "org/ooishi7823", 128, TRUE);
+	OutputLine(NULL, "　私ゃね、てっきり、親父は名古屋の空襲を奇跡的に生き延びて、帰ってきてくれたんじゃないかって本気で思いましたよ。」",
+		   NULL, " Credevo che fosse sopravvissuto al raid aereo e che fosse tornato miracolosamente integro da Nagoya.\"", Line_Normal);
+	ClearMessage();
+
+	DrawScene( "black", 400 );
+
+	if (GetGlobalFlag(GADVMode)) { OutputLineAll("", NULL, Line_ContinueAfterTyping); }
+	OutputLine(NULL, "　検問所から逃走した人間を追っていた。",
+		   NULL, "Stavo inseguendo un uomo che era scappato dal posto di blocco.", Line_Normal);
+	ClearMessage();
+
+	if (GetGlobalFlag(GADVMode)) { OutputLineAll("", NULL, Line_ContinueAfterTyping); }
+	OutputLine(NULL, "　重い米を担いで逃げ切れるわけもない。",
+		   NULL, "Non poteva andare lontano con tutto quel riso.", GetGlobalFlag(GLinemodeSp));
+	if (GetGlobalFlag(GADVMode)) { ClearMessage(); } else { OutputLineAll(NULL, "\n", Line_ContinueAfterTyping); }
+
+	if (GetGlobalFlag(GADVMode)) { OutputLineAll("", NULL, Line_ContinueAfterTyping); }
+	OutputLine(NULL, "　だから彼らは、米を抱いたまま捕まるか、家財を売り払ってようやく得た大切な米を捨てて逃げ延びるかを選ぶしかできなかった。",
+		   NULL, "Quindi, o lo avremmo arrestato per acquisto di riso sul mercato nero o avrebbe dovuto gettare per terra il sacco che aveva ottenuto con grandi sacrifici.", GetGlobalFlag(GLinemodeSp));
+	if (GetGlobalFlag(GADVMode)) { ClearMessage(); } else { OutputLineAll(NULL, "\n", Line_ContinueAfterTyping); }
+
+	if (GetGlobalFlag(GADVMode) == 0) { OutputLineAll(NULL, "\n", Line_ContinueAfterTyping); }
+
+
+	if (GetGlobalFlag(GADVMode)) { OutputLineAll("", NULL, Line_ContinueAfterTyping); }
+	OutputLine(NULL, "　……つまりどの道、警官に追われたら、家族に米を食わせることなどできないのだ。",
+		   NULL, "... in parole povere, una volta che la polizia ti puntava potevi scordarti di tornare dalla tua famiglia con qualcosa da mangiare.", Line_Normal);
+	ClearMessage();
+
+	if (GetGlobalFlag(GADVMode)) { OutputLineAll("", NULL, Line_ContinueAfterTyping); }
+	OutputLine(NULL, "　もちろん私にも負い目はあった。",
+		   NULL, "Inutile dire che mi sentissi terribilmente in colpa.", GetGlobalFlag(GLinemodeSp));
+	if (GetGlobalFlag(GADVMode)) { ClearMessage(); } else { OutputLineAll(NULL, "\n", Line_ContinueAfterTyping); }
+
+	if (GetGlobalFlag(GADVMode)) { OutputLineAll("", NULL, Line_ContinueAfterTyping); }
+	OutputLine(NULL, "　闇米を買うのが生きるためにどうしても仕方がないことだとわかっていた。",
+		   NULL, "Sapevo che quella gente l'aveva fatto per sopravvivere.", GetGlobalFlag(GLinemodeSp));
+	if (GetGlobalFlag(GADVMode)) { ClearMessage(); } else { OutputLineAll(NULL, "\n", Line_ContinueAfterTyping); }
+
+	if (GetGlobalFlag(GADVMode)) { OutputLineAll("", NULL, Line_ContinueAfterTyping); }
+	OutputLine(NULL, "　…だからせめて、米を捨てて逃げる人間は見逃すのが暗黙の了解だったのだ。",
+		   NULL, "... perciò avevamo stretto il tacito accordo di lasciar andare coloro che sceglievano di abbandonare il riso.", GetGlobalFlag(GLinemodeSp));
+	if (GetGlobalFlag(GADVMode)) { ClearMessage(); } else { OutputLineAll(NULL, "\n", Line_ContinueAfterTyping); }
+
+	if (GetGlobalFlag(GADVMode) == 0) { OutputLineAll(NULL, "\n", Line_ContinueAfterTyping); }
+
+
+	if (GetGlobalFlag(GADVMode)) { OutputLineAll("", NULL, Line_ContinueAfterTyping); }
+	OutputLine(NULL, "　だから、…追いながらいつも思っていた。",
+		   NULL, "Pensavo sempre la stessa cosa mentre li inseguivo.", Line_WaitForInput);
+	OutputLine(NULL, "早くそれを捨ててくれと。",
+		   NULL, " Ti prego, buttalo a terra.", Line_Normal);
+	ClearMessage();
+
+	if (GetGlobalFlag(GADVMode)) { OutputLineAll("", NULL, Line_ContinueAfterTyping); }
+	OutputLine(NULL, "　捕まえたくない。",
+		   NULL, "Non voglio arrestarti.", GetGlobalFlag(GLinemodeSp));
+	if (GetGlobalFlag(GADVMode)) { ClearMessage(); } else { OutputLineAll(NULL, "\n", Line_ContinueAfterTyping); }
+
+	if (GetGlobalFlag(GADVMode)) { OutputLineAll("", NULL, Line_ContinueAfterTyping); }
+	OutputLine(NULL, "　…窮状を訴える泣き声を聞かされたくなかったから。",
+		   NULL, "... perché non voglio vederti piangere e implorarmi di lasciarti tornare a casa con quel riso.", Line_Normal);
+	ClearMessage();
+
+	if (GetGlobalFlag(GADVMode)) { OutputLineAll("", NULL, Line_ContinueAfterTyping); }
+	OutputLine(NULL, "　そんな時、おやっさんが現れたんだ。",
+		   NULL, "Lo vidi quel giorno.", GetGlobalFlag(GLinemodeSp));
+	if (GetGlobalFlag(GADVMode)) { ClearMessage(); } else { OutputLineAll(NULL, "\n", Line_ContinueAfterTyping); }
+
+	if (GetGlobalFlag(GADVMode)) { OutputLineAll("", NULL, Line_ContinueAfterTyping); }
+	OutputLine(NULL, "　…死んだと思った親父に瓜二つ。",
+		   NULL, "Un uomo dalle fattezze identiche al mio defunto padre.", Line_WaitForInput);
+	OutputLine(NULL, "私は面食らった。",
+		   NULL, " Rimasi di stucco.", Line_Normal);
+	ClearMessage();
+
+	if (GetGlobalFlag(GADVMode)) { OutputLineAll("", NULL, Line_ContinueAfterTyping); }
+	OutputLine(NULL, "　そしたら、その親父が突然、私の頭をゲンコツで小突いたのだ。",
+		   NULL, "E quello, invece, colse l'occasione per tirarmi un pugno sulla testa.", GetGlobalFlag(GLinemodeSp));
+	if (GetGlobalFlag(GADVMode)) { ClearMessage(); } else { OutputLineAll(NULL, "\n", Line_ContinueAfterTyping); }
+
+	if (GetGlobalFlag(GADVMode) == 0) { OutputLineAll(NULL, "\n", Line_ContinueAfterTyping); }
+
+
+	if (GetGlobalFlag(GADVMode)) { OutputLineAll("", NULL, Line_ContinueAfterTyping); }
+	OutputLine(NULL, "　親父に叩かれたら、大人しく頭を垂れるのが子供の役割だ。",
+		   NULL, "I bambini chinano la testa quando i genitori li rimproverano per essersi comportati male.", GetGlobalFlag(GLinemodeSp));
+	if (GetGlobalFlag(GADVMode)) { ClearMessage(); } else { OutputLineAll(NULL, "\n", Line_ContinueAfterTyping); }
+
+	if (GetGlobalFlag(GADVMode)) { OutputLineAll("", NULL, Line_ContinueAfterTyping); }
+	OutputLine(NULL, "　でもとにかく、死んだと思っていた親父が生きていてくれたので、込み上げる嬉しさが抑え切れなかったんだ。",
+		   NULL, "Sentirmi di nuovo bambino, in colpa per aver sbagliato, fu una gioia troppo grande da trattenere.", Line_Normal);
+	ClearMessage();
+
+	if (GetGlobalFlag(GADVMode)) { OutputLineAll("", NULL, Line_ContinueAfterTyping); }
+	OutputLine(NULL, "　おやっさんは言った。",
+		   NULL, "Il vecchio disse", Line_WaitForInput);
+	OutputLine(NULL, "見逃してやれと。",
+		   NULL, " \"Lascialo andare.\"", Line_Normal);
+	ClearMessage();
+
+	if (GetGlobalFlag(GADVMode)) { OutputLineAll("", NULL, Line_ContinueAfterTyping); }
+	OutputLine(NULL, "　声を聞いてすぐに、親父ではないと気付き、私は警官への暴行の現行犯でしょっぴいてやろうと思った。",
+		   NULL, "La sua voce mi fece capire che quello non era mio padre e che avrei potuto arrestarlo per violenza contro pubblico ufficiale.", GetGlobalFlag(GLinemodeSp));
+	if (GetGlobalFlag(GADVMode)) { ClearMessage(); } else { OutputLineAll(NULL, "\n", Line_ContinueAfterTyping); }
+
+	if (GetGlobalFlag(GADVMode)) { OutputLineAll("", NULL, Line_ContinueAfterTyping); }
+	OutputLine(NULL, "　だが、喧嘩慣れしてるおやっさんに、ようやく青二才に毛が生えた程度の私がかなうわけもない。",
+		   NULL, "Ma un giovane come me, che a malapena aveva i peli sul petto, non poteva nulla contro un adulto abituato alle risse.", Line_Normal);
+	ClearMessage();
+
+	DrawScene( "background/sinryou_sinsatu2", 1000 );
+
+	if (GetGlobalFlag(GADVMode)) { OutputLine("<color=#a59da9>大石</color>", NULL, "<color=#a59da9>Ooishi</color>", NULL, Line_ContinueAfterTyping); }
+	ModPlayVoiceLS(4, 11, "ps3/s20/11/vtk1_oishi1071", 128, TRUE);
+	OutputLine(NULL, "「…いやぁ、たっぷり説教をもらいましたよ。",
+		   NULL, "\"Accidenti, mi diede proprio una bella lezione.", Line_WaitForInput);
+	ModPlayVoiceLS(4, 11, "ps3/s20/11/vtk1_oishi1072", 128, TRUE);
+	OutputLine(NULL, "大通りの真ん中でぶちのめされた挙句に。",
+		   NULL, " Mi fece una ramanzina mentre ero steso in mezzo alla strada.", Line_WaitForInput);
+	ModPlayVoiceLS(4, 11, "ps3/s20/11/vtk1_oishi1073", 128, TRUE);
+	OutputLine(NULL, "なっはっは、普通に考えたら、そんなのに耳なんか傾けないですよねぇ？",
+		   NULL, " Nahahah, dubito che chiunque altro lo avrebbe ascoltato.", Line_WaitForInput);
+	ModPlayVoiceLS(4, 11, "ps3/s20/11/vtk1_oishi1074", 128, TRUE);
+	OutputLine(NULL, "　でもあの時の私ゃどうかしてたんです。",
+		   NULL, " Per me, tuttavia, fu un'epifania.", GetGlobalFlag(GLinemodeSp));
+	if (GetGlobalFlag(GADVMode)) { OutputLine("<color=#a59da9>大石</color>", NULL, "<color=#a59da9>Ooishi</color>", NULL, Line_ContinueAfterTyping); }
+	ModPlayVoiceLS(4, 11, "ps3/s20/11/vtk1_oishi1075", 128, TRUE);
+	OutputLine(NULL, "どうしてもおやっさんが親父に見えちゃって。",
+		   NULL, "Continuavo a vedere mio padre in lui.", Line_WaitForInput);
+	ModPlayVoiceLS(4, 11, "ps3/s20/11/vtk1_oishi1076", 128, TRUE);
+	OutputLine(NULL, "大人しく言うことに耳を傾けることしかできなかったんです。」",
+		   NULL, " E non potei far altro che ascoltarlo in silenzio.\"", Line_Normal);
+	ClearMessage();
+
+	if (GetGlobalFlag(GADVMode)) { OutputLine("<color=#f5e6d3>鑑識</color>", NULL, "<color=#f5e6d3>Agente Forense</color>", NULL, Line_ContinueAfterTyping); }
+	ModPlayVoiceLS(4, 0, "ps3/s20/00/vtk1_kanshiki1017", 128, TRUE);
+	OutputLine(NULL, "「まぁ、そこで小突いただけじゃなく、男の器量もきっちりと見せられたのが、こいつの大したところだったの。",
+		   NULL, "\"Era un poco di buono, ma aveva un coraggio che tutti invidiavano. È questo che l'ha reso la persona che era.", Line_WaitForInput);
+	ModPlayVoiceLS(4, 0, "ps3/s20/00/vtk1_kanshiki1018", 128, TRUE);
+	OutputLine(NULL, "今時じゃすっかり珍しくなっちまった、古き良き時代の生き残りじゃった。」",
+		   NULL, " Non se ne vedono più di questi tempi. Lui era il tipico esempio di uomo all'antica.\"", GetGlobalFlag(GLinemodeSp));
+	if (GetGlobalFlag(GADVMode)) { ClearMessage(); } else { OutputLineAll(NULL, "\n", Line_ContinueAfterTyping); }
+
+	if (GetGlobalFlag(GADVMode) == 0) { OutputLineAll(NULL, "\n", Line_ContinueAfterTyping); }
+
+
+	if (GetGlobalFlag(GADVMode)) { OutputLineAll("", NULL, Line_ContinueAfterTyping); }
+	OutputLine(NULL, "　いい年にもなって、私にはまだまだ親父が必要だったのだ。",
+		   NULL, "Nonostante fossi grande, sentivo ancora la necessità di avere un padre.", GetGlobalFlag(GLinemodeSp));
+	if (GetGlobalFlag(GADVMode)) { ClearMessage(); } else { OutputLineAll(NULL, "\n", Line_ContinueAfterTyping); }
+
+	if (GetGlobalFlag(GADVMode)) { OutputLineAll("", NULL, Line_ContinueAfterTyping); }
+	OutputLine(NULL, "　酒を酌み交わし、男の器量を伝授してくれる目上の存在が、まだまだ必要だったのだ…。",
+		   NULL, "Qualcuno da ammirare, qualcuno che mi mostrasse cosa significava essere uomo...", GetGlobalFlag(GLinemodeSp));
+	if (GetGlobalFlag(GADVMode)) { ClearMessage(); } else { OutputLineAll(NULL, "\n", Line_ContinueAfterTyping); }
+
+	if (GetGlobalFlag(GADVMode)) { OutputLineAll("", NULL, Line_ContinueAfterTyping); }
+	OutputLine(NULL, "　だから言える。",
+		   NULL, "A pensarci adesso...", GetGlobalFlag(GLinemodeSp));
+	if (GetGlobalFlag(GADVMode)) { ClearMessage(); } else { OutputLineAll(NULL, "\n", Line_ContinueAfterTyping); }
+
+	if (GetGlobalFlag(GADVMode)) { OutputLineAll("", NULL, Line_ContinueAfterTyping); }
+	OutputLine(NULL, "　………私には親父が二人いた。",
+		   NULL, "Ho davvero avuto due padri.", GetGlobalFlag(GLinemodeSp));
+	if (GetGlobalFlag(GADVMode)) { ClearMessage(); } else { OutputLineAll(NULL, "\n", Line_ContinueAfterTyping); }
+
+	if (GetGlobalFlag(GADVMode)) { OutputLineAll("", NULL, Line_ContinueAfterTyping); }
+	OutputLine(NULL, "　おやっさんは、間違いなく私の親父であり、兄貴であり、",
+		   NULL, "Solo che il vecchio era molto di più: un padre, un fratello", Line_ContinueAfterTyping);
+	SetValidityOfInput( FALSE );
+	Wait( 800 );
+	SetValidityOfInput( TRUE );
+	OutputLine(NULL, "…親友だった。",
+		   NULL, " e un migliore amico.", Line_Normal);
+	ClearMessage();
+
+	if (GetGlobalFlag(GADVMode)) { OutputLineAll("", NULL, Line_ContinueAfterTyping); }
+	OutputLine(NULL, "　……そのおやっさんは今や、頭部、胴体、両手両足をブツ切りにされ、",
+		   NULL, "... e ora giace immobile da qualche parte, con il corpo fatto completamente a pezzi", Line_ContinueAfterTyping);
+	SetValidityOfInput( FALSE );
+	Wait( 800 );
+	SetValidityOfInput( TRUE );
+	OutputLine(NULL, "…右腕が未だに見付からない。",
+		   NULL, " mentre il braccio destro non si trova.", Line_Normal);
+	ClearMessage();
+
+	if (GetGlobalFlag(GADVMode)) { OutputLineAll("", NULL, Line_ContinueAfterTyping); }
+	OutputLine(NULL, "　男の義理も、酒の飲み方も博打の打ち方も教えてくれて、道を外れたらゲンコツで教えてくれたその右腕が、",
+		   NULL, "Fu lui a insegnarmi a essere uomo, a godermi l'alcol, a giocare a mahjong. Con quello stesso braccio destro mi dette tante di quelle botte...", Line_ContinueAfterTyping);
+	SetValidityOfInput( FALSE );
+	Wait( 800 );
+	SetValidityOfInput( TRUE );
+	OutputLine(NULL, "…未だに見付からない。",
+		   NULL, " braccio che, purtroppo, ancora non si sa dove sia.", Line_Normal);
+	ClearMessage();
+
+	if (GetGlobalFlag(GADVMode)) { OutputLine("<color=#f5e6d3>鑑識</color>", NULL, "<color=#f5e6d3>Agente Forense</color>", NULL, Line_ContinueAfterTyping); }
+	ModPlayVoiceLS(4, 0, "ps3/s20/00/vtk1_kanshiki1019", 128, TRUE);
+	OutputLine(NULL, "「…ホシの目星は？」",
+		   NULL, "\"Nessun sospetto?\"", GetGlobalFlag(GLinemodeSp));
+	if (GetGlobalFlag(GADVMode)) { ClearMessage(); } else { OutputLineAll(NULL, "\n", Line_ContinueAfterTyping); }
+
+	if (GetGlobalFlag(GADVMode)) { OutputLine("<color=#a59da9>大石</color>", NULL, "<color=#a59da9>Ooishi</color>", NULL, Line_ContinueAfterTyping); }
+	ModPlayVoiceLS(4, 11, "ps3/s20/11/vtk1_oishi1077", 128, TRUE);
+	OutputLine(NULL, "「えぇ、もちろんついてます。",
+		   NULL, "\"Certo che sì...", Line_WaitForInput);
+	ModPlayVoiceLS(4, 11, "ps3/s20/11/vtk1_oishi1078", 128, TRUE);
+	OutputLine(NULL, "…………おやっさんの右腕ももちろん取り返しますし、…この借りもきっちり返します。」",
+		   NULL, " giuro che troverò il braccio del vecchio e gliela farò pagare dieci volte tanto.\"", Line_Normal);
+	ClearMessage();
+
+	if (GetGlobalFlag(GADVMode)) { OutputLineAll("", NULL, Line_ContinueAfterTyping); }
+	OutputLine(NULL, "　雛見沢を影から牛耳り、ダム戦争と称する集団犯罪を煽り立てて来た、",
+		   NULL, "Controllano Hinamizawa nell'ombra, incitano gli abitanti a commettere crimini sotto la bandiera delle proteste...", Line_ContinueAfterTyping);
+	SetValidityOfInput( FALSE );
+	Wait( 800 );
+	SetValidityOfInput( TRUE );
+	OutputLine(NULL, "…園崎家。",
+		   NULL, " sono la famiglia Sonozaki.", GetGlobalFlag(GLinemodeSp));
+	if (GetGlobalFlag(GADVMode)) { ClearMessage(); } else { OutputLineAll(NULL, "\n", Line_ContinueAfterTyping); }
+
+	if (GetGlobalFlag(GADVMode) == 0) { OutputLineAll(NULL, "\n", Line_ContinueAfterTyping); }
+
+
+	if (GetGlobalFlag(GADVMode)) { OutputLineAll("", NULL, Line_ContinueAfterTyping); }
+	OutputLine(NULL, "　私は心の中で宣戦布告する。",
+		   NULL, "In cuor mio ho già dichiarato guerra.", GetGlobalFlag(GLinemodeSp));
+	if (GetGlobalFlag(GADVMode)) { ClearMessage(); } else { OutputLineAll(NULL, "\n", Line_ContinueAfterTyping); }
+
+	if (GetGlobalFlag(GADVMode)) { OutputLineAll("", NULL, Line_ContinueAfterTyping); }
+	OutputLine(NULL, "　…私の敵は、すでにはっきりしていた。",
+		   NULL, "In cuor mio so già chi è il nemico.", Line_Normal);
+	ClearMessage();
+
+	CallScript( "&eye" );
+	FadeOutBGM( 0, 1000, FALSE );
+	DrawScene( "black", 1000 );
+
+}

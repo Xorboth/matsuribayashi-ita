@@ -1,0 +1,85 @@
+void main()
+{
+	DrawScene( "black", 400 );
+
+	PlayBGM( 0, "it_moves", 120, 0 );
+
+	DrawScene( "background/fure2", 1000 );
+//	DrawFragment("minacubemap", "FragmentGroup", 1000);
+	DrawScene( "background/kakera", 400 );
+	StopFragment(1000);
+	DrawScene( "white", 1000 );
+	DrawScene( "background/so2", 1000 );
+
+	ClearMessage();
+	if (GetGlobalFlag(GADVMode)) { OutputLineAll("", NULL, Line_ContinueAfterTyping); }
+	OutputLine(NULL, "　このゲーム盤の上では、何が起ころうとも全て祟りやら、園崎家の暗躍やらで片付けられてしまうことを思い知らせるカケラ。",
+		   NULL, "Questo Frammento ci fa pensare, a prescindere da cosa succede sulla plancia di gioco, che tutto sia causato dalla maledizione o dalle trame della famiglia Sonozaki.", Line_Normal);
+	ClearMessage();
+
+	if (GetGlobalFlag(GADVMode)) { OutputLineAll("", NULL, Line_ContinueAfterTyping); }
+	OutputLine(NULL, "　いえ、もう少し私風に言うならば、ルールＺの存在を気付かせてくれるカケラなのかしら。",
+		   NULL, "Personalmente, preferisco dire che serve a dimostrare l'esistenza della Regola Z.", Line_Normal);
+	ClearMessage();
+
+	DrawSceneWithMask( "black", "maskleft", 1, 0, 300 );
+	DrawScene( "background/mati_o6", 400 );
+
+	if (GetGlobalFlag(GADVMode)) { OutputLineAll("", NULL, Line_ContinueAfterTyping); }
+	OutputLine(NULL, "　このカケラでは気付きにくいことだけど。",
+		   NULL, "È difficile accorgersene se si è sprovvisti di altri Frammenti.", Line_WaitForInput);
+	OutputLine(NULL, "…ルールＸに囚われた園崎詩音が、ルールＹに勘違いして翻弄されながら、",
+		   NULL, " Infatti, si tratta di uno scenario complesso dove Shion Sonozaki, confondendo la Regola X con la Regola Y che la sta soverchiando,", Line_WaitForInput);
+	OutputLine(NULL, "ルールＺの存在に気付いていくややこしいカケラ。",
+		   NULL, " nota l'esistenza della Regola Z.", GetGlobalFlag(GLinemodeSp));
+	if (GetGlobalFlag(GADVMode)) { ClearMessage(); } else { OutputLineAll(NULL, "\n", Line_ContinueAfterTyping); }
+
+	if (GetGlobalFlag(GADVMode) == 0) { OutputLineAll(NULL, "\n", Line_ContinueAfterTyping); }
+
+
+	if (GetGlobalFlag(GADVMode)) { OutputLineAll("", NULL, Line_ContinueAfterTyping); }
+	OutputLine(NULL, "　でも、ゲーム盤の法則を全て教えてもくれる重要なカケラでもある。",
+		   NULL, "Al tempo stesso, questo Frammento ci insegna le regole della scacchiera.", Line_Normal);
+	ClearMessage();
+
+	DrawSceneWithMask( "black", "maskdown", 1, 0, 1300 );
+	ModSetLayerFilter(0, 256, "none");
+	ModDrawCharacterWithFiltering(0, 6, "sprite/si1a_def_a1_", "0", "maskup", 1, 0, 0, FALSE, 0, 0, 0, 0, 0, 9, 300, TRUE );
+
+	if (GetGlobalFlag(GADVMode)) { OutputLineAll("", NULL, Line_ContinueAfterTyping); }
+	OutputLine(NULL, "　…そう言えば、園崎詩音という駒も、ゲーム盤の見地からは、外から来た駒という扱いになるのかもしれない。",
+		   NULL, "A tal proposito, il pezzo chiamato Shion Sonozaki è un pezzo che proviene dall'esterno e che vede le cose dal punto di vista della plancia.", Line_Normal);
+	ClearMessage();
+
+	if (GetGlobalFlag(GADVMode)) { OutputLineAll("", NULL, Line_ContinueAfterTyping); }
+	OutputLine(NULL, "　始めは北条沙都子を毛嫌いしていた彼女も、…このカケラともうひとつのカケラを経て大切な何かを学び取り、",
+		   NULL, "All'inizio è in conflitto con Satoko Houjou, ma il passare del tempo e il legame con altri pezzi le permettono di scoprire una cosa molto importante.", Line_WaitForInput);
+	OutputLine(NULL, "ルールＸに抗え、ルールＺと戦うための強力な駒に成長する。",
+		   NULL, " Sfida la Regola X e diventa abbastanza forte da combattere contro la Regola Z.", GetGlobalFlag(GLinemodeSp));
+	if (GetGlobalFlag(GADVMode)) { ClearMessage(); } else { OutputLineAll(NULL, "\n", Line_ContinueAfterTyping); }
+
+	if (GetGlobalFlag(GADVMode) == 0) { OutputLineAll(NULL, "\n", Line_ContinueAfterTyping); }
+
+
+	if (GetGlobalFlag(GADVMode)) { OutputLineAll("", NULL, Line_ContinueAfterTyping); }
+	OutputLine(NULL, "　このカケラがとにかく滑稽なのは、……それがとても狡猾に隠されていて、ぱっと見ただけでは、まるでそう見えないことなのだけれど。",
+		   NULL, "La cosa più assurda di questo Frammento... è che è nascosto talmente bene da non dare tale impressione al primo sguardo.", Line_Normal);
+	ClearMessage();
+
+	DrawScene( "black", 400 );
+
+	if (GetGlobalFlag(GADVMode)) { OutputLineAll("", NULL, Line_ContinueAfterTyping); }
+	OutputLine(NULL, "　学べよ学べ、過ちを。",
+		   NULL, "Si impara sempre qualcosa di nuovo.", GetGlobalFlag(GLinemodeSp));
+	if (GetGlobalFlag(GADVMode)) { ClearMessage(); } else { OutputLineAll(NULL, "\n", Line_ContinueAfterTyping); }
+
+	if (GetGlobalFlag(GADVMode)) { OutputLineAll("", NULL, Line_ContinueAfterTyping); }
+	OutputLine(NULL, "　そしてどうか、強力な駒となって敵に打ち勝つ力を貸しておくれ…。",
+		   NULL, "Ti prego, diventa un pezzo sempre più forte e donami la forza per sconfiggere i miei nemici...", Line_Normal);
+	ClearMessage();
+
+	CallScript( "&eye" );
+	FadeOutBGM( 0, 1000, FALSE );
+	DrawScene( "black", 1000 );
+
+}

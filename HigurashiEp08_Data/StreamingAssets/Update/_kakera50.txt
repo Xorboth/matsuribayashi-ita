@@ -1,0 +1,195 @@
+void main()
+{
+	if(GetLocalFlag(FragmentRead51) == 1 )
+	{
+		CallScript("_kakera50_02");
+		SetLocalFlag( LFragmentLoop, 0 );
+		Return();
+	}
+
+	DrawScene( "black", 400 );
+
+	DrawScene( "white", 1000 );
+
+	PlayBGM( 0, "maturi_01_Ver2", 120, 0 );
+
+	DrawScene( "background/fure2", 400 );
+
+	ClearMessage();
+	if (GetGlobalFlag(GADVMode)) { OutputLineAll("", NULL, Line_ContinueAfterTyping); }
+	OutputLine(NULL, "　７つのカケラを様々な奇跡で結び集め、",
+		   NULL, "Ora che abbiamo radunato tutti i miracoli dei sette Frammenti,", Line_ContinueAfterTyping);
+	SetValidityOfInput( FALSE );
+	Wait( 800 );
+	SetValidityOfInput( TRUE );
+	OutputLine(NULL, "……私はようやくこのカケラを手にする。",
+		   NULL, " sono finalmente riuscita a crearlo.", Line_Normal);
+	ClearMessage();
+
+	if (GetGlobalFlag(GADVMode)) { OutputLineAll("", NULL, Line_ContinueAfterTyping); }
+	OutputLine(NULL, "　…このカケラの中に、私たちの最後の運命が詰まっている。",
+		   NULL, "All'interno di questo Frammento si cela il nostro destino finale.", GetGlobalFlag(GLinemodeSp));
+	if (GetGlobalFlag(GADVMode)) { ClearMessage(); } else { OutputLineAll(NULL, "\n", Line_ContinueAfterTyping); }
+
+	if (GetGlobalFlag(GADVMode)) { OutputLineAll("", NULL, Line_ContinueAfterTyping); }
+	OutputLine(NULL, "　でも、……覗く前に、少しだけ待ってほしいの。",
+		   NULL, "Prima di cominciare, però... devo chiederti di aspettare un momento.", GetGlobalFlag(GLinemodeSp));
+	if (GetGlobalFlag(GADVMode)) { ClearMessage(); } else { OutputLineAll(NULL, "\n", Line_ContinueAfterTyping); }
+
+	if (GetGlobalFlag(GADVMode)) { OutputLineAll("", NULL, Line_ContinueAfterTyping); }
+	OutputLine(NULL, "　この中にある運命は、私たちが覗けばそれで決まってしまう。",
+		   NULL, "Il destino contenuto qua dentro sarà deciso una volta che sbirceremo al suo interno.", Line_Normal);
+	ClearMessage();
+
+	if (GetGlobalFlag(GADVMode)) { OutputLineAll("", NULL, Line_ContinueAfterTyping); }
+	OutputLine(NULL, "　……猫を詰めた箱の話をしたことはあったっけ？",
+		   NULL, "Ti ho già raccontato il paradosso del gatto nella scatola?", GetGlobalFlag(GLinemodeSp));
+	if (GetGlobalFlag(GADVMode)) { ClearMessage(); } else { OutputLineAll(NULL, "\n", Line_ContinueAfterTyping); }
+
+	if (GetGlobalFlag(GADVMode) == 0) { OutputLineAll(NULL, "\n", Line_ContinueAfterTyping); }
+
+
+	if (GetGlobalFlag(GADVMode)) { OutputLineAll("", NULL, Line_ContinueAfterTyping); }
+	OutputLine(NULL, "　箱の中の猫は生きているか、死んでいるか。",
+		   NULL, "Il gatto è vivo o morto?", GetGlobalFlag(GLinemodeSp));
+	if (GetGlobalFlag(GADVMode)) { ClearMessage(); } else { OutputLineAll(NULL, "\n", Line_ContinueAfterTyping); }
+
+	if (GetGlobalFlag(GADVMode)) { OutputLineAll("", NULL, Line_ContinueAfterTyping); }
+	OutputLine(NULL, "　…開ければわかることだけど、開けるまではわからない。",
+		   NULL, "Non è possibile saperlo finché non apriamo la scatola.", GetGlobalFlag(GLinemodeSp));
+	if (GetGlobalFlag(GADVMode)) { ClearMessage(); } else { OutputLineAll(NULL, "\n", Line_ContinueAfterTyping); }
+
+	if (GetGlobalFlag(GADVMode) == 0) { OutputLineAll(NULL, "\n", Line_ContinueAfterTyping); }
+
+
+	if (GetGlobalFlag(GADVMode)) { OutputLineAll("", NULL, Line_ContinueAfterTyping); }
+	OutputLine(NULL, "　生きているかもしれないし、死んでいるかもしれない。",
+		   NULL, "Potrebbe essere vivo oppure morto.", Line_Normal);
+	ClearMessage();
+
+	if (GetGlobalFlag(GADVMode)) { OutputLineAll("", NULL, Line_ContinueAfterTyping); }
+	OutputLine(NULL, "　つまり、中身のわからない開ける前の箱の中には、",
+		   NULL, "In parole povere, prima di aprire la scatola,", Line_ContinueAfterTyping);
+	SetValidityOfInput( FALSE );
+	Wait( 800 );
+	SetValidityOfInput( TRUE );
+	OutputLine(NULL, "……生きた猫と、死んだ猫が同時に存在しているということなの。",
+		   NULL, " il gatto è al tempo stesso vivo e morto.", GetGlobalFlag(GLinemodeSp));
+	if (GetGlobalFlag(GADVMode)) { ClearMessage(); } else { OutputLineAll(NULL, "\n", Line_ContinueAfterTyping); }
+
+	if (GetGlobalFlag(GADVMode) == 0) { OutputLineAll(NULL, "\n", Line_ContinueAfterTyping); }
+
+
+	if (GetGlobalFlag(GADVMode)) { OutputLineAll("", NULL, Line_ContinueAfterTyping); }
+	OutputLine(NULL, "　そして、開けて真実を知った瞬間に、ありえない方が消えてしまう。",
+		   NULL, "Solo nel momento in cui apri la scatola è possibile scoprire la risposta corretta.", Line_Normal);
+	ClearMessage();
+
+	if (GetGlobalFlag(GADVMode)) { OutputLineAll("", NULL, Line_ContinueAfterTyping); }
+	OutputLine(NULL, "　…このカケラの中身も同じこと。",
+		   NULL, "L'interno di questo Frammento segue la stessa logica.", GetGlobalFlag(GLinemodeSp));
+	if (GetGlobalFlag(GADVMode)) { ClearMessage(); } else { OutputLineAll(NULL, "\n", Line_ContinueAfterTyping); }
+
+	if (GetGlobalFlag(GADVMode)) { OutputLineAll("", NULL, Line_ContinueAfterTyping); }
+	OutputLine(NULL, "　この中には、私たちの望む未来と、鷹野の望む未来が同時に存在している。",
+		   NULL, "Qua dentro coesistono il futuro che noi desideriamo e quello voluto da Takano.", Line_Normal);
+	ClearMessage();
+
+	if (GetGlobalFlag(GADVMode)) { OutputLineAll("", NULL, Line_ContinueAfterTyping); }
+	OutputLine(NULL, "　それらは相反していて、互いの未来を否定し合っている。",
+		   NULL, "Sono due forze opposte che si respingono.", GetGlobalFlag(GLinemodeSp));
+	if (GetGlobalFlag(GADVMode)) { ClearMessage(); } else { OutputLineAll(NULL, "\n", Line_ContinueAfterTyping); }
+
+	if (GetGlobalFlag(GADVMode) == 0) { OutputLineAll(NULL, "\n", Line_ContinueAfterTyping); }
+
+
+	if (GetGlobalFlag(GADVMode)) { OutputLineAll("", NULL, Line_ContinueAfterTyping); }
+	OutputLine(NULL, "　覗けば、片方の未来は、消えてしまう。",
+		   NULL, "Una delle due sparirà quando vi guarderemo.", GetGlobalFlag(GLinemodeSp));
+	if (GetGlobalFlag(GADVMode)) { ClearMessage(); } else { OutputLineAll(NULL, "\n", Line_ContinueAfterTyping); }
+
+	if (GetGlobalFlag(GADVMode)) { OutputLineAll("", NULL, Line_ContinueAfterTyping); }
+	OutputLine(NULL, "　もし、……私たちの駒がこれ以上なく充分に揃っているならば、",
+		   NULL, "Se credi che i pezzi che abbiamo siano sufficienti...", Line_ContinueAfterTyping);
+	SetValidityOfInput( FALSE );
+	Wait( 800 );
+	SetValidityOfInput( TRUE );
+	OutputLine(NULL, "…私たちは覚悟を決めて、このカケラを覗いてみよう。",
+		   NULL, " allora possiamo guardare dentro al Frammento.", Line_Normal);
+	ClearMessage();
+
+	if (GetGlobalFlag(GADVMode)) { OutputLineAll("", NULL, Line_ContinueAfterTyping); }
+	OutputLine(NULL, "　…でも。",
+		   NULL, "Tuttavia...", GetGlobalFlag(GLinemodeSp));
+	if (GetGlobalFlag(GADVMode)) { ClearMessage(); } else { OutputLineAll(NULL, "\n", Line_ContinueAfterTyping); }
+
+	if (GetGlobalFlag(GADVMode)) { OutputLineAll("", NULL, Line_ContinueAfterTyping); }
+	OutputLine(NULL, "　私たちはゲーム盤の上に、これまでと同じ駒しか、まだ並べていない。",
+		   NULL, "Finora abbiamo radunato gli stessi pezzi di sempre sulla scacchiera.", GetGlobalFlag(GLinemodeSp));
+	if (GetGlobalFlag(GADVMode)) { ClearMessage(); } else { OutputLineAll(NULL, "\n", Line_ContinueAfterTyping); }
+
+	if (GetGlobalFlag(GADVMode)) { OutputLineAll("", NULL, Line_ContinueAfterTyping); }
+	OutputLine(NULL, "　そして、その条件でのゲームもやはり、鷹野たちの圧勝だった。",
+		   NULL, "In queste condizioni, la vittoria è praticamente nelle mani di Takano.", GetGlobalFlag(GLinemodeSp));
+	if (GetGlobalFlag(GADVMode)) { ClearMessage(); } else { OutputLineAll(NULL, "\n", Line_ContinueAfterTyping); }
+
+	if (GetGlobalFlag(GADVMode) == 0) { OutputLineAll(NULL, "\n", Line_ContinueAfterTyping); }
+
+
+	if (GetGlobalFlag(GADVMode)) { OutputLineAll("", NULL, Line_ContinueAfterTyping); }
+	OutputLine(NULL, "　すでに皆殺し編のカケラで試している。",
+		   NULL, "Ci abbiamo già provato nel Frammento di Minagoroshi.", Line_Normal);
+	ClearMessage();
+
+	if (GetGlobalFlag(GADVMode)) { OutputLineAll("", NULL, Line_ContinueAfterTyping); }
+	OutputLine(NULL, "　まだ、…駒がいるのだ。",
+		   NULL, "Abbiamo bisogno di altri pezzi.", GetGlobalFlag(GLinemodeSp));
+	if (GetGlobalFlag(GADVMode)) { ClearMessage(); } else { OutputLineAll(NULL, "\n", Line_ContinueAfterTyping); }
+
+	if (GetGlobalFlag(GADVMode)) { OutputLineAll("", NULL, Line_ContinueAfterTyping); }
+	OutputLine(NULL, "　強い力を持ち、ルールＹを打ち砕いてくれる強さを持った駒の協力が。",
+		   NULL, "Ce ne serve uno abbastanza potente da sconfiggere la Regola Y.", GetGlobalFlag(GLinemodeSp));
+	if (GetGlobalFlag(GADVMode)) { ClearMessage(); } else { OutputLineAll(NULL, "\n", Line_ContinueAfterTyping); }
+
+	if (GetGlobalFlag(GADVMode) == 0) { OutputLineAll(NULL, "\n", Line_ContinueAfterTyping); }
+
+
+	if (GetGlobalFlag(GADVMode)) { OutputLineAll("", NULL, Line_ContinueAfterTyping); }
+	OutputLine(NULL, "　……その駒が得られるまで、",
+		   NULL, "Finché non lo avremo,", Line_ContinueAfterTyping);
+	SetValidityOfInput( FALSE );
+	Wait( 750 );
+	SetValidityOfInput( TRUE );
+	OutputLine(NULL, "……私は恐ろしくて、このカケラを覗くことができない…。",
+		   NULL, " ho troppa paura di guardare dentro al Frammento.", Line_Normal);
+	ClearMessage();
+
+	if (GetGlobalFlag(GADVMode)) { OutputLineAll("", NULL, Line_ContinueAfterTyping); }
+	OutputLine(NULL, "　でも、そんな駒をどうやって得るの？",
+		   NULL, "Ma dove posso trovarlo?", Line_WaitForInput);
+	OutputLine(NULL, "　今まで一度も得たことがないのに？",
+		   NULL, " È un pezzo che non ho mai ottenuto prima d'ora.", Line_Normal);
+	ClearMessage();
+
+	if (GetGlobalFlag(GADVMode)) { OutputLineAll("", NULL, Line_ContinueAfterTyping); }
+	OutputLine(NULL, "　……それを得るには、",
+		   NULL, "Per averlo,", Line_WaitForInput);
+	OutputLine(NULL, "もう一度だけ、",
+		   NULL, " devo cercare", Line_ContinueAfterTyping);
+	SetValidityOfInput( FALSE );
+	Wait( 1000 );
+	SetValidityOfInput( TRUE );
+	OutputLine(NULL, "いる。",
+		   NULL, " un altro...", GetGlobalFlag(GLinemodeSp));
+	if (GetGlobalFlag(GADVMode)) { ClearMessage(); } else { OutputLineAll(NULL, "\n", Line_ContinueAfterTyping); }
+
+	if (GetGlobalFlag(GADVMode)) { OutputLineAll("", NULL, Line_ContinueAfterTyping); }
+	OutputLine(NULL, "　奇跡の力が、いる。",
+		   NULL, " miracolo.", Line_Normal);
+	ClearMessage();
+
+	CallScript( "&eye" );
+	FadeOutBGM( 0, 1000, FALSE );
+	DrawScene( "black", 1000 );
+
+}

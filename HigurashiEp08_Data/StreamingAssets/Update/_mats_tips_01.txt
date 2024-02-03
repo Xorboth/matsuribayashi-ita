@@ -1,0 +1,335 @@
+void main()
+{
+	DrawScene( "black", 400 );
+	PlayBGM( 0, "as_time_goes_by", 120, 0 );
+
+	ClearMessage();
+	if (GetGlobalFlag(GADVMode)) { OutputLineAll("", NULL, Line_ContinueAfterTyping); }
+	OutputLine(NULL, "　禁宝「鬼狩柳桜」。",
+		   NULL, "Il tesoro proibito: \"Onigari-no-Ryuuou.\"", GetGlobalFlag(GLinemodeSp));
+	if (GetGlobalFlag(GADVMode)) { ClearMessage(); } else { OutputLineAll(NULL, "\n", Line_ContinueAfterTyping); }
+
+	if (GetGlobalFlag(GADVMode)) { OutputLineAll("", NULL, Line_ContinueAfterTyping); }
+	OutputLine(NULL, "　古手神社、祭具殿に納められていると伝えられる至宝。",
+		   NULL, "È l'oggetto più prezioso del santuario Furude, custodito nel magazzino rituale.", Line_Normal);
+	ClearMessage();
+
+	if (GetGlobalFlag(GADVMode)) { OutputLineAll("", NULL, Line_ContinueAfterTyping); }
+	OutputLine(NULL, "　神代の昔。",
+		   NULL, "Al tempo degli dèi...", GetGlobalFlag(GLinemodeSp));
+	if (GetGlobalFlag(GADVMode)) { ClearMessage(); } else { OutputLineAll(NULL, "\n", Line_ContinueAfterTyping); }
+
+	if (GetGlobalFlag(GADVMode)) { OutputLineAll("", NULL, Line_ContinueAfterTyping); }
+	OutputLine(NULL, "　この地が、人と鬼の混在した「混沌の世」であった時、混沌の根源であった鬼神を討ち倒したと伝えられる宝刀である。",
+		   NULL, "quando il mondo era immerso nel caos e si divideva tra uomini e demoni, questa spada sacra trafisse la Dea Demone.", Line_Normal);
+	ClearMessage();
+
+	if (GetGlobalFlag(GADVMode)) { OutputLineAll("", NULL, Line_ContinueAfterTyping); }
+	OutputLine(NULL, "　その存在を見た者はこの千年間、存在しない。",
+		   NULL, "Da quel giorno, nessuno la rivide mai più per oltre mille anni.", GetGlobalFlag(GLinemodeSp));
+	if (GetGlobalFlag(GADVMode)) { ClearMessage(); } else { OutputLineAll(NULL, "\n", Line_ContinueAfterTyping); }
+
+	if (GetGlobalFlag(GADVMode) == 0) { OutputLineAll(NULL, "\n", Line_ContinueAfterTyping); }
+
+
+	if (GetGlobalFlag(GADVMode)) { OutputLineAll("", NULL, Line_ContinueAfterTyping); }
+	OutputLine(NULL, "　伝説では、祭具殿に奉納されているオヤシロさま御神体に封印されているとされ、",
+		   NULL, "La leggenda vuole che sia stata sigillata dentro alla statua di Oyashiro-sama, anch'essa nascosta allo sguardo dentro al magazzino.", GetGlobalFlag(GLinemodeSp));
+	if (GetGlobalFlag(GADVMode)) { OutputLineAll("", NULL, Line_ContinueAfterTyping); }
+	OutputLine(NULL, "その構造上から、信仰が続く限り永遠に封印を解くことのできない禁じられた祭具と記されている。",
+		   NULL, "Di conseguenza, questa lama resterà sopita nel suo simulacro finché esisterà il culto di Oyashiro-sama.", GetGlobalFlag(GLinemodeSp));
+	if (GetGlobalFlag(GADVMode)) { ClearMessage(); } else { OutputLineAll(NULL, "\n", Line_ContinueAfterTyping); }
+
+	if (GetGlobalFlag(GADVMode) == 0) { OutputLineAll(NULL, "\n", Line_ContinueAfterTyping); }
+
+
+	if (GetGlobalFlag(GADVMode)) { OutputLineAll("", NULL, Line_ContinueAfterTyping); }
+	OutputLine(NULL, "　また、その存在はいずれも固く封印された古手神社の禁書にしかなく、",
+		   NULL, "Solo le pergamene segrete del santuario Furude ne fanno menzione.", Line_WaitForInput);
+	OutputLine(NULL, "その存在を知る者は、歴代古手家頭首以外にはこの千年間、数えるほども存在しない。",
+		   NULL, " Ne consegue che solo un ristretto numero di membri della famiglia è a conoscenza di questo oggetto.", Line_Normal);
+	ClearMessage();
+
+	if (GetGlobalFlag(GADVMode)) { OutputLineAll("", NULL, Line_ContinueAfterTyping); }
+	OutputLine(NULL, "　複数の禁書の伝えるところによれば、その形状は、枝を垂らす柳の如しという。",
+		   NULL, "Secondo quanto riportato nelle pergamene, la spada ha la forma di un ramo di salice.", GetGlobalFlag(GLinemodeSp));
+	if (GetGlobalFlag(GADVMode)) { ClearMessage(); } else { OutputLineAll(NULL, "\n", Line_ContinueAfterTyping); }
+
+	if (GetGlobalFlag(GADVMode) == 0) { OutputLineAll(NULL, "\n", Line_ContinueAfterTyping); }
+
+
+	if (GetGlobalFlag(GADVMode)) { OutputLineAll("", NULL, Line_ContinueAfterTyping); }
+	OutputLine(NULL, "　その形状を想像した数人の古手家頭首が墨絵を残しているが、",
+		   NULL, "Esistono alcuni dipinti che raffigurano una spada, realizzati da alcuni capifamiglia Furude, ma nessuno di essi corrisponde a questa descrizione.", Line_WaitForInput);
+	OutputLine(NULL, "どの形も一致せず、想像の域を出ていないことを物語っている。",
+		   NULL, " Significa che tali opere provengono dalla loro fantasia.", Line_Normal);
+	ClearMessage();
+
+	if (GetGlobalFlag(GADVMode)) { OutputLineAll("", NULL, Line_ContinueAfterTyping); }
+	OutputLine(NULL, "　伝説によれば、桜花という名の穢れなき一人の乙女が、混沌の世の根源を討ち倒すべしと天啓を受けたという。",
+		   NULL, "La leggenda narra che una ragazza di nome Ouka ricevette dagli dèi l'ordine di sconfiggere la Dea Demone.", Line_Normal);
+	ClearMessage();
+
+	if (GetGlobalFlag(GADVMode)) { OutputLineAll("", NULL, Line_ContinueAfterTyping); }
+	OutputLine(NULL, "　その根源である鬼神は、人の剣にも、鬼の剣にも殺すことはできない。",
+		   NULL, "Ciononostante, nessuna arma forgiata dagli uomini o dai demoni era capace di riuscire nell'impresa.", GetGlobalFlag(GLinemodeSp));
+	if (GetGlobalFlag(GADVMode)) { ClearMessage(); } else { OutputLineAll(NULL, "\n", Line_ContinueAfterTyping); }
+
+	if (GetGlobalFlag(GADVMode)) { OutputLineAll("", NULL, Line_ContinueAfterTyping); }
+	OutputLine(NULL, "　人の剣でもなく、鬼の剣でもない、剣。",
+		   NULL, "Serviva una spada che non appartenesse né a un mondo né all'altro...", GetGlobalFlag(GLinemodeSp));
+	if (GetGlobalFlag(GADVMode)) { ClearMessage(); } else { OutputLineAll(NULL, "\n", Line_ContinueAfterTyping); }
+
+	if (GetGlobalFlag(GADVMode)) { OutputLineAll("", NULL, Line_ContinueAfterTyping); }
+	OutputLine(NULL, "　両者の交じり合った者にしか扱えない剣でしか、討ち取れない。",
+		   NULL, "Ovvero una che portasse in sé le caratteristiche degli uomini e dei demoni.", GetGlobalFlag(GLinemodeSp));
+	if (GetGlobalFlag(GADVMode)) { ClearMessage(); } else { OutputLineAll(NULL, "\n", Line_ContinueAfterTyping); }
+
+	if (GetGlobalFlag(GADVMode) == 0) { OutputLineAll(NULL, "\n", Line_ContinueAfterTyping); }
+
+
+	if (GetGlobalFlag(GADVMode)) { OutputLineAll("", NULL, Line_ContinueAfterTyping); }
+	OutputLine(NULL, "（※雛見沢の先祖が半人半鬼の血を引くとの記述は枚挙に暇がないが、",
+		   NULL, "(Si narra spesso che gli antenati dei nativi di Hinamizawa fossero per metà uomini e per metà demoni.", Line_WaitForInput);
+	OutputLine(NULL, "両者の血を引くと記された最古で最初の人物がこの古手桜花（？？？年〜？？？年）と考えられ、この記述はそれを伝えるものだと考えられている）",
+		   NULL, " Ouka Furude (date di nascita e morte sconosciute) pare che fosse la prima persona di sangue misto. Tale descrizione sembra corrispondere.)", Line_Normal);
+	ClearMessage();
+
+	if (GetGlobalFlag(GADVMode)) { OutputLineAll("", NULL, Line_ContinueAfterTyping); }
+	OutputLine(NULL, "　天は桜花に、一振りの宝刀を託す。",
+		   NULL, "I Cieli donarono a Ouka una spada di pregiata fattura.", GetGlobalFlag(GLinemodeSp));
+	if (GetGlobalFlag(GADVMode)) { ClearMessage(); } else { OutputLineAll(NULL, "\n", Line_ContinueAfterTyping); }
+
+	if (GetGlobalFlag(GADVMode)) { OutputLineAll("", NULL, Line_ContinueAfterTyping); }
+	OutputLine(NULL, "　その宝刀はまるで柳の枝の如し。",
+		   NULL, "Una spada dalla forma di un ramo di salice.", GetGlobalFlag(GLinemodeSp));
+	if (GetGlobalFlag(GADVMode)) { ClearMessage(); } else { OutputLineAll(NULL, "\n", Line_ContinueAfterTyping); }
+
+	if (GetGlobalFlag(GADVMode) == 0) { OutputLineAll(NULL, "\n", Line_ContinueAfterTyping); }
+
+
+	if (GetGlobalFlag(GADVMode)) { OutputLineAll("", NULL, Line_ContinueAfterTyping); }
+	OutputLine(NULL, "　その枝葉は三つに分かれ、天、地、人の三つの調和を示し、天、鬼、人の三者の融和を象徴していたという。",
+		   NULL, "La punta si divideva in tre, a simboleggiare il Cielo, la Terra e il popolo unito, nonché l'armonia tra dèi, umani e demoni.", Line_Normal);
+	ClearMessage();
+
+	if (GetGlobalFlag(GADVMode)) { OutputLineAll("", NULL, Line_ContinueAfterTyping); }
+	OutputLine(NULL, "　桜花は啓示のあった鬼神の潜む沼のほとりへ向かい、宝刀にて鬼神を討ち倒した。",
+		   NULL, "Ouka si diresse verso la palude dove risiedeva la Dea Demone e la sconfisse grazie alla spada sacra.", GetGlobalFlag(GLinemodeSp));
+	if (GetGlobalFlag(GADVMode)) { ClearMessage(); } else { OutputLineAll(NULL, "\n", Line_ContinueAfterTyping); }
+
+	if (GetGlobalFlag(GADVMode) == 0) { OutputLineAll(NULL, "\n", Line_ContinueAfterTyping); }
+
+
+	if (GetGlobalFlag(GADVMode)) { OutputLineAll("", NULL, Line_ContinueAfterTyping); }
+	OutputLine(NULL, "（※討ち倒した、の記述が禁書ごとに非常に曖昧である。",
+		   NULL, "(*Ogni scritto descrive la vittoria di Ouka in modo diverso.", Line_WaitForInput);
+	OutputLine(NULL, "成敗したとも、退散させたとも、屈服させたとも伝えられ、鬼神のその後については不明な点が多い。",
+		   NULL, " C'è chi dice che la rieducò, chi dice che scappò via, chi dice che si arrese. Qualsiasi cosa accadde alla Dea Demone, non viene mai specificata.", GetGlobalFlag(GLinemodeSp));
+	if (GetGlobalFlag(GADVMode)) { OutputLineAll("", NULL, Line_ContinueAfterTyping); }
+	OutputLine(NULL, "最古の書物には、宝刀にて鬼神の角を激しく打ちつけた、という記述があるが、別の書物にそれはない）",
+		   NULL, "Le pergamene più antiche dicono che la spada le ruppe le corna, mentre altri testi non ne fanno neppure menzione.)", Line_Normal);
+	ClearMessage();
+
+	if (GetGlobalFlag(GADVMode)) { OutputLineAll("", NULL, Line_ContinueAfterTyping); }
+	OutputLine(NULL, "　鬼神を打ち倒した宝刀は奉納され、後に「鬼狩柳桜（おにがりのりゅうおう）」と名付けられた。",
+		   NULL, "Così, la spada che aveva sconfitto la Dea venne trasformata in reliquia e rinominata Onigari-no-Ryuuou.", GetGlobalFlag(GLinemodeSp));
+	if (GetGlobalFlag(GADVMode)) { ClearMessage(); } else { OutputLineAll(NULL, "\n", Line_ContinueAfterTyping); }
+
+	if (GetGlobalFlag(GADVMode) == 0) { OutputLineAll(NULL, "\n", Line_ContinueAfterTyping); }
+
+
+	if (GetGlobalFlag(GADVMode)) { OutputLineAll("", NULL, Line_ContinueAfterTyping); }
+	OutputLine(NULL, "　だが、桜花はこの宝刀を神社の奥深くに封印し、その存在を永遠に禁じたという。",
+		   NULL, "Ouka sigillò la spada nel posto più recondito del santuario e ne occultò per sempre l'esistenza.", GetGlobalFlag(GLinemodeSp));
+	if (GetGlobalFlag(GADVMode)) { ClearMessage(); } else { OutputLineAll(NULL, "\n", Line_ContinueAfterTyping); }
+
+	if (GetGlobalFlag(GADVMode) == 0) { OutputLineAll(NULL, "\n", Line_ContinueAfterTyping); }
+
+
+	if (GetGlobalFlag(GADVMode)) { OutputLineAll("", NULL, Line_ContinueAfterTyping); }
+	OutputLine(NULL, "（※鬼神であれど、神の身と人の身を結んだ刀は、すでにこの世のものではなく、地上に存在すべきものでなかったため、人の世から遠ざけた、という説もある。",
+		   NULL, "(*Sebbene fosse stata forgiata per eliminare la Dea Demone, la spada non apparteneva più a questo mondo e mai sarebbe dovuta esistere sulla Terra. Alcuni studiosi dicono che sia sparita dal piano terreno.", GetGlobalFlag(GLinemodeSp));
+	if (GetGlobalFlag(GADVMode)) { OutputLineAll("", NULL, Line_ContinueAfterTyping); }
+	OutputLine(NULL, "だが、桜花こそが鬼神の娘であり、親殺しの剣を禁じたのではないかという異説もあり、この記述がその根拠のひとつとされている）",
+		   NULL, "Altri sostengono che Ouka fosse la figlia della Dea, e che perciò volesse cancellare per sempre l'esistenza della spada con cui aveva ucciso sua madre.)", Line_Normal);
+	ClearMessage();
+
+	if (GetGlobalFlag(GADVMode)) { OutputLineAll("", NULL, Line_ContinueAfterTyping); }
+	OutputLine(NULL, "　原始のオヤシロさま崇拝においては、オヤシロさまは鬼神のことを指したのではないかという説もある。",
+		   NULL, "L'antico culto di Oyashiro-sama lascia intendere che suddetta Dea Demone fosse proprio la stessa divinità.", Line_Normal);
+	ClearMessage();
+
+	if (GetGlobalFlag(GADVMode)) { OutputLineAll("", NULL, Line_ContinueAfterTyping); }
+	OutputLine(NULL, "　混沌の根源であり、全ての諸悪と不和の根源。",
+		   NULL, "L'origine del caos, l'origine del male, l'origine di ogni conflitto...", GetGlobalFlag(GLinemodeSp));
+	if (GetGlobalFlag(GADVMode)) { ClearMessage(); } else { OutputLineAll(NULL, "\n", Line_ContinueAfterTyping); }
+
+	if (GetGlobalFlag(GADVMode) == 0) { OutputLineAll(NULL, "\n", Line_ContinueAfterTyping); }
+
+
+	if (GetGlobalFlag(GADVMode)) { OutputLineAll("", NULL, Line_ContinueAfterTyping); }
+	OutputLine(NULL, "　それを崇め慰めることで、人の世への再臨を防ぐというのが、原始崇拝の根底とも考えられている。",
+		   NULL, "Impedire che ella potesse tornare tra gli uomini sembra essere il concetto basilare su cui si fonda la fede in Oyashiro-sama.", GetGlobalFlag(GLinemodeSp));
+	if (GetGlobalFlag(GADVMode)) { ClearMessage(); } else { OutputLineAll(NULL, "\n", Line_ContinueAfterTyping); }
+
+	if (GetGlobalFlag(GADVMode) == 0) { OutputLineAll(NULL, "\n", Line_ContinueAfterTyping); }
+
+
+	if (GetGlobalFlag(GADVMode)) { OutputLineAll("", NULL, Line_ContinueAfterTyping); }
+	OutputLine(NULL, "（※ある種の邪神崇拝か。",
+		   NULL, "(*Potrebbe trattarsi di una sorta di setta demoniaca.", Line_WaitForInput);
+	OutputLine(NULL, "加護を求めるのでなく、祟りを治めるために祀るという考え方は今日のオヤシロさま崇拝にもややつながり、",
+		   NULL, " Il fatto che la fede non fosse volta alla protezione della dea ma al tenere lontane le sue maledizioni trova alcuni fondamenti anche nel culto moderno di Oyashiro-sama...", GetGlobalFlag(GLinemodeSp));
+	if (GetGlobalFlag(GADVMode)) { OutputLineAll("", NULL, Line_ContinueAfterTyping); }
+	OutputLine(NULL, "近代崇拝の言うオヤシロさまの恩恵、良縁や縁結びを司るという守り神の姿とはやや遠ざかる）",
+		   NULL, "ma è evidente il contrasto con la tradizione attuale che lo vede come la divinità dei matrimoni e dei buoni rapporti.)", Line_Normal);
+	ClearMessage();
+
+	if (GetGlobalFlag(GADVMode)) { OutputLineAll("", NULL, Line_ContinueAfterTyping); }
+	OutputLine(NULL, "　人の不和は全てオヤシロさまの仕業であり、人の世には鬼はなしという、人間性善説の考え方。",
+		   NULL, "Ciò implica che l'uomo è buono per natura e che tutta la discordia è opera di Oyashiro-sama, negando persino l'idea che nel mondo umano esistano i demoni.", GetGlobalFlag(GLinemodeSp));
+	if (GetGlobalFlag(GADVMode)) { ClearMessage(); } else { OutputLineAll(NULL, "\n", Line_ContinueAfterTyping); }
+
+	if (GetGlobalFlag(GADVMode) == 0) { OutputLineAll(NULL, "\n", Line_ContinueAfterTyping); }
+
+
+	if (GetGlobalFlag(GADVMode)) { OutputLineAll("", NULL, Line_ContinueAfterTyping); }
+	OutputLine(NULL, "　ここから神話は、人と鬼の融和という、今日にもっとも広く知られる形に少しずつ姿を変えていく…。",
+		   NULL, "Da qui in avanti, la leggenda prosegue come la conosciamo... legata all'armonia tra uomini e demoni...", Line_Normal);
+	ClearMessage();
+
+	if (GetGlobalFlag(GADVMode)) { OutputLineAll("", NULL, Line_ContinueAfterTyping); }
+	OutputLine(NULL, "　だが、この時代に、オヤシロさま信仰の原点を記した書物や、古手家開祖の書物の多くが禁書となり、封印されていく。",
+		   NULL, "Tuttavia, tutti gli scritti relativi alla nascita del culto di Oyashiro-sama, nonché quelli appartenenti alla Matriarca della famiglia Furude, sono stati sigillati poiché ritenuti proibiti.", Line_Normal);
+	ClearMessage();
+
+	if (GetGlobalFlag(GADVMode)) { OutputLineAll("", NULL, Line_ContinueAfterTyping); }
+	OutputLine(NULL, "　慈愛の存在として神格化された後世のオヤシロさま像と、",
+		   NULL, "Questo perché l'immagine presente di divinità dell'amore e della pace stride con quella passata di radice di tutti i mali.", GetGlobalFlag(GLinemodeSp));
+	if (GetGlobalFlag(GADVMode)) { OutputLineAll("", NULL, Line_ContinueAfterTyping); }
+	OutputLine(NULL, "諸悪の根源という原始のオヤシロさま像が矛盾し、教義の説明が困難になったためと考えられる。",
+		   NULL, "Descrivere lo sviluppo della fede in Oyashiro-sama era diventato troppo complesso.", GetGlobalFlag(GLinemodeSp));
+	if (GetGlobalFlag(GADVMode)) { ClearMessage(); } else { OutputLineAll(NULL, "\n", Line_ContinueAfterTyping); }
+
+	if (GetGlobalFlag(GADVMode) == 0) { OutputLineAll(NULL, "\n", Line_ContinueAfterTyping); }
+
+
+	if (GetGlobalFlag(GADVMode)) { OutputLineAll("", NULL, Line_ContinueAfterTyping); }
+	OutputLine(NULL, "　また、禁書を信じるなら、古手家は自らの手で親である鬼神を討ち取った親殺しの一族であり、その血は深く深く呪われていることになる。",
+		   NULL, "Inoltre, volendo credere agli scritti, la famiglia Furude discenderebbe da una stirpe fondata sull'assassinio del proprio progenitore, rendendola di fatto maledetta.", Line_Normal);
+	ClearMessage();
+
+	if (GetGlobalFlag(GADVMode)) { OutputLineAll("", NULL, Line_ContinueAfterTyping); }
+	OutputLine(NULL, "　それらが全て真実ならば、今日の信仰は、古手家開祖の興したものとは異なることになる。",
+		   NULL, "Se sosteniamo questa ipotesi, allora il culto avviato dalla Matriarca risulta assai diverso rispetto a quello iniziale.", GetGlobalFlag(GLinemodeSp));
+	if (GetGlobalFlag(GADVMode)) { ClearMessage(); } else { OutputLineAll(NULL, "\n", Line_ContinueAfterTyping); }
+
+	if (GetGlobalFlag(GADVMode) == 0) { OutputLineAll(NULL, "\n", Line_ContinueAfterTyping); }
+
+
+	if (GetGlobalFlag(GADVMode)) { OutputLineAll("", NULL, Line_ContinueAfterTyping); }
+	OutputLine(NULL, "　数百年前の古手家頭首のひとりが、禁書の余白にこう記している。",
+		   NULL, "Un capofamiglia Furude scriveva così centinaia di anni fa.", Line_Normal);
+	ClearMessage();
+
+	if (GetGlobalFlag(GADVMode)) { OutputLineAll("", NULL, Line_ContinueAfterTyping); }
+	OutputLine(NULL, "　伝説の宝刀、鬼狩柳桜は古手家と人の世の罪の象徴である。",
+		   NULL, "La spada sacra, Onigari-no-Ryuuou, è il simbolo sia della famiglia Furude sia dei peccati del mondo umano.", Line_Normal);
+	ClearMessage();
+
+	if (GetGlobalFlag(GADVMode)) { OutputLineAll("", NULL, Line_ContinueAfterTyping); }
+	OutputLine(NULL, "　諸悪の根源を他者に求め、それを討ち取ることでしか罪の禊を知らなかった混沌の時代。",
+		   NULL, "Il periodo storico a cui ci riferiamo era uno in cui le persone obbligavano gli altri a farsi carico dei loro crimini, i quali potevano essere assolti soltanto con la morte.", GetGlobalFlag(GLinemodeSp));
+	if (GetGlobalFlag(GADVMode)) { ClearMessage(); } else { OutputLineAll(NULL, "\n", Line_ContinueAfterTyping); }
+
+	if (GetGlobalFlag(GADVMode) == 0) { OutputLineAll(NULL, "\n", Line_ContinueAfterTyping); }
+
+
+	if (GetGlobalFlag(GADVMode)) { OutputLineAll("", NULL, Line_ContinueAfterTyping); }
+	OutputLine(NULL, "　古手家開祖（注１）は、混沌の元凶を全て背負いて我が子に討たせ、この地を混沌より解き放った。",
+		   NULL, "La Matriarca (*1) si assunse le responsabilità di ogni male e lasciò che sua figlia la uccidesse. Fu così che questo luogo venne liberato dalla violenza e dal conflitto.", GetGlobalFlag(GLinemodeSp));
+	if (GetGlobalFlag(GADVMode)) { ClearMessage(); } else { OutputLineAll(NULL, "\n", Line_ContinueAfterTyping); }
+
+	if (GetGlobalFlag(GADVMode) == 0) { OutputLineAll(NULL, "\n", Line_ContinueAfterTyping); }
+
+
+	if (GetGlobalFlag(GADVMode)) { OutputLineAll("", NULL, Line_ContinueAfterTyping); }
+	OutputLine(NULL, "（注１：古手家開祖とは一般に古手桜花のことを指すが、稀に桜花の討った親を指す場合が見受けられる。",
+		   NULL, "(1*. Con \"Matriarca\" ci riferiamo spesso a Ouka Furude, ma alle volte identifica sua madre.", Line_WaitForInput);
+	OutputLine(NULL, "古手家開祖＝鬼神、との考えは古手家の最大の禁忌のはずであり、",
+		   NULL, " Credere che la Matriarca fosse la  Dea Demone era considerato un tabù tra i membri della famiglia Furude.", GetGlobalFlag(GLinemodeSp));
+	if (GetGlobalFlag(GADVMode)) { OutputLineAll("", NULL, Line_ContinueAfterTyping); }
+	OutputLine(NULL, "それでもなお、そう捉えていた頭首が存在していたことは意義深い）",
+		   NULL, "Nonostante questo, è chiaro che alcuni capifamiglia lo interpretarono proprio così.)", Line_Normal);
+	ClearMessage();
+
+	if (GetGlobalFlag(GADVMode)) { OutputLineAll("", NULL, Line_ContinueAfterTyping); }
+	OutputLine(NULL, "　古手家が、人の世が、再び罪を他者に求める愚を犯し、鬼の世に戻ろうとする時。",
+		   NULL, "Quando la famiglia Furude o quando il mondo degli uomini cercheranno scioccamente di incolpare gli altri, lasciando riemergere il passato oscuro del mondo dei demoni...", GetGlobalFlag(GLinemodeSp));
+	if (GetGlobalFlag(GADVMode)) { ClearMessage(); } else { OutputLineAll(NULL, "\n", Line_ContinueAfterTyping); }
+
+	if (GetGlobalFlag(GADVMode)) { OutputLineAll("", NULL, Line_ContinueAfterTyping); }
+	OutputLine(NULL, "　信仰は消え、御神体は砕け散り、その身に封じた鬼狩柳桜は再び、我らの前に姿を現すであろう。",
+		   NULL, "Allora la fede svanirà e la testa della statua si sfalderà, riportando alla luce le fattezze di Onigari-no-Ryuuou.", GetGlobalFlag(GLinemodeSp));
+	if (GetGlobalFlag(GADVMode)) { ClearMessage(); } else { OutputLineAll(NULL, "\n", Line_ContinueAfterTyping); }
+
+	if (GetGlobalFlag(GADVMode) == 0) { OutputLineAll(NULL, "\n", Line_ContinueAfterTyping); }
+
+
+	if (GetGlobalFlag(GADVMode)) { OutputLineAll("", NULL, Line_ContinueAfterTyping); }
+	OutputLine(NULL, "　それは、古手家が忘れてしまった罪の記憶を、再び蘇らせるための再臨なのである…。",
+		   NULL, "La seconda venuta della spada riporterà alla memoria i peccati dimenticati della famiglia Furude...", Line_Normal);
+	ClearMessage();
+
+	if (GetGlobalFlag(GADVMode)) { OutputLineAll("", NULL, Line_ContinueAfterTyping); }
+	OutputLine(NULL, "　鬼神は伝説上の架空なのか。",
+		   NULL, "La Dea Demone è un personaggio di fantasia?", Line_WaitForInput);
+	OutputLine(NULL, "それとも、実在の人物なのか。",
+		   NULL, " Oppure è esistita realmente?", GetGlobalFlag(GLinemodeSp));
+	if (GetGlobalFlag(GADVMode)) { ClearMessage(); } else { OutputLineAll(NULL, "\n", Line_ContinueAfterTyping); }
+
+	if (GetGlobalFlag(GADVMode) == 0) { OutputLineAll(NULL, "\n", Line_ContinueAfterTyping); }
+
+
+	if (GetGlobalFlag(GADVMode)) { OutputLineAll("", NULL, Line_ContinueAfterTyping); }
+	OutputLine(NULL, "　非常に稀な例として、生まれつき角を持った人間が生れ落ち、鬼神の子と呼ばれ蔑まれたことがあったのではないか。",
+		   NULL, "In rarissimi casi è capitato di veder nascere dei bambini con delle corna sulla testa, additati immediatamente come figli della Dea Demone.", Line_Normal);
+	ClearMessage();
+
+	if (GetGlobalFlag(GADVMode)) { OutputLineAll("", NULL, Line_ContinueAfterTyping); }
+	OutputLine(NULL, "　これをやがては読むであろう古手家末裔よ。",
+		   NULL, "O discendenti della famiglia Furude che leggerete queste pagine.", GetGlobalFlag(GLinemodeSp));
+	if (GetGlobalFlag(GADVMode)) { ClearMessage(); } else { OutputLineAll(NULL, "\n", Line_ContinueAfterTyping); }
+
+	if (GetGlobalFlag(GADVMode)) { OutputLineAll("", NULL, Line_ContinueAfterTyping); }
+	OutputLine(NULL, "　神話を伝える禁書は数あれど、その記述にはあまりに違いが多い。",
+		   NULL, "Le leggende e i miti proibiti tramandati attraverso le generazioni sono tanto numerosi quanto peculiari.", Line_Normal);
+	ClearMessage();
+
+	if (GetGlobalFlag(GADVMode)) { OutputLineAll("", NULL, Line_ContinueAfterTyping); }
+	OutputLine(NULL, "　しかし、だからといって煙にまかれてはならない。",
+		   NULL, "Ma non fatevi accecare dal fumo che alzeranno.", GetGlobalFlag(GLinemodeSp));
+	if (GetGlobalFlag(GADVMode)) { ClearMessage(); } else { OutputLineAll(NULL, "\n", Line_ContinueAfterTyping); }
+
+	if (GetGlobalFlag(GADVMode)) { OutputLineAll("", NULL, Line_ContinueAfterTyping); }
+	OutputLine(NULL, "　どんなに記述が違おうとも、それらが伝えようとしていることはたったひとつしかない。",
+		   NULL, "Per quanto differenti, c'è una cosa soltanto che questi scritti desiderano comunicare.", GetGlobalFlag(GLinemodeSp));
+	if (GetGlobalFlag(GADVMode)) { ClearMessage(); } else { OutputLineAll(NULL, "\n", Line_ContinueAfterTyping); }
+
+	if (GetGlobalFlag(GADVMode) == 0) { OutputLineAll(NULL, "\n", Line_ContinueAfterTyping); }
+
+
+	if (GetGlobalFlag(GADVMode)) { OutputLineAll("", NULL, Line_ContinueAfterTyping); }
+	OutputLine(NULL, "　鬼狩柳桜を永遠に禁じた、古手桜花の心を探れ。",
+		   NULL, "Cercate il cuore di Ouka Furude, colei che ha sigillato per sempre Onigari-no-Ryuuou.", GetGlobalFlag(GLinemodeSp));
+	if (GetGlobalFlag(GADVMode)) { ClearMessage(); } else { OutputLineAll(NULL, "\n", Line_ContinueAfterTyping); }
+
+	if (GetGlobalFlag(GADVMode)) { OutputLineAll("", NULL, Line_ContinueAfterTyping); }
+	OutputLine(NULL, "　それこそが、古手家頭首が悟るべき境地なり。",
+		   NULL, "È questo il destino che ogni capofamiglia deve adempiere.", Line_Normal);
+	ClearMessage();
+
+	CallScript( "&eye" );
+	FadeOutBGM( 0, 1000, TRUE );
+}

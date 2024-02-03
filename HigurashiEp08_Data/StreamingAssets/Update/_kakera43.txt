@@ -1,0 +1,89 @@
+void main()
+{
+	DrawScene( "black", 400 );
+
+	PlayBGM( 0, "it_move2", 120, 0 );
+
+	DrawScene( "background/fure1", 1000 );
+//	DrawFragment("minacubemap", "FragmentWeirdShapeSmall", 1000);
+	DrawScene( "background/kakera", 400 );
+
+	ClearMessage();
+	if (GetGlobalFlag(GADVMode)) { OutputLineAll("", NULL, Line_ContinueAfterTyping); }
+	OutputLine(NULL, "　このカケラだけはとても歪。",
+		   NULL, "Questo Frammento è l'unico a essere così distorto.", GetGlobalFlag(GLinemodeSp));
+	if (GetGlobalFlag(GADVMode)) { ClearMessage(); } else { OutputLineAll(NULL, "\n", Line_ContinueAfterTyping); }
+
+	if (GetGlobalFlag(GADVMode)) { OutputLineAll("", NULL, Line_ContinueAfterTyping); }
+	OutputLine(NULL, "　だって、昭和５８年６月より、もっと前のものだから。",
+		   NULL, "Dev'essere perché appartiene a un periodo molto antecedente al giugno 1983.", GetGlobalFlag(GLinemodeSp));
+	if (GetGlobalFlag(GADVMode)) { ClearMessage(); } else { OutputLineAll(NULL, "\n", Line_ContinueAfterTyping); }
+
+	if (GetGlobalFlag(GADVMode) == 0) { OutputLineAll(NULL, "\n", Line_ContinueAfterTyping); }
+
+
+	if (GetGlobalFlag(GADVMode)) { OutputLineAll("", NULL, Line_ContinueAfterTyping); }
+	OutputLine(NULL, "　だからこのカケラの有無は、私たちのゲーム盤の戦いに何の影響も及ぼさない。",
+		   NULL, "Di conseguenza, la sua esistenza non ha alcuna influenza sull'esito della nostra partita.", Line_Normal);
+	ClearMessage();
+
+	if (GetGlobalFlag(GADVMode)) { OutputLineAll("", NULL, Line_ContinueAfterTyping); }
+	OutputLine(NULL, "　…でも、本当に何の影響も及ぼさない役立たずのカケラなんだろうか。",
+		   NULL, "Ma siamo sicuri che si tratti di un Frammento del tutto isolato?", Line_Normal);
+	ClearMessage();
+
+	if (GetGlobalFlag(GADVMode)) { OutputLineAll("", NULL, Line_ContinueAfterTyping); }
+	OutputLine(NULL, "　今やルールＹの正体は完全に暴かれている。",
+		   NULL, "Ormai è chiaro quale sia l'identità della Regola Y.", GetGlobalFlag(GLinemodeSp));
+	if (GetGlobalFlag(GADVMode)) { ClearMessage(); } else { OutputLineAll(NULL, "\n", Line_ContinueAfterTyping); }
+
+	if (GetGlobalFlag(GADVMode)) { OutputLineAll("", NULL, Line_ContinueAfterTyping); }
+	OutputLine(NULL, "　それは、とても大きな組織の力で、個人たちのささやかな連帯など丸呑みにしてしまうほどの強大さを持っている。",
+		   NULL, "Il supporto di un'organizzazione potente e temibile la rende abbastanza salda da divorare la solidarietà di un manipolo di individui.", Line_Normal);
+	ClearMessage();
+
+	if (GetGlobalFlag(GADVMode)) { OutputLineAll("", NULL, Line_ContinueAfterTyping); }
+	OutputLine(NULL, "　その理不尽なほどの強さに、私はこのゲームを何度も諦めそうになる。",
+		   NULL, "La sua forza indescrivibile mi ha fatto vacillare in più occasioni.", GetGlobalFlag(GLinemodeSp));
+	if (GetGlobalFlag(GADVMode)) { ClearMessage(); } else { OutputLineAll(NULL, "\n", Line_ContinueAfterTyping); }
+
+	if (GetGlobalFlag(GADVMode) == 0) { OutputLineAll(NULL, "\n", Line_ContinueAfterTyping); }
+
+
+	if (GetGlobalFlag(GADVMode)) { OutputLineAll("", NULL, Line_ContinueAfterTyping); }
+	OutputLine(NULL, "　だからこそ、…思うのだ。",
+		   NULL, "Ecco perché ho pensato...", Line_WaitForInput);
+	OutputLine(NULL, "……このカケラの中に、そんな強敵に立ち向かうことのできる、駒が潜んでいるのではないかと。",
+		   NULL, " che un'informazione nascosta in un luogo remoto potrebbe diventare il nostro asso nella manica.", Line_Normal);
+	ClearMessage();
+
+	if (GetGlobalFlag(GADVMode)) { OutputLineAll("", NULL, Line_ContinueAfterTyping); }
+	OutputLine(NULL, "　赤坂衛は、東京の警視庁に勤めていて、…大きな陰謀に立ち向かえる力を持っている。",
+		   NULL, "Mamoru Akasaka lavora al quartier generale della polizia di Tokyo, motivo per cui potrebbe riuscire a opporsi contro una simile cospirazione.", GetGlobalFlag(GLinemodeSp));
+	if (GetGlobalFlag(GADVMode)) { ClearMessage(); } else { OutputLineAll(NULL, "\n", Line_ContinueAfterTyping); }
+
+	if (GetGlobalFlag(GADVMode)) { OutputLineAll("", NULL, Line_ContinueAfterTyping); }
+	OutputLine(NULL, "　その力はきっと、ルールＹが相手であっても、きっと及ぶ。",
+		   NULL, "Forse è lui la chiave per sconfiggere la Regola Y?", GetGlobalFlag(GLinemodeSp));
+	if (GetGlobalFlag(GADVMode)) { ClearMessage(); } else { OutputLineAll(NULL, "\n", Line_ContinueAfterTyping); }
+
+	if (GetGlobalFlag(GADVMode) == 0) { OutputLineAll(NULL, "\n", Line_ContinueAfterTyping); }
+
+
+	if (GetGlobalFlag(GADVMode)) { OutputLineAll("", NULL, Line_ContinueAfterTyping); }
+	OutputLine(NULL, "　前原圭一が、ルールＺを爽快に打ち破ったように、彼もルールＹを爽快に打ち破ってくれるのではないか。",
+		   NULL, "Riuscirebbe a fare ciò che Keiichi Maebara ha fatto con la Regola Z?", Line_Normal);
+	ClearMessage();
+
+	if (GetGlobalFlag(GADVMode)) { OutputLineAll("", NULL, Line_ContinueAfterTyping); }
+	OutputLine(NULL, "　……全ての力がいる。",
+		   NULL, "... abbiamo bisogno della forza di tutti.", Line_WaitForInput);
+	OutputLine(NULL, "赤坂の力も、必ずいる…。",
+		   NULL, " Perciò anche quella di Akasaka.", Line_Normal);
+	ClearMessage();
+
+	CallScript( "&eyefragment" );
+	FadeOutBGM( 0, 1000, FALSE );
+	DrawScene( "black", 1000 );
+
+}

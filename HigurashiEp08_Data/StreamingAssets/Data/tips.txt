@@ -1,0 +1,8 @@
+[
+   {
+      "Id":51,
+      "Title":"Il Tesoro Proibito: Onigari-no-Ryuuou",
+      "TitleJp":"禁宝「鬼狩柳桜」",
+      "Script":"_mats_tips_01"
+   }
+]

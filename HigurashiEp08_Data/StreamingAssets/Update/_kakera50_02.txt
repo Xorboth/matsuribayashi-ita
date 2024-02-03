@@ -1,0 +1,86 @@
+void main()
+{
+	DrawScene( "black", 400 );
+
+	DrawScene( "white", 1000 );
+
+	PlayBGM( 0, "maturi_01_Ver2", 120, 0 );
+
+	DrawSceneWithMask( "background/fure2", "maskm1", 1, 0, 1300 );
+
+	ClearMessage();
+	if (GetGlobalFlag(GADVMode)) { OutputLineAll("", NULL, Line_ContinueAfterTyping); }
+	OutputLine(NULL, "　……長かった。",
+		   NULL, "... è stata dura.", Line_WaitForInput);
+	OutputLine(NULL, "…本当に長かった。",
+		   NULL, " Un viaggio che sembrava non finire mai.", Line_Normal);
+	ClearMessage();
+
+	if (GetGlobalFlag(GADVMode)) { OutputLineAll("", NULL, Line_ContinueAfterTyping); }
+	OutputLine(NULL, "　大丈夫…？",
+		   NULL, "Stai bene?", Line_WaitForInput);
+	OutputLine(NULL, "　まだ、あなたの精神は生きている…？",
+		   NULL, " Senti ancora il suo spirito vivere...?", Line_Normal);
+	ClearMessage();
+
+	if (GetGlobalFlag(GADVMode)) { OutputLineAll("", NULL, Line_ContinueAfterTyping); }
+	OutputLine(NULL, "　これで、私たちが欲しい駒は全てゲーム盤に並んだのかしら。",
+		   NULL, "Abbiamo posizionato tutto ciò che volevamo sulla scacchiera?", GetGlobalFlag(GLinemodeSp));
+	if (GetGlobalFlag(GADVMode)) { ClearMessage(); } else { OutputLineAll(NULL, "\n", Line_ContinueAfterTyping); }
+
+	if (GetGlobalFlag(GADVMode)) { OutputLineAll("", NULL, Line_ContinueAfterTyping); }
+	OutputLine(NULL, "　昭和５８年６月を巡る、運命のゲームで、鷹野たちに勝てるだけの駒が並んだのかしら。",
+		   NULL, "Sono presenti tutti i pezzi in grado di sconfiggere Takano e i suoi in questo gioco fatidico del giugno 1983?", Line_Normal);
+	ClearMessage();
+
+	if (GetGlobalFlag(GADVMode)) { OutputLineAll("", NULL, Line_ContinueAfterTyping); }
+	OutputLine(NULL, "　……私は、",
+		   NULL, "Io...", Line_WaitForInput);
+	OutputLine(NULL, "多分、",
+		   NULL, " credo", Line_ContinueAfterTyping);
+	SetValidityOfInput( FALSE );
+	Wait( 800 );
+	SetValidityOfInput( TRUE );
+	OutputLine(NULL, "並んだと思ってる。",
+		   NULL, " di sì.", Line_Normal);
+	ClearMessage();
+
+	if (GetGlobalFlag(GADVMode)) { OutputLineAll("", NULL, Line_ContinueAfterTyping); }
+	OutputLine(NULL, "　あとは、羽入。",
+		   NULL, "Hanyuu.", Line_WaitForInput);
+	OutputLine(NULL, "…あなただけね。",
+		   NULL, " Manchi solo tu.", GetGlobalFlag(GLinemodeSp));
+	if (GetGlobalFlag(GADVMode)) { ClearMessage(); } else { OutputLineAll(NULL, "\n", Line_ContinueAfterTyping); }
+
+	if (GetGlobalFlag(GADVMode)) { OutputLineAll("", NULL, Line_ContinueAfterTyping); }
+	OutputLine(NULL, "　あなたが駒として登場できる時間は、もう相当に制限されている。",
+		   NULL, "Il tempo che ti è stato concesso di diventare un pezzo della scacchiera è limitato.", GetGlobalFlag(GLinemodeSp));
+	if (GetGlobalFlag(GADVMode)) { ClearMessage(); } else { OutputLineAll(NULL, "\n", Line_ContinueAfterTyping); }
+
+	if (GetGlobalFlag(GADVMode) == 0) { OutputLineAll(NULL, "\n", Line_ContinueAfterTyping); }
+
+
+	if (GetGlobalFlag(GADVMode)) { OutputLineAll("", NULL, Line_ContinueAfterTyping); }
+	OutputLine(NULL, "　でも、ゲームに登場できなくなったわけじゃない。",
+		   NULL, "Devi assolutamente fare la tua parte.", Line_Normal);
+	ClearMessage();
+
+	if (GetGlobalFlag(GADVMode)) { OutputLineAll("", NULL, Line_ContinueAfterTyping); }
+	OutputLine(NULL, "　………さぁ、始めましょう？",
+		   NULL, "... allora, iniziamo?", GetGlobalFlag(GLinemodeSp));
+	if (GetGlobalFlag(GADVMode)) { ClearMessage(); } else { OutputLineAll(NULL, "\n", Line_ContinueAfterTyping); }
+
+	if (GetGlobalFlag(GADVMode)) { OutputLineAll("", NULL, Line_ContinueAfterTyping); }
+	OutputLine(NULL, "　この日のために、数百年もの時間を賭けたのだから。",
+		   NULL, "Ho scommesso su questo giorno secoli e secoli della mia vita.", Line_Normal);
+	ClearMessage();
+
+	DisableWindow();
+	SetValidityOfInput( FALSE );
+	Wait( 5000 );
+	SetValidityOfInput( TRUE );
+	CallScript( "&eye" );
+	FadeOutBGM( 0, 1000, FALSE );
+	DrawScene( "black", 1000 );
+
+}

@@ -1,0 +1,566 @@
+void main()
+{
+
+	SetFontOfMessage( 2, 24, 1 );
+
+	DrawScene( "black", 1000 );
+	SetSpeedOfMessage( FALSE, 0 );
+
+	DrawScene( "background/ke_shiryou1_02", 1000 );
+
+	PlayBGM( 0, "sora_no_mukou", 120, 0 );
+
+	ClearMessage();
+	if (GetGlobalFlag(GADVMode)) { OutputLineAll("", NULL, Line_ContinueAfterTyping); }
+	OutputLine(NULL, "　こんにちは、竜騎士07です。",
+		   NULL, "Ciao, sono Ryukishi07.", GetGlobalFlag(GLinemodeSp));
+	if (GetGlobalFlag(GADVMode)) { ClearMessage(); } else { OutputLineAll(NULL, "\n", Line_ContinueAfterTyping); }
+
+	if (GetGlobalFlag(GADVMode)) { OutputLineAll("", NULL, Line_ContinueAfterTyping); }
+	OutputLine(NULL, "　この度は「祭囃し編」を、いえ、",
+		   NULL, "Grazie per aver giocato a Matsuribayashi. Anzi,", Line_WaitForInput);
+
+	OutputLine(NULL, "『ひぐらしのなく頃に』を最後までお付き合いくださり、誠にありがとうございます。",
+		   NULL, " grazie per aver giocato a Higurashi - When They Cry fino alla fine.", Line_Normal);
+	ClearMessage();
+
+
+	if (GetGlobalFlag(GADVMode)) { OutputLineAll("", NULL, Line_ContinueAfterTyping); }
+	OutputLine(NULL, "「祭囃し編」は、ある意味、",
+		   NULL, "In un certo senso, Matsuribayashi", Line_WaitForInput);
+
+	OutputLine(NULL, "「皆殺し編」の後半に描かれている鷹野との対決に対する解等編です。",
+		   NULL, " è l'episodio risolutivo del mondo che Takano e i ragazzi hanno iniziato a metà di Minagoroshi.", Line_Normal);
+	ClearMessage();
+
+
+	if (GetGlobalFlag(GADVMode)) { OutputLineAll("", NULL, Line_ContinueAfterTyping); }
+	OutputLine(NULL, "　どうすれば鷹野の陰謀を打ち砕けるか。",
+		   NULL, "Come sconfiggere Takano?", GetGlobalFlag(GLinemodeSp));
+	if (GetGlobalFlag(GADVMode)) { ClearMessage(); } else { OutputLineAll(NULL, "\n", Line_ContinueAfterTyping); }
+
+
+	if (GetGlobalFlag(GADVMode)) { OutputLineAll("", NULL, Line_ContinueAfterTyping); }
+	OutputLine(NULL, "　どうすれば理想の結末を迎えられるか。",
+		   NULL, "Come raggiungere il tanto agognato finale?", GetGlobalFlag(GLinemodeSp));
+	if (GetGlobalFlag(GADVMode)) { ClearMessage(); } else { OutputLineAll(NULL, "\n", Line_ContinueAfterTyping); }
+
+	if (GetGlobalFlag(GADVMode) == 0) { OutputLineAll(NULL, "\n", Line_ContinueAfterTyping); }
+
+
+
+	if (GetGlobalFlag(GADVMode)) { OutputLineAll("", NULL, Line_ContinueAfterTyping); }
+	OutputLine(NULL, "　今回は、それに対する解をご用意できた皆さんと、作者である私との一騎打ちとして描きました。",
+		   NULL, "Ho scritto questo episodio come una sorta di duello tra te, il lettore, e me, lo scrittore.", GetGlobalFlag(GLinemodeSp));
+	if (GetGlobalFlag(GADVMode)) { ClearMessage(); } else { OutputLineAll(NULL, "\n", Line_ContinueAfterTyping); }
+
+	if (GetGlobalFlag(GADVMode) == 0) { OutputLineAll(NULL, "\n", Line_ContinueAfterTyping); }
+
+
+
+	if (GetGlobalFlag(GADVMode)) { OutputLineAll("", NULL, Line_ContinueAfterTyping); }
+	OutputLine(NULL, "　ですのでつまり、私が今回「祭囃し編」でお届けした物語より、より素晴らしい解（世界）を描けたとお感じになられた方は、",
+		   NULL, "Di conseguenza, se credi di aver raggiunto una soluzione (mondo) migliore del mio Matsuribayashi,", Line_WaitForInput);
+
+	OutputLine(NULL, "竜騎士07との一騎打ちに勝った、と思っていただいてよろしいかと思います。",
+		   NULL, " allora hai sconfitto Ryukishi07 in questo duello.", Line_Normal);
+	ClearMessage();
+
+
+	if (GetGlobalFlag(GADVMode)) { OutputLineAll("", NULL, Line_ContinueAfterTyping); }
+	OutputLine(NULL, "　竜騎士07の用意させていただいた解は、大きく分けて２つあります。",
+		   NULL, "Io, Ryukishi07, ho proposto due soluzioni a due temi.", Line_Normal);
+	ClearMessage();
+
+
+	if (GetGlobalFlag(GADVMode)) { OutputLineAll("", NULL, Line_ContinueAfterTyping); }
+	OutputLine(NULL, "　１つ目の解は、鷹野との戦い方。",
+		   NULL, "La prima è la lotta contro Takano.", Line_Normal);
+	ClearMessage();
+
+
+	if (GetGlobalFlag(GADVMode)) { OutputLineAll("", NULL, Line_ContinueAfterTyping); }
+	OutputLine(NULL, "　まず、「皆殺し編」のヒント。",
+		   NULL, "Iniziamo con l'indizio presente in Minagoroshi.", GetGlobalFlag(GLinemodeSp));
+	if (GetGlobalFlag(GADVMode)) { ClearMessage(); } else { OutputLineAll(NULL, "\n", Line_ContinueAfterTyping); }
+
+
+	if (GetGlobalFlag(GADVMode)) { OutputLineAll("", NULL, Line_ContinueAfterTyping); }
+	OutputLine(NULL, "　彼女の陰謀を知り、その第一歩が緊急マニュアル第３４号に依存していること。",
+		   NULL, "Si tratta dell'esistenza del piano ordito da Takano, che si basa sul Manuale d'Emergenza 34.", GetGlobalFlag(GLinemodeSp));
+	if (GetGlobalFlag(GADVMode)) { ClearMessage(); } else { OutputLineAll(NULL, "\n", Line_ContinueAfterTyping); }
+
+	if (GetGlobalFlag(GADVMode) == 0) { OutputLineAll(NULL, "\n", Line_ContinueAfterTyping); }
+
+
+	if (GetGlobalFlag(GADVMode)) { OutputLineAll("", NULL, Line_ContinueAfterTyping); }
+	OutputLine(NULL, "　そして、「綿流し編」「目明し編」でのヒント。",
+		   NULL, "Poi ci sono altri due indizi in Watanagashi e in Meakashi.", GetGlobalFlag(GLinemodeSp));
+	if (GetGlobalFlag(GADVMode)) { ClearMessage(); } else { OutputLineAll(NULL, "\n", Line_ContinueAfterTyping); }
+
+	if (GetGlobalFlag(GADVMode)) { OutputLineAll("", NULL, Line_ContinueAfterTyping); }
+	OutputLine(NULL, "　梨花が死亡した後、４８時間が経過した世界があるにもかかわらず、村が平穏であること。",
+		   NULL, "Sono passate 48 ore dalla morte di Rika ma il villaggio non ha mostrato alcun cambiamento.", Line_Normal);
+	ClearMessage();
+
+	if (GetGlobalFlag(GADVMode)) { OutputLineAll("", NULL, Line_ContinueAfterTyping); }
+	OutputLine(NULL, "　これを重ね合わせれば、高野一二三が記した緊急マニュアルの根拠の、４８時間以内に全員が末期発症する、が真実でないことが明白です。",
+		   NULL, "Se mettiamo insieme questi elementi, allora è chiaro che è falso il principio su cui si basa il manuale d'emergenza scritto da Hifumi Takano, ovvero che gli abitanti svilupperanno i sintomi terminali entro 48 ore.", GetGlobalFlag(GLinemodeSp));
+	if (GetGlobalFlag(GADVMode)) { ClearMessage(); } else { OutputLineAll(NULL, "\n", Line_ContinueAfterTyping); }
+
+	if (GetGlobalFlag(GADVMode) == 0) { OutputLineAll(NULL, "\n", Line_ContinueAfterTyping); }
+
+
+	if (GetGlobalFlag(GADVMode)) { OutputLineAll("", NULL, Line_ContinueAfterTyping); }
+	OutputLine(NULL, "　これらは重ね合わせて透かしますと、梨花の死が４８時間以上経ってから確認されれば、",
+		   NULL, "A conti fatti, se il corpo di Rika viene scoperto dopo 48 ore dalla sua morte,", Line_WaitForInput);
+	OutputLine(NULL, "終末作戦を防ぐことが可能であることがわかると思います。",
+		   NULL, " allora è possibile impedire che il piano di Takano vada a buon fine.", Line_Normal);
+	ClearMessage();
+
+	if (GetGlobalFlag(GADVMode)) { OutputLineAll("", NULL, Line_ContinueAfterTyping); }
+	OutputLine(NULL, "　「祭囃し編」では、それを巡る攻防を、読み物になるようにどたばたと描いていますが、",
+		   NULL, "In Matsuribayashi mi sono concentrato sulle due fazioni e sulla loro battaglia, cercando di non dare troppe indicazioni.", GetGlobalFlag(GLinemodeSp));
+	if (GetGlobalFlag(GADVMode)) { OutputLineAll("", NULL, Line_ContinueAfterTyping); }
+	OutputLine(NULL, "淡々と解だけを描くなら、大石が梨花は死後４８時間と宣言し、それが「東京」に伝わった時点で、鷹野の陰謀の撃退に成功していたのです。",
+		   NULL, "Se parliamo di soluzione, allora l'annuncio di Ooishi che Rika era morta da almeno 48 ore è la scintilla che fa crollare il piano di Takano non appena la notizia giunge a Tokyo.", GetGlobalFlag(GLinemodeSp));
+	if (GetGlobalFlag(GADVMode)) { ClearMessage(); } else { OutputLineAll(NULL, "\n", Line_ContinueAfterTyping); }
+
+	if (GetGlobalFlag(GADVMode) == 0) { OutputLineAll(NULL, "\n", Line_ContinueAfterTyping); }
+
+
+	if (GetGlobalFlag(GADVMode)) { OutputLineAll("", NULL, Line_ContinueAfterTyping); }
+	OutputLine(NULL, "　これは、かなり簡単なパズル的解答ですので、正解された方も少なくないだろうと思います。",
+		   NULL, "Il riferimento era piuttosto evidente, come l'ultimo pezzo di un puzzle, e sono certo che molti lettori se ne saranno accorti.", Line_Normal);
+	ClearMessage();
+
+	if (GetGlobalFlag(GADVMode)) { OutputLineAll("", NULL, Line_ContinueAfterTyping); }
+	OutputLine(NULL, "　もう１つの解は、この世界の理想の結末。",
+		   NULL, "La seconda riguarda il finale ideale per questo mondo.", Line_Normal);
+	ClearMessage();
+
+	if (GetGlobalFlag(GADVMode)) { OutputLineAll("", NULL, Line_ContinueAfterTyping); }
+	OutputLine(NULL, "　これに答えるには、先にこの世界の世界観を説明しなければなりません。",
+		   NULL, "Per poter proseguire, prima devo fornire una spiegazione del quadro generale di questa storia.", GetGlobalFlag(GLinemodeSp));
+	if (GetGlobalFlag(GADVMode)) { ClearMessage(); } else { OutputLineAll(NULL, "\n", Line_ContinueAfterTyping); }
+
+	if (GetGlobalFlag(GADVMode) == 0) { OutputLineAll(NULL, "\n", Line_ContinueAfterTyping); }
+
+
+	if (GetGlobalFlag(GADVMode)) { OutputLineAll("", NULL, Line_ContinueAfterTyping); }
+	OutputLine(NULL, "　このヒントは、かなり細かく散らされていますが、特徴的なものとしては「祟殺し編」「皆殺し編」が挙げられると思います。",
+		   NULL, "Gli indizi sono disseminati un po' dappertutto, ma quelli cruciali appaiono in Tatarigoroshi e in Minagoroshi.", Line_Normal);
+	ClearMessage();
+
+	if (GetGlobalFlag(GADVMode)) { OutputLineAll("", NULL, Line_ContinueAfterTyping); }
+	OutputLine(NULL, "　沙都子の叔父が帰宅し、沙都子が辛い境遇に落ちる。",
+		   NULL, "La vita di Satoko diventa un inferno non appena suo zio fa ritorno a casa.", GetGlobalFlag(GLinemodeSp));
+	if (GetGlobalFlag(GADVMode)) { ClearMessage(); } else { OutputLineAll(NULL, "\n", Line_ContinueAfterTyping); }
+
+	if (GetGlobalFlag(GADVMode)) { OutputLineAll("", NULL, Line_ContinueAfterTyping); }
+	OutputLine(NULL, "　そこから救い出すにはどうすればいいか。",
+		   NULL, "Com'è possibile salvarla da quella situazione?", Line_Normal);
+	ClearMessage();
+
+	if (GetGlobalFlag(GADVMode)) { OutputLineAll("", NULL, Line_ContinueAfterTyping); }
+	OutputLine(NULL, "　本作が殺人を肯定的に描く、いわゆる殺人エンタメ作品であるならば、「祟殺し編」が正解です。",
+		   NULL, "Se l'intera storia fosse un quesito sugli omicidi, allora Tatarigoroshi sarebbe la risposta corretta.", GetGlobalFlag(GLinemodeSp));
+	if (GetGlobalFlag(GADVMode)) { ClearMessage(); } else { OutputLineAll(NULL, "\n", Line_ContinueAfterTyping); }
+
+	if (GetGlobalFlag(GADVMode)) { OutputLineAll("", NULL, Line_ContinueAfterTyping); }
+	OutputLine(NULL, "　圭一はうまく鉄平を殺害し、死体を隠せてハッピーエンド。",
+		   NULL, "Keiichi uccide Teppei e nasconde il cadavere. Tutti felici e contenti.", GetGlobalFlag(GLinemodeSp));
+	if (GetGlobalFlag(GADVMode)) { ClearMessage(); } else { OutputLineAll(NULL, "\n", Line_ContinueAfterTyping); }
+
+	if (GetGlobalFlag(GADVMode) == 0) { OutputLineAll(NULL, "\n", Line_ContinueAfterTyping); }
+
+
+	if (GetGlobalFlag(GADVMode)) { OutputLineAll("", NULL, Line_ContinueAfterTyping); }
+	OutputLine(NULL, "　しかし、私はそれを美しい世界として締めくくらず、明白なバッドエンドを当てて否定しました。",
+		   NULL, "Ma non è così che volevo finisse, perciò ne ho negato la possibilità con un bad ending.", Line_Normal);
+	ClearMessage();
+
+	if (GetGlobalFlag(GADVMode)) { OutputLineAll("", NULL, Line_ContinueAfterTyping); }
+	OutputLine(NULL, "　この『ひぐらし』の世界観が示す解とは、",
+		   NULL, "La soluzione che il mondo di Higurashi - When They Cry cerca", Line_WaitForInput);
+
+	OutputLine(NULL, "「皆殺し編」の、みんなで連帯して非暴力主義で訴えていく、というものでした。",
+		   NULL, " è una nonviolenta, dove i protagonisti uniscono le forze e si fidano gli uni degli altri.", Line_Normal);
+	ClearMessage();
+
+
+	if (GetGlobalFlag(GADVMode)) { OutputLineAll("", NULL, Line_ContinueAfterTyping); }
+	OutputLine(NULL, "　特に出題編である「鬼隠し編」「綿流し編」「祟殺し編」で多く描いていますが、",
+		   NULL, "Ciò risponde alle domande dei capitoli deduttivi come Onikakushi, Watanagashi e Tatarigoroshi.", GetGlobalFlag(GLinemodeSp));
+
+	if (GetGlobalFlag(GADVMode)) { OutputLineAll("", NULL, Line_ContinueAfterTyping); }
+	OutputLine(NULL, "この世界では、疑心暗鬼に陥り、１人で悩みこみ始めると必ず事態は悪化し惨劇を招くようになっています。",
+		   NULL, "In questi mondi, quando un personaggio inizia ad avere dei sospetti nei confronti altrui, finisce per isolarsi e per tormentarsi, portando al tragico epilogo che avete letto.", GetGlobalFlag(GLinemodeSp));
+	if (GetGlobalFlag(GADVMode)) { ClearMessage(); } else { OutputLineAll(NULL, "\n", Line_ContinueAfterTyping); }
+
+
+	if (GetGlobalFlag(GADVMode)) { OutputLineAll("", NULL, Line_ContinueAfterTyping); }
+	OutputLine(NULL, "　「目明し編」に至っては、それの極みであると言えるでしょう。",
+		   NULL, "Maekashi è l'apice di questa situazione.", GetGlobalFlag(GLinemodeSp));
+	if (GetGlobalFlag(GADVMode)) { ClearMessage(); } else { OutputLineAll(NULL, "\n", Line_ContinueAfterTyping); }
+
+	if (GetGlobalFlag(GADVMode) == 0) { OutputLineAll(NULL, "\n", Line_ContinueAfterTyping); }
+
+
+
+	if (GetGlobalFlag(GADVMode)) { OutputLineAll("", NULL, Line_ContinueAfterTyping); }
+	OutputLine(NULL, "　逆に、仲間に打ち明け相談した場合、数々の惨劇の火種は、どれも呆気ないくらいにくだらないものであったことが次々わかることが「罪滅し編」「皆殺し編」で示されています。",
+		   NULL, "Al contrario, quando il protagonista trova la forza di parlare con i suoi amici, scopre che la causa delle sue paure era solo una sciocchezza, come in Tsumihoroboshi e in Minagoroshi.", Line_Normal);
+	ClearMessage();
+
+
+	if (GetGlobalFlag(GADVMode)) { OutputLineAll("", NULL, Line_ContinueAfterTyping); }
+	OutputLine(NULL, "　つまり、『ひぐらし』の世界では、打ち明けあい連帯することで、いかなる困難にも打ち勝てる、という世界観が示されているのがおわかりになりますでしょうか。",
+		   NULL, "In parole povere, vedi che nel mondo di Higurashi tutto può cambiare quando le persone condividono i loro pensieri e si aiutano a vicenda?", Line_Normal);
+	ClearMessage();
+
+
+	if (GetGlobalFlag(GADVMode)) { OutputLineAll("", NULL, Line_ContinueAfterTyping); }
+	OutputLine(NULL, "　…非常に残酷ですが、現実世界はそこまでやさしくありません。",
+		   NULL, "È un peccato che la realtà sia spesso diversa da come vorremmo...", GetGlobalFlag(GLinemodeSp));
+	if (GetGlobalFlag(GADVMode)) { ClearMessage(); } else { OutputLineAll(NULL, "\n", Line_ContinueAfterTyping); }
+
+
+	if (GetGlobalFlag(GADVMode)) { OutputLineAll("", NULL, Line_ContinueAfterTyping); }
+	OutputLine(NULL, "　連帯はかえって不和を招き、１人で進める方が事態を混乱させない事例も少なくありません。",
+		   NULL, "Il contatto con gli altri può generare attriti, al punto che diventa più semplice fare tutto da soli.", GetGlobalFlag(GLinemodeSp));
+	if (GetGlobalFlag(GADVMode)) { ClearMessage(); } else { OutputLineAll(NULL, "\n", Line_ContinueAfterTyping); }
+
+	if (GetGlobalFlag(GADVMode) == 0) { OutputLineAll(NULL, "\n", Line_ContinueAfterTyping); }
+
+
+
+	if (GetGlobalFlag(GADVMode)) { OutputLineAll("", NULL, Line_ContinueAfterTyping); }
+	OutputLine(NULL, "　……ですが、私たちは人と連帯し、理解し合いながら困難に立ち向かいたいと日々願っている…。",
+		   NULL, "Al tempo stesso, però, continuiamo a sperare di trovare una connessione con gli altri e di comprenderci a vicenda, in modo da poter superare qualsiasi ostacolo.", GetGlobalFlag(GLinemodeSp));
+	if (GetGlobalFlag(GADVMode)) { ClearMessage(); } else { OutputLineAll(NULL, "\n", Line_ContinueAfterTyping); }
+
+	if (GetGlobalFlag(GADVMode) == 0) { OutputLineAll(NULL, "\n", Line_ContinueAfterTyping); }
+
+
+
+	if (GetGlobalFlag(GADVMode)) { OutputLineAll("", NULL, Line_ContinueAfterTyping); }
+	OutputLine(NULL, "　その一点においてのみ、この世界はファンタジーであると言ってもいいでしょう。",
+		   NULL, "In questo senso il mondo di Higurashi è uno di fantasia.", Line_Normal);
+	ClearMessage();
+
+	if (GetGlobalFlag(GADVMode)) { OutputLineAll("", NULL, Line_ContinueAfterTyping); }
+	OutputLine(NULL, "　そう。",
+		   NULL, "Già.", Line_WaitForInput);
+	OutputLine(NULL, "この『ひぐらし』の世界にはたった１つ、魔法の法則がある。",
+		   NULL, " In Higurashi vige una regola magica.", Line_Normal);
+	ClearMessage();
+
+	if (GetGlobalFlag(GADVMode)) { OutputLineAll("", NULL, Line_ContinueAfterTyping); }
+	OutputLine(NULL, "　それは、みんなに相談し、みんなの力を得れば、どんな困難にも打ち勝てるということ。",
+		   NULL, "Ovvero affidare le proprie paure agli altri e accettare il loro aiuto. Solo così è possibile cambiare il mondo.", GetGlobalFlag(GLinemodeSp));
+	if (GetGlobalFlag(GADVMode)) { ClearMessage(); } else { OutputLineAll(NULL, "\n", Line_ContinueAfterTyping); }
+
+	if (GetGlobalFlag(GADVMode)) { OutputLineAll("", NULL, Line_ContinueAfterTyping); }
+	OutputLine(NULL, "　どんな奇跡も起こせるということ。",
+		   NULL, "Solo così è possibile compiere un miracolo.", Line_Normal);
+	ClearMessage();
+
+	if (GetGlobalFlag(GADVMode)) { OutputLineAll("", NULL, Line_ContinueAfterTyping); }
+	OutputLine(NULL, "　それが絶対法則として示されるなら、これはもはや魔法、",
+		   NULL, "Se dovessi descriverlo come un dogma narrativo, allora lo chiamerei il magico", Line_ContinueAfterTyping);
+	SetValidityOfInput( FALSE );
+	Wait( 800 );
+	SetValidityOfInput( TRUE );
+	OutputLine(NULL, "…そう、「システム化された奇跡」と呼べるでしょう。",
+		   NULL, " \"miracolo sistematico.\"", GetGlobalFlag(GLinemodeSp));
+	if (GetGlobalFlag(GADVMode)) { ClearMessage(); } else { OutputLineAll(NULL, "\n", Line_ContinueAfterTyping); }
+
+	if (GetGlobalFlag(GADVMode)) { OutputLineAll("", NULL, Line_ContinueAfterTyping); }
+	OutputLine(NULL, "　劇中で羽入たちが語ったとおりです。",
+		   NULL, "Proprio come hanno detto Hanyuu e i suoi amici nel corso della storia.", Line_Normal);
+	ClearMessage();
+
+	if (GetGlobalFlag(GADVMode)) { OutputLineAll("", NULL, Line_ContinueAfterTyping); }
+	OutputLine(NULL, "　これこそが『ひぐらしのなく頃に』の世界観です。",
+		   NULL, "Questa è la visione del mondo di Higurashi - When They Cry.", GetGlobalFlag(GLinemodeSp));
+	if (GetGlobalFlag(GADVMode)) { ClearMessage(); } else { OutputLineAll(NULL, "\n", Line_ContinueAfterTyping); }
+
+	if (GetGlobalFlag(GADVMode) == 0) { OutputLineAll(NULL, "\n", Line_ContinueAfterTyping); }
+
+
+	if (GetGlobalFlag(GADVMode)) { OutputLineAll("", NULL, Line_ContinueAfterTyping); }
+	OutputLine(NULL, "　それに則って理想の結末を考えれば、最初に思いつくのは、登場人物全てが結束して鷹野と戦いこれを打ち破るという、爽快なエンドだと思います。",
+		   NULL, "Se seguissimo tale regola e immaginassimo un finale perfetto, immagino che la prima ipotesi sarebbe quella in cui i membri del club uniscono le forze e sconfiggono Takano.", Line_Normal);
+	ClearMessage();
+
+	if (GetGlobalFlag(GADVMode)) { OutputLineAll("", NULL, Line_ContinueAfterTyping); }
+	OutputLine(NULL, "　実際、「祭囃し編」の劇中でもそのシーンを爽快に描くことでそれを肯定しています。",
+		   NULL, "E, in effetti, all'interno di Matsuribayashi ci sono alcune scene che lo descrivono.", GetGlobalFlag(GLinemodeSp));
+	if (GetGlobalFlag(GADVMode)) { ClearMessage(); } else { OutputLineAll(NULL, "\n", Line_ContinueAfterTyping); }
+
+	if (GetGlobalFlag(GADVMode) == 0) { OutputLineAll(NULL, "\n", Line_ContinueAfterTyping); }
+
+
+	if (GetGlobalFlag(GADVMode)) { OutputLineAll("", NULL, Line_ContinueAfterTyping); }
+	OutputLine(NULL, "　ですが、同時に、鷹野という人物については非常に孤独に描き、",
+		   NULL, "Parallelamente, Takano viene rappresentata come una persona rimasta da sola.", Line_WaitForInput);
+	OutputLine(NULL, "爽快感とは逆行する演出をすることで、その解に対する疑問も提起しています。",
+		   NULL, " Partendo da questo presupposto, mi è sorto un dubbio sul finale.", Line_Normal);
+	ClearMessage();
+
+	if (GetGlobalFlag(GADVMode)) { OutputLineAll("", NULL, Line_ContinueAfterTyping); }
+	OutputLine(NULL, "　鷹野を除く全員が結束して、鷹野を生贄の羊にして叩きのめし、鷹野を除く全員がハッピーエンド。",
+		   NULL, "I membri del club sconfiggono Takano e la rendono un capro espiatorio. Un lieto fine, certo... per tutti tranne che per Takano.", GetGlobalFlag(GLinemodeSp));
+	if (GetGlobalFlag(GADVMode)) { ClearMessage(); } else { OutputLineAll(NULL, "\n", Line_ContinueAfterTyping); }
+
+	if (GetGlobalFlag(GADVMode) == 0) { OutputLineAll(NULL, "\n", Line_ContinueAfterTyping); }
+
+
+	if (GetGlobalFlag(GADVMode)) { OutputLineAll("", NULL, Line_ContinueAfterTyping); }
+	OutputLine(NULL, "　この、生贄を捧げることでその他全員が結束するのを美談として描く風潮は、非常に根強いものです。",
+		   NULL, "Vedere i protagonisti affidarsi gli uni agli altri e sconfiggere una volta per tutte il cattivo è un classico della narrazione.", Line_Normal);
+	ClearMessage();
+
+	if (GetGlobalFlag(GADVMode)) { OutputLineAll("", NULL, Line_ContinueAfterTyping); }
+	OutputLine(NULL, "　宇宙からエイリアンが攻めてきたため、世界各国は争いをやめて仲良く連携し、これを撃退。",
+		   NULL, "Dallo spazio arrivano gli alieni per invadere la Terra, allora tutti i paesi del mondo si alleano contro il nemico comune.", Line_WaitForInput);
+	OutputLine(NULL, "人類万歳、同じ人間同士仲良くがいいね。",
+		   NULL, " Evviva l'umanità. In fondo, la serena convivenza è il sogno di tutti.", Line_WaitForInput);
+	OutputLine(NULL, "という構図は古今東西に溢れているはずです。",
+		   NULL, " Di storie come questa ne esistono a bizzeffe.", Line_Normal);
+	ClearMessage();
+
+	if (GetGlobalFlag(GADVMode)) { OutputLineAll("", NULL, Line_ContinueAfterTyping); }
+	OutputLine(NULL, "　エイリアンや悪魔、モンスターという、明白な悪役を生贄に捧げることで人類愛をテーマとした作品は枚挙に暇がありません。",
+		   NULL, "Alieni, demoni, mostri o altri personaggi esplicitamente \"cattivi\" che vengono immolati per il bene, come dei veri e propri sacrifici.", GetGlobalFlag(GLinemodeSp));
+	if (GetGlobalFlag(GADVMode)) { ClearMessage(); } else { OutputLineAll(NULL, "\n", Line_ContinueAfterTyping); }
+
+	if (GetGlobalFlag(GADVMode) == 0) { OutputLineAll(NULL, "\n", Line_ContinueAfterTyping); }
+
+
+	if (GetGlobalFlag(GADVMode)) { OutputLineAll("", NULL, Line_ContinueAfterTyping); }
+	OutputLine(NULL, "　物語の途中までいがみ合っていた陣営が、第３の敵に対し、争いをやめて手を結び合って撃退するエピソードは確かに熱いものがあるのですが…。",
+		   NULL, "Due fazioni che si danno battaglia da sempre si ritrovano alleate quando appare un nemico più forte. Non si può dire che non siano risvolti emozionanti...", GetGlobalFlag(GLinemodeSp));
+	if (GetGlobalFlag(GADVMode)) { ClearMessage(); } else { OutputLineAll(NULL, "\n", Line_ContinueAfterTyping); }
+
+	if (GetGlobalFlag(GADVMode) == 0) { OutputLineAll(NULL, "\n", Line_ContinueAfterTyping); }
+
+
+	if (GetGlobalFlag(GADVMode)) { OutputLineAll("", NULL, Line_ContinueAfterTyping); }
+	OutputLine(NULL, "　この、生贄を投じることで手を結ぶ禊ぎには、友好的関係を作りだすため、常に第３の敵（生贄）を求め続けなくてはならないという不毛（鬼）をも生み出すと考えています。",
+		   NULL, "Con l'aggiunta di un nemico, persone diverse si ritrovano fianco a fianco. Serve sempre una terza parte (il sacrificio) per creare questa situazione.", Line_Normal);
+	ClearMessage();
+
+	if (GetGlobalFlag(GADVMode)) { OutputLineAll("", NULL, Line_ContinueAfterTyping); }
+	OutputLine(NULL, "　いえ、数々の物語を生み出された方々もそれに気付いています。",
+		   NULL, "Sono certo che molti autori di storie come queste se ne siano accorti in più occasioni.", GetGlobalFlag(GLinemodeSp));
+	if (GetGlobalFlag(GADVMode)) { ClearMessage(); } else { OutputLineAll(NULL, "\n", Line_ContinueAfterTyping); }
+
+	if (GetGlobalFlag(GADVMode)) { OutputLineAll("", NULL, Line_ContinueAfterTyping); }
+	OutputLine(NULL, "　ですから、絶対に私たちと相容れることのできない存在を、第３の敵に描くのです。",
+		   NULL, "Aggiungiamo sempre un personaggio che non potrà mai unirsi a noi.", Line_Normal);
+	ClearMessage();
+
+	if (GetGlobalFlag(GADVMode)) { OutputLineAll("", NULL, Line_ContinueAfterTyping); }
+	OutputLine(NULL, "　互いが仲直りするために、共同の敵を外に求める。",
+		   NULL, "Cerchiamo di trovare un nemico comune per risanare i nostri rapporti guastati.", GetGlobalFlag(GLinemodeSp));
+	if (GetGlobalFlag(GADVMode)) { ClearMessage(); } else { OutputLineAll(NULL, "\n", Line_ContinueAfterTyping); }
+
+	if (GetGlobalFlag(GADVMode) == 0) { OutputLineAll(NULL, "\n", Line_ContinueAfterTyping); }
+
+
+	if (GetGlobalFlag(GADVMode)) { OutputLineAll("", NULL, Line_ContinueAfterTyping); }
+	OutputLine(NULL, "　……何だか、今日の世界情勢にも通じそうな気がするキーワードだと思うのは、私だけでしょうか。",
+		   NULL, "Sono l'unico a pensare che queste parole rispecchino la realtà del mondo odierno?", Line_Normal);
+	ClearMessage();
+
+	if (GetGlobalFlag(GADVMode)) { OutputLineAll("", NULL, Line_ContinueAfterTyping); }
+	OutputLine(NULL, "　現実世界は人間だけの世界です。",
+		   NULL, "In fin dei conti, questo mondo è abitato dagli esseri umani.", GetGlobalFlag(GLinemodeSp));
+	if (GetGlobalFlag(GADVMode)) { ClearMessage(); } else { OutputLineAll(NULL, "\n", Line_ContinueAfterTyping); }
+
+	if (GetGlobalFlag(GADVMode)) { OutputLineAll("", NULL, Line_ContinueAfterTyping); }
+	OutputLine(NULL, "　そこにはエイリアンも悪魔もモンスターもいません。",
+		   NULL, " Non ci sono alieni, demoni o mostri.", GetGlobalFlag(GLinemodeSp));
+	if (GetGlobalFlag(GADVMode)) { ClearMessage(); } else { OutputLineAll(NULL, "\n", Line_ContinueAfterTyping); }
+
+	if (GetGlobalFlag(GADVMode) == 0) { OutputLineAll(NULL, "\n", Line_ContinueAfterTyping); }
+
+
+	if (GetGlobalFlag(GADVMode)) { OutputLineAll("", NULL, Line_ContinueAfterTyping); }
+	OutputLine(NULL, "　そこに敵を求めるというのはつまり、人同士が永遠に争いあうこと。",
+		   NULL, "Quindi, per trovare un nemico, dobbiamo combattere gli uni contro gli altri.", GetGlobalFlag(GLinemodeSp));
+	if (GetGlobalFlag(GADVMode)) { ClearMessage(); } else { OutputLineAll(NULL, "\n", Line_ContinueAfterTyping); }
+
+	if (GetGlobalFlag(GADVMode)) { OutputLineAll("", NULL, Line_ContinueAfterTyping); }
+	OutputLine(NULL, "　そして仲直りをするにも、また新しい敵が必要になるという、永遠の争いの連鎖です。",
+		   NULL, "Per fare pace abbiamo bisogno di una nuova minaccia, così puntiamo il dito contro qualcun altro.", GetGlobalFlag(GLinemodeSp));
+	if (GetGlobalFlag(GADVMode)) { ClearMessage(); } else { OutputLineAll(NULL, "\n", Line_ContinueAfterTyping); }
+
+	if (GetGlobalFlag(GADVMode) == 0) { OutputLineAll(NULL, "\n", Line_ContinueAfterTyping); }
+
+
+	if (GetGlobalFlag(GADVMode)) { OutputLineAll("", NULL, Line_ContinueAfterTyping); }
+	OutputLine(NULL, "　それこそが人の世の鬼だと、この度の『ひぐらし』の中では断じさせていただきました。",
+		   NULL, "In questo capitolo di Higurashi, ho affermato che è questo il vero demone del mondo umano.", Line_Normal);
+	ClearMessage();
+
+	if (GetGlobalFlag(GADVMode)) { OutputLineAll("", NULL, Line_ContinueAfterTyping); }
+	OutputLine(NULL, "　そこまで世界観を説明した上で「祭囃し編」を見ると、",
+		   NULL, "Basandoci su queste spiegazioni e sulla visione del mondo che ho descritto,", Line_WaitForInput);
+	OutputLine(NULL, "……鷹野という存在を叩きのめすのが果たして理想的な解なのか、少々の疑問が生じるのではないでしょうか。",
+		   NULL, " non viene da dubitare se il finale in cui Takano viene sconfitta sia davvero quello ideale?", Line_Normal);
+	ClearMessage();
+
+	if (GetGlobalFlag(GADVMode)) { OutputLineAll("", NULL, Line_ContinueAfterTyping); }
+	OutputLine(NULL, "　…そう。",
+		   NULL, "Esatto.", Line_WaitForInput);
+	OutputLine(NULL, "これでは「祟殺し編」の愚を再び冒したのと大差ないのです。",
+		   NULL, " Non è poi tanto diverso dalla follia che ha permeato Tatarigoroshi.", GetGlobalFlag(GLinemodeSp));
+	if (GetGlobalFlag(GADVMode)) { ClearMessage(); } else { OutputLineAll(NULL, "\n", Line_ContinueAfterTyping); }
+
+	if (GetGlobalFlag(GADVMode) == 0) { OutputLineAll(NULL, "\n", Line_ContinueAfterTyping); }
+
+
+	if (GetGlobalFlag(GADVMode)) { OutputLineAll("", NULL, Line_ContinueAfterTyping); }
+	OutputLine(NULL, "（その論法から行くと、沙都子救出を巡る問題は、",
+		   NULL, "(Seguendo questa logica, allora Minagoroshi non è nemmeno il miglior finale per la situazione di Satoko.", Line_WaitForInput);
+
+	OutputLine(NULL, "「皆殺し編」すらも実は最高の解ではない、という結論に行き着くのが、ご理解できますでしょうか……？）",
+		   NULL, " Ti torna...?)", Line_Normal);
+	ClearMessage();
+
+
+	if (GetGlobalFlag(GADVMode)) { OutputLineAll("", NULL, Line_ContinueAfterTyping); }
+	OutputLine(NULL, "　彼らは、どうやったら鷹野と仲良くなれるのでしょう。",
+		   NULL, "Com'è possibile riaccettare Takano?", Line_Normal);
+	ClearMessage();
+
+
+	if (GetGlobalFlag(GADVMode)) { OutputLineAll("", NULL, Line_ContinueAfterTyping); }
+	OutputLine(NULL, "　まさか、「東京」を新しい敵に据え、鷹野と共同戦線を張って仲直り…とは言いませんよね？",
+		   NULL, "Non starai mica pensando di trasformare Tokyo nel nuovo nemico contro cui i membri del club dovranno confrontarsi, vero?", Line_Normal);
+	ClearMessage();
+
+
+	if (GetGlobalFlag(GADVMode)) { OutputLineAll("", NULL, Line_ContinueAfterTyping); }
+	OutputLine(NULL, "　この話を延々と続けていくと、最後には宗教的な次元にまで達してしまうような気がしますので、これ以上の議論は控えましょう。",
+		   NULL, "Di questo passo, sento che potrei finire per passare sul piano religioso, perciò preferisco fermarmi qui.", Line_Normal);
+	ClearMessage();
+
+
+	if (GetGlobalFlag(GADVMode)) { OutputLineAll("", NULL, Line_ContinueAfterTyping); }
+	OutputLine(NULL, "　『ひぐらしのなく頃に』の世界観に沿った、最高の結末とは果たしてどのようなものなのか。",
+		   NULL, "Qual è il finale che si addice meglio alla visione del mondo di Higurashi - When They Cry?", GetGlobalFlag(GLinemodeSp));
+	if (GetGlobalFlag(GADVMode)) { ClearMessage(); } else { OutputLineAll(NULL, "\n", Line_ContinueAfterTyping); }
+
+
+	if (GetGlobalFlag(GADVMode)) { OutputLineAll("", NULL, Line_ContinueAfterTyping); }
+	OutputLine(NULL, "　……それはひょっとすると、「祭囃し編」よりも、もっともっと素晴らしい物語なのかも…。",
+		   NULL, "Forse uno ancora diverso da Matsuribayashi...", Line_Normal);
+	ClearMessage();
+
+
+	if (GetGlobalFlag(GADVMode)) { OutputLineAll("", NULL, Line_ContinueAfterTyping); }
+	OutputLine(NULL, "　この問題はきっと、『ひぐらしのなく頃に』の卒業問題になるかと思います。",
+		   NULL, "Questa è la domanda da porsi per poter dire di aver compreso appieno Higurashi - When They Cry.", GetGlobalFlag(GLinemodeSp));
+	if (GetGlobalFlag(GADVMode)) { ClearMessage(); } else { OutputLineAll(NULL, "\n", Line_ContinueAfterTyping); }
+
+	if (GetGlobalFlag(GADVMode) == 0) { OutputLineAll(NULL, "\n", Line_ContinueAfterTyping); }
+
+
+
+	if (GetGlobalFlag(GADVMode)) { OutputLineAll("", NULL, Line_ContinueAfterTyping); }
+	OutputLine(NULL, "　この最後の出題を『ひぐらしのなく頃に』という物語に、４年半もの長きにわたりお付き合いくださりました皆さんへの、最後の置き土産ということにさせていただければ幸いです。",
+		   NULL, "Diciamo che è il mio regalo di addio per tutti coloro che hanno seguito me e gli eventi di Higurashi - When They Cry in questi quattro anni e mezzo.", Line_Normal);
+	ClearMessage();
+
+
+	if (GetGlobalFlag(GADVMode)) { OutputLineAll("", NULL, Line_ContinueAfterTyping); }
+	OutputLine(NULL, "　何が語りたいやらもわかりにくい、このような難解な作品に今日までお付き合いくださり、本当にありがとうございました。",
+		   NULL, "Grazie di cuore per avermi accompagnato nella lettura di questa storia, così complessa e articolata.", Line_Normal);
+	ClearMessage();
+
+
+	if (GetGlobalFlag(GADVMode)) { OutputLineAll("", NULL, Line_ContinueAfterTyping); }
+	OutputLine(NULL, "　結局、この物語は何だったのか。",
+		   NULL, "Alla fine, a cos'è servito?", GetGlobalFlag(GLinemodeSp));
+	if (GetGlobalFlag(GADVMode)) { ClearMessage(); } else { OutputLineAll(NULL, "\n", Line_ContinueAfterTyping); }
+
+	if (GetGlobalFlag(GADVMode) == 0) { OutputLineAll(NULL, "\n", Line_ContinueAfterTyping); }
+
+
+	if (GetGlobalFlag(GADVMode)) { OutputLineAll("", NULL, Line_ContinueAfterTyping); }
+	OutputLine(NULL, "　それを全て統括したなら、やはり最後には「エンターテイメント」だったとご評価いただけるのがもっとも適当ではないかと思います。",
+		   NULL, "Se dovessi rispondere a questa domanda con una sola parola, allora direi che il suo valore risiede nell'\"intrattenimento.\"", GetGlobalFlag(GLinemodeSp));
+	if (GetGlobalFlag(GADVMode)) { ClearMessage(); } else { OutputLineAll(NULL, "\n", Line_ContinueAfterTyping); }
+
+	if (GetGlobalFlag(GADVMode) == 0) { OutputLineAll(NULL, "\n", Line_ContinueAfterTyping); }
+
+
+	if (GetGlobalFlag(GADVMode)) { OutputLineAll("", NULL, Line_ContinueAfterTyping); }
+	OutputLine(NULL, "　煙に巻くような謎掛けに答えられたかどうかが重要なんじゃない。",
+		   NULL, "Non importa se non hai risolto gli indovinelli.", GetGlobalFlag(GLinemodeSp));
+	if (GetGlobalFlag(GADVMode)) { ClearMessage(); } else { OutputLineAll(NULL, "\n", Line_ContinueAfterTyping); }
+
+	if (GetGlobalFlag(GADVMode)) { OutputLineAll("", NULL, Line_ContinueAfterTyping); }
+	OutputLine(NULL, "　結局のところ、楽しんだ方が一番の勝者なのですから。",
+		   NULL, "La tua vittoria risiede nel divertimento.", Line_Normal);
+	ClearMessage();
+
+	if (GetGlobalFlag(GADVMode)) { OutputLineAll("", NULL, Line_ContinueAfterTyping); }
+	OutputLine(NULL, "　竜騎士07としての挑戦意欲はまだまだ衰えません。",
+		   NULL, "Ryukishi07 continuerà a sfidarti.", GetGlobalFlag(GLinemodeSp));
+	if (GetGlobalFlag(GADVMode)) { ClearMessage(); } else { OutputLineAll(NULL, "\n", Line_ContinueAfterTyping); }
+
+	if (GetGlobalFlag(GADVMode) == 0) { OutputLineAll(NULL, "\n", Line_ContinueAfterTyping); }
+
+
+	if (GetGlobalFlag(GADVMode)) { OutputLineAll("", NULL, Line_ContinueAfterTyping); }
+	OutputLine(NULL, "『ひぐらしのなく頃に』は、これで物語の幕を閉じますが、また異なる世界にて皆さんと再会できることを願ってやみません。",
+		   NULL, "Higurashi - When They Cry termina qui, ma spero vivamente di vederti di nuovo in un mondo diverso.", GetGlobalFlag(GLinemodeSp));
+	if (GetGlobalFlag(GADVMode)) { ClearMessage(); } else { OutputLineAll(NULL, "\n", Line_ContinueAfterTyping); }
+
+	if (GetGlobalFlag(GADVMode) == 0) { OutputLineAll(NULL, "\n", Line_ContinueAfterTyping); }
+
+
+	if (GetGlobalFlag(GADVMode)) { OutputLineAll("", NULL, Line_ContinueAfterTyping); }
+	OutputLine(NULL, "　今度はどんな作品を描こうかな…。",
+		   NULL, "A che genere di opera potrei dedicarmi la prossima volta?", Line_Normal);
+	ClearMessage();
+
+	if (GetGlobalFlag(GADVMode)) { OutputLineAll("", NULL, Line_ContinueAfterTyping); }
+	OutputLine(NULL, "　それを無限の可能性の中から、ひぐらしの声を聞きながらのんびり思いを馳せるのも、今は非常に乙なことではないかと考えます。",
+		   NULL, "Credo proprio che andrò a sceglierla tra un numero infinito di possibilità, mentre ascolto il frinire delle higurashi.", GetGlobalFlag(GLinemodeSp));
+	if (GetGlobalFlag(GADVMode)) { ClearMessage(); } else { OutputLineAll(NULL, "\n", Line_ContinueAfterTyping); }
+
+	if (GetGlobalFlag(GADVMode)) { OutputLineAll("", NULL, Line_ContinueAfterTyping); }
+	OutputLine(NULL, "　今日まで、この作品に献身的な協力をしてくださった全ての方々に深く感謝いたします。",
+		   NULL, "Voglio esprimere la mia più profonda gratitudine per tutti coloro che mi hanno supportato finora.", GetGlobalFlag(GLinemodeSp));
+	if (GetGlobalFlag(GADVMode)) { ClearMessage(); } else { OutputLineAll(NULL, "\n", Line_ContinueAfterTyping); }
+
+	if (GetGlobalFlag(GADVMode) == 0) { OutputLineAll(NULL, "\n", Line_ContinueAfterTyping); }
+
+
+	if (GetGlobalFlag(GADVMode)) { OutputLineAll("", NULL, Line_ContinueAfterTyping); }
+	OutputLine(NULL, "　本当にありがとうございました。",
+		   NULL, "Grazie.", GetGlobalFlag(GLinemodeSp));
+	if (GetGlobalFlag(GADVMode)) { ClearMessage(); } else { OutputLineAll(NULL, "\n", Line_ContinueAfterTyping); }
+
+	if (GetGlobalFlag(GADVMode)) { OutputLineAll("", NULL, Line_ContinueAfterTyping); }
+	OutputLine(NULL, "　皆さんとまた再会できることを、心より祈っております。",
+		   NULL, "Spero con tutto il cuore di rivedervi presto.", GetGlobalFlag(GLinemodeSp));
+	if (GetGlobalFlag(GADVMode)) { ClearMessage(); } else { OutputLineAll(NULL, "\n", Line_ContinueAfterTyping); }
+
+	if (GetGlobalFlag(GADVMode) == 0) { SetDrawingPointOfMessage( 0, 10 ); }
+
+	if (GetGlobalFlag(GADVMode)) { OutputLineAll("", NULL, Line_ContinueAfterTyping); }
+	OutputLine(NULL, "竜騎士07",
+		   NULL, "                                         Ryukishi07", Line_Normal);
+	ClearMessage();
+	CallScript( "&eye" );
+	FadeOutBGM( 0, 1000, TRUE );
+	GetAchievement("HIGURASHI_STORY_EP08_OMAKE");
+
+}

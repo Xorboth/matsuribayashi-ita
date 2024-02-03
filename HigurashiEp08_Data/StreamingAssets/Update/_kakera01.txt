@@ -1,0 +1,690 @@
+void main()
+{
+	DrawScene( "black", 400 );
+
+	PlayBGM( 0, "higurashi", 120, 0 );
+
+	DrawScene( "background/sinryou_sinsatu4", 1000 );
+
+	ClearMessage();
+	if (GetGlobalFlag(GADVMode)) { OutputLineAll("", NULL, Line_ContinueAfterTyping); }
+	OutputLine(NULL, "　沙都子ちゃんの解剖スケジュールがちゃくちゃくと進んでいく。",
+		   NULL, "I piani per la vivisezione di Satoko-chan procedono a buon ritmo.", Line_Normal);
+	ClearMessage();
+
+	if (GetGlobalFlag(GADVMode)) { OutputLineAll("", NULL, Line_ContinueAfterTyping); }
+	OutputLine(NULL, "　…悟史くんを悲しませたくないという気持ち。",
+		   NULL, "Non voglio vedere Satoshi-kun triste.", GetGlobalFlag(GLinemodeSp));
+	if (GetGlobalFlag(GADVMode)) { ClearMessage(); } else { OutputLineAll(NULL, "\n", Line_ContinueAfterTyping); }
+
+	if (GetGlobalFlag(GADVMode)) { OutputLineAll("", NULL, Line_ContinueAfterTyping); }
+	OutputLine(NULL, "　沙都子ちゃんの辛い境遇への同情。",
+		   NULL, "Mi addolora pensare a Satoko-chan e alla sua situazione.", GetGlobalFlag(GLinemodeSp));
+	if (GetGlobalFlag(GADVMode)) { ClearMessage(); } else { OutputLineAll(NULL, "\n", Line_ContinueAfterTyping); }
+
+	if (GetGlobalFlag(GADVMode) == 0) { OutputLineAll(NULL, "\n", Line_ContinueAfterTyping); }
+
+
+	if (GetGlobalFlag(GADVMode)) { OutputLineAll("", NULL, Line_ContinueAfterTyping); }
+	OutputLine(NULL, "　……そして、この研究のために非情なる責任を全うしなくてはならないという気持ちが、私の中で何度もせめぎあっていた。",
+		   NULL, "Sono costantemente combattuto tra il bene della ricerca e i sacrifici necessari per portarla a compimento.", Line_Normal);
+	ClearMessage();
+
+	ModSetLayerFilter(2, 256, "none");
+	ModDrawCharacter(2, 5, "sprite/ri1_def_a1_", "0", 160, 0, 0, FALSE, 0, 0, 0, 0, 0, 0, 0, 10, 0, FALSE );
+	DrawScene( "background/sinryou_sinsatu1", 400 );
+
+	if (GetGlobalFlag(GADVMode)) { OutputLine("<color=#6972c1>梨花</color>", NULL, "<color=#6972c1>Rika</color>", NULL, Line_ContinueAfterTyping); }
+	ModPlayVoiceLS(4, 5, "ps3/s20/05/vtk1_rika1001", 128, TRUE);
+	OutputLine(NULL, "「……入江。」",
+		   NULL, "\"...... Irie?\"", GetGlobalFlag(GLinemodeSp));
+	if (GetGlobalFlag(GADVMode)) { ClearMessage(); } else { OutputLineAll(NULL, "\n", Line_ContinueAfterTyping); }
+
+	if (GetGlobalFlag(GADVMode)) { OutputLine("<color=#c89a80>入江</color>", NULL, "<color=#c89a80>Irie</color>", NULL, Line_ContinueAfterTyping); }
+	ModPlayVoiceLS(4, 10, "ps3/s20/10/vtk1_irie1006", 128, TRUE);
+	OutputLine(NULL, "「え？",
+		   NULL, "\"Eh?", Line_WaitForInput);
+	ModPlayVoiceLS(4, 10, "ps3/s20/10/vtk1_irie1007", 128, TRUE);
+	OutputLine(NULL, "　あぁ、すみません、うっかりしていました。",
+		   NULL, " Ah, scusa, ero distratto.", Line_WaitForInput);
+	ModPlayVoiceLS(4, 10, "ps3/s20/10/vtk1_irie1008", 128, TRUE);
+	OutputLine(NULL, "どうなさいましたか梨花ちゃん。」",
+		   NULL, " Che cosa c'è, Rika-san?\"", Line_Normal);
+	ClearMessage();
+
+	DisableWindow();
+	ModDrawCharacter(2, 5, "sprite/ri1_komaru_a1_", "0", 160, 0, 0, FALSE, 0, 0, 0, 0, 0, 0, 0, 10, 200, TRUE );
+
+	if (GetGlobalFlag(GADVMode)) { OutputLine("<color=#6972c1>梨花</color>", NULL, "<color=#6972c1>Rika</color>", NULL, Line_ContinueAfterTyping); }
+	ModPlayVoiceLS(4, 5, "ps3/s20/05/vtk1_rika1002", 128, TRUE);
+	OutputLine(NULL, "「……ボクの友達がずっと長く入院していますが、その子は雛見沢症候群ではないのですか？」",
+		   NULL, "\"...... uno dei miei amici è ricoverato da molto tempo. Pensi che abbia la Sindrome di Hinamizawa?\"", GetGlobalFlag(GLinemodeSp));
+	if (GetGlobalFlag(GADVMode)) { ClearMessage(); } else { OutputLineAll(NULL, "\n", Line_ContinueAfterTyping); }
+
+	if (GetGlobalFlag(GADVMode)) { OutputLine("<color=#c89a80>入江</color>", NULL, "<color=#c89a80>Irie</color>", NULL, Line_ContinueAfterTyping); }
+	ModPlayVoiceLS(4, 10, "ps3/s20/10/vtk1_irie1009", 128, TRUE);
+	OutputLine(NULL, "「それを誰に聞きましたか？」",
+		   NULL, "\"Chi te l'ha detto?\"", Line_Normal);
+	ClearMessage();
+
+	if (GetGlobalFlag(GADVMode)) { OutputLine("<color=#6972c1>梨花</color>", NULL, "<color=#6972c1>Rika</color>", NULL, Line_ContinueAfterTyping); }
+	ModPlayVoiceLS(4, 5, "ps3/s20/05/vtk1_rika1003", 128, TRUE);
+	OutputLine(NULL, "「……ボクがそう思っただけです。",
+		   NULL, "\"...... nessuno, è solo un'idea.", Line_WaitForInput);
+	ModPlayVoiceLS(4, 5, "ps3/s20/05/vtk1_rika1004", 128, TRUE);
+	OutputLine(NULL, "どうなのですか、入江。",
+		   NULL, " Che cosa ne pensi, Irie?", Line_WaitForInput);
+	ModPlayVoiceLS(4, 5, "ps3/s20/05/vtk1_rika1005", 128, TRUE);
+	OutputLine(NULL, "沙都子は雛見沢症候群ではないのですか。」",
+		   NULL, " Satoko ha la Sindrome di Hinamizawa?\"", GetGlobalFlag(GLinemodeSp));
+	if (GetGlobalFlag(GADVMode)) { ClearMessage(); } else { OutputLineAll(NULL, "\n", Line_ContinueAfterTyping); }
+
+	if (GetGlobalFlag(GADVMode) == 0) { OutputLineAll(NULL, "\n", Line_ContinueAfterTyping); }
+
+
+	if (GetGlobalFlag(GADVMode)) { OutputLineAll("", NULL, Line_ContinueAfterTyping); }
+	OutputLine(NULL, "　梨花ちゃんはすでに私たち側の人間だ。",
+		   NULL, "Rika-san è dalla nostra parte.", GetGlobalFlag(GLinemodeSp));
+	if (GetGlobalFlag(GADVMode)) { ClearMessage(); } else { OutputLineAll(NULL, "\n", Line_ContinueAfterTyping); }
+
+	if (GetGlobalFlag(GADVMode)) { OutputLineAll("", NULL, Line_ContinueAfterTyping); }
+	OutputLine(NULL, "　何も隠すことなどない。",
+		   NULL, "Non ho motivo di nasconderglielo.", GetGlobalFlag(GLinemodeSp));
+	if (GetGlobalFlag(GADVMode)) { ClearMessage(); } else { OutputLineAll(NULL, "\n", Line_ContinueAfterTyping); }
+
+	if (GetGlobalFlag(GADVMode) == 0) { OutputLineAll(NULL, "\n", Line_ContinueAfterTyping); }
+
+
+	if (GetGlobalFlag(GADVMode)) { OutputLineAll("", NULL, Line_ContinueAfterTyping); }
+	OutputLine(NULL, "　むしろ、隠し事をしてはいけないというのが、私なりの誠意の不文律だと思っていた。",
+		   NULL, "Anzi, non ho motivo di tacerle niente di ciò che stiamo facendo.", Line_Normal);
+	ClearMessage();
+
+	ModFadeOutBGM( 1, 300, FALSE, 0 );
+	ModPlayBGM( 0, "Gray_2", 120, 0, 0 );
+	ModFadeOutBGM( 0, 300, FALSE, 1 );
+	ModPlayBGM( 1, "Gray_2", 120, 0, 1 );
+
+	if (GetGlobalFlag(GADVMode)) { OutputLine("<color=#c89a80>入江</color>", NULL, "<color=#c89a80>Irie</color>", NULL, Line_ContinueAfterTyping); }
+	ModPlayVoiceLS(4, 10, "ps3/s20/10/vtk1_irie1010", 128, TRUE);
+	OutputLine(NULL, "「…………はい。",
+		   NULL, "\"..... sì.", Line_WaitForInput);
+	ModPlayVoiceLS(4, 10, "ps3/s20/10/vtk1_irie1011", 128, TRUE);
+	OutputLine(NULL, "両親との不仲と、その両親の突然の死。",
+		   NULL, " Il suo passato famigliare e la morte improvvisa dei suoi genitori...", Line_WaitForInput);
+	ModPlayVoiceLS(4, 10, "ps3/s20/10/vtk1_irie1012", 128, TRUE);
+	OutputLine(NULL, "…彼女の心には、それは一度に受け入れるにはあまりに大き過ぎる出来事でした。",
+		   NULL, " sono stati troppo da sopportare per il suo cuore...", Line_WaitForInput);
+	ModPlayVoiceLS(4, 10, "ps3/s20/10/vtk1_irie1013", 128, TRUE);
+	OutputLine(NULL, "……それが引き金になったのかもしれません。」",
+		   NULL, " dev'essere stata quella tragedia a farle scaturire i sintomi.\"", Line_Normal);
+	ClearMessage();
+
+	DrawSceneWithMask( "background/sinryou_sinsatu1", "maskright", 1, 0, 200 );
+	ModSetLayerFilter(0, 256, "none");
+	ModDrawCharacterWithFiltering(0, 5, "sprite/ri1_majime_a1_", "2", "maskright", 1, 0, 0, FALSE, 0, 0, 0, 0, 0, 9, 200, TRUE );
+
+	if (GetGlobalFlag(GADVMode)) { OutputLine("<color=#6972c1>梨花</color>", NULL, "<color=#6972c1>Rika</color>", NULL, Line_ContinueAfterTyping); }
+	ModPlayVoiceLS(4, 5, "ps3/s20/05/vtk1_rika1006", 128, TRUE);
+	OutputLine(NULL, "「……検査の結果は？」",
+		   NULL, "\"Che cosa dicono i risultati?\"", Line_Normal);
+	ClearMessage();
+
+	if (GetGlobalFlag(GADVMode)) { OutputLine("<color=#c89a80>入江</color>", NULL, "<color=#c89a80>Irie</color>", NULL, Line_ContinueAfterTyping); }
+	ModPlayVoiceLS(4, 10, "ps3/s20/10/vtk1_irie1014", 128, TRUE);
+	OutputLine(NULL, "「Ｌ５です。",
+		   NULL, "\"L5.", Line_WaitForInput);
+	ModPlayVoiceLS(4, 10, "ps3/s20/10/vtk1_irie1015", 128, TRUE);
+	OutputLine(NULL, "上辺は非常に安定して見えますが、情緒は非常に不安定です。",
+		   NULL, " All'apparenza sembra stare bene, ma a livello emotivo mostra enormi instabilità.", Line_WaitForInput);
+	ModPlayVoiceLS(4, 10, "ps3/s20/10/vtk1_irie1016", 128, TRUE);
+	OutputLine(NULL, "先日から悟史くんの見舞いも謝絶にしました。」",
+		   NULL, " È da diversi giorni che si rifiuta persino di vedere Satoshi-kun.\" ", GetGlobalFlag(GLinemodeSp));
+	if (GetGlobalFlag(GADVMode)) { ClearMessage(); } else { OutputLineAll(NULL, "\n", Line_ContinueAfterTyping); }
+
+	DisableWindow();
+	ModDrawCharacter(0, 5, "sprite/ri1_komaru_a1_", "0", 0, 0, 0, FALSE, 0, 0, 0, 0, 0, 0, 0, 9, 200, TRUE );
+
+	if (GetGlobalFlag(GADVMode)) { OutputLine("<color=#6972c1>梨花</color>", NULL, "<color=#6972c1>Rika</color>", NULL, Line_ContinueAfterTyping); }
+	ModPlayVoiceLS(4, 5, "ps3/s20/05/vtk1_rika1007", 128, TRUE);
+	OutputLine(NULL, "「……悟史に聞きましたです。",
+		   NULL, "\"...... Satoshi me l'aveva detto.", Line_WaitForInput);
+	ModPlayVoiceLS(4, 5, "ps3/s20/05/vtk1_rika1008", 128, TRUE);
+	OutputLine(NULL, "沙都子の心の傷がなかなか癒えないと気にしていましたです。",
+		   NULL, " Teme che ci vorrà molto tempo prima che Satoko possa riprendersi...", Line_WaitForInput);
+	ModPlayVoiceLS(4, 5, "ps3/s20/05/vtk1_rika1009", 128, TRUE);
+	OutputLine(NULL, "……入江。",
+		   NULL, " Irie,", Line_WaitForInput);
+	ModPlayVoiceLS(4, 5, "ps3/s20/05/vtk1_rika1010", 128, TRUE);
+	OutputLine(NULL, "沙都子はどうなるのですか。」",
+		   NULL, " che cosa ne sarà di Satoko?\"", Line_Normal);
+	ClearMessage();
+
+	if (GetGlobalFlag(GADVMode)) { OutputLine("<color=#c89a80>入江</color>", NULL, "<color=#c89a80>Irie</color>", NULL, Line_ContinueAfterTyping); }
+	ModPlayVoiceLS(4, 10, "ps3/s20/10/vtk1_irie1017", 128, TRUE);
+	OutputLine(NULL, "「………………………………。」",
+		   NULL, "\"..................\"", Line_Normal);
+	ClearMessage();
+
+	if (GetGlobalFlag(GADVMode)) { OutputLineAll("", NULL, Line_ContinueAfterTyping); }
+	OutputLine(NULL, "　沙都子ちゃんは、梨花ちゃんにとって親友だ。",
+		   NULL, "Satoko-chan è la migliore amica di Rika-san.", GetGlobalFlag(GLinemodeSp));
+	if (GetGlobalFlag(GADVMode)) { ClearMessage(); } else { OutputLineAll(NULL, "\n", Line_ContinueAfterTyping); }
+
+	if (GetGlobalFlag(GADVMode)) { OutputLineAll("", NULL, Line_ContinueAfterTyping); }
+	OutputLine(NULL, "　その沙都子ちゃんを解剖するためのスケジュール作りがすでに始められているなど、口にできるわけもない…。",
+		   NULL, "Con che coraggio posso confessarle che abbiamo intenzione di vivisezionarla per la nostra ricerca...?", GetGlobalFlag(GLinemodeSp));
+	if (GetGlobalFlag(GADVMode)) { ClearMessage(); } else { OutputLineAll(NULL, "\n", Line_ContinueAfterTyping); }
+
+	if (GetGlobalFlag(GADVMode) == 0) { OutputLineAll(NULL, "\n", Line_ContinueAfterTyping); }
+
+
+	if (GetGlobalFlag(GADVMode)) { OutputLineAll("", NULL, Line_ContinueAfterTyping); }
+	OutputLine(NULL, "　だが、結局、無言で誤魔化したって、沙都子ちゃんを巡る状況は極めて悪いことの肯定にしかならない。",
+		   NULL, "Se anche rimanessi in silenzio, questa bambina sa benissimo quanto sia grave la situazione di Satoko-chan.", Line_Normal);
+	ClearMessage();
+
+	DisableWindow();
+	ModDrawCharacter(0, 5, "sprite/ri1_def_a1_", "0", 0, 0, 0, FALSE, 0, 0, 0, 0, 0, 0, 0, 9, 200, TRUE );
+
+	if (GetGlobalFlag(GADVMode)) { OutputLine("<color=#6972c1>梨花</color>", NULL, "<color=#6972c1>Rika</color>", NULL, Line_ContinueAfterTyping); }
+	ModPlayVoiceLS(4, 5, "ps3/s20/05/vtk1_rika1011", 128, TRUE);
+	OutputLine(NULL, "「……入江は、ボクの体を調べて、たくさんのことがわかったのではないですか？」",
+		   NULL, "\"...... non avete scoperto tante cose diverse quando mi avete esaminata?\"", GetGlobalFlag(GLinemodeSp));
+	if (GetGlobalFlag(GADVMode)) { ClearMessage(); } else { OutputLineAll(NULL, "\n", Line_ContinueAfterTyping); }
+
+	if (GetGlobalFlag(GADVMode)) { OutputLine("<color=#c89a80>入江</color>", NULL, "<color=#c89a80>Irie</color>", NULL, Line_ContinueAfterTyping); }
+	ModPlayVoiceLS(4, 10, "ps3/s20/10/vtk1_irie1018", 128, TRUE);
+	OutputLine(NULL, "「えぇ、それはもちろんです。",
+		   NULL, "\"Certamente...", Line_WaitForInput);
+	ModPlayVoiceLS(4, 10, "ps3/s20/10/vtk1_irie1019", 128, TRUE);
+	OutputLine(NULL, "………症状を抑える効果が期待される試薬も現在、色々と試しているところです。」",
+		   NULL, " stiamo anche testando una medicina che potrebbe tenere a bada i sintomi.\"", GetGlobalFlag(GLinemodeSp));
+	if (GetGlobalFlag(GADVMode)) { ClearMessage(); } else { OutputLineAll(NULL, "\n", Line_ContinueAfterTyping); }
+
+	if (GetGlobalFlag(GADVMode)) { OutputLine("<color=#6972c1>梨花</color>", NULL, "<color=#6972c1>Rika</color>", NULL, Line_ContinueAfterTyping); }
+	ModPlayVoiceLS(4, 5, "ps3/s20/05/vtk1_rika1012", 128, TRUE);
+	OutputLine(NULL, "「……それを沙都子に与えることはできませんのですか？」",
+		   NULL, "\"...... e non potete darla anche a Satoko?\"", Line_Normal);
+	ClearMessage();
+
+	if (GetGlobalFlag(GADVMode)) { OutputLine("<color=#c89a80>入江</color>", NULL, "<color=#c89a80>Irie</color>", NULL, Line_ContinueAfterTyping); }
+	ModPlayVoiceLS(4, 10, "ps3/s20/10/vtk1_irie1020", 128, TRUE);
+	OutputLine(NULL, "「一度は考えました。",
+		   NULL, "\"Ci abbiamo pensato...", Line_WaitForInput);
+	ModPlayVoiceLS(4, 10, "ps3/s20/10/vtk1_irie1021", 128, TRUE);
+	OutputLine(NULL, "…しかし、かなり危険です。",
+		   NULL, " ma è troppo pericoloso.", Line_WaitForInput);
+	ModPlayVoiceLS(4, 10, "ps3/s20/10/vtk1_irie1022", 128, TRUE);
+	OutputLine(NULL, "体力や精神力に余裕がある検体に試し、少しずつデータを集めていこうという段階です。",
+		   NULL, " Siamo ancora in fase sperimentale e c'è bisogno di raccogliere molti dati.", Line_WaitForInput);
+	ModPlayVoiceLS(4, 10, "ps3/s20/10/vtk1_irie1023", 128, TRUE);
+	OutputLine(NULL, "……沙都子ちゃんのような、もう後がない人間に試せるようなシロモノではありません。」",
+		   NULL, " Non possiamo somministrarla a una paziente con un caso delicato come Satoko-chan.\"", Line_Normal);
+	ClearMessage();
+
+	DisableWindow();
+	ModDrawCharacter(0, 5, "sprite/ri1_komaru_a1_", "0", 0, 0, 0, FALSE, 0, 0, 0, 0, 0, 0, 0, 9, 200, TRUE );
+
+	if (GetGlobalFlag(GADVMode)) { OutputLine("<color=#6972c1>梨花</color>", NULL, "<color=#6972c1>Rika</color>", NULL, Line_ContinueAfterTyping); }
+	ModPlayVoiceLS(4, 5, "ps3/s20/05/vtk1_rika1013", 128, TRUE);
+	OutputLine(NULL, "「……では入江。",
+		   NULL, "\"...... allora,", Line_WaitForInput);
+	ModPlayVoiceLS(4, 5, "ps3/s20/05/vtk1_rika1014", 128, TRUE);
+	OutputLine(NULL, "その薬を試さないなら、沙都子はどうなってしまうのですか。」",
+		   NULL, " che cosa le succederà se non proverete a curarla con quella medicina, Irie?\"", GetGlobalFlag(GLinemodeSp));
+	if (GetGlobalFlag(GADVMode)) { ClearMessage(); } else { OutputLineAll(NULL, "\n", Line_ContinueAfterTyping); }
+
+	if (GetGlobalFlag(GADVMode)) { OutputLineAll("", NULL, Line_ContinueAfterTyping); }
+	OutputLine(NULL, "　まるで、沙都子ちゃんの末路は解剖だと知っているかの口調だった。",
+		   NULL, "Domanda, come se fosse consapevole delle nostre intenzioni.", GetGlobalFlag(GLinemodeSp));
+	if (GetGlobalFlag(GADVMode)) { ClearMessage(); } else { OutputLineAll(NULL, "\n", Line_ContinueAfterTyping); }
+
+	if (GetGlobalFlag(GADVMode) == 0) { OutputLineAll(NULL, "\n", Line_ContinueAfterTyping); }
+
+
+	if (GetGlobalFlag(GADVMode)) { OutputLineAll("", NULL, Line_ContinueAfterTyping); }
+	OutputLine(NULL, "　……いや、知っているのかもしれない。",
+		   NULL, "... no, ormai l'avrà capito.", GetGlobalFlag(GLinemodeSp));
+	if (GetGlobalFlag(GADVMode)) { ClearMessage(); } else { OutputLineAll(NULL, "\n", Line_ContinueAfterTyping); }
+
+	if (GetGlobalFlag(GADVMode)) { OutputLineAll("", NULL, Line_ContinueAfterTyping); }
+	OutputLine(NULL, "　私は彼女に研究のほとんどを明かしている。",
+		   NULL, "Le ho parlato in più occasioni di cosa stiamo facendo.", GetGlobalFlag(GLinemodeSp));
+	if (GetGlobalFlag(GADVMode)) { ClearMessage(); } else { OutputLineAll(NULL, "\n", Line_ContinueAfterTyping); }
+
+	if (GetGlobalFlag(GADVMode)) { OutputLineAll("", NULL, Line_ContinueAfterTyping); }
+	OutputLine(NULL, "　……彼女が見掛けより大人なら、少し考えれば解剖のこともわかるだろうから。",
+		   NULL, "... è una bambina più matura dell'età che dimostra, perciò non mi sorprende che l'abbia scoperto.", Line_Normal);
+	ClearMessage();
+
+	DisableWindow();
+	ModDrawCharacter(0, 5, "sprite/ri1_majime_a1_", "2", 0, 0, 0, FALSE, 0, 0, 0, 0, 0, 0, 0, 9, 200, TRUE );
+
+	if (GetGlobalFlag(GADVMode)) { OutputLine("<color=#6972c1>梨花</color>", NULL, "<color=#6972c1>Rika</color>", NULL, Line_ContinueAfterTyping); }
+	ModPlayVoiceLS(4, 5, "ps3/s20/05/vtk1_rika1015", 128, TRUE);
+	OutputLine(NULL, "「……ボクは、沙都子が１％でも助かる可能性があるなら、それに賭けるべきだと思いますです。」",
+		   NULL, "\"...... se esiste anche l'1% di possibilità che Satoko guarisca, allora credo che dovremmo provare.\"", GetGlobalFlag(GLinemodeSp));
+	if (GetGlobalFlag(GADVMode)) { ClearMessage(); } else { OutputLineAll(NULL, "\n", Line_ContinueAfterTyping); }
+
+	if (GetGlobalFlag(GADVMode)) { OutputLine("<color=#c89a80>入江</color>", NULL, "<color=#c89a80>Irie</color>", NULL, Line_ContinueAfterTyping); }
+	ModPlayVoiceLS(4, 10, "ps3/s20/10/vtk1_irie1024", 128, TRUE);
+	OutputLine(NULL, "「非常に危険な賭けです。",
+		   NULL, "\"I rischi sono molto elevati.", Line_WaitForInput);
+	ModPlayVoiceLS(4, 10, "ps3/s20/10/vtk1_irie1025", 128, TRUE);
+	OutputLine(NULL, "…最悪の場合、彼女は即座に末期発症し錯乱するか、さもなければ人としての心を失い、一生を焦点の合わない目で壁を見て過ごす体になってしまうかもしれない。",
+		   NULL, "... nel peggiore dei casi, potrebbe mostrare sintomi terminali come allucinazioni croniche oppure perdere coscienza di sé, finendo per rimanere a fissare il vuoto per il resto dei suoi giorni.", GetGlobalFlag(GLinemodeSp));
+	if (GetGlobalFlag(GADVMode)) { OutputLine("<color=#c89a80>入江</color>", NULL, "<color=#c89a80>Irie</color>", NULL, Line_ContinueAfterTyping); }
+	ModPlayVoiceLS(4, 10, "ps3/s20/10/vtk1_irie1026", 128, TRUE);
+	OutputLine(NULL, "……どちらも、それはあまりに過酷な運命です。」",
+		   NULL, "... in entrambi i casi, sarebbe un destino troppo crudele.\"", Line_Normal);
+	ClearMessage();
+
+	DisableWindow();
+	ModDrawCharacter(0, 5, "sprite/ri1_fuman_a1_", "0", 0, 0, 0, FALSE, 0, 0, 0, 0, 0, 0, 0, 9, 200, TRUE );
+
+	if (GetGlobalFlag(GADVMode)) { OutputLine("<color=#6972c1>梨花</color>", NULL, "<color=#6972c1>Rika</color>", NULL, Line_ContinueAfterTyping); }
+	ModPlayVoiceLS(4, 5, "ps3/s20/05/vtk1_rika1016", 128, TRUE);
+	OutputLine(NULL, "「……全身麻酔で痛みを感じさせずに、眠ったままを殺す方がずっといいと言うの？」",
+		   NULL, "\"...... in altre parole, vuoi dire che preferiresti darle la morte nel sonno, senza farle provare alcun dolore?\"", GetGlobalFlag(GLinemodeSp));
+	if (GetGlobalFlag(GADVMode)) { ClearMessage(); } else { OutputLineAll(NULL, "\n", Line_ContinueAfterTyping); }
+
+	if (GetGlobalFlag(GADVMode)) { OutputLine("<color=#c89a80>入江</color>", NULL, "<color=#c89a80>Irie</color>", NULL, Line_ContinueAfterTyping); }
+	ModPlayVoiceLS(4, 10, "ps3/s20/10/vtk1_irie1027", 128, TRUE);
+	OutputLine(NULL, "「…………………………。」",
+		   NULL, "\"............\"", Line_Normal);
+	ClearMessage();
+
+	if (GetGlobalFlag(GADVMode)) { OutputLine("<color=#6972c1>梨花</color>", NULL, "<color=#6972c1>Rika</color>", NULL, Line_ContinueAfterTyping); }
+	ModPlayVoiceLS(4, 5, "ps3/s20/05/vtk1_rika1017", 128, TRUE);
+	OutputLine(NULL, "「……入江。",
+		   NULL, "\"...... Irie.", Line_WaitForInput);
+	ModPlayVoiceLS(4, 5, "ps3/s20/05/vtk1_rika1018", 128, TRUE);
+	OutputLine(NULL, "よく鷹野が言う通り、医学に１００％はない。",
+		   NULL, " La medicina non è una scienza esatta, come dice sempre Takano.", Line_WaitForInput);
+	ModPlayVoiceLS(4, 5, "ps3/s20/05/vtk1_rika1019", 128, TRUE);
+	OutputLine(NULL, "でも、このまま放置すれば沙都子を待ち受ける運命は１００％の、絶対の死しかない。",
+		   NULL, " Ma se neanche proviamo e decidiamo di lasciarla al suo destino, Satoko morirà di sicuro.", Line_WaitForInput);
+	ModPlayVoiceLS(4, 5, "ps3/s20/05/vtk1_rika1020", 128, TRUE);
+	OutputLine(NULL, "ならば、どちらに賭けるかは明白なはず。」",
+		   NULL, " A questo punto, è chiaro su cosa dobbiamo puntare.\"", GetGlobalFlag(GLinemodeSp));
+	if (GetGlobalFlag(GADVMode)) { ClearMessage(); } else { OutputLineAll(NULL, "\n", Line_ContinueAfterTyping); }
+
+	if (GetGlobalFlag(GADVMode)) { OutputLine("<color=#c89a80>入江</color>", NULL, "<color=#c89a80>Irie</color>", NULL, Line_ContinueAfterTyping); }
+	ModPlayVoiceLS(4, 10, "ps3/s20/10/vtk1_irie1028", 128, TRUE);
+	OutputLine(NULL, "「……そうですね。",
+		   NULL, "\"...... già.", Line_WaitForInput);
+	ModPlayVoiceLS(4, 10, "ps3/s20/10/vtk1_irie1029", 128, TRUE);
+	OutputLine(NULL, "その通りです。」",
+		   NULL, " Hai ragione.\"", Line_Normal);
+	ClearMessage();
+
+	DrawSceneWithMask( "black", "maskdown", 1, 0, 300 );
+
+	if (GetGlobalFlag(GADVMode)) { OutputLineAll("", NULL, Line_ContinueAfterTyping); }
+	OutputLine(NULL, "　だが、所長である私は誰よりも理解している。",
+		   NULL, "Io sono il primo a saperlo.", GetGlobalFlag(GLinemodeSp));
+	if (GetGlobalFlag(GADVMode)) { ClearMessage(); } else { OutputLineAll(NULL, "\n", Line_ContinueAfterTyping); }
+
+	if (GetGlobalFlag(GADVMode)) { OutputLineAll("", NULL, Line_ContinueAfterTyping); }
+	OutputLine(NULL, "　開発中の試薬C103は使い物になるかどうかもわからない段階のものだ。",
+		   NULL, "C103, la cura che stiamo testanto, rischia di trasformarsi in qualcosa che nemmeno possiamo usare.", GetGlobalFlag(GLinemodeSp));
+	if (GetGlobalFlag(GADVMode)) { ClearMessage(); } else { OutputLineAll(NULL, "\n", Line_ContinueAfterTyping); }
+
+	if (GetGlobalFlag(GADVMode)) { OutputLineAll("", NULL, Line_ContinueAfterTyping); }
+	OutputLine(NULL, "　その成功率は百分率に直せば一にも満たないに違いない。",
+		   NULL, "Le pobabilità di successo non ammontano nemmeno a una su cento.", GetGlobalFlag(GLinemodeSp));
+	if (GetGlobalFlag(GADVMode)) { ClearMessage(); } else { OutputLineAll(NULL, "\n", Line_ContinueAfterTyping); }
+
+	if (GetGlobalFlag(GADVMode) == 0) { OutputLineAll(NULL, "\n", Line_ContinueAfterTyping); }
+
+
+	if (GetGlobalFlag(GADVMode)) { OutputLineAll("", NULL, Line_ContinueAfterTyping); }
+	OutputLine(NULL, "　しかも、試薬が体に合わなかったらどのような悲惨な最期を遂げるか、まったく想像もつかないのだ。",
+		   NULL, "Non riesco neppure a immaginare che brutta fine attenderà Satoko se il suo corpo rifiutasse la medicina.", Line_Normal);
+	ClearMessage();
+
+	SetSpeedOfMessage( TRUE, 128 );
+	if (GetGlobalFlag(GADVMode)) { OutputLineAll("", NULL, Line_ContinueAfterTyping); }
+	OutputLine(NULL, "　だから、",
+		   NULL, "Ecco perché...", Line_ContinueAfterTyping);
+	SetValidityOfInput( FALSE );
+	Wait( 700 );
+	SetValidityOfInput( TRUE );
+	OutputLine(NULL, "………彼女の大好物を好きなだけ振る舞い、",
+		   NULL, " sono più incline a credere che sarebbe meglio offrirle il suo piatto preferito,", Line_ContinueAfterTyping);
+	SetValidityOfInput( FALSE );
+	Wait( 900 );
+	SetValidityOfInput( TRUE );
+	OutputLine(NULL, "…やさしく眠りにつくのを見届けてから、夢を見ている間に解剖してしまった方が、よっぽど慈悲的ではないかという誘惑に駆られてしまう…。",
+		   NULL, " sdraiarla gentilmente su un letto comodo, aspettare che si addormenti e procedere mentre ancora vive un sogno.", Line_Normal);
+	ClearMessage();
+
+	DrawScene( "background/aka1", 200 );
+
+	if (GetGlobalFlag(GADVMode)) { OutputLineAll("", NULL, Line_ContinueAfterTyping); }
+	OutputLine(NULL, "　……悔しいが、鷹野さんの言う通りなのだ。",
+		   NULL, "... detesto ammetterlo, ma Takano-san ha ragione.", Line_Normal);
+	ClearMessage();
+
+	if (GetGlobalFlag(GADVMode)) { OutputLineAll("", NULL, Line_ContinueAfterTyping); }
+	OutputLine(NULL, "　自分は、未だ覚悟さえ決まらない中途半端。",
+		   NULL, "La mia esitazione dimostra che non ho sufficiente fermezza.", GetGlobalFlag(GLinemodeSp));
+	if (GetGlobalFlag(GADVMode)) { ClearMessage(); } else { OutputLineAll(NULL, "\n", Line_ContinueAfterTyping); }
+
+	if (GetGlobalFlag(GADVMode)) { OutputLineAll("", NULL, Line_ContinueAfterTyping); }
+	OutputLine(NULL, "　…そんな人間の作り出すものがどの程度の効果を持つというのか。",
+		   NULL, "... quanto mai può essere efficace l'aiuto di un medico che nemmeno sa prendere una decisione?", GetGlobalFlag(GLinemodeSp));
+	if (GetGlobalFlag(GADVMode)) { ClearMessage(); } else { OutputLineAll(NULL, "\n", Line_ContinueAfterTyping); }
+
+	if (GetGlobalFlag(GADVMode) == 0) { OutputLineAll(NULL, "\n", Line_ContinueAfterTyping); }
+
+
+	if (GetGlobalFlag(GADVMode)) { OutputLineAll("", NULL, Line_ContinueAfterTyping); }
+	OutputLine(NULL, "　……そんな自分の作り出した薬だからこそ、…コンマ１％の成功すら信用することができない…。",
+		   NULL, "... il fatto che abbia creato io quella medicina... non riesco a credere che le possibilità di successo sfiorino lo zero.", Line_Normal);
+	ClearMessage();
+
+	DrawScene( "black", 400 );
+
+	if (GetGlobalFlag(GADVMode)) { OutputLine("<color=#6972c1>梨花</color>", NULL, "<color=#6972c1>Rika</color>", NULL, Line_ContinueAfterTyping); }
+	ModPlayVoiceLS(4, 5, "ps3/s20/05/vtk1_rika1021", 128, TRUE);
+	OutputLine(NULL, "「……ボクは、入江の作った薬なら信用できると思いますです。」",
+		   NULL, "\"...... io penso che dovremmo credere nel tuo lavoro, Irie.\"", Line_Normal);
+	ClearMessage();
+
+	if (GetGlobalFlag(GADVMode)) { OutputLineAll("", NULL, Line_ContinueAfterTyping); }
+	OutputLine(NULL, "　まるで、私の心を見透かしたような言葉にはっとする。",
+		   NULL, "Aggiunge Rika-san, come se mi avesse letto nel pensiero.", GetGlobalFlag(GLinemodeSp));
+	if (GetGlobalFlag(GADVMode)) { ClearMessage(); } else { OutputLineAll(NULL, "\n", Line_ContinueAfterTyping); }
+
+	if (GetGlobalFlag(GADVMode)) { OutputLineAll("", NULL, Line_ContinueAfterTyping); }
+	OutputLine(NULL, "　驚き、俯いていた顔を上げて彼女を見ると、……年齢からは想像もつかないような、しっかりした表情が浮かべられていた。",
+		   NULL, "Sorpreso, alzo la testa e la guardo... sul suo volto c'è l'espressione più serena e rassicurante che abbia mai visto, incredibile per una bambina della sua età.", Line_Normal);
+	ClearMessage();
+
+	ModDrawCharacter(0, 5, "sprite/ri1_fuman_a1_", "0", 0, 0, 0, FALSE, 0, 0, 0, 0, 0, 0, 0, 9, 0, FALSE );
+	DrawSceneWithMask( "background/sinryou_sinsatu1", "maskup", 1, 0, 300 );
+
+	if (GetGlobalFlag(GADVMode)) { OutputLine("<color=#6972c1>梨花</color>", NULL, "<color=#6972c1>Rika</color>", NULL, Line_ContinueAfterTyping); }
+	ModPlayVoiceLS(4, 5, "ps3/s20/05/vtk1_rika1022", 128, TRUE);
+	OutputLine(NULL, "「……入江は、人の命を左右するとても辛い仕事に耐えている。",
+		   NULL, "\"...... la vita delle persone dipende dalla tua competenza.", Line_WaitForInput);
+	ModPlayVoiceLS(4, 5, "ps3/s20/05/vtk1_rika1023", 128, TRUE);
+	OutputLine(NULL, "本来、人の生き死になど、人間がどうにかしようというのがおこがましいこと。",
+		   NULL, " È assurdo che un essere umano possa controllare la vita e la morte altrui come fai tu.", Line_WaitForInput);
+	ModPlayVoiceLS(4, 5, "ps3/s20/05/vtk1_rika1024", 128, TRUE);
+	OutputLine(NULL, "その重圧は、背負った者にしかわからない。」",
+		   NULL, " Non saprei nemmeno descrivere la pressione che senti addosso.\"", GetGlobalFlag(GLinemodeSp));
+	if (GetGlobalFlag(GADVMode)) { ClearMessage(); } else { OutputLineAll(NULL, "\n", Line_ContinueAfterTyping); }
+
+	if (GetGlobalFlag(GADVMode) == 0) { OutputLineAll(NULL, "\n", Line_ContinueAfterTyping); }
+
+
+	if (GetGlobalFlag(GADVMode)) { OutputLineAll("", NULL, Line_ContinueAfterTyping); }
+	OutputLine(NULL, "　声は同じなのに、…なぜか私は、私の知らない梨花ちゃんに諭されているような錯覚に陥る…。",
+		   NULL, "Il suo tono di voce non è cambiato, ma è come se mi stesse dando un avvertimento.", GetGlobalFlag(GLinemodeSp));
+	if (GetGlobalFlag(GADVMode)) { ClearMessage(); } else { OutputLineAll(NULL, "\n", Line_ContinueAfterTyping); }
+
+	if (GetGlobalFlag(GADVMode)) { OutputLineAll("", NULL, Line_ContinueAfterTyping); }
+	OutputLine(NULL, "　そして、その梨花ちゃんは、人の命を背負う重さをすでに充分知っているかのような口ぶりにさえ。",
+		   NULL, "Come se sapesse già da tempo che cosa significa avere nelle mani il destino di una vita.", Line_Normal);
+	ClearMessage();
+
+	DisableWindow();
+	ModDrawCharacter(0, 5, "sprite/ri1_majime_a1_", "2", 0, 0, 0, FALSE, 0, 0, 0, 0, 0, 0, 0, 9, 200, TRUE );
+
+	if (GetGlobalFlag(GADVMode)) { OutputLine("<color=#6972c1>梨花</color>", NULL, "<color=#6972c1>Rika</color>", NULL, Line_ContinueAfterTyping); }
+	ModPlayVoiceLS(4, 5, "ps3/s20/05/vtk1_rika1025", 128, TRUE);
+	OutputLine(NULL, "「……その重さは、罪の意識と後悔の重さを加えて決められる。",
+		   NULL, "\"... senso di colpa e rimpianti sono parte del peso che porti sulle spalle.", Line_WaitForInput);
+	ModPlayVoiceLS(4, 5, "ps3/s20/05/vtk1_rika1026", 128, TRUE);
+	OutputLine(NULL, "…だから入江は、まだまだ危険な薬を沙都子に試せない。",
+		   NULL, " Per questo non vuoi somministrare la medicina a Satoko.", Line_WaitForInput);
+	ModPlayVoiceLS(4, 5, "ps3/s20/05/vtk1_rika1027", 128, TRUE);
+	OutputLine(NULL, "そうでしょう？」",
+		   NULL, " Sbaglio?\"", GetGlobalFlag(GLinemodeSp));
+	if (GetGlobalFlag(GADVMode)) { ClearMessage(); } else { OutputLineAll(NULL, "\n", Line_ContinueAfterTyping); }
+
+	if (GetGlobalFlag(GADVMode)) { OutputLine("<color=#c89a80>入江</color>", NULL, "<color=#c89a80>Irie</color>", NULL, Line_ContinueAfterTyping); }
+	ModPlayVoiceLS(4, 10, "ps3/s20/10/vtk1_irie1030", 128, TRUE);
+	OutputLine(NULL, "「………………………。」",
+		   NULL, "\".........\"", GetGlobalFlag(GLinemodeSp));
+	if (GetGlobalFlag(GADVMode)) { ClearMessage(); } else { OutputLineAll(NULL, "\n", Line_ContinueAfterTyping); }
+
+	if (GetGlobalFlag(GADVMode) == 0) { OutputLineAll(NULL, "\n", Line_ContinueAfterTyping); }
+
+
+	if (GetGlobalFlag(GADVMode)) { OutputLineAll("", NULL, Line_ContinueAfterTyping); }
+	OutputLine(NULL, "　かつて鷹野さんにも、同じようなことを言われて責められた気がする。",
+		   NULL, "Takano-san ha detto una cosa simile quando mi ha rimproverato poco fa.", Line_WaitForInput);
+	OutputLine(NULL, "…僕は再び、それを責められている…。",
+		   NULL, " Non è cambiato nulla.", Line_Normal);
+	ClearMessage();
+
+	DisableWindow();
+	ModDrawCharacter(0, 5, "sprite/ri1_niko_a1_", "2", 0, 0, 0, FALSE, 0, 0, 0, 0, 0, 0, 0, 9, 200, TRUE );
+
+	if (GetGlobalFlag(GADVMode)) { OutputLine("<color=#6972c1>梨花</color>", NULL, "<color=#6972c1>Rika</color>", NULL, Line_ContinueAfterTyping); }
+	ModPlayVoiceLS(4, 5, "ps3/s20/05/vtk1_rika1028", 128, TRUE);
+	OutputLine(NULL, "「でも。",
+		   NULL, "\"Però...", Line_WaitForInput);
+	ModPlayVoiceLS(4, 5, "ps3/s20/05/vtk1_rika1029", 128, TRUE);
+	OutputLine(NULL, "……だからあなたになら、沙都子を託せると思う。」",
+		   NULL, " ecco perché posso affidarti Satoko.\"", Line_Normal);
+	ClearMessage();
+
+	if (GetGlobalFlag(GADVMode)) { OutputLine("<color=#c89a80>入江</color>", NULL, "<color=#c89a80>Irie</color>", NULL, Line_ContinueAfterTyping); }
+	ModPlayVoiceLS(4, 10, "ps3/s20/10/vtk1_irie1031", 128, TRUE);
+	OutputLine(NULL, "「……え…？」",
+		   NULL, "\"... eh...?\"", Line_Normal);
+	ClearMessage();
+
+	DisableWindow();
+	ModDrawCharacter(0, 5, "sprite/ri1_majime_a1_", "2", 0, 0, 0, FALSE, 0, 0, 0, 0, 0, 0, 0, 9, 200, TRUE );
+
+	if (GetGlobalFlag(GADVMode)) { OutputLine("<color=#6972c1>梨花</color>", NULL, "<color=#6972c1>Rika</color>", NULL, Line_ContinueAfterTyping); }
+	ModPlayVoiceLS(4, 5, "ps3/s20/05/vtk1_rika1030", 128, TRUE);
+	OutputLine(NULL, "「人の命はとても重い。",
+		   NULL, "\"La vita umana è preziosa.", Line_WaitForInput);
+	ModPlayVoiceLS(4, 5, "ps3/s20/05/vtk1_rika1031", 128, TRUE);
+	OutputLine(NULL, "その重みに耐えかねるのは、あなたが人の命を大切にしたい心があるからこそよ。",
+		   NULL, " Tu lo sai bene ed è il motivo per cui fai ciò che devi fare......", Line_WaitForInput);
+	ModPlayVoiceLS(4, 5, "ps3/s20/05/vtk1_rika1032", 128, TRUE);
+	OutputLine(NULL, "………そんな心がなくして、どうして人を病気から救えるというの？",
+		   NULL, " ...... come puoi pensare di aiutare gli altri senza conoscere il valore delle loro vite?", GetGlobalFlag(GLinemodeSp));
+	if (GetGlobalFlag(GADVMode)) { ClearMessage(); } else { OutputLineAll(NULL, "\n", Line_ContinueAfterTyping); }
+
+	DisableWindow();
+	ModDrawCharacter(0, 5, "sprite/ri1_niyari_a1_", "0", 0, 0, 0, FALSE, 0, 0, 0, 0, 0, 0, 0, 9, 200, TRUE );
+
+	if (GetGlobalFlag(GADVMode)) { OutputLine("<color=#6972c1>梨花</color>", NULL, "<color=#6972c1>Rika</color>", NULL, Line_ContinueAfterTyping); }
+	ModPlayVoiceLS(4, 5, "ps3/s20/05/vtk1_rika1033", 128, TRUE);
+	OutputLine(NULL, "　鷹野みたいに、人をモルモットとしか思ってないヤツの治療薬なんか試せると思う？",
+		   NULL, "Credi che mi fiderei di una medicina realizzata da Takano, che ritiene le persone alla stregua di cavie da laboratorio?", Line_WaitForInput);
+	ModPlayVoiceLS(4, 5, "ps3/s20/05/vtk1_rika1034", 128, TRUE);
+	OutputLine(NULL, "　くすくすくす。」",
+		   NULL, " Eheheh.\"", GetGlobalFlag(GLinemodeSp));
+	if (GetGlobalFlag(GADVMode)) { ClearMessage(); } else { OutputLineAll(NULL, "\n", Line_ContinueAfterTyping); }
+
+	if (GetGlobalFlag(GADVMode)) { OutputLine("<color=#c89a80>入江</color>", NULL, "<color=#c89a80>Irie</color>", NULL, Line_ContinueAfterTyping); }
+	ModPlayVoiceLS(4, 10, "ps3/s20/10/vtk1_irie1032", 128, TRUE);
+	OutputLine(NULL, "「……は、…ははははは…。」",
+		   NULL, "\"... ahah... ahahahahahah...\"", GetGlobalFlag(GLinemodeSp));
+	if (GetGlobalFlag(GADVMode)) { ClearMessage(); } else { OutputLineAll(NULL, "\n", Line_ContinueAfterTyping); }
+
+	if (GetGlobalFlag(GADVMode)) { OutputLineAll("", NULL, Line_ContinueAfterTyping); }
+	OutputLine(NULL, "　とても笑ってはいけない話なのだが、なぜか笑ってしまう。",
+		   NULL, "Non dovrei ridere, ma mi è sfuggito...", GetGlobalFlag(GLinemodeSp));
+	if (GetGlobalFlag(GADVMode)) { ClearMessage(); } else { OutputLineAll(NULL, "\n", Line_ContinueAfterTyping); }
+
+	if (GetGlobalFlag(GADVMode)) { OutputLineAll("", NULL, Line_ContinueAfterTyping); }
+	OutputLine(NULL, "　……そこで笑うのがいいように感じられたのだ。",
+		   NULL, "... la sua sincerità è disarmante.", Line_Normal);
+	ClearMessage();
+
+	DisableWindow();
+	ModDrawCharacter(0, 5, "sprite/ri1_fuman_a1_", "0", 0, 0, 0, FALSE, 0, 0, 0, 0, 0, 0, 0, 9, 200, TRUE );
+
+	if (GetGlobalFlag(GADVMode)) { OutputLine("<color=#6972c1>梨花</color>", NULL, "<color=#6972c1>Rika</color>", NULL, Line_ContinueAfterTyping); }
+	ModPlayVoiceLS(4, 5, "ps3/s20/05/vtk1_rika1035", 128, TRUE);
+	OutputLine(NULL, "「鷹野とあなたが、それぞれに薬を差し出したなら。",
+		   NULL, "\"Se entrambi creaste una medicina diversa,", Line_WaitForInput);
+	ModPlayVoiceLS(4, 5, "ps3/s20/05/vtk1_rika1036", 128, TRUE);
+	OutputLine(NULL, "私は入江の薬の方が治るように思う。",
+		   NULL, " credo che sarebbe la tua a salvare Satoko.", Line_WaitForInput);
+	ModPlayVoiceLS(4, 5, "ps3/s20/05/vtk1_rika1037", 128, TRUE);
+	OutputLine(NULL, "だって、薬は人の心から生み出されるんだもの。",
+		   NULL, " Perché ogni cosa che fai viene dal profondo del cuore...", Line_WaitForInput);
+	ModPlayVoiceLS(4, 5, "ps3/s20/05/vtk1_rika1038", 128, TRUE);
+	OutputLine(NULL, "……自分の身から滴り落ちる雫で、人を救いたいという気持ちが、人の病を癒してくれる。」",
+		   NULL, " è il tuo desiderio di guarire chi soffre a darti la spinta in più che serve per riuscirci davvero.\"", Line_Normal);
+	ClearMessage();
+
+	if (GetGlobalFlag(GADVMode)) { OutputLine("<color=#c89a80>入江</color>", NULL, "<color=#c89a80>Irie</color>", NULL, Line_ContinueAfterTyping); }
+	ModPlayVoiceLS(4, 10, "ps3/s20/10/vtk1_irie1033", 128, TRUE);
+	OutputLine(NULL, "「……仰る通りです。",
+		   NULL, "\"... hai proprio ragione...", Line_WaitForInput);
+	ModPlayVoiceLS(4, 10, "ps3/s20/10/vtk1_irie1034", 128, TRUE);
+	OutputLine(NULL, "……医者が薬のことで諭されるとは…。」",
+		   NULL, " un medico che si fa dare lezioni di medicina, sigh...\"", Line_Normal);
+	ClearMessage();
+
+	if (GetGlobalFlag(GADVMode)) { OutputLine("<color=#6972c1>梨花</color>", NULL, "<color=#6972c1>Rika</color>", NULL, Line_ContinueAfterTyping); }
+	ModPlayVoiceLS(4, 5, "ps3/s20/05/vtk1_rika1039", 128, TRUE);
+	OutputLine(NULL, "「私は自分の体を、他でもない沙都子のために差し出した。",
+		   NULL, "\"Ti ho donato il mio corpo per il bene di Satoko.", Line_WaitForInput);
+	ModPlayVoiceLS(4, 5, "ps3/s20/05/vtk1_rika1040", 128, TRUE);
+	OutputLine(NULL, "私の体から注射針で抜き出したものは全て、私から沙都子に捧げる薬の雫。",
+		   NULL, " Quel che hai avuto da me è come se lo avessi ricevuto anche da lei.", Line_WaitForInput);
+	ModPlayVoiceLS(4, 5, "ps3/s20/05/vtk1_rika1041", 128, TRUE);
+	OutputLine(NULL, "その雫から、命の本当の重さを知り、日々後悔と自責を忘れないあなたが何かを抽出してくれたなら。",
+		   NULL, " Se davvero hai realizzato questa cura consapevole dell'importanza delle vite umane,", Line_WaitForInput);
+	ModPlayVoiceLS(4, 5, "ps3/s20/05/vtk1_rika1042", 128, TRUE);
+	OutputLine(NULL, "……それが沙都子に効かないわけがない。」",
+		   NULL, " allora funzionerà di certo.\"", Line_Normal);
+	ClearMessage();
+
+	if (GetGlobalFlag(GADVMode)) { OutputLineAll("", NULL, Line_ContinueAfterTyping); }
+	OutputLine(NULL, "　……神社の巫女という存在は人の悩みや懺悔を聞くこともあるのだろうか？",
+		   NULL, "... le miko come lei saranno abituate alle confessioni?", GetGlobalFlag(GLinemodeSp));
+	if (GetGlobalFlag(GADVMode)) { ClearMessage(); } else { OutputLineAll(NULL, "\n", Line_ContinueAfterTyping); }
+
+	if (GetGlobalFlag(GADVMode)) { OutputLineAll("", NULL, Line_ContinueAfterTyping); }
+	OutputLine(NULL, "　だとしたら、彼女はこの歳ですでに、立派な古手神社の巫女だった。",
+		   NULL, "Se così fosse, significa che da grande diventerà una sacerdotessa modello.", Line_Normal);
+	ClearMessage();
+
+	if (GetGlobalFlag(GADVMode)) { OutputLine("<color=#c89a80>入江</color>", NULL, "<color=#c89a80>Irie</color>", NULL, Line_ContinueAfterTyping); }
+	ModPlayVoiceLS(4, 10, "ps3/s20/10/vtk1_irie1035", 128, TRUE);
+	OutputLine(NULL, "「…………これは、",
+		   NULL, "\"...... sarà", Line_Continue);
+	// (backup) SetValidityOfInput( FALSE );
+	Wait( 1000 );
+	// (backup) SetValidityOfInput( TRUE );
+	OutputLine(NULL, "…賭けになります。",
+		   NULL, " una scommessa...", Line_WaitForInput);
+	ModPlayVoiceLS(4, 10, "ps3/s20/10/vtk1_irie1036", 128, TRUE);
+	OutputLine(NULL, "……沙都子ちゃんが果たして受け容れてくれるかどうか…。」",
+		   NULL, " l'unico dubbio è se Satoko-chan l'accetterà...\"", Line_Normal);
+	ClearMessage();
+
+	if (GetGlobalFlag(GADVMode)) { OutputLine("<color=#6972c1>梨花</color>", NULL, "<color=#6972c1>Rika</color>", NULL, Line_ContinueAfterTyping); }
+	ModPlayVoiceLS(4, 5, "ps3/s20/05/vtk1_rika1043", 128, TRUE);
+	OutputLine(NULL, "「沙都子に伝える必要はありません。",
+		   NULL, "\"Non c'è bisogno di dirglielo.", Line_WaitForInput);
+	ModPlayVoiceLS(4, 5, "ps3/s20/05/vtk1_rika1044", 128, TRUE);
+	OutputLine(NULL, "沙都子にとって、雛見沢症候群を知ることは、心の深い傷をもう一度えぐる事にしかならないのだから。」",
+		   NULL, " Scoprire l'esistenza della Sindrome di Hinamizawa non farà altro che riaprire le ferite nel suo cuore.\"", GetGlobalFlag(GLinemodeSp));
+	if (GetGlobalFlag(GADVMode)) { ClearMessage(); } else { OutputLineAll(NULL, "\n", Line_ContinueAfterTyping); }
+
+	if (GetGlobalFlag(GADVMode) == 0) { OutputLineAll(NULL, "\n", Line_ContinueAfterTyping); }
+
+
+	if (GetGlobalFlag(GADVMode)) { OutputLineAll("", NULL, Line_ContinueAfterTyping); }
+	OutputLine(NULL, "　彼女が口にしたこの意味。",
+		   NULL, "Le sue parole celano un altro significato.", GetGlobalFlag(GLinemodeSp));
+	if (GetGlobalFlag(GADVMode)) { ClearMessage(); } else { OutputLineAll(NULL, "\n", Line_ContinueAfterTyping); }
+
+	if (GetGlobalFlag(GADVMode)) { OutputLineAll("", NULL, Line_ContinueAfterTyping); }
+	OutputLine(NULL, "　……私は後にそれに気づき、改めて彼女の思慮深さや洞察力に驚くことになる。",
+		   NULL, "Ma l'ho scoperto solo in seguito, a dimostrazione di quanto sappia essere attenta e perspicace.", Line_Normal);
+	ClearMessage();
+
+	if (GetGlobalFlag(GADVMode)) { OutputLine("<color=#c89a80>入江</color>", NULL, "<color=#c89a80>Irie</color>", NULL, Line_ContinueAfterTyping); }
+	ModPlayVoiceLS(4, 10, "ps3/s20/10/vtk1_irie1037", 128, TRUE);
+	OutputLine(NULL, "「……………解剖計画を中止させましょう。",
+		   NULL, "\"......... fermerò il progetto per la dissezione.", Line_WaitForInput);
+	ModPlayVoiceLS(4, 10, "ps3/s20/10/vtk1_irie1038", 128, TRUE);
+	OutputLine(NULL, "北条沙都子に対するC103投与実験に変更します。",
+		   NULL, " Somministreremo il C103 a Satoko Houjou...", Line_WaitForInput);
+	ModPlayVoiceLS(4, 10, "ps3/s20/10/vtk1_irie1039", 128, TRUE);
+	OutputLine(NULL, "……せめて１％でもうまく行く確率があがるように、努力します。」",
+		   NULL, " anche se le possibilità di riuscita sono dell'1%, io darò tutto me stesso.\"", Line_Normal);
+	ClearMessage();
+
+	DisableWindow();
+	ModDrawCharacter(0, 5, "sprite/ri1_niko_a1_", "2", 0, 0, 0, FALSE, 0, 0, 0, 0, 0, 0, 0, 9, 200, TRUE );
+
+	if (GetGlobalFlag(GADVMode)) { OutputLine("<color=#6972c1>梨花</color>", NULL, "<color=#6972c1>Rika</color>", NULL, Line_ContinueAfterTyping); }
+	ModPlayVoiceLS(4, 5, "ps3/s20/05/vtk1_rika1044a", 128, TRUE);
+	OutputLine(NULL, "「……大丈夫ですよ入江。",
+		   NULL, "\"...... non temere, Irie.", Line_WaitForInput);
+	ModPlayVoiceLS(4, 5, "ps3/s20/05/vtk1_rika1044b", 128, TRUE);
+	OutputLine(NULL, "絶対にうまく行きますです。」",
+		   NULL, " Sono convinta che funzionerà.\"", GetGlobalFlag(GLinemodeSp));
+	if (GetGlobalFlag(GADVMode)) { ClearMessage(); } else { OutputLineAll(NULL, "\n", Line_ContinueAfterTyping); }
+
+	if (GetGlobalFlag(GADVMode)) { OutputLine("<color=#c89a80>入江</color>", NULL, "<color=#c89a80>Irie</color>", NULL, Line_ContinueAfterTyping); }
+	ModPlayVoiceLS(4, 10, "ps3/s20/10/vtk1_irie1042", 128, TRUE);
+	OutputLine(NULL, "「ははははは…。",
+		   NULL, "\"Ahahahahah...", Line_WaitForInput);
+	ModPlayVoiceLS(4, 10, "ps3/s20/10/vtk1_irie1043", 128, TRUE);
+	OutputLine(NULL, "そんな、楽観してはいけません。」",
+		   NULL, " meglio non farsi troppe aspettative.\"", GetGlobalFlag(GLinemodeSp));
+	if (GetGlobalFlag(GADVMode)) { ClearMessage(); } else { OutputLineAll(NULL, "\n", Line_ContinueAfterTyping); }
+
+	if (GetGlobalFlag(GADVMode)) { OutputLine("<color=#6972c1>梨花</color>", NULL, "<color=#6972c1>Rika</color>", NULL, Line_ContinueAfterTyping); }
+	ModPlayVoiceLS(4, 5, "ps3/s20/05/vtk1_rika1044c", 128, TRUE);
+	OutputLine(NULL, "「……大丈夫なのです。",
+		   NULL, "\"... andrà tutto bene.", Line_WaitForInput);
+	ModPlayVoiceLS(4, 5, "ps3/s20/05/vtk1_rika1044d", 128, TRUE);
+	OutputLine(NULL, "もう決まってることなのですから。",
+		   NULL, " Dopotutto, è già scritto.", GetGlobalFlag(GLinemodeSp));
+	if (GetGlobalFlag(GADVMode)) { ClearMessage(); } else { OutputLineAll(NULL, "\n", Line_ContinueAfterTyping); }
+
+	if (GetGlobalFlag(GADVMode)) { OutputLine("<color=#6972c1>梨花</color>", NULL, "<color=#6972c1>Rika</color>", NULL, Line_ContinueAfterTyping); }
+	ModPlayVoiceLS(4, 5, "ps3/s20/05/vtk1_rika1044e", 128, TRUE);
+	OutputLine(NULL, "これは、…古手神社の巫女さまの心強いお告げです。",
+		   NULL, "Vedila come una profezia di buon auspicio della sacerdotessa del santuario Furude.", Line_Normal);
+	ClearMessage();
+
+	DisableWindow();
+	ModDrawCharacter(0, 5, "sprite/ri1_warai_a1_", "2", 0, 0, 0, FALSE, 0, 0, 0, 0, 0, 0, 0, 9, 200, TRUE );
+
+	SetSpeedOfMessage( TRUE, 128 );
+	if (GetGlobalFlag(GADVMode)) { OutputLine("<color=#6972c1>梨花</color>", NULL, "<color=#6972c1>Rika</color>", NULL, Line_ContinueAfterTyping); }
+	ModPlayVoiceLS(4, 5, "ps3/s20/05/vtk1_rika1044f", 128, TRUE);
+	OutputLine(NULL, "……ファイト、",
+		   NULL, "...... fight,", Line_Continue);
+	// (backup) SetValidityOfInput( FALSE );
+	Wait( 800 );
+	// (backup) SetValidityOfInput( TRUE );
+	OutputLine(NULL, "お〜、",
+		   NULL, " oohh〜", Line_Continue);
+	// (backup) SetValidityOfInput( FALSE );
+	Wait( 800 );
+	// (backup) SetValidityOfInput( TRUE );
+	OutputLine(NULL, "なのですよ☆」",
+		   NULL, "☆\"", Line_Continue);
+	OutputLineAll(NULL, "", Line_Normal);
+
+	ClearMessage();
+	SetSpeedOfMessage( FALSE, 0 );
+
+	CallScript( "&eye" );
+	ModFadeOutBGM( 0, 1000, FALSE, 0 );
+	ModFadeOutBGM( 1, 1000, FALSE, 1 );
+	DrawScene( "black", 1000 );
+
+}

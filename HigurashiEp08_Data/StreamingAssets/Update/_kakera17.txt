@@ -1,0 +1,857 @@
+void main()
+{
+	DrawScene( "black", 400 );
+
+	DrawScene( "background/sora", 1000 );
+
+	PlayBGM( 0, "er_Ver3", 120, 0 );
+
+	ClearMessage();
+	if (GetGlobalFlag(GADVMode)) { OutputLineAll("", NULL, Line_ContinueAfterTyping); }
+	OutputLine(NULL, "　医者になろうという動機は、子供の頃にありがちな非常に不純なものだった。",
+		   NULL, "Desideravo diventare un medico sin da piccolo.", GetGlobalFlag(GLinemodeSp));
+	if (GetGlobalFlag(GADVMode)) { ClearMessage(); } else { OutputLineAll(NULL, "\n", Line_ContinueAfterTyping); }
+
+	if (GetGlobalFlag(GADVMode) == 0) { OutputLineAll(NULL, "\n", Line_ContinueAfterTyping); }
+
+
+	if (GetGlobalFlag(GADVMode)) { OutputLineAll("", NULL, Line_ContinueAfterTyping); }
+	OutputLine(NULL, "　お医者さんになれば儲かる。",
+		   NULL, "I medici guadagnano molto.", Line_WaitForInput);
+	OutputLine(NULL, "尊敬される。",
+		   NULL, " La gente li rispetta.", Line_WaitForInput);
+	OutputLine(NULL, "…そんな程度が原点だった気がする。",
+		   NULL, " Le motivazioni erano più o meno queste.", Line_Normal);
+	ClearMessage();
+
+	if (GetGlobalFlag(GADVMode)) { OutputLineAll("", NULL, Line_ContinueAfterTyping); }
+	OutputLine(NULL, "　だから、近所の子供たちと遊ぶ時にも、自分は常に医者として振舞った。",
+		   NULL, "Quando giocavo con i miei amici fingevo sempre di essere in ospedale.", GetGlobalFlag(GLinemodeSp));
+	if (GetGlobalFlag(GADVMode)) { ClearMessage(); } else { OutputLineAll(NULL, "\n", Line_ContinueAfterTyping); }
+
+	if (GetGlobalFlag(GADVMode)) { OutputLineAll("", NULL, Line_ContinueAfterTyping); }
+	OutputLine(NULL, "　付け焼刃の知識で、転んだ子の傷口を洗ったり、捻挫を冷やしたりしてあげていたっけ。",
+		   NULL, "Lavavo loro le ginocchia quando si sbucciavano e mettevo del ghiaccio sulle caviglie quando se le slogavano, seguendo i libri di medicina che avevamo a casa.", GetGlobalFlag(GLinemodeSp));
+	if (GetGlobalFlag(GADVMode)) { ClearMessage(); } else { OutputLineAll(NULL, "\n", Line_ContinueAfterTyping); }
+
+	if (GetGlobalFlag(GADVMode) == 0) { OutputLineAll(NULL, "\n", Line_ContinueAfterTyping); }
+
+
+	if (GetGlobalFlag(GADVMode)) { OutputLineAll("", NULL, Line_ContinueAfterTyping); }
+	OutputLine(NULL, "　自分も周りも、京介くんは将来、きっとお医者さんになると信じていたんだ。",
+		   NULL, "Tutti, me compreso, credevano che ci sarei riuscito.", Line_Normal);
+	ClearMessage();
+
+	DrawSceneWithMask( "black", "maskdown", 1, 0, 300 );
+
+	if (GetGlobalFlag(GADVMode)) { OutputLineAll("", NULL, Line_ContinueAfterTyping); }
+	OutputLine(NULL, "　家は貧乏だったから、私のその志をとても喜んだらしい。",
+		   NULL, "La mia famiglia era poco abbiente e mi sostenevano nel mio sogno.", GetGlobalFlag(GLinemodeSp));
+	if (GetGlobalFlag(GADVMode)) { ClearMessage(); } else { OutputLineAll(NULL, "\n", Line_ContinueAfterTyping); }
+
+	if (GetGlobalFlag(GADVMode)) { OutputLineAll("", NULL, Line_ContinueAfterTyping); }
+	OutputLine(NULL, "　医者になるにはたくさんの勉強が必要だと教えてくれ、貸本屋さんから医学書もどきを借りて来ては読ませてくれたっけ。",
+		   NULL, "Mi dicevano che dovevo studiare molto, perciò prendevano sempre in prestito dei libri di simil-medicina dalla biblioteca locale.", Line_Normal);
+	ClearMessage();
+
+	if (GetGlobalFlag(GADVMode)) { OutputLineAll("", NULL, Line_ContinueAfterTyping); }
+	OutputLine(NULL, "　一冊の借り賃も決して安くない。",
+		   NULL, "Le spese di noleggio erano alte.", GetGlobalFlag(GLinemodeSp));
+	if (GetGlobalFlag(GADVMode)) { ClearMessage(); } else { OutputLineAll(NULL, "\n", Line_ContinueAfterTyping); }
+
+	if (GetGlobalFlag(GADVMode) == 0) { OutputLineAll(NULL, "\n", Line_ContinueAfterTyping); }
+
+
+	if (GetGlobalFlag(GADVMode)) { OutputLineAll("", NULL, Line_ContinueAfterTyping); }
+	if (GetGlobalFlag(GADVMode)) { OutputLine(NULL, "", NULL, "<size=-3>", Line_Continue); }
+	OutputLine(NULL, "　だから、借りた一冊を一日で斜め読みし、翌日に両親がそれを「以前に借りた本と重複してしまったので、本を変更したい」なんて言って、タダで二冊目を借りて来てもらったりしたっけ。",
+		   NULL, "Dovevo leggere un libro in pochi giorni, così che i miei genitori potessero restituirlo dicendo che era il libro sbagliato e prenderne un altro.", GetGlobalFlag(GLinemodeSp));
+	if (GetGlobalFlag(GADVMode)) { ClearMessage(); } else { OutputLineAll(NULL, "\n", Line_ContinueAfterTyping); }
+
+	if (GetGlobalFlag(GADVMode) == 0) { OutputLineAll(NULL, "\n", Line_ContinueAfterTyping); }
+
+
+	if (GetGlobalFlag(GADVMode)) { OutputLineAll("", NULL, Line_ContinueAfterTyping); }
+	OutputLine(NULL, "　もっとも、そんな知識は、実際には大して役に立たないのだが、将来はきっと医者になるというモチベーションを盛り上げる意味では、とても有意義だったと思う。",
+		   NULL, "Naturalmente, oggi so che quei libri non riportavano contenuti sempre esatti, ma al tempo mi davano la motivazione che mi serviva.", Line_Normal);
+	ClearMessage();
+
+	DrawSceneWithMask( "background/juku1_01", "maskc", 1, 0, 300 );
+
+	if (GetGlobalFlag(GADVMode)) { OutputLineAll("", NULL, Line_ContinueAfterTyping); }
+	OutputLine(NULL, "　近所ではお医者の京介くんと呼ばれたし、クラスでも必ず保険委員に推薦された。",
+		   NULL, "I miei vicini iniziarono a chiamarmi \"dottor Kyousuke-kun\" e a scuola venivo sempre scelto per fare da assistente durante le visite di routine.", GetGlobalFlag(GLinemodeSp));
+	if (GetGlobalFlag(GADVMode)) { ClearMessage(); } else { OutputLineAll(NULL, "\n", Line_ContinueAfterTyping); }
+
+	if (GetGlobalFlag(GADVMode)) { OutputLineAll("", NULL, Line_ContinueAfterTyping); }
+	OutputLine(NULL, "　先生も、医者になるためにはどう進学すればいいか相談に乗ってくれた。",
+		   NULL, "Persino le maestre e i professori non perdevano occasione per aiutarmi nel raggiungere il mio obiettivo.", GetGlobalFlag(GLinemodeSp));
+	if (GetGlobalFlag(GADVMode)) { ClearMessage(); } else { OutputLineAll(NULL, "\n", Line_ContinueAfterTyping); }
+
+	if (GetGlobalFlag(GADVMode) == 0) { OutputLineAll(NULL, "\n", Line_ContinueAfterTyping); }
+
+
+	if (GetGlobalFlag(GADVMode)) { OutputLineAll("", NULL, Line_ContinueAfterTyping); }
+	OutputLine(NULL, "　もちろん、夢だけで医者になれるほど現実は甘くない。",
+		   NULL, "Diventare un medico non è affatto semplice.", GetGlobalFlag(GLinemodeSp));
+	if (GetGlobalFlag(GADVMode)) { ClearMessage(); } else { OutputLineAll(NULL, "\n", Line_ContinueAfterTyping); }
+
+	if (GetGlobalFlag(GADVMode)) { OutputLineAll("", NULL, Line_ContinueAfterTyping); }
+	OutputLine(NULL, "　勉強も大変だったし、決して楽な道のりではなかった。",
+		   NULL, "Dovetti studiare con costanza e superare ostacoli che sembravano insormontabili.", Line_Normal);
+	ClearMessage();
+
+	DrawScene( "black", 400 );
+
+	if (GetGlobalFlag(GADVMode)) { OutputLineAll("", NULL, Line_ContinueAfterTyping); }
+	OutputLine(NULL, "　医者の門を叩くには大学に入るのが欠かせない。",
+		   NULL, "In primis, l'università.", GetGlobalFlag(GLinemodeSp));
+	if (GetGlobalFlag(GADVMode)) { ClearMessage(); } else { OutputLineAll(NULL, "\n", Line_ContinueAfterTyping); }
+
+	if (GetGlobalFlag(GADVMode)) { OutputLineAll("", NULL, Line_ContinueAfterTyping); }
+	OutputLine(NULL, "　だが、家が貧乏だったため、学費のかかる私大は認めないと言われた。",
+		   NULL, "Dato che eravamo poveri, spesso mi veniva detto che non sarei riuscito a entrare in un prestigioso istituto privato.", Line_WaitForInput);
+	OutputLine(NULL, "となれば、国立大学しかない。",
+		   NULL, " Così, dovetti puntare a un'università pubblica.", GetGlobalFlag(GLinemodeSp));
+	if (GetGlobalFlag(GADVMode)) { ClearMessage(); } else { OutputLineAll(NULL, "\n", Line_ContinueAfterTyping); }
+
+	if (GetGlobalFlag(GADVMode) == 0) { OutputLineAll(NULL, "\n", Line_ContinueAfterTyping); }
+
+
+	if (GetGlobalFlag(GADVMode)) { OutputLineAll("", NULL, Line_ContinueAfterTyping); }
+	OutputLine(NULL, "　私の成績は決して悪くはなかったが、国立大学は極めて狭き門だった。",
+		   NULL, "I miei voti erano sopra la media, ma i posti disponibili all'università pubblica erano scarni.", GetGlobalFlag(GLinemodeSp));
+	if (GetGlobalFlag(GADVMode)) { ClearMessage(); } else { OutputLineAll(NULL, "\n", Line_ContinueAfterTyping); }
+
+	if (GetGlobalFlag(GADVMode)) { OutputLineAll("", NULL, Line_ContinueAfterTyping); }
+	OutputLine(NULL, "　その上、医学部ともなれば、その門はさらに狭まる。",
+		   NULL, "E diminuivano ulteriormente per la facoltà di medicina.", Line_Normal);
+	ClearMessage();
+
+	DrawScene( "white", 1000 );
+	DrawScene( "background/sora", 1000 );
+
+	if (GetGlobalFlag(GADVMode)) { OutputLineAll("", NULL, Line_ContinueAfterTyping); }
+	OutputLine(NULL, "　…懸命に勉強した。",
+		   NULL, "... studiai come un forsennato.", GetGlobalFlag(GLinemodeSp));
+	if (GetGlobalFlag(GADVMode)) { ClearMessage(); } else { OutputLineAll(NULL, "\n", Line_ContinueAfterTyping); }
+
+	if (GetGlobalFlag(GADVMode)) { OutputLineAll("", NULL, Line_ContinueAfterTyping); }
+	OutputLine(NULL, "　原動力は、子供の頃の夢。",
+		   NULL, "L'unica forza che mi guidava era quel sogno di diventare un medico.", GetGlobalFlag(GLinemodeSp));
+	if (GetGlobalFlag(GADVMode)) { ClearMessage(); } else { OutputLineAll(NULL, "\n", Line_ContinueAfterTyping); }
+
+	if (GetGlobalFlag(GADVMode) == 0) { OutputLineAll(NULL, "\n", Line_ContinueAfterTyping); }
+
+
+	if (GetGlobalFlag(GADVMode)) { OutputLineAll("", NULL, Line_ContinueAfterTyping); }
+	OutputLine(NULL, "　自分はお医者さんになって、みんなに尊敬されるんだ、という本当に安っぽい子供の頃の夢だけが私の背中を押してくれたのだ。",
+		   NULL, "Diventare una persona che chiunque avrebbe guardato con ammirazione e con rispetto.", Line_Normal);
+	ClearMessage();
+
+	if (GetGlobalFlag(GADVMode)) { OutputLineAll("", NULL, Line_ContinueAfterTyping); }
+	OutputLine(NULL, "　……そして合格。",
+		   NULL, "... così, riuscii a passare il test di ammissione.", GetGlobalFlag(GLinemodeSp));
+	if (GetGlobalFlag(GADVMode)) { ClearMessage(); } else { OutputLineAll(NULL, "\n", Line_ContinueAfterTyping); }
+
+	if (GetGlobalFlag(GADVMode)) { OutputLineAll("", NULL, Line_ContinueAfterTyping); }
+	OutputLine(NULL, "　順位は決してよくなかったが、それでも辿り着いたのだ。子供の頃の夢を叶える、そのスタートラインにようやく。",
+		   NULL, "Non ero tra le prime posizioni, ma ci riuscii. Stavo finalmente per muovere il primo passo nel concretizzare il mio sogno.", Line_Normal);
+	ClearMessage();
+
+	DrawScene( "black", 1000 );
+
+	if (GetGlobalFlag(GADVMode)) { OutputLineAll("", NULL, Line_ContinueAfterTyping); }
+	OutputLine(NULL, "　両親は大喜びだった。",
+		   NULL, "I miei genitori erano al settimo cielo.", GetGlobalFlag(GLinemodeSp));
+	if (GetGlobalFlag(GADVMode)) { ClearMessage(); } else { OutputLineAll(NULL, "\n", Line_ContinueAfterTyping); }
+
+	if (GetGlobalFlag(GADVMode)) { OutputLineAll("", NULL, Line_ContinueAfterTyping); }
+	OutputLine(NULL, "　…父も母も学歴は低かったから、自分の息子が医学部合格を成し遂げた快挙に、親類中を呼んでお祝いしてくれた。",
+		   NULL, "Nessuno dei due aveva frequentato l'università, motivo per cui erano fieri del loro figlio che era stato ammesso alla facoltà pubblica di medicina. Invitarono anche dei parenti per festeggiare.", GetGlobalFlag(GLinemodeSp));
+	if (GetGlobalFlag(GADVMode)) { ClearMessage(); } else { OutputLineAll(NULL, "\n", Line_ContinueAfterTyping); }
+
+	if (GetGlobalFlag(GADVMode) == 0) { OutputLineAll(NULL, "\n", Line_ContinueAfterTyping); }
+
+
+	if (GetGlobalFlag(GADVMode)) { OutputLineAll("", NULL, Line_ContinueAfterTyping); }
+	OutputLine(NULL, "　たとえ国立と言えど安くない学費を承知の上で、盛大にお祝いしてくれた。",
+		   NULL, "Le tasse universitarie erano elevate, ma decisero comunque di celebrare l'evento in modo vistoso.", Line_Normal);
+	ClearMessage();
+
+	if (GetGlobalFlag(GADVMode)) { OutputLineAll("", NULL, Line_ContinueAfterTyping); }
+	OutputLine(NULL, "　父は、感情を表に出さないタイプだった。",
+		   NULL, "Mio padre non era un uomo molto espressivo.", GetGlobalFlag(GLinemodeSp));
+	if (GetGlobalFlag(GADVMode)) { ClearMessage(); } else { OutputLineAll(NULL, "\n", Line_ContinueAfterTyping); }
+
+	if (GetGlobalFlag(GADVMode) == 0) { OutputLineAll(NULL, "\n", Line_ContinueAfterTyping); }
+
+
+	if (GetGlobalFlag(GADVMode)) { OutputLineAll("", NULL, Line_ContinueAfterTyping); }
+	OutputLine(NULL, "　何があっても仏頂面。",
+		   NULL, "Aveva sempre un volto illeggibile.", Line_WaitForInput);
+	OutputLine(NULL, "自分の意見を述べることもなく、率先することもない。",
+		   NULL, " Raramente dava voce alle sue opinioni o prendeva l'iniziativa.", GetGlobalFlag(GLinemodeSp));
+	if (GetGlobalFlag(GADVMode)) { ClearMessage(); } else { OutputLineAll(NULL, "\n", Line_ContinueAfterTyping); }
+
+	if (GetGlobalFlag(GADVMode)) { OutputLineAll("", NULL, Line_ContinueAfterTyping); }
+	OutputLine(NULL, "　母に促されお膳立てをしてもらい、最後に現れて無言で去っていく、あの時代に多かった無言頑固タイプだった。",
+		   NULL, "Era mia madre a occuparsi di tutto mentre lui usciva presto la mattina e tornava la sera tardi dal lavoro. Era il tipico padre giapponese poco presente e di poche parole.", Line_Normal);
+	ClearMessage();
+
+	if (GetGlobalFlag(GADVMode)) { OutputLineAll("", NULL, Line_ContinueAfterTyping); }
+	OutputLine(NULL, "　その親父が、涙を浮かべながら歓喜する姿がとても嬉しくて、自分も涙をもらってしまったことを思い出す。",
+		   NULL, "Quindi rimasi di stucco quando lo vidi piangere dalla gioia insieme a me.", GetGlobalFlag(GLinemodeSp));
+	if (GetGlobalFlag(GADVMode)) { ClearMessage(); } else { OutputLineAll(NULL, "\n", Line_ContinueAfterTyping); }
+
+	if (GetGlobalFlag(GADVMode)) { OutputLineAll("", NULL, Line_ContinueAfterTyping); }
+	OutputLine(NULL, "　私の背中を何度も叩きながら親類に、こんな息子を持てて俺は幸せだと何度も繰り返し、私に面と向って、これまでの努力を讃えてくれたのだ。",
+		   NULL, "Passò in rassegna tutti i nostri parenti vantandosi di me e di quanto fosse stato fortunato ad avermi, dandomi una pacca dopo l'altra sulla schiena con aria soddisfatta.", Line_Normal);
+	ClearMessage();
+
+	if (GetGlobalFlag(GADVMode)) { OutputLineAll("", NULL, Line_ContinueAfterTyping); }
+	OutputLine(NULL, "　そして、それは私を東京へ送り出す壮行会ともなった。",
+		   NULL, "La festa diventò anche l'occasione per salutarmi prima di partire per Tokyo.", GetGlobalFlag(GLinemodeSp));
+	if (GetGlobalFlag(GADVMode)) { ClearMessage(); } else { OutputLineAll(NULL, "\n", Line_ContinueAfterTyping); }
+
+	if (GetGlobalFlag(GADVMode) == 0) { OutputLineAll(NULL, "\n", Line_ContinueAfterTyping); }
+
+
+	if (GetGlobalFlag(GADVMode)) { OutputLineAll("", NULL, Line_ContinueAfterTyping); }
+	OutputLine(NULL, "　駅で父は、辺りに構わず万歳を連呼して見送ってくれた。",
+		   NULL, "Mio padre continuò a urlare \"Banzai! Banzai!\" mentre il treno partiva dalla stazione.", GetGlobalFlag(GLinemodeSp));
+	if (GetGlobalFlag(GADVMode)) { ClearMessage(); } else { OutputLineAll(NULL, "\n", Line_ContinueAfterTyping); }
+
+	if (GetGlobalFlag(GADVMode) == 0) { OutputLineAll(NULL, "\n", Line_ContinueAfterTyping); }
+
+
+	if (GetGlobalFlag(GADVMode)) { OutputLineAll("", NULL, Line_ContinueAfterTyping); }
+	OutputLine(NULL, "　それが見えている内は、恥ずかしくて嫌だったのだが、",
+		   NULL, "In tutta sincerità, mi sentivo in imbarazzo.", Line_ContinueAfterTyping);
+	SetValidityOfInput( FALSE );
+	Wait( 800 );
+	SetValidityOfInput( TRUE );
+	OutputLine(NULL, "…父の姿が見えなくなって初めて、感涙が込み上げてきたのを思い出す…。",
+		   NULL, " Ma quando non lo vidi più in lontananza, ricordo che non riuscii a trattenere le lacrime.", Line_Normal);
+	ClearMessage();
+
+	DrawScene( "white", 400 );
+	DrawScene( "background/ke5", 1000 );
+
+	if (GetGlobalFlag(GADVMode)) { OutputLineAll("", NULL, Line_ContinueAfterTyping); }
+	OutputLine(NULL, "　それからは永く険しい勉強の日々だった。",
+		   NULL, "Da quel giorno in avanti, iniziarono i miei giorni di vero studio per gli esami.", Line_Normal);
+	ClearMessage();
+
+	if (GetGlobalFlag(GADVMode)) { OutputLineAll("", NULL, Line_ContinueAfterTyping); }
+	OutputLine(NULL, "　ハイカラな都会の生活に溺れ、自堕落になりたい日もたまにはあった。",
+		   NULL, "Alle volte mi sentivo in trappola, a tanto così dal gettare la spugna e a rimanere imprigionato nei ritmi caotici della metropoli.", GetGlobalFlag(GLinemodeSp));
+	if (GetGlobalFlag(GADVMode)) { ClearMessage(); } else { OutputLineAll(NULL, "\n", Line_ContinueAfterTyping); }
+
+	if (GetGlobalFlag(GADVMode)) { OutputLineAll("", NULL, Line_ContinueAfterTyping); }
+	OutputLine(NULL, "　でも、その度に田舎から届く両親の手紙に励まされ、何くそ、俺は挫けないぞ、と頑張ってきた。",
+		   NULL, "Tuttavia, le lettere che i miei genitori mi mandavano ogni mese bastavano a restituirmi la forza di andare avanti.", GetGlobalFlag(GLinemodeSp));
+	if (GetGlobalFlag(GADVMode)) { ClearMessage(); } else { OutputLineAll(NULL, "\n", Line_ContinueAfterTyping); }
+
+	if (GetGlobalFlag(GADVMode) == 0) { OutputLineAll(NULL, "\n", Line_ContinueAfterTyping); }
+
+
+	if (GetGlobalFlag(GADVMode)) { OutputLineAll("", NULL, Line_ContinueAfterTyping); }
+	OutputLine(NULL, "　この頃は、自分の将来の夢は開業医で、田舎に帰り、内科や小児科を開いて地域に貢献したいと思っていた。",
+		   NULL, "Al tempo, il mio sogno era quello di aprire una clinica nel mio paese natale per poter aiutare i miei concittadini.", GetGlobalFlag(GLinemodeSp));
+	if (GetGlobalFlag(GADVMode)) { ClearMessage(); } else { OutputLineAll(NULL, "\n", Line_ContinueAfterTyping); }
+
+	if (GetGlobalFlag(GADVMode)) { OutputLineAll("", NULL, Line_ContinueAfterTyping); }
+	OutputLine(NULL, "　だから、まさか夢にも、脳に関わることになるとは思わなかった…。",
+		   NULL, "Non mi sarei mai immaginato di intraprendere un percorso specializzato nella neurologia.", Line_Normal);
+	ClearMessage();
+
+	FadeOutBGM( 0, 300, FALSE );
+
+	PlayBGM( 1, "higurashi", 120, 0 );
+
+	if (GetGlobalFlag(GADVMode)) { OutputLineAll("", NULL, Line_ContinueAfterTyping); }
+	OutputLine(NULL, "　ある日、私をいつも励ましてくれる田舎からの手紙の雰囲気が、少し変わった。",
+		   NULL, "Un giorno, ricevetti una lettera un po' diversa rispetto alle solite.", Line_Normal);
+	ClearMessage();
+
+	if (GetGlobalFlag(GADVMode)) { OutputLineAll("", NULL, Line_ContinueAfterTyping); }
+	OutputLine(NULL, "　文面はいつもと変わらぬ田舎の近況と、こちらの生活を気遣う内容だったが、",
+		   NULL, "Il contenuto era pressoché lo stesso, dove i miei genitori mi chiedevano come stavo e come me la passavo.", Line_WaitForInput);
+	OutputLine(NULL, "…追伸部分がいつもと違う雰囲気だった。",
+		   NULL, " Il post-scriptum, però, colse la mia attenzione.", Line_Normal);
+	ClearMessage();
+
+	if (GetGlobalFlag(GADVMode)) { OutputLineAll("", NULL, Line_ContinueAfterTyping); }
+	OutputLine(NULL, "「最近、お父さんがとても乱暴になりました。",
+		   NULL, "\"Di recente tuo padre ha avuto molti scatti di rabbia.", Line_WaitForInput);
+	OutputLine(NULL, "ひどい時には家中が散らかるくらいに暴れて困っています。」",
+		   NULL, " Capita che metta a soqquadro la casa, lasciandomi incapace di rispondere...\"", Line_Normal);
+	ClearMessage();
+
+	if (GetGlobalFlag(GADVMode)) { OutputLineAll("", NULL, Line_ContinueAfterTyping); }
+	OutputLine(NULL, "　…その粗暴な振る舞いと、寡黙な父の姿がどうしても重ならず、私は驚きを隠すことができなかった。",
+		   NULL, "... non potevo neanche immaginare una scena in cui mio padre alzasse la voce.", GetGlobalFlag(GLinemodeSp));
+	if (GetGlobalFlag(GADVMode)) { ClearMessage(); } else { OutputLineAll(NULL, "\n", Line_ContinueAfterTyping); }
+
+	if (GetGlobalFlag(GADVMode)) { OutputLineAll("", NULL, Line_ContinueAfterTyping); }
+	OutputLine(NULL, "　何かよほどのことがあったのだろうか。",
+		   NULL, "Era successo qualcosa?", GetGlobalFlag(GLinemodeSp));
+	if (GetGlobalFlag(GADVMode)) { ClearMessage(); } else { OutputLineAll(NULL, "\n", Line_ContinueAfterTyping); }
+
+	if (GetGlobalFlag(GADVMode) == 0) { OutputLineAll(NULL, "\n", Line_ContinueAfterTyping); }
+
+
+	if (GetGlobalFlag(GADVMode)) { OutputLineAll("", NULL, Line_ContinueAfterTyping); }
+	OutputLine(NULL, "　…だが、そのような心当たりがわからず困っていると、母の追伸は結ばれていた。",
+		   NULL, "... alla fine, però, mia madre diceva che non sapeva di cosa potesse trattarsi.", Line_Normal);
+	ClearMessage();
+
+	if (GetGlobalFlag(GADVMode)) { OutputLineAll("", NULL, Line_ContinueAfterTyping); }
+	OutputLine(NULL, "　母は父の伴侶だ。",
+		   NULL, "Il loro matrimonio era longevo.", Line_WaitForInput);
+	OutputLine(NULL, "私が生まれるよりずっと前から、ずっと父と共に過ごしてきた。",
+		   NULL, " Si erano fidanzati molto prima che io nascessi.", GetGlobalFlag(GLinemodeSp));
+	if (GetGlobalFlag(GADVMode)) { ClearMessage(); } else { OutputLineAll(NULL, "\n", Line_ContinueAfterTyping); }
+
+	if (GetGlobalFlag(GADVMode)) { OutputLineAll("", NULL, Line_ContinueAfterTyping); }
+	OutputLine(NULL, "　…実の息子に気付けないようなことにも気付ける人だった。",
+		   NULL, "Quindi non mi sorprende che lei si accorgesse di cose che per me erano invisibili.", GetGlobalFlag(GLinemodeSp));
+	if (GetGlobalFlag(GADVMode)) { ClearMessage(); } else { OutputLineAll(NULL, "\n", Line_ContinueAfterTyping); }
+
+	if (GetGlobalFlag(GADVMode) == 0) { OutputLineAll(NULL, "\n", Line_ContinueAfterTyping); }
+
+
+	if (GetGlobalFlag(GADVMode)) { OutputLineAll("", NULL, Line_ContinueAfterTyping); }
+	OutputLine(NULL, "　…その母にも思い当たらぬ父の乱暴。",
+		   NULL, "... tuttavia, se neppure mia madre aveva idea del motivo...", Line_WaitForInput);
+	OutputLine(NULL, "…………一体、何があったのか。",
+		   NULL, " allora cosa poteva essere successo?", Line_Normal);
+	ClearMessage();
+
+	if (GetGlobalFlag(GADVMode)) { OutputLineAll("", NULL, Line_ContinueAfterTyping); }
+	OutputLine(NULL, "　父母は本当に仲が良いおしどり夫婦だった。",
+		   NULL, "Andavano sempre d'amore e d'accordo.", GetGlobalFlag(GLinemodeSp));
+	if (GetGlobalFlag(GADVMode)) { ClearMessage(); } else { OutputLineAll(NULL, "\n", Line_ContinueAfterTyping); }
+
+	if (GetGlobalFlag(GADVMode)) { OutputLineAll("", NULL, Line_ContinueAfterTyping); }
+	OutputLine(NULL, "　幼い自分が母を困らせると、父はゲンコツで制裁したものだ。",
+		   NULL, "Da piccolo, per rimproverarmi quando facevo qualcosa di sbagliato, mio padre mi dava solo un colpetto sulla testa.", Line_WaitForInput);
+	OutputLine(NULL, "…そんな父がどうして母に辛く当たるのか。",
+		   NULL, " Perché adesso aveva iniziato a maltrattare mia madre?", GetGlobalFlag(GLinemodeSp));
+	if (GetGlobalFlag(GADVMode)) { ClearMessage(); } else { OutputLineAll(NULL, "\n", Line_ContinueAfterTyping); }
+
+	if (GetGlobalFlag(GADVMode)) { OutputLineAll("", NULL, Line_ContinueAfterTyping); }
+	OutputLine(NULL, "　父母の間で何か仲違いがあったのではないか。",
+		   NULL, "Forse avevano litigato peggio del solito.", GetGlobalFlag(GLinemodeSp));
+	if (GetGlobalFlag(GADVMode)) { ClearMessage(); } else { OutputLineAll(NULL, "\n", Line_ContinueAfterTyping); }
+
+	if (GetGlobalFlag(GADVMode) == 0) { OutputLineAll(NULL, "\n", Line_ContinueAfterTyping); }
+
+
+	if (GetGlobalFlag(GADVMode)) { OutputLineAll("", NULL, Line_ContinueAfterTyping); }
+	OutputLine(NULL, "　……元旦には帰る。",
+		   NULL, "...... sarei tornato a casa per le festività dell'anno nuovo.", Line_WaitForInput);
+	OutputLine(NULL, "その時に父と腹を割ってみようかなんて思っていた。",
+		   NULL, " Così avremmo potuto parlarne di persona.", Line_Normal);
+	ClearMessage();
+
+	DrawScene( "black", 400 );
+
+	if (GetGlobalFlag(GADVMode)) { OutputLineAll("", NULL, Line_ContinueAfterTyping); }
+	OutputLine(NULL, "　……だが、私が考えている以上に状況は深刻だったのだ。",
+		   NULL, "Peccato che la situazione fosse molto più grave di quanto immaginassi.", Line_Normal);
+	ClearMessage();
+
+	FadeOutBGM( 1, 300, FALSE );
+
+	DrawSceneWithMask( "background/si_mansion", "maskup", 1, 0, 1300 );
+
+	PlayBGM( 0, "Gray_2", 120, 0 );
+
+	if (GetGlobalFlag(GADVMode)) { OutputLineAll("", NULL, Line_ContinueAfterTyping); }
+	OutputLine(NULL, "　ある冬の寒い日。",
+		   NULL, "Un giorno d'inverno, quando fuori faceva molto freddo...", Line_WaitForInput);
+	OutputLine(NULL, "…私の下宿先の鍵が開いていた。",
+		   NULL, " trovai la porta del mio appartamento aperta.", Line_Normal);
+	ClearMessage();
+
+	DrawSceneWithMask( "black", "maskleft", 1, 0, 300 );
+
+	if (GetGlobalFlag(GADVMode)) { OutputLineAll("", NULL, Line_ContinueAfterTyping); }
+	OutputLine(NULL, "　泥棒にやられたかと驚いて入ると、……そこには荷物を抱えた母の姿があった。",
+		   NULL, "Credetti subito che si fosse trattato di un ladro... e invece trovai mia madre con due grosse valigie.", Line_Normal);
+	ClearMessage();
+
+	if (GetGlobalFlag(GADVMode)) { OutputLineAll("", NULL, Line_ContinueAfterTyping); }
+	OutputLine(NULL, "　…そう。",
+		   NULL, "... già.", Line_WaitForInput);
+	OutputLine(NULL, "母は父の暴力に耐え切れなくなり、私のところへ逃げてきたのだ。",
+		   NULL, " Mia madre non riusciva più a sopportare le violenze di mio padre ed era venuta da me.", Line_Normal);
+	ClearMessage();
+
+	if (GetGlobalFlag(GADVMode)) { OutputLineAll("", NULL, Line_ContinueAfterTyping); }
+	OutputLine(NULL, "　女、三界に家なしなんて言われた時代だ。",
+		   NULL, "Al tempo era consuetudine pensare che una donna non potesse tornare a casa propria dopo averla abbandonata.", GetGlobalFlag(GLinemodeSp));
+	if (GetGlobalFlag(GADVMode)) { ClearMessage(); } else { OutputLineAll(NULL, "\n", Line_ContinueAfterTyping); }
+
+	if (GetGlobalFlag(GADVMode)) { OutputLineAll("", NULL, Line_ContinueAfterTyping); }
+	OutputLine(NULL, "　父と同郷の母は実家にもおめおめ帰れず、上京した私のところへやって来たのだ。",
+		   NULL, "E lo stesso valeva per i parenti. Infatti, poiché i miei nonni e i miei zii abitavano nella stessa regione dove abitavano i miei genitori, mia madre era stata costretta a venire fino a Tokyo.", Line_Normal);
+	ClearMessage();
+
+	if (GetGlobalFlag(GADVMode)) { OutputLineAll("", NULL, Line_ContinueAfterTyping); }
+	OutputLine(NULL, "　そして、母の口から知らされる父の暴行の日々。",
+		   NULL, "Fu proprio lei a raccontarmi cosa significasse vivere nel terrore di mio padre.", GetGlobalFlag(GLinemodeSp));
+	if (GetGlobalFlag(GADVMode)) { ClearMessage(); } else { OutputLineAll(NULL, "\n", Line_ContinueAfterTyping); }
+
+	if (GetGlobalFlag(GADVMode)) { OutputLineAll("", NULL, Line_ContinueAfterTyping); }
+	OutputLine(NULL, "　あんなにも物静かな人だったのに、なぜ人が変わってしまったのかわからないと母は泣いた。",
+		   NULL, "Non faceva altro che piangere, chiedendosi come fosse possibile che un uomo mite come lui fosse cambiato completamente.", GetGlobalFlag(GLinemodeSp));
+	if (GetGlobalFlag(GADVMode)) { ClearMessage(); } else { OutputLineAll(NULL, "\n", Line_ContinueAfterTyping); }
+
+	if (GetGlobalFlag(GADVMode) == 0) { OutputLineAll(NULL, "\n", Line_ContinueAfterTyping); }
+
+
+	if (GetGlobalFlag(GADVMode)) { OutputLineAll("", NULL, Line_ContinueAfterTyping); }
+	OutputLine(NULL, "　そして、もう二度とあのような乱暴な人のところへは戻らないと決別を口にするのだった。",
+		   NULL, "Disse che non sarebbe mai più tornata in quella casa.", Line_Normal);
+	ClearMessage();
+
+	if (GetGlobalFlag(GADVMode)) { OutputLineAll("", NULL, Line_ContinueAfterTyping); }
+	OutputLine(NULL, "　息子の私は、おろおろとするしかない。",
+		   NULL, "Non sapevo come ribattere.", GetGlobalFlag(GLinemodeSp));
+	if (GetGlobalFlag(GADVMode)) { ClearMessage(); } else { OutputLineAll(NULL, "\n", Line_ContinueAfterTyping); }
+
+	if (GetGlobalFlag(GADVMode) == 0) { OutputLineAll(NULL, "\n", Line_ContinueAfterTyping); }
+
+
+	if (GetGlobalFlag(GADVMode)) { OutputLineAll("", NULL, Line_ContinueAfterTyping); }
+	OutputLine(NULL, "　…もう一度父を話し合うことはできないのかと言ったが、…それは母の体中に残るアザの前には無力だった…。",
+		   NULL, "... provai a chiederle se non valesse la pena parlarci un'ultima volta, ma i lividi sul suo viso furono fin troppo eloquenti.", Line_Normal);
+	ClearMessage();
+
+	DrawScene( "background/sora", 400 );
+
+	if (GetGlobalFlag(GADVMode)) { OutputLineAll("", NULL, Line_ContinueAfterTyping); }
+	OutputLine(NULL, "　その後のことは、……思い出すのも辛いから掻い摘む。",
+		   NULL, "Il resto è per me come una pugnalata al cuore... quindi sarò breve.", GetGlobalFlag(GLinemodeSp));
+	if (GetGlobalFlag(GADVMode)) { ClearMessage(); } else { OutputLineAll(NULL, "\n", Line_ContinueAfterTyping); }
+
+	if (GetGlobalFlag(GADVMode) == 0) { OutputLineAll(NULL, "\n", Line_ContinueAfterTyping); }
+
+
+	if (GetGlobalFlag(GADVMode)) { OutputLineAll("", NULL, Line_ContinueAfterTyping); }
+	OutputLine(NULL, "　母が家を出た直後、父はそれを浮気だと思い、ご近所の家に木刀を持って押しかけて暴れ、",
+		   NULL, "Una volta scappata da casa, mio padre credette che mia madre avesse iniziato una relazione con un altro uomo, al che si presentò a casa dei vicini con una spada di legno.", Line_ContinueAfterTyping);
+	SetValidityOfInput( FALSE );
+	Wait( 800 );
+	SetValidityOfInput( TRUE );
+	OutputLine(NULL, "……警察に逮捕された。",
+		   NULL, " La polizia lo arrestò.", GetGlobalFlag(GLinemodeSp));
+	if (GetGlobalFlag(GADVMode)) { ClearMessage(); } else { OutputLineAll(NULL, "\n", Line_ContinueAfterTyping); }
+
+	if (GetGlobalFlag(GADVMode)) { OutputLineAll("", NULL, Line_ContinueAfterTyping); }
+	OutputLine(NULL, "　すぐに釈放されたが、近所の誰かが逃げた母を匿っていると疑い、同じようなことを数度繰り返した。",
+		   NULL, "Venne rilasciato poco dopo, ma il pensiero che sua moglie si stesse nascondendo da qualche parte nel vicinato lo portò a reiterare.", Line_Normal);
+	ClearMessage();
+
+	DrawScene( "black", 400 );
+
+	if (GetGlobalFlag(GADVMode)) { OutputLineAll("", NULL, Line_ContinueAfterTyping); }
+	OutputLine(NULL, "　誰彼の見境なく喧嘩を吹っかけ、",
+		   NULL, "Arrivò al punto di alzare le mani su chiunque incrociasse per strada.", Line_WaitForInput);
+	OutputLine(NULL, "…最後には路上で愚連隊もどきに袋叩きにされて死んだ。",
+		   NULL, " Finché, un giorno, incappò nel gruppo di persone sbagliato... che rispose alla violenza e lo massacrò di botte.", Line_Normal);
+	ClearMessage();
+
+
+	if (GetGlobalFlag(GADVMode)) { OutputLineAll("", NULL, Line_ContinueAfterTyping); }
+	OutputLine(NULL, "　…葬儀の喪主は親類が務めてくれたが、母は参列しなかった。",
+		   NULL, "I miei parenti gli fecero un funerale come tanti altri, ma mia madre non vi partecipò.", GetGlobalFlag(GLinemodeSp));
+	if (GetGlobalFlag(GADVMode)) { ClearMessage(); } else { OutputLineAll(NULL, "\n", Line_ContinueAfterTyping); }
+
+	if (GetGlobalFlag(GADVMode) == 0) { OutputLineAll(NULL, "\n", Line_ContinueAfterTyping); }
+
+
+	if (GetGlobalFlag(GADVMode)) { OutputLineAll("", NULL, Line_ContinueAfterTyping); }
+	OutputLine(NULL, "　死人に鞭は打たない。",
+		   NULL, "Inutile prendersela coi morti.", GetGlobalFlag(GLinemodeSp));
+	if (GetGlobalFlag(GADVMode)) { ClearMessage(); } else { OutputLineAll(NULL, "\n", Line_ContinueAfterTyping); }
+
+	if (GetGlobalFlag(GADVMode)) { OutputLineAll("", NULL, Line_ContinueAfterTyping); }
+	OutputLine(NULL, "　だから誰も父の蛮行を今さら批判しなかったが、…誰もが、どうしてあの寡黙だった人がああも豹変してしまったのかと不思議がっていた…。",
+		   NULL, "Nessuno disse nulla di male riguardo mio padre, limitandosi allo stupore di quel cambiamento repentino.", Line_Normal);
+	ClearMessage();
+
+	if (GetGlobalFlag(GADVMode)) { OutputLineAll("", NULL, Line_ContinueAfterTyping); }
+	OutputLine(NULL, "　そこで親類たちから聞いた、晩年の父の様子は、母から知らされている以上の奇妙な実態がわかった。",
+		   NULL, "Le versioni dei miei parenti furono assai diverse rispetto a quella raccontatami da mia madre.", GetGlobalFlag(GLinemodeSp));
+	if (GetGlobalFlag(GADVMode)) { ClearMessage(); } else { OutputLineAll(NULL, "\n", Line_ContinueAfterTyping); }
+
+	if (GetGlobalFlag(GADVMode) == 0) { OutputLineAll(NULL, "\n", Line_ContinueAfterTyping); }
+
+
+	if (GetGlobalFlag(GADVMode)) { OutputLineAll("", NULL, Line_ContinueAfterTyping); }
+	OutputLine(NULL, "　母から聞いているのは、突発的な暴力や激昂のことばかりだった。",
+		   NULL, "Per lei si trattava nient'altro che di rabbia e violenza.", GetGlobalFlag(GLinemodeSp));
+	if (GetGlobalFlag(GADVMode)) { ClearMessage(); } else { OutputLineAll(NULL, "\n", Line_ContinueAfterTyping); }
+
+	if (GetGlobalFlag(GADVMode)) { OutputLineAll("", NULL, Line_ContinueAfterTyping); }
+	OutputLine(NULL, "　…だが、それは極めて目立つ一面に過ぎなかったのだ。",
+		   NULL, "Per loro, invece,", Line_WaitForInput);
+	OutputLine(NULL, "他にも、笑ったり、落ち込んだり。",
+		   NULL, " era un complesso altalenarsi di emozioni.", GetGlobalFlag(GLinemodeSp));
+	if (GetGlobalFlag(GADVMode)) { ClearMessage(); } else { OutputLineAll(NULL, "\n", Line_ContinueAfterTyping); }
+
+	if (GetGlobalFlag(GADVMode)) { OutputLineAll("", NULL, Line_ContinueAfterTyping); }
+	OutputLine(NULL, "　…様々な感情が突然に発露しては切り替わっていたらしく、特に晩年はそれが著しかったという。",
+		   NULL, "Gioia, tristezza, rabbia. Nei suoi ultimi anni di vita era un susseguirsi di picchi emotivi che non trovavano giustificazione.", Line_Normal);
+	ClearMessage();
+
+	if (GetGlobalFlag(GADVMode)) { OutputLineAll("", NULL, Line_ContinueAfterTyping); }
+	OutputLine(NULL, "　そして、ある事故を境に強い頭痛に悩まされるようになっていたこと。",
+		   NULL, "Mi dissero anche che aveva iniziato a lamentare un gran mal di testa in seguito a un incidente sul lavoro.", Line_Normal);
+	ClearMessage();
+
+	if (GetGlobalFlag(GADVMode)) { OutputLineAll("", NULL, Line_ContinueAfterTyping); }
+	OutputLine(NULL, "　…父は土建職人だった。",
+		   NULL, "... mio padre era un operaio.", GetGlobalFlag(GLinemodeSp));
+	if (GetGlobalFlag(GADVMode)) { ClearMessage(); } else { OutputLineAll(NULL, "\n", Line_ContinueAfterTyping); }
+
+	if (GetGlobalFlag(GADVMode) == 0) { OutputLineAll(NULL, "\n", Line_ContinueAfterTyping); }
+
+
+	if (GetGlobalFlag(GADVMode)) { OutputLineAll("", NULL, Line_ContinueAfterTyping); }
+	OutputLine(NULL, "　仕事先の事故で建築用の角材で頭部を強打したことがあったらしい。",
+		   NULL, "Aveva sbattuto forte la testa su una lastra di metallo appesa all'interno del cantiere.", GetGlobalFlag(GLinemodeSp));
+	if (GetGlobalFlag(GADVMode)) { ClearMessage(); } else { OutputLineAll(NULL, "\n", Line_ContinueAfterTyping); }
+
+	if (GetGlobalFlag(GADVMode)) { OutputLineAll("", NULL, Line_ContinueAfterTyping); }
+	OutputLine(NULL, "　……意識はすぐに戻ったらしく、本人もぴんぴんしていたため、それだけのことで片付けられてしまったが、",
+		   NULL, "Si riprese in fretta e, almeno in un primo momento, sembrava non essersi fatto niente...", Line_WaitForInput);
+	OutputLine(NULL, "…その事故以後から、父の頭痛や異常が徐々に始まっていくというのだ。",
+		   NULL, " ma fu da quel giorno che iniziò a soffrire di emicrania e a comportarsi in modo inusuale.", Line_Normal);
+	ClearMessage();
+
+	if (GetGlobalFlag(GADVMode)) { OutputLineAll("", NULL, Line_ContinueAfterTyping); }
+	OutputLine(NULL, "　私はこの事故と父の豹変に因果関係を感じ、帰郷後、教授に打ち明けた。",
+		   NULL, "Credetti che tra quei due eventi doveva esserci una qualche correlazione, così ne parlai con un professore quando tornai a Tokyo.", Line_Normal);
+	ClearMessage();
+
+	DrawSceneWithMask( "background/xta2", "maskup", 1, 0, 300 );
+
+	if (GetGlobalFlag(GADVMode)) { OutputLine("<color=#f5e6d3>教授</color>", NULL, "<color=#f5e6d3>Professore</color>", NULL, Line_ContinueAfterTyping); }
+	ModPlayVoiceLS(4, 0, "ps3/s20/00/vtk1_prof1001", 128, TRUE);
+	OutputLine(NULL, "「…ふむ。",
+		   NULL, "\"... uhm.", Line_WaitForInput);
+	ModPlayVoiceLS(4, 0, "ps3/s20/00/vtk1_prof1002", 128, TRUE);
+	OutputLine(NULL, "断言はできませんが、その様子から、入江君のお父さんに何らかの精神障害が起こっていた可能性は否めません。",
+		   NULL, " Non posso dirlo con certezza, ma credo che tuo padre avesse subìto un trauma cerebrale.", Line_WaitForInput);
+	ModPlayVoiceLS(4, 0, "ps3/s20/00/vtk1_prof1003", 128, TRUE);
+	OutputLine(NULL, "その頭部打撲事故の際に脳に障害が起こり、脳器質性精神障害を起こしたのかもしれませんね。",
+		   NULL, " Capita che un colpo alla testa causi dei disturbi nel comportamento e nell'umore.", GetGlobalFlag(GLinemodeSp));
+	if (GetGlobalFlag(GADVMode)) { OutputLine("<color=#f5e6d3>教授</color>", NULL, "<color=#f5e6d3>Professore</color>", NULL, Line_ContinueAfterTyping); }
+	ModPlayVoiceLS(4, 0, "ps3/s20/00/vtk1_prof1004", 128, TRUE);
+	OutputLine(NULL, "お父さんの晩年の状況は、そんな患者さんに多い、意識変容や譫妄（せんもう）に酷似していると思います。」",
+		   NULL, "I sintomi mostrati da tuo padre poco prima di morire sono simili ai deliri e all'instabilità mentale che riscontriamo in altri pazienti.\"", Line_Normal);
+	ClearMessage();
+
+	if (GetGlobalFlag(GADVMode)) { OutputLineAll("", NULL, Line_ContinueAfterTyping); }
+	OutputLine(NULL, "　人の行動は脳から作られる。",
+		   NULL, "L'uomo si muove in funzione del cervello.", Line_WaitForInput);
+	OutputLine(NULL, "……その脳が疾患することで起こる、行動の異常。",
+		   NULL, " Se quest'ultimo subisce dei traumi, causa comportamenti anomali.", GetGlobalFlag(GLinemodeSp));
+	if (GetGlobalFlag(GADVMode)) { ClearMessage(); } else { OutputLineAll(NULL, "\n", Line_ContinueAfterTyping); }
+
+	if (GetGlobalFlag(GADVMode) == 0) { OutputLineAll(NULL, "\n", Line_ContinueAfterTyping); }
+
+
+	if (GetGlobalFlag(GADVMode)) { OutputLineAll("", NULL, Line_ContinueAfterTyping); }
+	OutputLine(NULL, "　つまり、父は異常者でもなんでもなく、…気の毒な患者に過ぎなかったのだ。",
+		   NULL, "In altre parole, mio padre non era pazzo: era malato.", Line_Normal);
+	ClearMessage();
+
+	if (GetGlobalFlag(GADVMode)) { OutputLine("<color=#f5e6d3>教授</color>", NULL, "<color=#f5e6d3>Professore</color>", NULL, Line_ContinueAfterTyping); }
+	ModPlayVoiceLS(4, 0, "ps3/s20/00/vtk1_prof1005", 128, TRUE);
+	OutputLine(NULL, "「お父さんの遺体を検死できるなら、脳をよく調べてみるといいでしょう。",
+		   NULL, "\"Se avrai occasione di assistere alla sua autopsia, ti suggerisco di controllargli con attenzione il cervello.", Line_WaitForInput);
+	ModPlayVoiceLS(4, 0, "ps3/s20/00/vtk1_prof1006", 128, TRUE);
+	OutputLine(NULL, "…ひょっとすると腫瘍のようなものが見付かるかもしれません。」",
+		   NULL, " Forse troverai i segni di un trauma o di un tumore in fase avanzata.\"", GetGlobalFlag(GLinemodeSp));
+	if (GetGlobalFlag(GADVMode)) { ClearMessage(); } else { OutputLineAll(NULL, "\n", Line_ContinueAfterTyping); }
+
+	if (GetGlobalFlag(GADVMode) == 0) { OutputLineAll(NULL, "\n", Line_ContinueAfterTyping); }
+
+
+	if (GetGlobalFlag(GADVMode)) { OutputLineAll("", NULL, Line_ContinueAfterTyping); }
+	OutputLine(NULL, "　だが、父の遺体はすでに火葬されている。",
+		   NULL, "Mio padre, al tempo, era già stato cremato.", Line_WaitForInput);
+	OutputLine(NULL, "それを確かめることは永遠にできない。",
+		   NULL, " Non c'era più modo di scoprire la verità.", Line_Normal);
+	ClearMessage();
+
+	DrawScene( "black", 400 );
+
+	if (GetGlobalFlag(GADVMode)) { OutputLineAll("", NULL, Line_ContinueAfterTyping); }
+	OutputLine(NULL, "　でも私は、父の状況から間違いなくそうだと断言できた。",
+		   NULL, "Ciononostante, le storie sul suo comportamento mi bastarono.", GetGlobalFlag(GLinemodeSp));
+	if (GetGlobalFlag(GADVMode)) { ClearMessage(); } else { OutputLineAll(NULL, "\n", Line_ContinueAfterTyping); }
+
+	if (GetGlobalFlag(GADVMode)) { OutputLineAll("", NULL, Line_ContinueAfterTyping); }
+	OutputLine(NULL, "　それしか、あの寡黙で家族思いで、…母に静かな思いやりを寄せていた父の豹変を説明できないのだから。",
+		   NULL, "Non esisteva altra spiegazione per cui un uomo gentile e sereno come lui fosse cambiato in quel modo.", GetGlobalFlag(GLinemodeSp));
+	if (GetGlobalFlag(GADVMode)) { ClearMessage(); } else { OutputLineAll(NULL, "\n", Line_ContinueAfterTyping); }
+
+	if (GetGlobalFlag(GADVMode) == 0) { OutputLineAll(NULL, "\n", Line_ContinueAfterTyping); }
+
+
+	if (GetGlobalFlag(GADVMode)) { OutputLineAll("", NULL, Line_ContinueAfterTyping); }
+	OutputLine(NULL, "　………私は、父の名誉を回復するため、親類たちにそれを説明したが、ほとんどの人たちは納得してくれなかった。",
+		   NULL, "..... tornato a casa, cercai di spiegare ai miei parenti quel che era successo nel tentativo di restituire l'onore a mio padre, ma quasi nessuno mi capii.", Line_Normal);
+	ClearMessage();
+
+	if (GetGlobalFlag(GADVMode)) { OutputLineAll("", NULL, Line_ContinueAfterTyping); }
+	OutputLine(NULL, "　脳が傷つくようなことがあれば死んでしまうはず。",
+		   NULL, "Sarebbe dovuto morire dopo un colpo come quello.", GetGlobalFlag(GLinemodeSp));
+	if (GetGlobalFlag(GADVMode)) { ClearMessage(); } else { OutputLineAll(NULL, "\n", Line_ContinueAfterTyping); }
+
+	if (GetGlobalFlag(GADVMode)) { OutputLineAll("", NULL, Line_ContinueAfterTyping); }
+	OutputLine(NULL, "　だが父はぴんぴんしていた。",
+		   NULL, "Eppure era vivo e vegeto.", GetGlobalFlag(GLinemodeSp));
+	if (GetGlobalFlag(GADVMode)) { ClearMessage(); } else { OutputLineAll(NULL, "\n", Line_ContinueAfterTyping); }
+
+	if (GetGlobalFlag(GADVMode) == 0) { OutputLineAll(NULL, "\n", Line_ContinueAfterTyping); }
+
+
+	if (GetGlobalFlag(GADVMode)) { OutputLineAll("", NULL, Line_ContinueAfterTyping); }
+	OutputLine(NULL, "　だからあの事故で脳が傷ついたわけがない。",
+		   NULL, "Quindi l'incidente non poteva avere a che fare con il suo cambiamento.", GetGlobalFlag(GLinemodeSp));
+	if (GetGlobalFlag(GADVMode)) { ClearMessage(); } else { OutputLineAll(NULL, "\n", Line_ContinueAfterTyping); }
+
+	if (GetGlobalFlag(GADVMode)) { OutputLineAll("", NULL, Line_ContinueAfterTyping); }
+	OutputLine(NULL, "　それに、あれらは父の人間性に起因するもので、脳ではなく心の問題に違いないと、",
+		   NULL, "Non era stato il cervello a farlo cambiare. Era stata la sua mente.", Line_WaitForInput);
+	OutputLine(NULL, "心という都合のいい言葉で無理やり片付けられてしまった。",
+		   NULL, " Venni liquidato così, senza tante possibilità di rispondere.", Line_Normal);
+	ClearMessage();
+
+	if (GetGlobalFlag(GADVMode)) { OutputLineAll("", NULL, Line_ContinueAfterTyping); }
+	OutputLine(NULL, "　…それが、一般人の持つ脳に関する知識の限界だった。",
+		   NULL, "... dopotutto, è questa l'idea che la gente comune ha sul cervello.", GetGlobalFlag(GLinemodeSp));
+	if (GetGlobalFlag(GADVMode)) { ClearMessage(); } else { OutputLineAll(NULL, "\n", Line_ContinueAfterTyping); }
+
+	if (GetGlobalFlag(GADVMode)) { OutputLineAll("", NULL, Line_ContinueAfterTyping); }
+	OutputLine(NULL, "　……彼らのいう心は、脳という器官で作られるものに過ぎないという考えがないのだから。",
+		   NULL, "Difficile credere che il cervello e la psiche siano collegati.", Line_Normal);
+	ClearMessage();
+
+	if (GetGlobalFlag(GADVMode)) { OutputLineAll("", NULL, Line_ContinueAfterTyping); }
+	OutputLine(NULL, "　親類たちのほとんどは信じてくれなかったが、",
+		   NULL, "Nessuno credette alla mia versione...", Line_ContinueAfterTyping);
+	SetValidityOfInput( FALSE );
+	Wait( 1000 );
+	SetValidityOfInput( TRUE );
+	OutputLine(NULL, "………それでも、たったひとりだけ信じてほしい人がいた。",
+		   NULL, " ma volevo che soltanto una persona lo facesse, nonché la stessa che speravo mi credesse.", Line_Normal);
+	ClearMessage();
+
+	if (GetGlobalFlag(GADVMode)) { OutputLineAll("", NULL, Line_ContinueAfterTyping); }
+	OutputLine(NULL, "　………それが母だった。",
+		   NULL, "...... mia madre.", Line_Normal);
+	ClearMessage();
+
+	DrawScene( "background/sinryou_sinsatu4", 400 );
+
+	if (GetGlobalFlag(GADVMode)) { OutputLineAll("", NULL, Line_ContinueAfterTyping); }
+	OutputLine(NULL, "　母は老衰が進むと、心も少し狭くなり、",
+		   NULL, "Con l'avanzare dell'età iniziò a perdere il senno", Line_ContinueAfterTyping);
+	SetValidityOfInput( FALSE );
+	Wait( 800 );
+	SetValidityOfInput( TRUE );
+	OutputLine(NULL, "……父に受けた乱暴を誇張して語るようになっていた。",
+		   NULL, " e a esasperare i soprusi che aveva dovuto sopportare.", GetGlobalFlag(GLinemodeSp));
+	if (GetGlobalFlag(GADVMode)) { ClearMessage(); } else { OutputLineAll(NULL, "\n", Line_ContinueAfterTyping); }
+
+	if (GetGlobalFlag(GADVMode) == 0) { OutputLineAll(NULL, "\n", Line_ContinueAfterTyping); }
+
+
+	if (GetGlobalFlag(GADVMode)) { OutputLineAll("", NULL, Line_ContinueAfterTyping); }
+	OutputLine(NULL, "　…口を開けば父の批判ばかり。",
+		   NULL, "... non faceva altro che parlare male di mio padre.", GetGlobalFlag(GLinemodeSp));
+	if (GetGlobalFlag(GADVMode)) { ClearMessage(); } else { OutputLineAll(NULL, "\n", Line_ContinueAfterTyping); }
+
+	if (GetGlobalFlag(GADVMode) == 0) { OutputLineAll(NULL, "\n", Line_ContinueAfterTyping); }
+
+
+	if (GetGlobalFlag(GADVMode)) { OutputLineAll("", NULL, Line_ContinueAfterTyping); }
+	OutputLine(NULL, "　そして最後には必ず、どうしてあのような人のところへ嫁いでしまったのかとさめざめと泣くのだった。",
+		   NULL, "E alla fine scoppiava sempre a piangere, pentendosi di averlo sposato.", Line_Normal);
+	ClearMessage();
+
+	if (GetGlobalFlag(GADVMode)) { OutputLineAll("", NULL, Line_ContinueAfterTyping); }
+	OutputLine(NULL, "　……あれだけ仲のいい夫婦だった。",
+		   NULL, "Erano dei genitori fantastici.", GetGlobalFlag(GLinemodeSp));
+	if (GetGlobalFlag(GADVMode)) { ClearMessage(); } else { OutputLineAll(NULL, "\n", Line_ContinueAfterTyping); }
+
+	if (GetGlobalFlag(GADVMode)) { OutputLineAll("", NULL, Line_ContinueAfterTyping); }
+	OutputLine(NULL, "　…家族仲の良い最高の家族だった…。",
+		   NULL, "Eravamo una famiglia fantastica.", GetGlobalFlag(GLinemodeSp));
+	if (GetGlobalFlag(GADVMode)) { ClearMessage(); } else { OutputLineAll(NULL, "\n", Line_ContinueAfterTyping); }
+
+	if (GetGlobalFlag(GADVMode) == 0) { OutputLineAll(NULL, "\n", Line_ContinueAfterTyping); }
+
+
+	if (GetGlobalFlag(GADVMode)) { OutputLineAll("", NULL, Line_ContinueAfterTyping); }
+	OutputLine(NULL, "　だから母の、父に対する誤解だけは絶対に解きたかったのだ…。",
+		   NULL, "Per questo volevo comunicarle a tutti i costi cosa avesse davvero causato quel comportamento di mio padre.", Line_Normal);
+	ClearMessage();
+
+	if (GetGlobalFlag(GADVMode)) { OutputLineAll("", NULL, Line_ContinueAfterTyping); }
+	OutputLine(NULL, "　父のあれらの行為は、脳障害による症状に過ぎない。",
+		   NULL, "Era tutta colpa di un trauma cerebrale.", GetGlobalFlag(GLinemodeSp));
+	if (GetGlobalFlag(GADVMode)) { ClearMessage(); } else { OutputLineAll(NULL, "\n", Line_ContinueAfterTyping); }
+
+	if (GetGlobalFlag(GADVMode) == 0) { OutputLineAll(NULL, "\n", Line_ContinueAfterTyping); }
+
+
+	if (GetGlobalFlag(GADVMode)) { OutputLineAll("", NULL, Line_ContinueAfterTyping); }
+	OutputLine(NULL, "　…母に対する辛い仕打ちの数々はとても悲しいものだが、それは本当の意味で父が望んだことではないのだと、",
+		   NULL, "... ciò che aveva fatto a mia madre era stato sicuramente orrendo e deplorevole, ma non potevamo dargli la colpa.", Line_ContinueAfterTyping);
+	SetValidityOfInput( FALSE );
+	Wait( 900 );
+	SetValidityOfInput( TRUE );
+	OutputLine(NULL, "……父には罪はなかったのだと、何度も説明した。",
+		   NULL, " Cercai di dirle che mio padre era innocente.", Line_Normal);
+	ClearMessage();
+
+	DrawScene( "black", 400 );
+
+	if (GetGlobalFlag(GADVMode)) { OutputLineAll("", NULL, Line_ContinueAfterTyping); }
+	OutputLine(NULL, "　…でも、……母はその説明にはついに納得してくれなかった。",
+		   NULL, "Purtroppo... mia madre non lo capì.", GetGlobalFlag(GLinemodeSp));
+	if (GetGlobalFlag(GADVMode)) { ClearMessage(); } else { OutputLineAll(NULL, "\n", Line_ContinueAfterTyping); }
+
+	if (GetGlobalFlag(GADVMode)) { OutputLineAll("", NULL, Line_ContinueAfterTyping); }
+	OutputLine(NULL, "　母が息を引き取る最後の瞬間、…私は母に、父を許してやってほしいと最後に頼んだ。",
+		   NULL, "Prima che esalasse l'ultimo respiro... la implorai di perdonarlo.", GetGlobalFlag(GLinemodeSp));
+	if (GetGlobalFlag(GADVMode)) { ClearMessage(); } else { OutputLineAll(NULL, "\n", Line_ContinueAfterTyping); }
+
+	if (GetGlobalFlag(GADVMode) == 0) { OutputLineAll(NULL, "\n", Line_ContinueAfterTyping); }
+
+
+	if (GetGlobalFlag(GADVMode)) { OutputLineAll("", NULL, Line_ContinueAfterTyping); }
+	OutputLine(NULL, "　だが母の最後の言葉は、……自分の骨は決して父と同じ墓に納めないでほしいというものだった…。",
+		   NULL, "Ma le sue ultime parole furono \"Ti prego, non seppellirmi accanto a quell'uomo.\"", Line_Normal);
+	ClearMessage();
+
+	FadeOutBGM( 0, 1000, FALSE );
+	DrawScene( "background/sora", 1000 );
+
+	if (GetGlobalFlag(GADVMode)) { OutputLineAll("", NULL, Line_ContinueAfterTyping); }
+	OutputLine(NULL, "　………父に罪は無かった。",
+		   NULL, "...... mio padre non aveva alcuna colpa.", GetGlobalFlag(GLinemodeSp));
+	if (GetGlobalFlag(GADVMode)) { ClearMessage(); } else { OutputLineAll(NULL, "\n", Line_ContinueAfterTyping); }
+
+	PlayBGM( 0, "years_Ver2", 120, 0 );
+
+	if (GetGlobalFlag(GADVMode)) { OutputLineAll("", NULL, Line_ContinueAfterTyping); }
+	OutputLine(NULL, "　ただただ、…父は脳障害という悲しい疾患の犠牲者だっただけなのだ。",
+		   NULL, "Era soltanto caduto vittima di un terribile evento.", Line_Normal);
+	ClearMessage();
+
+	if (GetGlobalFlag(GADVMode)) { OutputLineAll("", NULL, Line_ContinueAfterTyping); }
+	OutputLine(NULL, "　風邪をひき、咳が止まらない人にうるさいと言う人などいない。",
+		   NULL, "Non ci si lamenta di una persona che tossisce perché ha la febbre.", GetGlobalFlag(GLinemodeSp));
+	if (GetGlobalFlag(GADVMode)) { ClearMessage(); } else { OutputLineAll(NULL, "\n", Line_ContinueAfterTyping); }
+
+	if (GetGlobalFlag(GADVMode)) { OutputLineAll("", NULL, Line_ContinueAfterTyping); }
+	OutputLine(NULL, "　それは症状なのだから仕方がないことで、むしろ同情を与えるべきなのだ。",
+		   NULL, "La tosse è solo un sintomo della malattia, perciò dobbiamo essere comprensivi.", GetGlobalFlag(GLinemodeSp));
+	if (GetGlobalFlag(GADVMode)) { ClearMessage(); } else { OutputLineAll(NULL, "\n", Line_ContinueAfterTyping); }
+
+	if (GetGlobalFlag(GADVMode) == 0) { OutputLineAll(NULL, "\n", Line_ContinueAfterTyping); }
+
+
+	if (GetGlobalFlag(GADVMode)) { OutputLineAll("", NULL, Line_ContinueAfterTyping); }
+	OutputLine(NULL, "　父の場合は、それが咳というわかりやすい形ではなく、",
+		   NULL, "Nel caso di mio padre, i sintomi non erano evidenti come un colpo di tosse", Line_WaitForInput);
+	OutputLine(NULL, "……性格の変容というわかりにくい形だっただけなのだ。",
+		   NULL, "... ma prendevano la forma di urla, pianti, scatti d'ira, che sono assai più difficili da identificare.", Line_Normal);
+	ClearMessage();
+
+	if (GetGlobalFlag(GADVMode)) { OutputLineAll("", NULL, Line_ContinueAfterTyping); }
+	OutputLine(NULL, "　もし私が、もっともっと脳のことを勉強していたなら、母にもっと詳しく説明して、…父への誤解を解き、",
+		   NULL, " Se avessi approfondito gli studi sul cervello, avrei potuto spiegare meglio a mia madre cosa accadde a mio padre... e forse mi avrebbe compreso.", Line_WaitForInput);
+	OutputLine(NULL, "……せめてあの世では元通りのおしどり夫婦に戻れたのではないか。",
+		   NULL, "Così, almeno in paradiso, sarebbero tornati a essere la coppia tanto invidiata di un tempo.", GetGlobalFlag(GLinemodeSp));
+	if (GetGlobalFlag(GADVMode)) { ClearMessage(); } else { OutputLineAll(NULL, "\n", Line_ContinueAfterTyping); }
+
+	if (GetGlobalFlag(GADVMode) == 0) { OutputLineAll(NULL, "\n", Line_ContinueAfterTyping); }
+
+
+	if (GetGlobalFlag(GADVMode)) { OutputLineAll("", NULL, Line_ContinueAfterTyping); }
+	OutputLine(NULL, "　…それを思った時、……私は自分の無力さに泣いた。",
+		   NULL, "... piansi lacrime amare quando mi accorsi di questa verità.", Line_Normal);
+	ClearMessage();
+
+	if (GetGlobalFlag(GADVMode)) { OutputLineAll("", NULL, Line_ContinueAfterTyping); }
+	OutputLine(NULL, "　そして、……世の中には私の父と同じに、",
+		   NULL, "E capii anche che al mondo dovevano esserci tantissime persone come mio padre,", Line_ContinueAfterTyping);
+	SetValidityOfInput( FALSE );
+	Wait( 700 );
+	SetValidityOfInput( TRUE );
+	OutputLine(NULL, "…同情されるべき患者なのに、誤解され蔑まれている人々が大勢いることを悟る。",
+		   NULL, " che erano afflitte da una malattia da tutti ignorata o disprezzata.", Line_Normal);
+	ClearMessage();
+
+	DrawScene( "black", 400 );
+
+	if (GetGlobalFlag(GADVMode)) { OutputLineAll("", NULL, Line_ContinueAfterTyping); }
+	OutputLine(NULL, "　そして、私は知る。",
+		   NULL, "Poi, ebbi una folgorazione.", GetGlobalFlag(GLinemodeSp));
+	if (GetGlobalFlag(GADVMode)) { ClearMessage(); } else { OutputLineAll(NULL, "\n", Line_ContinueAfterTyping); }
+
+	if (GetGlobalFlag(GADVMode) == 0) { OutputLineAll(NULL, "\n", Line_ContinueAfterTyping); }
+
+
+	if (GetGlobalFlag(GADVMode)) { OutputLineAll("", NULL, Line_ContinueAfterTyping); }
+	OutputLine(NULL, "　難治の精神病や脳疾患に対する画期的な治療法として脚光を浴び、研究が進められていた「精神外科」を。",
+		   NULL, "Scoprii l'esistenza di una cura miracolosa per questi pazienti che si chiamava \"lobotomia\".", Line_Normal);
+	ClearMessage();
+
+	if (GetGlobalFlag(GADVMode)) { OutputLineAll("", NULL, Line_ContinueAfterTyping); }
+	OutputLine(NULL, "　その日から、…私は生涯をかけて「脳」を学び、誤解された人々を救おうと誓ったのだ。",
+		   NULL, "Da quel giorno in poi dedicai la mia vita allo studio del cervello, in modo da poter salvare le persone affette da malattie mentali.", GetGlobalFlag(GLinemodeSp));
+	if (GetGlobalFlag(GADVMode)) { ClearMessage(); } else { OutputLineAll(NULL, "\n", Line_ContinueAfterTyping); }
+
+	if (GetGlobalFlag(GADVMode) == 0) { OutputLineAll(NULL, "\n", Line_ContinueAfterTyping); }
+
+
+	if (GetGlobalFlag(GADVMode)) { OutputLineAll("", NULL, Line_ContinueAfterTyping); }
+	OutputLine(NULL, "　もう父はいないけど。",
+		   NULL, "Mio padre ormai non c'è più.", Line_WaitForInput);
+	OutputLine(NULL, "……もし、あの日の父がそこに現れたなら、自らの手で治療できるように。",
+		   NULL, " Ma se oggi fosse vivo, potrei curarlo con le mie stesse mani.", GetGlobalFlag(GLinemodeSp));
+	if (GetGlobalFlag(GADVMode)) { ClearMessage(); } else { OutputLineAll(NULL, "\n", Line_ContinueAfterTyping); }
+
+	if (GetGlobalFlag(GADVMode)) { OutputLineAll("", NULL, Line_ContinueAfterTyping); }
+	OutputLine(NULL, "　…そして、母と仲直りできるように。",
+		   NULL, "Così che possa fare pace con mia madre.", Line_Normal);
+	ClearMessage();
+
+	if (GetGlobalFlag(GADVMode) == 0) { OutputLineAll(NULL, "\n", Line_ContinueAfterTyping); }
+
+
+	if (GetGlobalFlag(GADVMode)) { OutputLineAll("", NULL, Line_ContinueAfterTyping); }
+	OutputLine(NULL, "　それが、私の。",
+		   NULL, "Non esiste altra ragione per cui io, Kyousuke Irie,", Line_WaitForInput);
+	OutputLine(NULL, "……入江京介がこの道にかける情熱の原点。",
+		   NULL, " oggi mi trovi qui.", Line_Normal);
+	ClearMessage();
+
+	CallScript( "&eye" );
+	FadeOutBGM( 0, 1000, FALSE );
+	DrawScene( "black", 1000 );
+
+}

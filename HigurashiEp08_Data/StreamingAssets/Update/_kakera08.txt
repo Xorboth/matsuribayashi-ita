@@ -1,0 +1,1222 @@
+void main()
+{
+	DrawScene( "black", 400 );
+
+	PlayBGM( 1, "semi", 120, 0 );
+
+	DrawScene( "background/hi1", 1000 );
+
+	ClearMessage();
+	if (GetGlobalFlag(GADVMode)) { OutputLineAll("", NULL, Line_ContinueAfterTyping); }
+	OutputLine(NULL, "　村は騒然としていた。",
+		   NULL, "Il villaggio è in preda al panico.", GetGlobalFlag(GLinemodeSp));
+	if (GetGlobalFlag(GADVMode)) { ClearMessage(); } else { OutputLineAll(NULL, "\n", Line_ContinueAfterTyping); }
+
+	if (GetGlobalFlag(GADVMode)) { OutputLineAll("", NULL, Line_ContinueAfterTyping); }
+	OutputLine(NULL, "　誰もが起こると思っていた、連続怪死事件が四度、起こったからだ。",
+		   NULL, "È successo ciò che la maggior parte degli abitanti si aspettavano, ovvero la quarta morte misteriosa di fila.", Line_Normal);
+	ClearMessage();
+
+	DrawSceneWithMask( "background/ryuuketu1", "maskaa", 1, 0, 200 );
+
+	if (GetGlobalFlag(GADVMode)) { OutputLineAll("", NULL, Line_ContinueAfterTyping); }
+	OutputLine(NULL, "　殺されたのは、……沙都子ちゃんの叔母だった。",
+		   NULL, "La zia di Satoko-chan è stata uccisa.", Line_Normal);
+	ClearMessage();
+
+	if (GetGlobalFlag(GADVMode)) { OutputLineAll("", NULL, Line_ContinueAfterTyping); }
+	OutputLine(NULL, "　村人たちは、ヒステリックに近所とトラブルを起こしてばかりいた叔母への祟りに、不謹慎ながらある種の満足感を感じていたようだった。",
+		   NULL, "Sono tutti felici di questo fatto, perché dicono che la maledizione ha finalmente colpito colei che aveva causato guai e malumori per il villaggio.", GetGlobalFlag(GLinemodeSp));
+	if (GetGlobalFlag(GADVMode)) { ClearMessage(); } else { OutputLineAll(NULL, "\n", Line_ContinueAfterTyping); }
+
+	if (GetGlobalFlag(GADVMode) == 0) { OutputLineAll(NULL, "\n", Line_ContinueAfterTyping); }
+
+
+	if (GetGlobalFlag(GADVMode)) { OutputLineAll("", NULL, Line_ContinueAfterTyping); }
+	OutputLine(NULL, "　でも、私だけがすぐに真相に気が付いた。",
+		   NULL, "Tuttavia, io so la verità.", GetGlobalFlag(GLinemodeSp));
+	if (GetGlobalFlag(GADVMode)) { ClearMessage(); } else { OutputLineAll(NULL, "\n", Line_ContinueAfterTyping); }
+
+	if (GetGlobalFlag(GADVMode) == 0) { OutputLineAll(NULL, "\n", Line_ContinueAfterTyping); }
+
+
+	if (GetGlobalFlag(GADVMode)) { OutputLineAll("", NULL, Line_ContinueAfterTyping); }
+	OutputLine(NULL, "　あの夜、事件が発生し、警察に事件現場に呼ばれて、異様に頭部だけを滅多打ちにした叔母の死体を見た時、",
+		   NULL, "Quando ho visto il corpo martoriato dalle percosse riverso sulla scena del crimine,", Line_ContinueAfterTyping);
+	SetValidityOfInput( FALSE );
+	Wait( 800 );
+	SetValidityOfInput( TRUE );
+	OutputLine(NULL, "…悟史くんの仕業に違いないと確信した…。",
+		   NULL, " ho capito subito che era stato Satoshi-kun.", Line_Normal);
+	ClearMessage();
+
+	DrawSceneWithMask( "black", "maskdown", 1, 0, 300 );
+
+	if (GetGlobalFlag(GADVMode)) { OutputLineAll("", NULL, Line_ContinueAfterTyping); }
+	OutputLine(NULL, "　より酷くなっていく沙都子ちゃんへの苛め。",
+		   NULL, "Gli abusi su Satoko-chan erano peggiorati.", GetGlobalFlag(GLinemodeSp));
+	if (GetGlobalFlag(GADVMode)) { ClearMessage(); } else { OutputLineAll(NULL, "\n", Line_ContinueAfterTyping); }
+
+	if (GetGlobalFlag(GADVMode)) { OutputLineAll("", NULL, Line_ContinueAfterTyping); }
+	OutputLine(NULL, "　そしてそれを救いたいと悩む悟史くん。",
+		   NULL, "Satoshi-kun voleva solo proteggerla.", GetGlobalFlag(GLinemodeSp));
+	if (GetGlobalFlag(GADVMode)) { ClearMessage(); } else { OutputLineAll(NULL, "\n", Line_ContinueAfterTyping); }
+
+	if (GetGlobalFlag(GADVMode)) { OutputLineAll("", NULL, Line_ContinueAfterTyping); }
+	OutputLine(NULL, "　そして、持ち帰ったバット…。",
+		   NULL, "Per questo aveva portato con sé quella mazza da baseball.", GetGlobalFlag(GLinemodeSp));
+	if (GetGlobalFlag(GADVMode)) { ClearMessage(); } else { OutputLineAll(NULL, "\n", Line_ContinueAfterTyping); }
+
+	if (GetGlobalFlag(GADVMode) == 0) { OutputLineAll(NULL, "\n", Line_ContinueAfterTyping); }
+
+
+	if (GetGlobalFlag(GADVMode)) { OutputLineAll("", NULL, Line_ContinueAfterTyping); }
+	OutputLine(NULL, "　全ての符号は重なり合っていた。",
+		   NULL, "Era tutto già scritto.", Line_WaitForInput);
+	OutputLine(NULL, "悟史くんの口から聞くまでもなかった。",
+		   NULL, " Non c'era bisogno che dicesse nulla.", Line_Normal);
+	ClearMessage();
+
+	FadeOutBGM( 1, 300, FALSE );
+	PlayBGM( 0, "Gray_2", 120, 0 );
+
+	if (GetGlobalFlag(GADVMode)) { OutputLineAll("", NULL, Line_ContinueAfterTyping); }
+	OutputLine(NULL, "　……私は自問せずにはいられない。",
+		   NULL, "... ma non potevo fare a meno di avere dei dubbi.", GetGlobalFlag(GLinemodeSp));
+	if (GetGlobalFlag(GADVMode)) { ClearMessage(); } else { OutputLineAll(NULL, "\n", Line_ContinueAfterTyping); }
+
+	if (GetGlobalFlag(GADVMode) == 0) { OutputLineAll(NULL, "\n", Line_ContinueAfterTyping); }
+
+
+	if (GetGlobalFlag(GADVMode)) { OutputLineAll("", NULL, Line_ContinueAfterTyping); }
+	OutputLine(NULL, "　味方のいない気の毒な北条兄妹のために、自分だけは味方になろうと思ったはずなのに。",
+		   NULL, "Mi dispiace per i fratelli Houjou, che non avevano nessuno su cui fare affidamento e con cui avevo cercato di legare.", GetGlobalFlag(GLinemodeSp));
+	if (GetGlobalFlag(GADVMode)) { ClearMessage(); } else { OutputLineAll(NULL, "\n", Line_ContinueAfterTyping); }
+
+	if (GetGlobalFlag(GADVMode)) { OutputLineAll("", NULL, Line_ContinueAfterTyping); }
+	OutputLine(NULL, "　…結局、自分は何の味方にもなれなかったのだから…。",
+		   NULL, "... alla fine, non sono riuscito a essere loro di aiuto.", Line_Normal);
+	ClearMessage();
+
+	if (GetGlobalFlag(GADVMode)) { OutputLineAll("", NULL, Line_ContinueAfterTyping); }
+	OutputLine(NULL, "　そんな中、私は悟史くんからの電話を受けた。",
+		   NULL, "In quel momento, ricevo una telefonata.", Line_Normal);
+	ClearMessage();
+
+	if (GetGlobalFlag(GADVMode)) { OutputLineAll("", NULL, Line_ContinueAfterTyping); }
+	OutputLine(NULL, "　彼から電話をもらったことは一度もない。",
+		   NULL, "È Satoshi-kun.", GetGlobalFlag(GLinemodeSp));
+	if (GetGlobalFlag(GADVMode)) { ClearMessage(); } else { OutputLineAll(NULL, "\n", Line_ContinueAfterTyping); }
+
+	if (GetGlobalFlag(GADVMode) == 0) { OutputLineAll(NULL, "\n", Line_ContinueAfterTyping); }
+
+
+	if (GetGlobalFlag(GADVMode)) { OutputLineAll("", NULL, Line_ContinueAfterTyping); }
+	OutputLine(NULL, "　一体何事なのか…。",
+		   NULL, "Non mi ha mai chiamato prima d'ora.", GetGlobalFlag(GLinemodeSp));
+	if (GetGlobalFlag(GADVMode)) { ClearMessage(); } else { OutputLineAll(NULL, "\n", Line_ContinueAfterTyping); }
+
+	if (GetGlobalFlag(GADVMode)) { OutputLineAll("", NULL, Line_ContinueAfterTyping); }
+	OutputLine(NULL, "　…今回の事件について、何かの助力を求めているのだろうか。",
+		   NULL, "Sarà successo qualcosa? Ha bisogno di una mano?", GetGlobalFlag(GLinemodeSp));
+	if (GetGlobalFlag(GADVMode)) { ClearMessage(); } else { OutputLineAll(NULL, "\n", Line_ContinueAfterTyping); }
+
+	if (GetGlobalFlag(GADVMode) == 0) { OutputLineAll(NULL, "\n", Line_ContinueAfterTyping); }
+
+
+	if (GetGlobalFlag(GADVMode)) { OutputLineAll("", NULL, Line_ContinueAfterTyping); }
+	OutputLine(NULL, "　なら、……せめてそれに協力してやりたい。",
+		   NULL, "Aiutarlo sarebbe il minimo.", Line_WaitForInput);
+	OutputLine(NULL, "そう思った。",
+		   NULL, " Non mi tirerò indietro.", Line_Normal);
+	ClearMessage();
+
+	PlayBGM( 1, "higurashi", 120, 0 );
+
+	DrawSceneWithMask( "background/denwa", "maskup", 1, 0, 300 );
+
+	if (GetGlobalFlag(GADVMode)) { OutputLine("<color=#ffdc6f>悟史</color>", NULL, "<color=#ffdc6f>Satoshi</color>", NULL, Line_ContinueAfterTyping); }
+	ModPlayVoiceLS(4, 7, "ps3/s20/07/vtk1_satoshi1095", 128, TRUE);
+	OutputLine(NULL, "「あ、監督ですか。",
+		   NULL, "\"Pronto, coach?", Line_WaitForInput);
+	ModPlayVoiceLS(4, 7, "ps3/s20/07/vtk1_satoshi1096", 128, TRUE);
+	OutputLine(NULL, "お仕事中に済みませんでした。」",
+		   NULL, " Scusa se ti disturbo.\"", GetGlobalFlag(GLinemodeSp));
+	if (GetGlobalFlag(GADVMode)) { ClearMessage(); } else { OutputLineAll(NULL, "\n", Line_ContinueAfterTyping); }
+
+	if (GetGlobalFlag(GADVMode)) { OutputLine("<color=#c89a80>入江</color>", NULL, "<color=#c89a80>Irie</color>", NULL, Line_ContinueAfterTyping); }
+	ModPlayVoiceLS(4, 10, "ps3/s20/10/vtk1_irie1318", 128, TRUE);
+	OutputLine(NULL, "「いえいえ、気になさらないでください。",
+		   NULL, "\"Ah, no, figurati.", Line_WaitForInput);
+	ModPlayVoiceLS(4, 10, "ps3/s20/10/vtk1_irie1319", 128, TRUE);
+	OutputLine(NULL, "どうなさいましたか？」",
+		   NULL, " Dimmi pure.\"", GetGlobalFlag(GLinemodeSp));
+	if (GetGlobalFlag(GADVMode)) { ClearMessage(); } else { OutputLineAll(NULL, "\n", Line_ContinueAfterTyping); }
+
+	if (GetGlobalFlag(GADVMode)) { OutputLine("<color=#ffdc6f>悟史</color>", NULL, "<color=#ffdc6f>Satoshi</color>", NULL, Line_ContinueAfterTyping); }
+	ModPlayVoiceLS(4, 7, "ps3/s20/07/vtk1_satoshi1097", 128, TRUE);
+	OutputLine(NULL, "「あの、……えっと、車を持っている人が、他に思いつかなかったんで…。」",
+		   NULL, "\"Ecco... cercavo qualcuno che avesse un'auto...\"", GetGlobalFlag(GLinemodeSp));
+	if (GetGlobalFlag(GADVMode)) { ClearMessage(); } else { OutputLineAll(NULL, "\n", Line_ContinueAfterTyping); }
+
+	if (GetGlobalFlag(GADVMode)) { OutputLine("<color=#c89a80>入江</color>", NULL, "<color=#c89a80>Irie</color>", NULL, Line_ContinueAfterTyping); }
+	ModPlayVoiceLS(4, 10, "ps3/s20/10/vtk1_irie1320", 128, TRUE);
+	OutputLine(NULL, "「車、ですか？",
+		   NULL, "\"Un'auto?", Line_WaitForInput);
+	ModPlayVoiceLS(4, 10, "ps3/s20/10/vtk1_irie1321", 128, TRUE);
+	OutputLine(NULL, "　えぇ、ありますよ。」",
+		   NULL, " Io ce l'ho.\"", Line_Normal);
+	ClearMessage();
+
+	if (GetGlobalFlag(GADVMode)) { OutputLine("<color=#ffdc6f>悟史</color>", NULL, "<color=#ffdc6f>Satoshi</color>", NULL, Line_ContinueAfterTyping); }
+	ModPlayVoiceLS(4, 7, "ps3/s20/07/vtk1_satoshi1098", 128, TRUE);
+	OutputLine(NULL, "「実は、今、興宮のおもちゃ屋さんの前にいるんです。",
+		   NULL, "\"Sono davanti al negozio di giocattoli di Okinomiya.", Line_WaitForInput);
+	ModPlayVoiceLS(4, 7, "ps3/s20/07/vtk1_satoshi1099", 128, TRUE);
+	OutputLine(NULL, "あの、魅音の叔父さんのおもちゃ屋じゃなくて、もう一軒の、歯医者さんの近くにあるおもちゃ屋さんの方です。」",
+		   NULL, " Non quello dello zio di Mion, ma quello che si trova accanto allo studio dentistico.\"", GetGlobalFlag(GLinemodeSp));
+	if (GetGlobalFlag(GADVMode)) { ClearMessage(); } else { OutputLineAll(NULL, "\n", Line_ContinueAfterTyping); }
+
+	if (GetGlobalFlag(GADVMode)) { OutputLine("<color=#c89a80>入江</color>", NULL, "<color=#c89a80>Irie</color>", NULL, Line_ContinueAfterTyping); }
+	ModPlayVoiceLS(4, 10, "ps3/s20/10/vtk1_irie1322", 128, TRUE);
+	OutputLine(NULL, "「あぁ、わかりますわかります。」",
+		   NULL, "\"Sì, ho capito quale.\"", Line_Normal);
+	ClearMessage();
+
+	if (GetGlobalFlag(GADVMode)) { OutputLine("<color=#ffdc6f>悟史</color>", NULL, "<color=#ffdc6f>Satoshi</color>", NULL, Line_ContinueAfterTyping); }
+	ModPlayVoiceLS(4, 7, "ps3/s20/07/vtk1_satoshi1100", 128, TRUE);
+	OutputLine(NULL, "「それで、沙都子の誕生日プレゼントのぬいぐるみを買えたんですけど、",
+		   NULL, "\"Ho comprato un orso di peluche che voglio regalare a Satoko per il compleanno...", Line_Continue);
+	OutputLine(NULL, "……その、",
+		   NULL, " però...", Line_Continue);
+	OutputLine(NULL, "……むぅ。",
+		   NULL, " uff.", Line_WaitForInput);
+	ModPlayVoiceLS(4, 7, "ps3/s20/07/vtk1_satoshi1101", 128, TRUE);
+	OutputLine(NULL, "…大きくって、自転車に積めないんです。」",
+		   NULL, " È troppo grande per la mia bici.\"", Line_Normal);
+	ClearMessage();
+
+	if (GetGlobalFlag(GADVMode)) { OutputLine("<color=#c89a80>入江</color>", NULL, "<color=#c89a80>Irie</color>", NULL, Line_ContinueAfterTyping); }
+	ModPlayVoiceLS(4, 10, "ps3/s20/10/vtk1_irie1323", 128, TRUE);
+	OutputLine(NULL, "「大きくって自転車に積めない？",
+		   NULL, "\"Troppo grande?", Line_WaitForInput);
+	ModPlayVoiceLS(4, 10, "ps3/s20/10/vtk1_irie1324", 128, TRUE);
+	OutputLine(NULL, "　あっはっはっは、悟史くん、あなた、どれだけ大きなぬいぐるみを買ったんですか。」",
+		   NULL, " Ahahah, Satoshi-kun, ma quanto è grande quell'orsacchiotto?\"", GetGlobalFlag(GLinemodeSp));
+	if (GetGlobalFlag(GADVMode)) { ClearMessage(); } else { OutputLineAll(NULL, "\n", Line_ContinueAfterTyping); }
+
+	if (GetGlobalFlag(GADVMode)) { OutputLine("<color=#ffdc6f>悟史</color>", NULL, "<color=#ffdc6f>Satoshi</color>", NULL, Line_ContinueAfterTyping); }
+	ModPlayVoiceLS(4, 7, "ps3/s20/07/vtk1_satoshi1102", 128, TRUE);
+	OutputLine(NULL, "「……むぅ。」",
+		   NULL, "\"...... uff.\"", Line_Normal);
+	ClearMessage();
+
+	FadeOutBGM( 1, 300, FALSE );
+
+	if (GetGlobalFlag(GADVMode)) { OutputLineAll("", NULL, Line_ContinueAfterTyping); }
+	OutputLine(NULL, "　それに気付かずに自転車に乗っておもちゃ屋に行ってしまい、それで途方にくれているというわけらしい。",
+		   NULL, "Probabilmente non ci aveva pensato quando ha preso la bici e adesso non sa cosa fare.", GetGlobalFlag(GLinemodeSp));
+	if (GetGlobalFlag(GADVMode)) { ClearMessage(); } else { OutputLineAll(NULL, "\n", Line_ContinueAfterTyping); }
+
+	if (GetGlobalFlag(GADVMode)) { OutputLineAll("", NULL, Line_ContinueAfterTyping); }
+	OutputLine(NULL, "　……何と言うか、悟史くんらしく、ちょっと微笑ましくなってしまった。",
+		   NULL, "Satoshi-kun fa sempre così, ma non posso fare a meno di sorridere.", GetGlobalFlag(GLinemodeSp));
+	if (GetGlobalFlag(GADVMode)) { ClearMessage(); } else { OutputLineAll(NULL, "\n", Line_ContinueAfterTyping); }
+
+	if (GetGlobalFlag(GADVMode) == 0) { OutputLineAll(NULL, "\n", Line_ContinueAfterTyping); }
+
+
+	if (GetGlobalFlag(GADVMode)) { OutputLineAll("", NULL, Line_ContinueAfterTyping); }
+	OutputLine(NULL, "　つまり、自転車とぬいぐるみ、両方を持って帰れないので、車で迎えに来てもらえないかということだろう。",
+		   NULL, "Quindi mi ha telefonato per chiedermi di andarlo a prendere perché non riesce a riportare a casa sia la bici che il regalo.", Line_Normal);
+	ClearMessage();
+
+	DrawSceneWithMask( "black", "maskright", 1, 0, 300 );
+
+	if (GetGlobalFlag(GADVMode)) { OutputLineAll("", NULL, Line_ContinueAfterTyping); }
+	OutputLine(NULL, "　私はすぐ迎えに行くといい、",
+		   NULL, "Gli rispondo che arrivo subito e mi dirigo a Okinomiya.", Line_WaitForInput);
+	OutputLine(NULL, "興宮のおもちゃ屋へ行き、",
+		   NULL, " Una volta raggiunto il negozio di giocattoli,", Line_ContinueAfterTyping);
+	SetValidityOfInput( FALSE );
+	Wait( 1000 );
+	SetValidityOfInput( TRUE );
+	OutputLine(NULL, "……プレゼント用のぬいぐるみが、想像をはるかに超えて大きな物であったことを知るのだった。",
+		   NULL, " vedo che l'orso di peluche che ha comprato è molto più grande di quanto potessi immaginare.", Line_Normal);
+	ClearMessage();
+
+	FadeOutBGM( 0, 300, FALSE );
+
+	DrawScene( "background/sora", 400 );
+
+	PlayBGM( 1, "Mati", 120, 0 );
+
+	if (GetGlobalFlag(GADVMode)) { OutputLine("<color=#c89a80>入江</color>", NULL, "<color=#c89a80>Irie</color>", NULL, Line_ContinueAfterTyping); }
+	ModPlayVoiceLS(4, 10, "ps3/s20/10/vtk1_irie1325", 128, TRUE);
+	OutputLine(NULL, "「…これは…！",
+		   NULL, "\"Accidenti...!", Line_WaitForInput);
+	ModPlayVoiceLS(4, 10, "ps3/s20/10/vtk1_irie1326", 128, TRUE);
+	OutputLine(NULL, "　はははは、大きいですねぇ。",
+		   NULL, " Ahahahah, ma è enorme!", Line_WaitForInput);
+	ModPlayVoiceLS(4, 10, "ps3/s20/10/vtk1_irie1327", 128, TRUE);
+	OutputLine(NULL, "確かに、これじゃあ、自転車は無理でしょう。」",
+		   NULL, " Come pensavi di portarlo a casa in bicicletta?\"", GetGlobalFlag(GLinemodeSp));
+	if (GetGlobalFlag(GADVMode)) { ClearMessage(); } else { OutputLineAll(NULL, "\n", Line_ContinueAfterTyping); }
+
+	if (GetGlobalFlag(GADVMode) == 0) { OutputLineAll(NULL, "\n", Line_ContinueAfterTyping); }
+
+
+	if (GetGlobalFlag(GADVMode)) { OutputLineAll("", NULL, Line_ContinueAfterTyping); }
+	OutputLine(NULL, "　何しろ、そのぬいぐるみは抱きかかえる程の大きさがある。",
+		   NULL, "L'orso è talmente grande che a malapena riesce a stringerlo tra le braccia.", GetGlobalFlag(GLinemodeSp));
+	if (GetGlobalFlag(GADVMode)) { ClearMessage(); } else { OutputLineAll(NULL, "\n", Line_ContinueAfterTyping); }
+
+	if (GetGlobalFlag(GADVMode)) { OutputLineAll("", NULL, Line_ContinueAfterTyping); }
+	OutputLine(NULL, "　助手席で膝に抱いたとしたら、前が見えなくなるくらいの大きさだ。",
+		   NULL, "Non vedrebbe neanche davanti a sé se lo mettesse sul sedile del passeggero.", Line_Normal);
+	ClearMessage();
+
+	DrawSceneWithMask( "black", "maskup", 7, 0, 300 );
+
+	if (GetGlobalFlag(GADVMode)) { OutputLineAll("", NULL, Line_ContinueAfterTyping); }
+	OutputLine(NULL, "　自転車は後部座席に積み、ぬいぐるみはトランクに無理やり押し込んだ。",
+		   NULL, "Carichiamo la bici sui sedili posteriori e l'orsacchiotto nel bagagliaio.", Line_Normal);
+	ClearMessage();
+
+	ModSetLayerFilter(0, 256, "none");
+	ModDrawCharacter(0, 7, "sprite/sato1_komaru_", "0", 0, 0, 0, FALSE, 0, 0, 0, 0, 0, 0, 0, 9, 0, FALSE );
+	DrawSceneWithMask( "background/mati_o1", "maskup", 1, 0, 300 );
+
+	if (GetGlobalFlag(GADVMode)) { OutputLine("<color=#c89a80>入江</color>", NULL, "<color=#c89a80>Irie</color>", NULL, Line_ContinueAfterTyping); }
+	ModPlayVoiceLS(4, 10, "ps3/s20/10/vtk1_irie1328", 128, TRUE);
+	OutputLine(NULL, "「しかし、これだけの大きなぬいぐるみともなると、高かったでしょう。」",
+		   NULL, "\"Un regalo così grande dev'esserti costato caro.\"", GetGlobalFlag(GLinemodeSp));
+	if (GetGlobalFlag(GADVMode)) { ClearMessage(); } else { OutputLineAll(NULL, "\n", Line_ContinueAfterTyping); }
+
+	DisableWindow();
+	ModDrawCharacter(0, 7, "sprite/sato1_tukare_", "0", 0, 0, 0, FALSE, 0, 0, 0, 0, 0, 0, 0, 9, 200, TRUE );
+
+	SetSpeedOfMessage( TRUE, 128 );
+	if (GetGlobalFlag(GADVMode)) { OutputLine("<color=#ffdc6f>悟史</color>", NULL, "<color=#ffdc6f>Satoshi</color>", NULL, Line_ContinueAfterTyping); }
+	ModPlayVoiceLS(4, 7, "ps3/s20/07/vtk1_satoshi1103", 128, TRUE);
+	OutputLine(NULL, "「……えぇ、",
+		   NULL, "\"... già...", Line_Continue);
+	// (backup) SetValidityOfInput( FALSE );
+	Wait( 1600 );
+	// (backup) SetValidityOfInput( TRUE );
+	OutputLine(NULL, "………まぁ、",
+		   NULL, " insomma,", Line_Continue);
+	// (backup) SetValidityOfInput( FALSE );
+	Wait( 1800 );
+	// (backup) SetValidityOfInput( TRUE );
+	OutputLine(NULL, "そこそこに。」",
+		   NULL, " più o meno.\"", GetGlobalFlag(GLinemodeSp));
+	if (GetGlobalFlag(GADVMode)) { ClearMessage(); } else { OutputLineAll(NULL, "\n", Line_ContinueAfterTyping); }
+	SetSpeedOfMessage( FALSE, 0 );
+
+	if (GetGlobalFlag(GADVMode)) { OutputLineAll("", NULL, Line_ContinueAfterTyping); }
+	OutputLine(NULL, "　初めは、暑いから汗をかいているのかと思った。",
+		   NULL, "Il sudore che ha sulla fronte dev'essere colpa del caldo.", GetGlobalFlag(GLinemodeSp));
+	if (GetGlobalFlag(GADVMode)) { ClearMessage(); } else { OutputLineAll(NULL, "\n", Line_ContinueAfterTyping); }
+
+	if (GetGlobalFlag(GADVMode) == 0) { OutputLineAll(NULL, "\n", Line_ContinueAfterTyping); }
+
+
+	if (GetGlobalFlag(GADVMode)) { OutputLineAll("", NULL, Line_ContinueAfterTyping); }
+	OutputLine(NULL, "　…でも、どうも様子がおかしい。",
+		   NULL, "Ma a uno sguardo più attento... c'è qualcosa di strano.", GetGlobalFlag(GLinemodeSp));
+	if (GetGlobalFlag(GADVMode)) { ClearMessage(); } else { OutputLineAll(NULL, "\n", Line_ContinueAfterTyping); }
+
+	if (GetGlobalFlag(GADVMode)) { OutputLineAll("", NULL, Line_ContinueAfterTyping); }
+	OutputLine(NULL, "　まるで高熱か何かで朦朧としているように見えた。",
+		   NULL, "È come se avesse la febbre alta e rischiasse di svenire.", Line_Normal);
+	ClearMessage();
+
+	FadeOutBGM( 1, 300, FALSE );
+
+	PlayBGM( 3, "semi_r", 120, 0 );
+
+	if (GetGlobalFlag(GADVMode)) { OutputLine("<color=#c89a80>入江</color>", NULL, "<color=#c89a80>Irie</color>", NULL, Line_ContinueAfterTyping); }
+	ModPlayVoiceLS(4, 10, "ps3/s20/10/vtk1_irie1329", 128, TRUE);
+	OutputLine(NULL, "「どうしましたか。",
+		   NULL, "\"Che cos'hai?", Line_WaitForInput);
+	ModPlayVoiceLS(4, 10, "ps3/s20/10/vtk1_irie1330", 128, TRUE);
+	OutputLine(NULL, "…具合でも悪いんですか…？」",
+		   NULL, " Ti senti bene?\"", GetGlobalFlag(GLinemodeSp));
+	if (GetGlobalFlag(GADVMode)) { ClearMessage(); } else { OutputLineAll(NULL, "\n", Line_ContinueAfterTyping); }
+
+	if (GetGlobalFlag(GADVMode)) { OutputLine("<color=#ffdc6f>悟史</color>", NULL, "<color=#ffdc6f>Satoshi</color>", NULL, Line_ContinueAfterTyping); }
+	ModPlayVoiceLS(4, 7, "ps3/s20/07/vtk1_satoshi1104", 128, TRUE);
+	OutputLine(NULL, "「……多分、",
+		   NULL, "\"...... ecco,", Line_Continue);
+	// (backup) SetValidityOfInput( FALSE );
+	Wait( 1800 );
+	// (backup) SetValidityOfInput( TRUE );
+	OutputLine(NULL, "…………いえ、",
+		   NULL, " forse...", Line_Continue);
+	// (backup) SetValidityOfInput( FALSE );
+	Wait( 1700 );
+	// (backup) SetValidityOfInput( TRUE );
+	OutputLine(NULL, "……風邪です…。」",
+		   NULL, " ho... preso freddo...\"", GetGlobalFlag(GLinemodeSp));
+	if (GetGlobalFlag(GADVMode)) { ClearMessage(); } else { OutputLineAll(NULL, "\n", Line_ContinueAfterTyping); }
+
+	if (GetGlobalFlag(GADVMode)) { OutputLine("<color=#c89a80>入江</color>", NULL, "<color=#c89a80>Irie</color>", NULL, Line_ContinueAfterTyping); }
+	ModPlayVoiceLS(4, 10, "ps3/s20/10/vtk1_irie1331", 128, TRUE);
+	OutputLine(NULL, "「それはよくありませんね。",
+		   NULL, "\"Immaginavo.", Line_WaitForInput);
+	ModPlayVoiceLS(4, 10, "ps3/s20/10/vtk1_irie1332", 128, TRUE);
+	OutputLine(NULL, "診療所に寄って行きませんか？",
+		   NULL, " Vuoi che ti porti alla clinica?", Line_WaitForInput);
+	ModPlayVoiceLS(4, 10, "ps3/s20/10/vtk1_irie1333", 128, TRUE);
+	OutputLine(NULL, "　具合を見てあげましょう。」",
+		   NULL, " Così ti do un'occhiata.\"", GetGlobalFlag(GLinemodeSp));
+	if (GetGlobalFlag(GADVMode)) { ClearMessage(); } else { OutputLineAll(NULL, "\n", Line_ContinueAfterTyping); }
+
+	DisableWindow();
+	ModDrawCharacter(0, 7, "sprite/sato1_komaru2_", "0", 0, 0, 0, FALSE, 0, 0, 0, 0, 0, 0, 0, 9, 200, TRUE );
+
+	if (GetGlobalFlag(GADVMode)) { OutputLine("<color=#ffdc6f>悟史</color>", NULL, "<color=#ffdc6f>Satoshi</color>", NULL, Line_ContinueAfterTyping); }
+	ModPlayVoiceLS(4, 7, "ps3/s20/07/vtk1_satoshi1105", 128, TRUE);
+	OutputLine(NULL, "「……ありがとうございます……。",
+		   NULL, "\"... grazie...", Line_WaitForInput);
+	ModPlayVoiceLS(4, 7, "ps3/s20/07/vtk1_satoshi1106", 128, TRUE);
+	OutputLine(NULL, "……はぁ……、",
+		   NULL, " anf...", Line_Continue);
+	// (backup) SetValidityOfInput( FALSE );
+	Wait( 2000 );
+	// (backup) SetValidityOfInput( TRUE );
+	OutputLine(NULL, "…はぁ………。」",
+		   NULL, " anf......\"", Line_Normal);
+	ClearMessage();
+
+	if (GetGlobalFlag(GADVMode)) { OutputLineAll("", NULL, Line_ContinueAfterTyping); }
+	OutputLine(NULL, "　さっき電話をくれた時は、具合が悪そうな様子ではなかった。",
+		   NULL, "Quando mi ha telefonato poco fa non sembrava stare male.", GetGlobalFlag(GLinemodeSp));
+	if (GetGlobalFlag(GADVMode)) { ClearMessage(); } else { OutputLineAll(NULL, "\n", Line_ContinueAfterTyping); }
+
+	if (GetGlobalFlag(GADVMode)) { OutputLineAll("", NULL, Line_ContinueAfterTyping); }
+	OutputLine(NULL, "　……では、急に体調が悪くなったということなのだろうか。",
+		   NULL, "Ha avuto una qualche ricaduta?", Line_Normal);
+	ClearMessage();
+
+	DrawSceneWithMask( "black", "maskleft", 1, 0, 300 );
+
+	PlayBGM( 1, "Mati", 120, 0 );
+
+	DrawSceneWithMask( "background/kuruma1", "maskleft", 1, 0, 300 );
+
+	if (GetGlobalFlag(GADVMode)) { OutputLine("<color=#c89a80>入江</color>", NULL, "<color=#c89a80>Irie</color>", NULL, Line_ContinueAfterTyping); }
+	ModPlayVoiceLS(4, 10, "ps3/s20/10/vtk1_irie1334", 128, TRUE);
+	OutputLine(NULL, "「どうぞ、リクライニングを倒して、楽にしててください。",
+		   NULL, "\"Tira giù il sedile, così starai più comodo.", Line_WaitForInput);
+	ModPlayVoiceLS(4, 10, "ps3/s20/10/vtk1_irie1335", 128, TRUE);
+	OutputLine(NULL, "冷房が強すぎませんか？　",
+		   NULL, " Spengo l'aria condizionata?", Line_WaitForInput);
+	ModPlayVoiceLS(4, 10, "ps3/s20/10/vtk1_irie1336", 128, TRUE);
+	OutputLine(NULL, "大丈夫ですか？」",
+		   NULL, " Stai bene?\"", GetGlobalFlag(GLinemodeSp));
+	if (GetGlobalFlag(GADVMode)) { ClearMessage(); } else { OutputLineAll(NULL, "\n", Line_ContinueAfterTyping); }
+
+	SetSpeedOfMessage( TRUE, 128 );
+	if (GetGlobalFlag(GADVMode)) { OutputLine("<color=#ffdc6f>悟史</color>", NULL, "<color=#ffdc6f>Satoshi</color>", NULL, Line_ContinueAfterTyping); }
+	ModPlayVoiceLS(4, 7, "ps3/s20/07/vtk1_satoshi1107", 128, TRUE);
+	OutputLine(NULL, "「…………はぁ、",
+		   NULL, "\"...... anf...", Line_Continue);
+	// (backup) SetValidityOfInput( FALSE );
+	Wait( 1700 );
+	// (backup) SetValidityOfInput( TRUE );
+	OutputLine(NULL, "…………はぁ",
+		   NULL, " anf...", Line_Continue);
+	// (backup) SetValidityOfInput( FALSE );
+	Wait( 1700 );
+	// (backup) SetValidityOfInput( TRUE );
+	OutputLine(NULL, "…………はぁ",
+		   NULL, " anf...", Line_Continue);
+	// (backup) SetValidityOfInput( FALSE );
+	Wait( 800 );
+	// (backup) SetValidityOfInput( TRUE );
+	OutputLine(NULL, "………。」",
+		   NULL, "......\"", GetGlobalFlag(GLinemodeSp));
+	if (GetGlobalFlag(GADVMode)) { ClearMessage(); } else { OutputLineAll(NULL, "\n", Line_ContinueAfterTyping); }
+
+	if (GetGlobalFlag(GADVMode)) { OutputLineAll("", NULL, Line_ContinueAfterTyping); }
+	OutputLine(NULL, "　顔色は蒼白。",
+		   NULL, "È pallido in volto.", Line_WaitForInput);
+	OutputLine(NULL, "計ってはいないが、熱も相当ありそうだった。",
+		   NULL, " Ha la febbre alta.", Line_Normal);
+	ClearMessage();
+
+	DrawSceneWithMask( "black", "maskleft", 1, 0, 300 );
+	DrawSceneWithMask( "background/kuruma2", "maskleft", 1, 0, 300 );
+
+	if (GetGlobalFlag(GADVMode)) { OutputLineAll("", NULL, Line_ContinueAfterTyping); }
+	OutputLine(NULL, "　……悟史くんはこのぬいぐるみを買うために今日まで無理をしてきたのだ。",
+		   NULL, "...... Satoshi-kun ha esagerato nel voler comprare quel regalo a Satoko-chan.", GetGlobalFlag(GLinemodeSp));
+	if (GetGlobalFlag(GADVMode)) { ClearMessage(); } else { OutputLineAll(NULL, "\n", Line_ContinueAfterTyping); }
+
+	if (GetGlobalFlag(GADVMode)) { OutputLineAll("", NULL, Line_ContinueAfterTyping); }
+	OutputLine(NULL, "　何しろ、これだけ大きいぬいぐるみなのだから、きっと安くはあるまい。",
+		   NULL, "Un orso così grande non può essergli costato poco.", GetGlobalFlag(GLinemodeSp));
+	if (GetGlobalFlag(GADVMode)) { ClearMessage(); } else { OutputLineAll(NULL, "\n", Line_ContinueAfterTyping); }
+
+	if (GetGlobalFlag(GADVMode)) { OutputLineAll("", NULL, Line_ContinueAfterTyping); }
+	OutputLine(NULL, "　それを長くない期間の間に稼いだのだから、かなり堪えるバイトをしていたのだろう。",
+		   NULL, "Deve aver lavorato a lungo per racimolare i soldi necessari.", Line_Normal);
+	ClearMessage();
+
+	if (GetGlobalFlag(GADVMode)) { OutputLineAll("", NULL, Line_ContinueAfterTyping); }
+	OutputLine(NULL, "　念願のぬいぐるみが買えて、気が緩んだのかもしれない。",
+		   NULL, "Forse la tensione che aveva in corpo si è allentata ora che ha raggiunto il suo obiettivo.", GetGlobalFlag(GLinemodeSp));
+	if (GetGlobalFlag(GADVMode)) { ClearMessage(); } else { OutputLineAll(NULL, "\n", Line_ContinueAfterTyping); }
+
+	if (GetGlobalFlag(GADVMode) == 0) { OutputLineAll(NULL, "\n", Line_ContinueAfterTyping); }
+
+
+	if (GetGlobalFlag(GADVMode)) { OutputLineAll("", NULL, Line_ContinueAfterTyping); }
+	OutputLine(NULL, "　…目標に向って無理をしていた人は、達成した時、それまでの疲れが一気に出て体調を崩してしまうことも珍しくない…。",
+		   NULL, "... non è raro avere degli svenimenti dopo aver ottenuto quello che si desidera dopo molti sforzi.", Line_Normal);
+	ClearMessage();
+
+	FadeOutBGM( 3, 300, FALSE );
+
+	if (GetGlobalFlag(GADVMode)) { OutputLine("<color=#c89a80>入江</color>", NULL, "<color=#c89a80>Irie</color>", NULL, Line_ContinueAfterTyping); }
+	ModPlayVoiceLS(4, 10, "ps3/s20/10/vtk1_irie1337", 128, TRUE);
+	OutputLine(NULL, "「……しかし、…よくがんばりましたね。",
+		   NULL, "\"... sei stato bravo", Line_WaitForInput);
+	ModPlayVoiceLS(4, 10, "ps3/s20/10/vtk1_irie1338", 128, TRUE);
+	OutputLine(NULL, "こんなにも大きなぬいぐるみを。",
+		   NULL, " a trovare tutti i soldi per quell'orsacchiotto.", Line_WaitForInput);
+	ModPlayVoiceLS(4, 10, "ps3/s20/10/vtk1_irie1339", 128, TRUE);
+	OutputLine(NULL, "沙都子ちゃん、きっと喜ぶと思いますよ。」",
+		   NULL, " Satoko-chan sarà al settimo cielo.\"", GetGlobalFlag(GLinemodeSp));
+	if (GetGlobalFlag(GADVMode)) { ClearMessage(); } else { OutputLineAll(NULL, "\n", Line_ContinueAfterTyping); }
+
+	if (GetGlobalFlag(GADVMode)) { OutputLine("<color=#ffdc6f>悟史</color>", NULL, "<color=#ffdc6f>Satoshi</color>", NULL, Line_ContinueAfterTyping); }
+	ModPlayVoiceLS(4, 7, "ps3/s20/07/vtk1_satoshi1108", 128, TRUE);
+	OutputLine(NULL, "「……………………喜んで、……ほしいです。」",
+		   NULL, "\"............ lo... spero...\"", Line_Normal);
+	ClearMessage();
+
+	if (GetGlobalFlag(GADVMode)) { OutputLine("<color=#c89a80>入江</color>", NULL, "<color=#c89a80>Irie</color>", NULL, Line_ContinueAfterTyping); }
+	ModPlayVoiceLS(4, 10, "ps3/s20/10/vtk1_irie1340", 128, TRUE);
+	OutputLine(NULL, "「喜びますよ。",
+		   NULL, "\"Ne sono convinto.", Line_WaitForInput);
+	ModPlayVoiceLS(4, 10, "ps3/s20/10/vtk1_irie1341", 128, TRUE);
+	OutputLine(NULL, "私が保証しちゃいます。」",
+		   NULL, " Ti do la mia parola.\"", Line_Normal);
+	ClearMessage();
+
+	if (GetGlobalFlag(GADVMode)) { OutputLine("<color=#ffdc6f>悟史</color>", NULL, "<color=#ffdc6f>Satoshi</color>", NULL, Line_ContinueAfterTyping); }
+	ModPlayVoiceLS(4, 7, "ps3/s20/07/vtk1_satoshi1109", 128, TRUE);
+	OutputLine(NULL, "「……………もう、",
+		   NULL, "\"...... adesso...", Line_Continue);
+	OutputLine(NULL, "………叔母さんもいない。",
+		   NULL, " che la zia se n'è andata...", Line_WaitForInput);
+	ModPlayVoiceLS(4, 7, "ps3/s20/07/vtk1_satoshi1110", 128, TRUE);
+	OutputLine(NULL, "……叔父さんも帰ってこない。",
+		   NULL, " e che lo zio non tornerà a casa...", Line_WaitForInput);
+	ModPlayVoiceLS(4, 7, "ps3/s20/07/vtk1_satoshi1111", 128, TRUE);
+	OutputLine(NULL, "……もうこれで、",
+		   NULL, " non c'è più nessuno", Line_Continue);
+	OutputLine(NULL, "……沙都子を苛める人はいないんですよね………？」",
+		   NULL, " che possa farle del male...... giusto?\"", GetGlobalFlag(GLinemodeSp));
+	if (GetGlobalFlag(GADVMode)) { ClearMessage(); } else { OutputLineAll(NULL, "\n", Line_ContinueAfterTyping); }
+
+	if (GetGlobalFlag(GADVMode)) { OutputLine("<color=#c89a80>入江</color>", NULL, "<color=#c89a80>Irie</color>", NULL, Line_ContinueAfterTyping); }
+	ModPlayVoiceLS(4, 10, "ps3/s20/10/vtk1_irie1342", 128, TRUE);
+	OutputLine(NULL, "「そうですね。",
+		   NULL, "\"Giusto.", Line_WaitForInput);
+	ModPlayVoiceLS(4, 10, "ps3/s20/10/vtk1_irie1343", 128, TRUE);
+	OutputLine(NULL, "もう沙都子ちゃんを苛める人はいません。",
+		   NULL, " Nessuno farà mai più del male a Satoko-chan.", Line_WaitForInput);
+	ModPlayVoiceLS(4, 10, "ps3/s20/10/vtk1_irie1344", 128, TRUE);
+	OutputLine(NULL, "だから、これからはゆっくりと過ごしていいんです…。」",
+		   NULL, " Puoi tirare un sospiro di sollievo...\"", Line_Normal);
+	ClearMessage();
+
+	if (GetGlobalFlag(GADVMode)) { OutputLine("<color=#ffdc6f>悟史</color>", NULL, "<color=#ffdc6f>Satoshi</color>", NULL, Line_ContinueAfterTyping); }
+	ModPlayVoiceLS(4, 7, "ps3/s20/07/vtk1_satoshi1112", 128, TRUE);
+	OutputLine(NULL, "「…………………叔母さんは、",
+		   NULL, "\"...... nostra zia...", Line_Continue);
+	OutputLine(NULL, "……いないんですよね…？",
+		   NULL, " non c'è più...", Line_WaitForInput);
+	ModPlayVoiceLS(4, 7, "ps3/s20/07/vtk1_satoshi1113", 128, TRUE);
+	OutputLine(NULL, "　………死んだんですもんね……？」",
+		   NULL, " è morta... vero...?\"", Line_Normal);
+	ClearMessage();
+
+	if (GetGlobalFlag(GADVMode)) { OutputLine("<color=#c89a80>入江</color>", NULL, "<color=#c89a80>Irie</color>", NULL, Line_ContinueAfterTyping); }
+	ModPlayVoiceLS(4, 10, "ps3/s20/10/vtk1_irie1345", 128, TRUE);
+	OutputLine(NULL, "「はい。",
+		   NULL, "\"Sì.", Line_WaitForInput);
+	ModPlayVoiceLS(4, 10, "ps3/s20/10/vtk1_irie1346", 128, TRUE);
+	OutputLine(NULL, "…確かに死にました。",
+		   NULL, " È morta.", Line_WaitForInput);
+	ModPlayVoiceLS(4, 10, "ps3/s20/10/vtk1_irie1347", 128, TRUE);
+	OutputLine(NULL, "検死には私も立ち会っています。",
+		   NULL, " Ho fatto io l'autopsia.", Line_WaitForInput);
+	ModPlayVoiceLS(4, 10, "ps3/s20/10/vtk1_irie1348", 128, TRUE);
+	OutputLine(NULL, "間違いありませんよ。",
+		   NULL, " Non c'è ombra di dubbio.", Line_WaitForInput);
+	ModPlayVoiceLS(4, 10, "ps3/s20/10/vtk1_irie1349", 128, TRUE);
+	OutputLine(NULL, "だから、もう二度と沙都子ちゃんを苛めたりはしません。」",
+		   NULL, " Satoko-chan non ha niente da temere.\"", GetGlobalFlag(GLinemodeSp));
+	if (GetGlobalFlag(GADVMode)) { ClearMessage(); } else { OutputLineAll(NULL, "\n", Line_ContinueAfterTyping); }
+
+	if (GetGlobalFlag(GADVMode)) { OutputLine("<color=#ffdc6f>悟史</color>", NULL, "<color=#ffdc6f>Satoshi</color>", NULL, Line_ContinueAfterTyping); }
+	ModPlayVoiceLS(4, 7, "ps3/s20/07/vtk1_satoshi1114", 128, TRUE);
+	OutputLine(NULL, "「…………本当に…？",
+		   NULL, "\"...... davvero...?", Line_WaitForInput);
+	ModPlayVoiceLS(4, 7, "ps3/s20/07/vtk1_satoshi1115", 128, TRUE);
+	OutputLine(NULL, "　本当に叔母さんが死んでるのを、",
+		   NULL, " Sei davvero sicuro...", Line_Continue);
+	// (backup) SetValidityOfInput( FALSE );
+	Wait( 800 );
+	// (backup) SetValidityOfInput( TRUE );
+	OutputLine(NULL, "……確認したんですね……？」",
+		   NULL, " che sia morta...?\"", GetGlobalFlag(GLinemodeSp));
+	if (GetGlobalFlag(GADVMode)) { ClearMessage(); } else { OutputLineAll(NULL, "\n", Line_ContinueAfterTyping); }
+
+	if (GetGlobalFlag(GADVMode)) { OutputLine("<color=#c89a80>入江</color>", NULL, "<color=#c89a80>Irie</color>", NULL, Line_ContinueAfterTyping); }
+	ModPlayVoiceLS(4, 10, "ps3/s20/10/vtk1_irie1350", 128, TRUE);
+	OutputLine(NULL, "「はい。",
+		   NULL, "\"Sì.", Line_WaitForInput);
+	ModPlayVoiceLS(4, 10, "ps3/s20/10/vtk1_irie1351", 128, TRUE);
+	OutputLine(NULL, "間違いなく。」",
+		   NULL, " Al cento percento.\"", Line_Normal);
+	ClearMessage();
+
+	SetSpeedOfMessage( TRUE, 128 );
+	if (GetGlobalFlag(GADVMode)) { OutputLine("<color=#ffdc6f>悟史</color>", NULL, "<color=#ffdc6f>Satoshi</color>", NULL, Line_ContinueAfterTyping); }
+	ModPlayVoiceLS(4, 7, "ps3/s20/07/vtk1_satoshi1116", 128, TRUE);
+	OutputLine(NULL, "「………じゃあ、",
+		   NULL, "\"...... allora...", Line_Continue);
+	OutputLine(NULL, "……たまに通りすがる、",
+		   NULL, " se anche vedessi qualcuno...", Line_Continue);
+	OutputLine(NULL, "叔母さんにそっくりな人がいても、",
+		   NULL, " che le somiglia......", Line_Continue);
+	OutputLine(NULL, "……それは叔母さんじゃないんですよね…？",
+		   NULL, " non potrebbe essere lei...", Line_WaitForInput);
+	ModPlayVoiceLS(4, 7, "ps3/s20/07/vtk1_satoshi1117", 128, TRUE);
+	OutputLine(NULL, "　……叔母さんが実は生きてて、",
+		   NULL, " non era ancora viva...", Line_Continue);
+	OutputLine(NULL, "……退院してきたとか、そういうのじゃないんですよね……？」",
+		   NULL, " e in qualche modo è guarita...?\"", Line_Continue);
+	OutputLineAll(NULL, "", Line_Normal);
+
+	ClearMessage();
+	SetSpeedOfMessage( FALSE, 0 );
+
+	if (GetGlobalFlag(GADVMode)) { OutputLine("<color=#c89a80>入江</color>", NULL, "<color=#c89a80>Irie</color>", NULL, Line_ContinueAfterTyping); }
+	ModPlayVoiceLS(4, 10, "ps3/s20/10/vtk1_irie1352", 128, TRUE);
+	OutputLine(NULL, "「えぇ。",
+		   NULL, "\"No.", Line_WaitForInput);
+	ModPlayVoiceLS(4, 10, "ps3/s20/10/vtk1_irie1353", 128, TRUE);
+	OutputLine(NULL, "そんなことはありえません。",
+		   NULL, " È impossibile.", Line_WaitForInput);
+	ModPlayVoiceLS(4, 10, "ps3/s20/10/vtk1_irie1354", 128, TRUE);
+	OutputLine(NULL, "二度と私たちの前に現れることはありませんよ。」",
+		   NULL, " Non tornerà mai nel mondo dei vivi.\"", Line_Normal);
+	ClearMessage();
+
+	PlayBGM( 0, "semi_r", 120, 0 );
+
+	SetSpeedOfMessage( TRUE, 128 );
+	if (GetGlobalFlag(GADVMode)) { OutputLine("<color=#ffdc6f>悟史</color>", NULL, "<color=#ffdc6f>Satoshi</color>", NULL, Line_ContinueAfterTyping); }
+	ModPlayVoiceLS(4, 7, "ps3/s20/07/vtk1_satoshi1118", 128, TRUE);
+	OutputLine(NULL, "「じゃ、",
+		   NULL, "\"Però,", Line_Continue);
+	// (backup) SetValidityOfInput( FALSE );
+	Wait( 700 );
+	// (backup) SetValidityOfInput( TRUE );
+	OutputLine(NULL, "……じゃあ、",
+		   NULL, " ecco...", Line_Continue);
+	// (backup) SetValidityOfInput( FALSE );
+	Wait( 800 );
+	// (backup) SetValidityOfInput( TRUE );
+	OutputLine(NULL, "…あの、",
+		   NULL, " quella,", Line_Continue);
+	// (backup) SetValidityOfInput( FALSE );
+	Wait( 600 );
+	// (backup) SetValidityOfInput( TRUE );
+	OutputLine(NULL, "あの人…、",
+		   NULL, " quella donna...", Line_Continue);
+	// (backup) SetValidityOfInput( FALSE );
+	Wait( 800 );
+	// (backup) SetValidityOfInput( TRUE );
+	OutputLine(NULL, "あれもよく似てるけど、",
+		   NULL, " le somiglia, ma...", Line_Continue);
+	// (backup) SetValidityOfInput( FALSE );
+	Wait( 900 );
+	// (backup) SetValidityOfInput( TRUE );
+	OutputLine(NULL, "…叔母さんじゃないんですよね…？",
+		   NULL, " non è mia zia, vero...?", Line_WaitForInput);
+	ModPlayVoiceLS(4, 7, "ps3/s20/07/vtk1_satoshi1119", 128, TRUE);
+	OutputLine(NULL, "　ですよね……？！」",
+		   NULL, " Vero...?!\"", Line_Continue);
+	OutputLineAll(NULL, "", Line_Normal);
+
+	ClearMessage();
+	SetSpeedOfMessage( FALSE, 0 );
+
+	DrawSceneWithMask( "background/kuruma6", "maskright", 1, 0, 300 );
+
+	if (GetGlobalFlag(GADVMode)) { OutputLineAll("", NULL, Line_ContinueAfterTyping); }
+	OutputLine(NULL, "　悟史くんが怯えるように、対向車を指差した。",
+		   NULL, "Domanda Satoshi-kun indicando un'automobile che proviene dalla corsia opposta.", Line_Normal);
+	ClearMessage();
+
+	if (GetGlobalFlag(GADVMode)) { OutputLineAll("", NULL, Line_ContinueAfterTyping); }
+	OutputLine(NULL, "　もちろんその運転手の姿をよく見る前にあっと言う間に通り過ぎてしまったので、どんな顔をしていたかはわからないが、",
+		   NULL, "Ci passa accanto talmente in fretta che non riesco nemmeno a vedere che faccia abbia il conducente.", Line_WaitForInput);
+	OutputLine(NULL, "…とにかく、どんなに似ていたとしても、生きているなんてことはありえない。",
+		   NULL, " Tuttavia, per quanto possa somigliarle, non potrà mai essere lei.", Line_Normal);
+	ClearMessage();
+
+	DrawScene( "background/kuruma2", 400 );
+
+	PlayBGM( 3, "kaze", 120, 0 );
+
+	if (GetGlobalFlag(GADVMode)) { OutputLine("<color=#ffdc6f>悟史</color>", NULL, "<color=#ffdc6f>Satoshi</color>", NULL, Line_ContinueAfterTyping); }
+	ModPlayVoiceLS(4, 7, "ps3/s20/07/vtk1_satoshi1120", 128, TRUE);
+	OutputLine(NULL, "「ほ、ほら！！",
+		   NULL, "\"G-Guarda!!", Line_WaitForInput);
+	ModPlayVoiceLS(4, 7, "ps3/s20/07/vtk1_satoshi1121", 128, TRUE);
+	OutputLine(NULL, "　あの人も！！",
+		   NULL, " Anche lei!!", Line_WaitForInput);
+	ModPlayVoiceLS(4, 7, "ps3/s20/07/vtk1_satoshi1122", 128, TRUE);
+	OutputLine(NULL, "　あんなにそっくりでも、叔母さんじゃないんですか…？！",
+		   NULL, " È identica a mia zia!", Line_WaitForInput);
+	ModPlayVoiceLS(4, 7, "ps3/s20/07/vtk1_satoshi1123", 128, TRUE);
+	OutputLine(NULL, "　だって、僕を見ましたよ？！」",
+		   NULL, " Mi ha anche guardato!!\"", GetGlobalFlag(GLinemodeSp));
+	if (GetGlobalFlag(GADVMode)) { ClearMessage(); } else { OutputLineAll(NULL, "\n", Line_ContinueAfterTyping); }
+
+	if (GetGlobalFlag(GADVMode)) { OutputLine("<color=#c89a80>入江</color>", NULL, "<color=#c89a80>Irie</color>", NULL, Line_ContinueAfterTyping); }
+	ModPlayVoiceLS(4, 10, "ps3/s20/10/vtk1_irie1355", 128, TRUE);
+	OutputLine(NULL, "「お、落ち着いてください、悟史くん。",
+		   NULL, "\"A-Adesso calmati, Satoshi-kun.", Line_WaitForInput);
+	ModPlayVoiceLS(4, 10, "ps3/s20/10/vtk1_irie1356", 128, TRUE);
+	OutputLine(NULL, "叔母さんは完全に死にました。",
+		   NULL, " Tua zia è morta.", Line_WaitForInput);
+	ModPlayVoiceLS(4, 10, "ps3/s20/10/vtk1_irie1357", 128, TRUE);
+	OutputLine(NULL, "だからどんなに似ていてもそれは叔母さんではありません。」",
+		   NULL, " Non può essere lei, anche se ti sembra somigliarle.\"", Line_Normal);
+	ClearMessage();
+
+	SetSpeedOfMessage( TRUE, 128 );
+	if (GetGlobalFlag(GADVMode)) { OutputLine("<color=#ffdc6f>悟史</color>", NULL, "<color=#ffdc6f>Satoshi</color>", NULL, Line_ContinueAfterTyping); }
+	ModPlayVoiceLS(4, 7, "ps3/s20/07/vtk1_satoshi1124", 128, TRUE);
+	OutputLine(NULL, "「似てる、",
+		   NULL, "\"Era identica...", Line_Continue);
+	// (backup) SetValidityOfInput( FALSE );
+	Wait( 800 );
+	// (backup) SetValidityOfInput( TRUE );
+	OutputLine(NULL, "…似てる…。",
+		   NULL, " identica...", Line_WaitForInput);
+	ModPlayVoiceLS(4, 7, "ps3/s20/07/vtk1_satoshi1125", 128, TRUE);
+	OutputLine(NULL, "いや、",
+		   NULL, " anzi,", Line_Continue);
+	// (backup) SetValidityOfInput( FALSE );
+	Wait( 600 );
+	// (backup) SetValidityOfInput( TRUE );
+	OutputLine(NULL, "……違う、本当に叔母さんなんだ……、",
+		   NULL, " era proprio lei...", Line_Continue);
+	// (backup) SetValidityOfInput( FALSE );
+	Wait( 700 );
+	// (backup) SetValidityOfInput( TRUE );
+	OutputLine(NULL, "叔母さんはまだ……、",
+		   NULL, " era mia zia...", Line_Continue);
+	// (backup) SetValidityOfInput( FALSE );
+	Wait( 600 );
+	// (backup) SetValidityOfInput( TRUE );
+	OutputLine(NULL, "まだ……。",
+		   NULL, " ma io...", Line_WaitForInput);
+	ModPlayVoiceLS(4, 7, "ps3/s20/07/vtk1_satoshi1126", 128, TRUE);
+	OutputLine(NULL, "……あんなに殺したのに、",
+		   NULL, " l'ho uccisa...", Line_Continue);
+	// (backup) SetValidityOfInput( FALSE );
+	Wait( 700 );
+	// (backup) SetValidityOfInput( TRUE );
+	OutputLine(NULL, "……あんなに殴ったのに………、",
+		   NULL, " le ho spaccato la testa...", Line_Continue);
+	// (backup) SetValidityOfInput( FALSE );
+	Wait( 800 );
+	// (backup) SetValidityOfInput( TRUE );
+	OutputLine(NULL, "何で、",
+		   NULL, " e allora...", Line_Continue);
+	// (backup) SetValidityOfInput( FALSE );
+	Wait( 400 );
+	// (backup) SetValidityOfInput( TRUE );
+	OutputLine(NULL, "……何で…………！」",
+		   NULL, " perché.........?!\"", Line_Continue);
+	OutputLineAll(NULL, "", Line_Normal);
+
+	ClearMessage();
+	SetSpeedOfMessage( FALSE, 0 );
+
+	if (GetGlobalFlag(GADVMode)) { OutputLineAll("", NULL, Line_ContinueAfterTyping); }
+	OutputLine(NULL, "　私は冷静に運転を続けるしかない…。",
+		   NULL, "Devo mantenere il sangue freddo e guidare.", Line_Normal);
+	ClearMessage();
+
+	if (GetGlobalFlag(GADVMode)) { OutputLineAll("", NULL, Line_ContinueAfterTyping); }
+	OutputLine(NULL, "　悟史くんはすでに冷静さを失っていた。",
+		   NULL, "Satoshi-kun non è in sé.", GetGlobalFlag(GLinemodeSp));
+	if (GetGlobalFlag(GADVMode)) { ClearMessage(); } else { OutputLineAll(NULL, "\n", Line_ContinueAfterTyping); }
+
+	if (GetGlobalFlag(GADVMode) == 0) { OutputLineAll(NULL, "\n", Line_ContinueAfterTyping); }
+
+
+	if (GetGlobalFlag(GADVMode)) { OutputLineAll("", NULL, Line_ContinueAfterTyping); }
+	OutputLine(NULL, "　…彼には、見えているのだ。",
+		   NULL, "Ha le allucinazioni.", Line_WaitForInput);
+	OutputLine(NULL, "…殺したはずの叔母がまだ生きていて、彼の前に次々に現れるように見えているのだ…。",
+		   NULL, " Vede sua zia ovunque, nonostante dica di averla uccisa lui stesso.", Line_Normal);
+	ClearMessage();
+
+	FadeOutBGM( 0, 300, FALSE );
+	FadeOutBGM( 1, 300, FALSE );
+	FadeOutBGM( 3, 300, FALSE );
+
+	DrawSceneWithMask( "black", "maskdown", 1, 0, 300 );
+
+	PlayBGM( 0, "hitoe_2", 120, 0 );
+
+	if (GetGlobalFlag(GADVMode)) { OutputLineAll("", NULL, Line_ContinueAfterTyping); }
+	OutputLine(NULL, "　この段階にまで及んでようやく私は悟る……。",
+		   NULL, "Questa è la conferma...", GetGlobalFlag(GLinemodeSp));
+	if (GetGlobalFlag(GADVMode)) { ClearMessage(); } else { OutputLineAll(NULL, "\n", Line_ContinueAfterTyping); }
+
+	if (GetGlobalFlag(GADVMode) == 0) { OutputLineAll(NULL, "\n", Line_ContinueAfterTyping); }
+
+
+	if (GetGlobalFlag(GADVMode)) { OutputLineAll("", NULL, Line_ContinueAfterTyping); }
+	OutputLine(NULL, "　悟史くんは、…………末期発症を起こしている…！",
+		   NULL, "Satoshi-kun...... mostra i segni dello stadio terminale...!", Line_Normal);
+	ClearMessage();
+
+	if (GetGlobalFlag(GADVMode)) { OutputLineAll("", NULL, Line_ContinueAfterTyping); }
+	OutputLine(NULL, "　…診療所についたら、まず彼の具合を見よう。",
+		   NULL, "... devo portarlo con me alla clinica.", GetGlobalFlag(GLinemodeSp));
+	if (GetGlobalFlag(GADVMode)) { ClearMessage(); } else { OutputLineAll(NULL, "\n", Line_ContinueAfterTyping); }
+
+	if (GetGlobalFlag(GADVMode)) { OutputLineAll("", NULL, Line_ContinueAfterTyping); }
+	OutputLine(NULL, "　沙都子ちゃんの時とは違う。",
+		   NULL, "Il suo caso è diverso da quello di Satoko-chan.", GetGlobalFlag(GLinemodeSp));
+	if (GetGlobalFlag(GADVMode)) { ClearMessage(); } else { OutputLineAll(NULL, "\n", Line_ContinueAfterTyping); }
+
+	if (GetGlobalFlag(GADVMode) == 0) { OutputLineAll(NULL, "\n", Line_ContinueAfterTyping); }
+
+
+	if (GetGlobalFlag(GADVMode)) { OutputLineAll("", NULL, Line_ContinueAfterTyping); }
+	OutputLine(NULL, "　すでに充分な実験を重ねた治療薬が作られている。",
+		   NULL, "Abbiamo già pronto un vaccino.", Line_WaitForInput);
+	OutputLine(NULL, "悟史くんは治療可能なのだ。",
+		   NULL, " Possiamo curarlo.", Line_Normal);
+	ClearMessage();
+
+	if (GetGlobalFlag(GADVMode)) { OutputLineAll("", NULL, Line_ContinueAfterTyping); }
+	OutputLine(NULL, "　そして、叔母殺しについても、また山狗の人たちに頼めば、うまく揉み消してくれるはずだ。",
+		   NULL, "Dirò ai Lupi di occuparsi dell'omicidio.", GetGlobalFlag(GLinemodeSp));
+	if (GetGlobalFlag(GADVMode)) { ClearMessage(); } else { OutputLineAll(NULL, "\n", Line_ContinueAfterTyping); }
+
+	if (GetGlobalFlag(GADVMode)) { OutputLineAll("", NULL, Line_ContinueAfterTyping); }
+	OutputLine(NULL, "　だから彼を末期症状から救い、沙都子ちゃんとの平穏な日々を取り戻させてあげることは必ずできる…。",
+		   NULL, "In questo modo, potrò salvare Satoshi-kun dallo stadio terminale e restituirgli una vita serena insieme a Satoko-chan.", Line_Normal);
+	ClearMessage();
+
+	if (GetGlobalFlag(GADVMode)) { OutputLineAll("", NULL, Line_ContinueAfterTyping); }
+	OutputLine(NULL, "　さっきまであんなにも取り乱していたのに、今度は急に静かになった。",
+		   NULL, "Nel frattempo, il delirio si è placato e Satoshi-kun si è ammutolito.", Line_Normal);
+	ClearMessage();
+
+	if (GetGlobalFlag(GADVMode)) { OutputLineAll("", NULL, Line_ContinueAfterTyping); }
+	OutputLine(NULL, "　…眠ってしまったわけではないようだった。",
+		   NULL, "... però non sta dormendo.", GetGlobalFlag(GLinemodeSp));
+	if (GetGlobalFlag(GADVMode)) { ClearMessage(); } else { OutputLineAll(NULL, "\n", Line_ContinueAfterTyping); }
+
+	if (GetGlobalFlag(GADVMode)) { OutputLineAll("", NULL, Line_ContinueAfterTyping); }
+	OutputLine(NULL, "　…とにかく、悟史くんが大人しくしてくれている内に診療所につかなくてはならない。",
+		   NULL, "Adesso dobbiamo andare alla clinica per farlo restare calmo.", GetGlobalFlag(GLinemodeSp));
+	if (GetGlobalFlag(GADVMode)) { ClearMessage(); } else { OutputLineAll(NULL, "\n", Line_ContinueAfterTyping); }
+
+	if (GetGlobalFlag(GADVMode)) { OutputLineAll("", NULL, Line_ContinueAfterTyping); }
+	OutputLine(NULL, "　……錯乱して、運転中の私に襲い掛かってこない保証もないのだから。",
+		   NULL, "Nessuno mi garantisce che non mi aggredisca mentre ho le mani sul volante.", GetGlobalFlag(GLinemodeSp));
+	if (GetGlobalFlag(GADVMode)) { ClearMessage(); } else { OutputLineAll(NULL, "\n", Line_ContinueAfterTyping); }
+
+	if (GetGlobalFlag(GADVMode) == 0) { OutputLineAll(NULL, "\n", Line_ContinueAfterTyping); }
+
+
+	if (GetGlobalFlag(GADVMode)) { OutputLineAll("", NULL, Line_ContinueAfterTyping); }
+	OutputLine(NULL, "　…そんな恐ろしい想像を見抜かれたかのように、悟史くんは落ち着いた声で言った。",
+		   NULL, "... in quel momento, Satoshi-kun si volta e mi rivolge la parola, come se mi avesse letto nel pensiero.", Line_Normal);
+	ClearMessage();
+
+	DrawScene( "background/kuruma1", 400 );
+
+	if (GetGlobalFlag(GADVMode)) { OutputLine("<color=#ffdc6f>悟史</color>", NULL, "<color=#ffdc6f>Satoshi</color>", NULL, Line_ContinueAfterTyping); }
+	ModPlayVoiceLS(4, 7, "ps3/s20/07/vtk1_satoshi1127", 128, TRUE);
+	OutputLine(NULL, "「………監督。",
+		   NULL, "\"...... coach.", Line_WaitForInput);
+	ModPlayVoiceLS(4, 7, "ps3/s20/07/vtk1_satoshi1128", 128, TRUE);
+	OutputLine(NULL, "……………これってやっぱり、",
+		   NULL, " È questa...", Line_Continue);
+	// (backup) SetValidityOfInput( FALSE );
+	Wait( 2700 );
+	// (backup) SetValidityOfInput( TRUE );
+	OutputLine(NULL, "…オヤシロさまの祟りなんでしょうか。」",
+		   NULL, " la maledizione di Oyashiro-sama?\"", GetGlobalFlag(GLinemodeSp));
+	if (GetGlobalFlag(GADVMode)) { ClearMessage(); } else { OutputLineAll(NULL, "\n", Line_ContinueAfterTyping); }
+
+	if (GetGlobalFlag(GADVMode)) { OutputLine("<color=#c89a80>入江</color>", NULL, "<color=#c89a80>Irie</color>", NULL, Line_ContinueAfterTyping); }
+	ModPlayVoiceLS(4, 10, "ps3/s20/10/vtk1_irie1358", 128, TRUE);
+	OutputLine(NULL, "「祟りなんかありません。",
+		   NULL, "\"Le maledizioni non esistono.", Line_WaitForInput);
+	ModPlayVoiceLS(4, 10, "ps3/s20/10/vtk1_irie1359", 128, TRUE);
+	OutputLine(NULL, "どうか気を強く持ってください。」",
+		   NULL, " Cerca di restare in te.\"", Line_Normal);
+	ClearMessage();
+
+	SetSpeedOfMessage( TRUE, 128 );
+	if (GetGlobalFlag(GADVMode)) { OutputLine("<color=#ffdc6f>悟史</color>", NULL, "<color=#ffdc6f>Satoshi</color>", NULL, Line_ContinueAfterTyping); }
+	ModPlayVoiceLS(4, 7, "ps3/s20/07/vtk1_satoshi1129", 128, TRUE);
+	OutputLine(NULL, "「…………沙都子、",
+		   NULL, "\"...... Satoko,", Line_Continue);
+	OutputLine(NULL, "……ごめん。",
+		   NULL, " mi dispiace...", Line_WaitForInput);
+	ModPlayVoiceLS(4, 7, "ps3/s20/07/vtk1_satoshi1130", 128, TRUE);
+	OutputLine(NULL, "……ぬいぐるみを買う直前まで、",
+		   NULL, " avevo intenzione di scappare...", Line_Continue);
+	// (backup) SetValidityOfInput( FALSE );
+	Wait( 700 );
+	// (backup) SetValidityOfInput( TRUE );
+	OutputLine(NULL, "……僕はそのお金でどこか遠くに逃げてしまおうって思ってたんだ……。",
+		   NULL, " fino a poco prima di comprare l'orsacchiotto...", Line_WaitForInput);
+	ModPlayVoiceLS(4, 7, "ps3/s20/07/vtk1_satoshi1131", 128, TRUE);
+	OutputLine(NULL, "…だから、",
+		   NULL, " per questo...", Line_WaitForInput);
+	ModPlayVoiceLS(4, 7, "ps3/s20/07/vtk1_satoshi1131", 128, TRUE);
+	OutputLine(NULL, "…そんな僕をオヤシロさまは許さなかったんだ……。",
+		   NULL, " Oyashiro-sama si è infuriato...", Line_WaitForInput);
+	ModPlayVoiceLS(4, 7, "ps3/s20/07/vtk1_satoshi1132", 128, TRUE);
+	OutputLine(NULL, "…僕は兄、",
+		   NULL, " come fratello...", Line_Continue);
+	// (backup) SetValidityOfInput( FALSE );
+	Wait( 300 );
+	// (backup) SetValidityOfInput( TRUE );
+	OutputLine(NULL, "失格なんだ……。",
+		   NULL, " sono una vergogna...", Line_WaitForInput);
+	ModPlayVoiceLS(4, 7, "ps3/s20/07/vtk1_satoshi1133", 128, TRUE);
+	OutputLine(NULL, "……僕は………、",
+		   NULL, " Io...", Line_Continue);
+	// (backup) SetValidityOfInput( FALSE );
+	Wait( 1800 );
+	// (backup) SetValidityOfInput( TRUE );
+	OutputLine(NULL, "……僕は……………。」",
+		   NULL, " sono......\"", Line_Normal);
+	ClearMessage();
+
+	if (GetGlobalFlag(GADVMode)) { OutputLine("<color=#c89a80>入江</color>", NULL, "<color=#c89a80>Irie</color>", NULL, Line_ContinueAfterTyping); }
+	ModPlayVoiceLS(4, 10, "ps3/s20/10/vtk1_irie1360", 128, TRUE);
+	OutputLine(NULL, "「無理にしゃべらないでいいですよ。",
+		   NULL, "\"Non sforzarti di parlare.", Line_WaitForInput);
+	ModPlayVoiceLS(4, 10, "ps3/s20/10/vtk1_irie1361", 128, TRUE);
+	OutputLine(NULL, "目蓋を閉じて休んでいてください。",
+		   NULL, " Chiudi gli occhi e riposa.", Line_WaitForInput);
+	ModPlayVoiceLS(4, 10, "ps3/s20/10/vtk1_irie1362", 128, TRUE);
+	OutputLine(NULL, "すぐに診療所につきますからね。",
+		   NULL, " Tra poco arriveremo alla clinica.", Line_WaitForInput);
+	ModPlayVoiceLS(4, 10, "ps3/s20/10/vtk1_irie1363", 128, TRUE);
+	OutputLine(NULL, "そうしたら、具合のすぐよくなる薬をあげますからね…。」",
+		   NULL, " Così ti darò una medicina per farti stare meglio...\"", GetGlobalFlag(GLinemodeSp));
+	if (GetGlobalFlag(GADVMode)) { ClearMessage(); } else { OutputLineAll(NULL, "\n", Line_ContinueAfterTyping); }
+
+	if (GetGlobalFlag(GADVMode)) { OutputLine("<color=#ffdc6f>悟史</color>", NULL, "<color=#ffdc6f>Satoshi</color>", NULL, Line_ContinueAfterTyping); }
+	ModPlayVoiceLS(4, 7, "ps3/s20/07/vtk1_satoshi1134", 128, TRUE);
+	OutputLine(NULL, "「……僕の血の中にも……蛆虫が湧いてるのかな………。",
+		   NULL, "\"... mi sembra... di avere delle larve che mi strisciano nelle vene...", Line_WaitForInput);
+	ModPlayVoiceLS(4, 7, "ps3/s20/07/vtk1_satoshi1135", 128, TRUE);
+	OutputLine(NULL, "……痒い…。」",
+		   NULL, " che fastidio...\"", GetGlobalFlag(GLinemodeSp));
+	if (GetGlobalFlag(GADVMode)) { ClearMessage(); } else { OutputLineAll(NULL, "\n", Line_ContinueAfterTyping); }
+
+	if (GetGlobalFlag(GADVMode)) { OutputLine("<color=#c89a80>入江</color>", NULL, "<color=#c89a80>Irie</color>", NULL, Line_ContinueAfterTyping); }
+	ModPlayVoiceLS(4, 10, "ps3/s20/10/vtk1_irie1364", 128, TRUE);
+	OutputLine(NULL, "「掻かないで！",
+		   NULL, "\"Non grattarti!!", Line_WaitForInput);
+	ModPlayVoiceLS(4, 10, "ps3/s20/10/vtk1_irie1365", 128, TRUE);
+	OutputLine(NULL, "　喉を掻いてはいけません！」",
+		   NULL, " Non avvicinare le mani al collo!!\"", Line_Normal);
+	ClearMessage();
+
+	DrawSceneWithMask( "black", "maskleft", 1, 0, 300 );
+	SetValidityOfInput( FALSE );
+	Wait( 2000 );
+	SetValidityOfInput( TRUE );
+	DrawSceneWithMask( "background/sinryou_soto3", "maskleft", 1, 0, 300 );
+	SetSpeedOfMessage( FALSE, 0 );
+
+	if (GetGlobalFlag(GADVMode)) { OutputLineAll("", NULL, Line_ContinueAfterTyping); }
+	OutputLine(NULL, "　車は診療所の裏口前に到着した。",
+		   NULL, "Raggiungiamo la porta sul retro della clinica.", Line_Normal);
+	ClearMessage();
+
+	if (GetGlobalFlag(GADVMode)) { OutputLineAll("", NULL, Line_ContinueAfterTyping); }
+	OutputLine(NULL, "　私は乱暴なブレーキで車を停める。",
+		   NULL, "Freno di colpo e apro la portiera.", GetGlobalFlag(GLinemodeSp));
+	if (GetGlobalFlag(GADVMode)) { ClearMessage(); } else { OutputLineAll(NULL, "\n", Line_ContinueAfterTyping); }
+
+	if (GetGlobalFlag(GADVMode)) { OutputLineAll("", NULL, Line_ContinueAfterTyping); }
+	OutputLine(NULL, "　もう、悟史くんは喉を掻き毟り始めていた。",
+		   NULL, "Satoshi-kun ha già iniziato a grattarsi.", Line_WaitForInput);
+	OutputLine(NULL, "私ひとりでは抑えきれない。",
+		   NULL, " Non riesco a impedirglielo.", Line_WaitForInput);
+	OutputLine(NULL, "インターホンでスタッフに応援を求める。",
+		   NULL, " Premo l'interfono e chiedo a qualcuno di aiutarmi.", Line_Normal);
+	ClearMessage();
+
+	DrawSceneWithMask( "black", "maskright", 1, 0, 300 );
+	DrawSceneWithMask( "background/sinryou_soto1", "maskright", 1, 0, 300 );
+
+	if (GetGlobalFlag(GADVMode)) { OutputLineAll("", NULL, Line_ContinueAfterTyping); }
+	OutputLine(NULL, "　すぐにスタッフが何人か駆けて来てくれた。",
+		   NULL, "Alcuni medici del mio staff accorrono in tutta fretta.", GetGlobalFlag(GLinemodeSp));
+	if (GetGlobalFlag(GADVMode)) { ClearMessage(); } else { OutputLineAll(NULL, "\n", Line_ContinueAfterTyping); }
+
+	if (GetGlobalFlag(GADVMode)) { OutputLineAll("", NULL, Line_ContinueAfterTyping); }
+	OutputLine(NULL, "　……しかし、一度に大勢の人が現れたことに悟史くんは驚いたのか、急に抵抗を始めた。",
+		   NULL, "Vedere tutte queste persone venirgli incontro deve aver spaventato Satoshi-kun, che prova a opporre resistenza.", GetGlobalFlag(GLinemodeSp));
+	if (GetGlobalFlag(GADVMode)) { ClearMessage(); } else { OutputLineAll(NULL, "\n", Line_ContinueAfterTyping); }
+
+	if (GetGlobalFlag(GADVMode) == 0) { OutputLineAll(NULL, "\n", Line_ContinueAfterTyping); }
+
+
+	if (GetGlobalFlag(GADVMode)) { OutputLineAll("", NULL, Line_ContinueAfterTyping); }
+	OutputLine(NULL, "　………検査を待つまでもなく、悟史くんはＬ５だ。",
+		   NULL, "...... non mi serve un test per capire che è a livello L5.", GetGlobalFlag(GLinemodeSp));
+	if (GetGlobalFlag(GADVMode)) { ClearMessage(); } else { OutputLineAll(NULL, "\n", Line_ContinueAfterTyping); }
+
+	if (GetGlobalFlag(GADVMode)) { OutputLineAll("", NULL, Line_ContinueAfterTyping); }
+	OutputLine(NULL, "　完全な末期症状で、心の中は疑心暗鬼と被害妄想でいっぱいのはず。",
+		   NULL, "Avrà la testa piena di complotti e speculazioni ora che è in questo stato.", GetGlobalFlag(GLinemodeSp));
+	if (GetGlobalFlag(GADVMode)) { ClearMessage(); } else { OutputLineAll(NULL, "\n", Line_ContinueAfterTyping); }
+
+	if (GetGlobalFlag(GADVMode)) { OutputLineAll("", NULL, Line_ContinueAfterTyping); }
+	OutputLine(NULL, "　突然現れたスタッフたちが、自分を殺そうとしているように見えるのかもしれない。",
+		   NULL, "Non mi sorprenderei se stesse pensando che il mio staff ha intenzione di ucciderlo.", Line_Normal);
+	ClearMessage();
+
+	DrawSceneWithMask( "black", "maskdown", 1, 0, 300 );
+
+	if (GetGlobalFlag(GADVMode)) { OutputLineAll("", NULL, Line_ContinueAfterTyping); }
+	OutputLine(NULL, "　暴れる彼を、スタッフがそれぞれ四肢を抱え込み、眠らせる薬を注射する。",
+		   NULL, "Satoshi-kun viene preso per braccia e gambe e gli viene somministrato un calmante via iniezione.", Line_Normal);
+	ClearMessage();
+
+	SetSpeedOfMessage( TRUE, 128 );
+	if (GetGlobalFlag(GADVMode)) { OutputLine("<color=#ffdc6f>悟史</color>", NULL, "<color=#ffdc6f>Satoshi</color>", NULL, Line_ContinueAfterTyping); }
+	ModPlayVoiceLS(4, 7, "ps3/s20/07/vtk1_satoshi1136", 128, TRUE);
+	OutputLine(NULL, "「……か、",
+		   NULL, "\"... c-", Line_Continue);
+	// (backup) SetValidityOfInput( FALSE );
+	Wait( 600 );
+	// (backup) SetValidityOfInput( TRUE );
+	OutputLine(NULL, "……監督……、",
+		   NULL, "coach...", Line_Continue);
+	// (backup) SetValidityOfInput( FALSE );
+	Wait( 700 );
+	// (backup) SetValidityOfInput( TRUE );
+	OutputLine(NULL, "た、",
+		   NULL, " a-", Line_Continue);
+	// (backup) SetValidityOfInput( FALSE );
+	Wait( 700 );
+	// (backup) SetValidityOfInput( TRUE );
+	OutputLine(NULL, "……助けて…………ッ！！」",
+		   NULL, "aiutami...!!!\"", GetGlobalFlag(GLinemodeSp));
+	if (GetGlobalFlag(GADVMode)) { ClearMessage(); } else { OutputLineAll(NULL, "\n", Line_ContinueAfterTyping); }
+	SetSpeedOfMessage( FALSE, 0 );
+
+	if (GetGlobalFlag(GADVMode)) { OutputLine("<color=#c89a80>入江</color>", NULL, "<color=#c89a80>Irie</color>", NULL, Line_ContinueAfterTyping); }
+	ModPlayVoiceLS(4, 10, "ps3/s20/10/vtk1_irie1366", 128, TRUE);
+	OutputLine(NULL, "「大丈夫ですよ。",
+		   NULL, "\"Va tutto bene.", Line_WaitForInput);
+	ModPlayVoiceLS(4, 10, "ps3/s20/10/vtk1_irie1367", 128, TRUE);
+	OutputLine(NULL, "すぐに治療しますから、しばらくの間、楽にしていてください。」",
+		   NULL, " Ti rimetterò in sesto io, quindi ora rilassati.\"", GetGlobalFlag(GLinemodeSp));
+	if (GetGlobalFlag(GADVMode)) { ClearMessage(); } else { OutputLineAll(NULL, "\n", Line_ContinueAfterTyping); }
+
+	SetSpeedOfMessage( TRUE, 128 );
+	if (GetGlobalFlag(GADVMode)) { OutputLine("<color=#ffdc6f>悟史</color>", NULL, "<color=#ffdc6f>Satoshi</color>", NULL, Line_ContinueAfterTyping); }
+	ModPlayVoiceLS(4, 7, "ps3/s20/07/vtk1_satoshi1137", 128, TRUE);
+	OutputLine(NULL, "「…",
+		   NULL, "\"...", Line_Continue);
+	// (backup) SetValidityOfInput( FALSE );
+	Wait( 100 );
+	// (backup) SetValidityOfInput( TRUE );
+	OutputLine(NULL, "…",
+		   NULL, "...", Line_Continue);
+	// (backup) SetValidityOfInput( FALSE );
+	Wait( 100 );
+	// (backup) SetValidityOfInput( TRUE );
+	OutputLine(NULL, "…",
+		   NULL, "...", Line_Continue);
+	// (backup) SetValidityOfInput( FALSE );
+	Wait( 100 );
+	// (backup) SetValidityOfInput( TRUE );
+	OutputLine(NULL, "…",
+		   NULL, "...", Line_Continue);
+	// (backup) SetValidityOfInput( FALSE );
+	Wait( 100 );
+	// (backup) SetValidityOfInput( TRUE );
+	OutputLine(NULL, "…",
+		   NULL, "...", Line_Continue);
+	// (backup) SetValidityOfInput( FALSE );
+	Wait( 100 );
+	// (backup) SetValidityOfInput( TRUE );
+	OutputLine(NULL, "んとく、",
+		   NULL, " coach", Line_Continue);
+	// (backup) SetValidityOfInput( FALSE );
+	Wait( 800 );
+	// (backup) SetValidityOfInput( TRUE );
+	OutputLine(NULL, "…",
+		   NULL, "...", Line_Continue);
+	// (backup) SetValidityOfInput( FALSE );
+	Wait( 200 );
+	// (backup) SetValidityOfInput( TRUE );
+	OutputLine(NULL, "…",
+		   NULL, "...", Line_Continue);
+	// (backup) SetValidityOfInput( FALSE );
+	Wait( 200 );
+	// (backup) SetValidityOfInput( TRUE );
+	OutputLine(NULL, "…",
+		   NULL, "...", Line_Continue);
+	// (backup) SetValidityOfInput( FALSE );
+	Wait( 200 );
+	// (backup) SetValidityOfInput( TRUE );
+	OutputLine(NULL, "…。",
+		   NULL, "...", Line_WaitForInput);
+	ModPlayVoiceLS(4, 7, "ps3/s20/07/vtk1_satoshi1138", 128, TRUE);
+	OutputLine(NULL, "…",
+		   NULL, "...", Line_Continue);
+	// (backup) SetValidityOfInput( FALSE );
+	Wait( 200 );
+	// (backup) SetValidityOfInput( TRUE );
+	OutputLine(NULL, "…",
+		   NULL, "...", Line_Continue);
+	// (backup) SetValidityOfInput( FALSE );
+	Wait( 200 );
+	// (backup) SetValidityOfInput( TRUE );
+	OutputLine(NULL, "沙都子を、",
+		   NULL, " Satoko", Line_Continue);
+	// (backup) SetValidityOfInput( FALSE );
+	Wait( 200 );
+	// (backup) SetValidityOfInput( TRUE );
+	OutputLine(NULL, "…",
+		   NULL, "...", Line_Continue);
+	// (backup) SetValidityOfInput( FALSE );
+	Wait( 200 );
+	// (backup) SetValidityOfInput( TRUE );
+	OutputLine(NULL, "…",
+		   NULL, "...", Line_Continue);
+	// (backup) SetValidityOfInput( FALSE );
+	Wait( 200 );
+	// (backup) SetValidityOfInput( TRUE );
+	OutputLine(NULL, "…",
+		   NULL, "...", Line_Continue);
+	// (backup) SetValidityOfInput( FALSE );
+	Wait( 200 );
+	// (backup) SetValidityOfInput( TRUE );
+	OutputLine(NULL, "…",
+		   NULL, " è", Line_Continue);
+	// (backup) SetValidityOfInput( FALSE );
+	Wait( 200 );
+	// (backup) SetValidityOfInput( TRUE );
+	OutputLine(NULL, "ね",
+		   NULL, " nelle", Line_Continue);
+	// (backup) SetValidityOfInput( FALSE );
+	Wait( 200 );
+	// (backup) SetValidityOfInput( TRUE );
+	OutputLine(NULL, "が",
+		   NULL, " tue", Line_Continue);
+	// (backup) SetValidityOfInput( FALSE );
+	Wait( 200 );
+	// (backup) SetValidityOfInput( TRUE );
+	OutputLine(NULL, "い",
+		   NULL, " mani", Line_Continue);
+	// (backup) SetValidityOfInput( FALSE );
+	Wait( 200 );
+	// (backup) SetValidityOfInput( TRUE );
+	OutputLine(NULL, "…。」",
+		   NULL, "...\"", GetGlobalFlag(GLinemodeSp));
+	if (GetGlobalFlag(GADVMode)) { ClearMessage(); } else { OutputLineAll(NULL, "\n", Line_ContinueAfterTyping); }
+	SetSpeedOfMessage( FALSE, 0 );
+
+	if (GetGlobalFlag(GADVMode) == 0) { OutputLineAll(NULL, "\n", Line_ContinueAfterTyping); }
+
+
+	if (GetGlobalFlag(GADVMode)) { OutputLineAll("", NULL, Line_ContinueAfterTyping); }
+	OutputLine(NULL, "　沙都子をお願い。",
+		   NULL, "Satoko è nelle tue mani.", GetGlobalFlag(GLinemodeSp));
+	if (GetGlobalFlag(GADVMode)) { ClearMessage(); } else { OutputLineAll(NULL, "\n", Line_ContinueAfterTyping); }
+
+	if (GetGlobalFlag(GADVMode) == 0) { OutputLineAll(NULL, "\n", Line_ContinueAfterTyping); }
+
+
+	if (GetGlobalFlag(GADVMode)) { OutputLineAll("", NULL, Line_ContinueAfterTyping); }
+	OutputLine(NULL, "　その言葉を何とか口にすると、そこで悟史くんの意識は途絶えた。",
+		   NULL, "Con queste parole, Satoshi-kun perde conoscenza.", Line_Normal);
+	ClearMessage();
+
+	ModSetLayerFilter(2, 256, "none");
+	ModDrawCharacter(2, 9, "sprite/ta2_def_", "0", 160, 0, 0, FALSE, 0, 0, 0, 0, 0, 0, 0, 10, 0, FALSE );
+	DrawSceneWithMask( "background/sinryou_soto1", "maskleft", 1, 0, 300 );
+
+	if (GetGlobalFlag(GADVMode)) { OutputLine("<color=#f6d9a8>鷹野</color>", NULL, "<color=#f6d9a8>Takano</color>", NULL, Line_ContinueAfterTyping); }
+	ModPlayVoiceLS(4, 9, "ps3/s20/09/vtk1_takano1258", 128, TRUE);
+	OutputLine(NULL, "「あらあら。",
+		   NULL, "\"Oh cielo.", Line_WaitForInput);
+	ModPlayVoiceLS(4, 9, "ps3/s20/09/vtk1_takano1259", 128, TRUE);
+	OutputLine(NULL, "騒がしいと思ったら、これは何事ですの？」",
+		   NULL, " Cos'è tutto questo baccano?\"", Line_Normal);
+	ClearMessage();
+
+	if (GetGlobalFlag(GADVMode)) { OutputLine("<color=#c89a80>入江</color>", NULL, "<color=#c89a80>Irie</color>", NULL, Line_ContinueAfterTyping); }
+	ModPlayVoiceLS(4, 10, "ps3/s20/10/vtk1_irie1368", 128, TRUE);
+	OutputLine(NULL, "「………悟史くんが、急性発症したようです。",
+		   NULL, "\"... Satoshi-kun ha iniziato a mostrare i sintomi...", Line_WaitForInput);
+	ModPlayVoiceLS(4, 10, "ps3/s20/10/vtk1_irie1369", 128, TRUE);
+	OutputLine(NULL, "……彼の日頃のストレスを考えれば、いつ発症してもおかしくなかったでしょう。",
+		   NULL, " ed era solo una questione di tempo dopo tutto lo stress che ha accumulato.", Line_WaitForInput);
+	ModPlayVoiceLS(4, 10, "ps3/s20/10/vtk1_irie1370", 128, TRUE);
+	OutputLine(NULL, "…いや、………ぬいぐるみを買うまで、自制心でそれをずっと抑え続けてきたに違いありません…。」",
+		   NULL, " Anzi... forse ha fatto di tutto per resistere almeno fino a comprare l'orso di peluche.\"", Line_Normal);
+	ClearMessage();
+
+	DisableWindow();
+	ModDrawCharacter(2, 9, "sprite/ta2_akuwarai_", "2", 160, 0, 0, FALSE, 0, 0, 0, 0, 0, 0, 0, 10, 200, TRUE );
+
+	if (GetGlobalFlag(GADVMode)) { OutputLine("<color=#f6d9a8>鷹野</color>", NULL, "<color=#f6d9a8>Takano</color>", NULL, Line_ContinueAfterTyping); }
+	ModPlayVoiceLS(4, 9, "ps3/s20/09/vtk1_takano1260", 128, TRUE);
+	OutputLine(NULL, "「何だか毎年、綿流しになると生きた検体が手に入りますわね。",
+		   NULL, "\"Affascinante come troviamo sempre un soggetto in vita intorno al periodo del Watanagashi.", Line_WaitForInput);
+	ModPlayVoiceLS(4, 9, "ps3/s20/09/vtk1_takano1261", 128, TRUE);
+	OutputLine(NULL, "これもオヤシロさまの祟りのお陰なのかしら。",
+		   NULL, " Sarà forse la maledizione di Oyashiro-sama?", Line_WaitForInput);
+	ModPlayVoiceLS(4, 9, "ps3/s20/09/vtk1_takano1262", 128, TRUE);
+	OutputLine(NULL, "くすくす。」",
+		   NULL, " Eheh.\"", GetGlobalFlag(GLinemodeSp));
+	if (GetGlobalFlag(GADVMode)) { ClearMessage(); } else { OutputLineAll(NULL, "\n", Line_ContinueAfterTyping); }
+
+	if (GetGlobalFlag(GADVMode)) { OutputLineAll("", NULL, Line_ContinueAfterTyping); }
+	OutputLine(NULL, "　鷹野さんの戯言を聞いている暇は、今はなかった。",
+		   NULL, "Non ho tempo per stare a sentire i suoi commenti.", Line_Normal);
+	ClearMessage();
+
+	CallScript( "&eye" );
+	FadeOutBGM( 0, 1000, FALSE );
+	DrawScene( "black", 1000 );
+
+}

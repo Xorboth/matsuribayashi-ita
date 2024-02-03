@@ -1,0 +1,1382 @@
+void main()
+{
+
+	FadeOutBGM( 1, 300, FALSE );
+	PlayBGM( 0, "pros", 120, 0 );
+	DrawScene( "background/sora", 1000 );
+	SetValidityOfInput( FALSE );
+	Wait( 2000 );
+	SetValidityOfInput( TRUE );
+	DrawScene( "background/sora2", 1000 );
+	SetValidityOfInput( FALSE );
+	Wait( 2000 );
+	SetValidityOfInput( TRUE );
+	DrawSceneWithMask( "black", "maskdown", 1, 0, 1300 );
+	DrawScene( "background/tk_ryou1", 1000 );
+	SetSpeedOfMessage( FALSE, 0 );
+
+	ClearMessage();
+	if (GetGlobalFlag(GADVMode)) { OutputLineAll("", NULL, Line_ContinueAfterTyping); }
+	OutputLine(NULL, "　上品な小料理の配膳を終えると、女将は毎度の利用を深々と感謝した後、しずしずと姿を消す。",
+		   NULL, "Servita la prima portata, impiattata con maestria e con ingredienti di prima scelta, la cameriera fa un inchino e torna verso la cucina.", Line_Normal);
+	ClearMessage();
+
+	if (GetGlobalFlag(GADVMode)) { OutputLineAll("", NULL, Line_ContinueAfterTyping); }
+	OutputLine(NULL, "　上品なお茶室のような室内は、とても落ち着きがあり、下手に飾らず、それでいて本当の贅沢が尽くしてある、素晴らしいものだった。",
+		   NULL, "La sala ha uno splendido gusto di arredamento, simile a quelle usate per la cerimonia del tè, e le decorazioni alle pareti fanno pensare che vi siano stati spesi parecchi soldi.", GetGlobalFlag(GLinemodeSp));
+	if (GetGlobalFlag(GADVMode)) { ClearMessage(); } else { OutputLineAll(NULL, "\n", Line_ContinueAfterTyping); }
+
+	if (GetGlobalFlag(GADVMode) == 0) { OutputLineAll(NULL, "\n", Line_ContinueAfterTyping); }
+
+
+	if (GetGlobalFlag(GADVMode)) { OutputLineAll("", NULL, Line_ContinueAfterTyping); }
+	OutputLine(NULL, "　この高級料亭で、財界の要人や政府高官が人目を忍んで会合するのによく使われる、その道では有名な料亭だ。",
+		   NULL, "Siamo all'interno di un famoso ristorante di cucina giapponese, dove si incontrano molti pezzi grossi della politica per discutere delle loro faccende segrete.", Line_Normal);
+	ClearMessage();
+
+	if (GetGlobalFlag(GADVMode)) { OutputLineAll("", NULL, Line_ContinueAfterTyping); }
+	OutputLine(NULL, "　そこには、よく肥えた壮年の紳士たちが５人ほど。そして、その中には鷹野の姿も混じっていた。",
+		   NULL, "Tra i presenti si nota anche Takano, accompagnata da cinque signori più anziani di lei.", Line_Normal);
+	ClearMessage();
+
+
+	if (GetGlobalFlag(GADVMode)) { OutputLineAll("", NULL, Line_ContinueAfterTyping); }
+	OutputLine(NULL, "　鷹野は、一歩引いた位置でかしこまる様に座っていた。",
+		   NULL, "Il suo posto è qualche centimetro più distante rispetto ai loro.", GetGlobalFlag(GLinemodeSp));
+	if (GetGlobalFlag(GADVMode)) { ClearMessage(); } else { OutputLineAll(NULL, "\n", Line_ContinueAfterTyping); }
+
+	if (GetGlobalFlag(GADVMode)) { OutputLineAll("", NULL, Line_ContinueAfterTyping); }
+	OutputLine(NULL, "　その様子から、鷹野にとってかなり目上の人間たちとの会合であることがうかがえた。",
+		   NULL, "Ciò a dimostrazione di come queste persone si trovino a un livello più alto del suo.", GetGlobalFlag(GLinemodeSp));
+	if (GetGlobalFlag(GADVMode)) { ClearMessage(); } else { OutputLineAll(NULL, "\n", Line_ContinueAfterTyping); }
+
+	if (GetGlobalFlag(GADVMode) == 0) { OutputLineAll(NULL, "\n", Line_ContinueAfterTyping); }
+
+
+	if (GetGlobalFlag(GADVMode)) { OutputLineAll("", NULL, Line_ContinueAfterTyping); }
+	OutputLine(NULL, "　ダブルの高級スーツに身を包んだ男は、そんな鷹野に、硬くならなくていいですよと声をかける。",
+		   NULL, "Uno di questi, con indosso un completo lussuoso in doppiopetto, dice gentilmente a Takano di rilassarsi.", Line_Normal);
+	ClearMessage();
+
+	if (GetGlobalFlag(GADVMode)) { OutputLine("<color=#f5e6d3>官僚</color>", NULL, "<color=#f5e6d3>Burocrate</color>", NULL, Line_ContinueAfterTyping); }
+	ModPlayVoiceLS(4, 0, "org/mob8f7000", 128, TRUE);
+	OutputLine(NULL, "「どうぞお楽に、鷹野さん。",
+		   NULL, "\"Non essere nervosa, Takano-san.", Line_WaitForInput);
+	ModPlayVoiceLS(4, 0, "org/mob8f7001", 128, TRUE);
+	OutputLine(NULL, "今回の件、非常に興味深く読ませていただきました。",
+		   NULL, " Quel che abbiamo letto è davvero interessante.", Line_WaitForInput);
+	ModPlayVoiceLS(4, 0, "org/mob8f7002", 128, TRUE);
+	OutputLine(NULL, "このような研究が、数十年に渡り眠り続けてきたとは…。」",
+		   NULL, " È incredibile come questo studio sia stato lasciato in disparte per decenni...\"", GetGlobalFlag(GLinemodeSp));
+	if (GetGlobalFlag(GADVMode)) { ClearMessage(); } else { OutputLineAll(NULL, "\n", Line_ContinueAfterTyping); }
+
+	if (GetGlobalFlag(GADVMode)) { OutputLine("<color=#f5e6d3>官僚</color>", NULL, "<color=#f5e6d3>Burocrate</color>", NULL, Line_ContinueAfterTyping); }
+	ModPlayVoiceLS(4, 0, "org/mob8g7000", 128, TRUE);
+	OutputLine(NULL, "「うーむ、驚きです。",
+		   NULL, "\"Già, una vera sorpresa.", Line_WaitForInput);
+	ModPlayVoiceLS(4, 0, "org/mob8g7001", 128, TRUE);
+	OutputLine(NULL, "旧日本軍が戦時中に行なっていたＢＣ兵器の研究は、ほとんどが実らず、",
+		   NULL, " Credevo che la maggior parte delle ricerche svolte dai militari sulle armi chimiche non avessero dato alcun frutto...", GetGlobalFlag(GLinemodeSp));
+	if (GetGlobalFlag(GADVMode)) { OutputLine("<color=#f5e6d3>官僚</color>", NULL, "<color=#f5e6d3>Burocrate</color>", NULL, Line_ContinueAfterTyping); }
+	ModPlayVoiceLS(4, 0, "org/mob8g7002", 128, TRUE);
+	OutputLine(NULL, "研究基礎も全て米軍に接収され、何も残っていないと思っておりましたよ。」",
+		   NULL, "e che nient'altro fosse rimasto dopo che gli Stati Uniti avevano confiscato ogni documento, persino il più basilare.\"", GetGlobalFlag(GLinemodeSp));
+	if (GetGlobalFlag(GADVMode)) { ClearMessage(); } else { OutputLineAll(NULL, "\n", Line_ContinueAfterTyping); }
+
+	if (GetGlobalFlag(GADVMode)) { OutputLine("<color=#f6d9a8>鷹野</color>", NULL, "<color=#f6d9a8>Takano</color>", NULL, Line_ContinueAfterTyping); }
+	ModPlayVoiceLS(4, 9, "org/takano7001", 128, TRUE);
+	OutputLine(NULL, "「……この研究は、軍上層部にもほとんど相手にされなかったと聞いております。」",
+		   NULL, "\"... ho sentito che questo studio venne completamente ignorato dai piani alti.\"", Line_Normal);
+	ClearMessage();
+
+
+	if (GetGlobalFlag(GADVMode)) { OutputLine("<color=#f5e6d3>官僚</color>", NULL, "<color=#f5e6d3>Burocrate</color>", NULL, Line_ContinueAfterTyping); }
+	ModPlayVoiceLS(4, 0, "org/mob8g7003", 128, TRUE);
+	OutputLine(NULL, "「なるほど。",
+		   NULL, "\"Capisco...", Line_WaitForInput);
+	ModPlayVoiceLS(4, 0, "org/mob8g7004", 128, TRUE);
+	OutputLine(NULL, "ゆえに、誰にも知られず、そしてＧＨＱの追求も受けなかったというわけですな。",
+		   NULL, " ecco perché nessuno ne sapeva niente e il Comando delle Forze Alleate non approfondì.", Line_WaitForInput);
+	ModPlayVoiceLS(4, 0, "org/mob8g7005", 128, TRUE);
+	OutputLine(NULL, "その意味においてだけは、本当に幸運でした。」",
+		   NULL, " In un certo senso, abbiamo avuto fortuna.\"", GetGlobalFlag(GLinemodeSp));
+	if (GetGlobalFlag(GADVMode)) { ClearMessage(); } else { OutputLineAll(NULL, "\n", Line_ContinueAfterTyping); }
+
+	if (GetGlobalFlag(GADVMode)) { OutputLine("<color=#f5e6d3>官僚</color>", NULL, "<color=#f5e6d3>Burocrate</color>", NULL, Line_ContinueAfterTyping); }
+	ModPlayVoiceLS(4, 0, "org/mob8f7003", 128, TRUE);
+	OutputLine(NULL, "「ふぅむ。",
+		   NULL, "\"Eh sì.", Line_WaitForInput);
+	ModPlayVoiceLS(4, 0, "org/mob8f7004", 128, TRUE);
+	OutputLine(NULL, "高野先生の研究をタカノさんが引き継ぐとは、面白い。",
+		   NULL, " Curioso come la ricerca del dottor Takano venga proseguita da un'altra Takano.", Line_WaitForInput);
+	ModPlayVoiceLS(4, 0, "org/mob8f7005", 128, TRUE);
+	OutputLine(NULL, "これも因縁ですかな。",
+		   NULL, " Dev'essere merito del destino.", Line_WaitForInput);
+	ModPlayVoiceLS(4, 0, "org/mob8f7006", 128, TRUE);
+	OutputLine(NULL, "まるで、あなたの体を借りて、故人が研究を完成させようとしているかのようです。」",
+		   NULL, " È come se i morti ti stessero sfruttando per completare la loro opera magna.\"", GetGlobalFlag(GLinemodeSp));
+	if (GetGlobalFlag(GADVMode)) { ClearMessage(); } else { OutputLineAll(NULL, "\n", Line_ContinueAfterTyping); }
+
+	if (GetGlobalFlag(GADVMode)) { OutputLine("<color=#f6d9a8>鷹野</color>", NULL, "<color=#f6d9a8>Takano</color>", NULL, Line_ContinueAfterTyping); }
+	ModPlayVoiceLS(4, 9, "ps3/s13/09/550500059", 128, TRUE);
+	OutputLine(NULL, "「くすくす。",
+		   NULL, "\"Eheh.", Line_WaitForInput);
+	ModPlayVoiceLS(4, 9, "ps3/s13/09/550500060", 128, TRUE);
+	OutputLine(NULL, "本当にそうかもしれませんわね。",
+		   NULL, " Forse è la verità.", Line_WaitForInput);
+	ModPlayVoiceLS(4, 9, "ps3/s13/09/550500061", 128, TRUE);
+	OutputLine(NULL, "私も奇妙な因縁を感じます。」",
+		   NULL, " Percepisco un legame misterioso con lui.\"", Line_Normal);
+	ClearMessage();
+
+	if (GetGlobalFlag(GADVMode)) { OutputLineAll("", NULL, Line_ContinueAfterTyping); }
+	OutputLine(NULL, "　鷹野は、高野一二三を祖父と呼び、慕っているが、対外的にはその関係を説明してはいなかった。",
+		   NULL, "Takano ha sempre avuto stima di Hifumi Takano al punto da chiamarlo nonno, ma non ha mai rivelato a nessuno la loro vera relazione.", GetGlobalFlag(GLinemodeSp));
+	if (GetGlobalFlag(GADVMode)) { ClearMessage(); } else { OutputLineAll(NULL, "\n", Line_ContinueAfterTyping); }
+
+	if (GetGlobalFlag(GADVMode)) { OutputLineAll("", NULL, Line_ContinueAfterTyping); }
+	OutputLine(NULL, "　高野の研究を自分が受け継ぐことに、私情が混じっていると思われることがプラスにならないと判断したからだ。",
+		   NULL, "In fondo, non avrebbe rafforzato la sua posizione se la gente avesse pensato che non ci fosse una sorta di legame affettivo tra lei e il ricercatore originario.", GetGlobalFlag(GLinemodeSp));
+	if (GetGlobalFlag(GADVMode)) { ClearMessage(); } else { OutputLineAll(NULL, "\n", Line_ContinueAfterTyping); }
+
+	if (GetGlobalFlag(GADVMode) == 0) { OutputLineAll(NULL, "\n", Line_ContinueAfterTyping); }
+
+
+	if (GetGlobalFlag(GADVMode)) { OutputLineAll("", NULL, Line_ContinueAfterTyping); }
+	OutputLine(NULL, "　だから表向きは、鷹野はかつて高野一二三と交流があり、高野の死後、その遺品の中の資料からこの研究を見つけて引き継いだ…、",
+		   NULL, "Perciò, pubblicamente il loro legame accademico nasce da come Takano abbia scoperto dei documenti dopo la sua morte e di come abbia deciso di portarla avanti...", Line_WaitForInput);
+	OutputLine(NULL, "というようなことになっていた。",
+		   NULL, " ma la realtà è diversa.", Line_Normal);
+	ClearMessage();
+
+
+	if (GetGlobalFlag(GADVMode)) { OutputLine("<color=#f6d9a8>鷹野</color>", NULL, "<color=#f6d9a8>Takano</color>", NULL, Line_ContinueAfterTyping); }
+	ModPlayVoiceLS(4, 9, "ps3/s13/09/550500062", 128, TRUE);
+	OutputLine(NULL, "「それで、先生方。",
+		   NULL, "\"Dunque, signori...", Line_WaitForInput);
+	ModPlayVoiceLS(4, 9, "ps3/s13/09/550500063", 128, TRUE);
+	OutputLine(NULL, "…いかがでしょうか。」",
+		   NULL, " che cosa ne pensate?\"", Line_Normal);
+	ClearMessage();
+
+	if (GetGlobalFlag(GADVMode)) { OutputLine("<color=#f5e6d3>官僚</color>", NULL, "<color=#f5e6d3>Burocrate</color>", NULL, Line_ContinueAfterTyping); }
+	ModPlayVoiceLS(4, 0, "ps3/s13/00/551400001", 128, TRUE);
+	OutputLine(NULL, "「うむ。",
+		   NULL, "\"Uhm...", Line_Continue);
+	Wait( 1000 );
+	OutputLine(NULL, "防衛庁がね、非常に強い関心を持ったよ。",
+		   NULL, " il Ministro della Difesa ha mostrato grande interesse.", Line_WaitForInput);
+	ModPlayVoiceLS(4, 0, "ps3/s13/00/551400002", 128, TRUE);
+	OutputLine(NULL, "はっはっは！",
+		   NULL, " Ahahah!", Line_WaitForInput);
+	OutputLine(NULL, "　中川くんが言うには防衛庁技術研究本部が強い関心を示してくれてね。",
+		   NULL, " Secondo Nakagawa-kun, è stato soprattutto il Dipartimento di Ricerca e Sviluppo del Ministero a leggerla con attenzione.", Line_WaitForInput);
+	ModPlayVoiceLS(4, 0, "ps3/s13/00/551400003", 128, TRUE);
+	OutputLine(NULL, "研究のスポンサーを名乗り出てくれた。」",
+		   NULL, " Si sono persino offerti di sponsorizzarla.\"", GetGlobalFlag(GLinemodeSp));
+	if (GetGlobalFlag(GADVMode)) { ClearMessage(); } else { OutputLineAll(NULL, "\n", Line_ContinueAfterTyping); }
+
+	if (GetGlobalFlag(GADVMode)) { OutputLine("<color=#f5e6d3>官僚</color>", NULL, "<color=#f5e6d3>Burocrate</color>", NULL, Line_ContinueAfterTyping); }
+	ModPlayVoiceLS(4, 0, "org/mob8f7007", 128, TRUE);
+	OutputLine(NULL, "「おお、それは朗報じゃないですか。",
+		   NULL, "\"Oh, ma è magnifico!", Line_WaitForInput);
+	ModPlayVoiceLS(4, 0, "org/mob8f7008", 128, TRUE);
+	OutputLine(NULL, "おめでとう、鷹野さん！」",
+		   NULL, " Congratulazioni, Takano-san!\"", GetGlobalFlag(GLinemodeSp));
+	if (GetGlobalFlag(GADVMode)) { ClearMessage(); } else { OutputLineAll(NULL, "\n", Line_ContinueAfterTyping); }
+
+	if (GetGlobalFlag(GADVMode)) { OutputLine("<color=#f6d9a8>鷹野</color>", NULL, "<color=#f6d9a8>Takano</color>", NULL, Line_ContinueAfterTyping); }
+	ModPlayVoiceLS(4, 9, "ps3/s13/09/550500064", 128, TRUE);
+	OutputLine(NULL, "「あ、ありがとうございます…！」",
+		   NULL, "\"G-Grazie mille...!\"", Line_Normal);
+	ClearMessage();
+
+	if (GetGlobalFlag(GADVMode)) { OutputLine("<color=#f5e6d3>官僚</color>", NULL, "<color=#f5e6d3>Burocrate</color>", NULL, Line_ContinueAfterTyping); }
+	ModPlayVoiceLS(4, 0, "ps3/s13/00/551400004", 128, TRUE);
+	OutputLine(NULL, "「何でも、向こうが言うにはね。",
+		   NULL, "\"La loro risposta è stata questa.", Line_WaitForInput);
+	OutputLine(NULL, "いくつかの省庁間での有識者による、次世代抑止兵器の研究会があってね。",
+		   NULL, " Esiste un gruppo di ricercatori che si occupa di armi di deterrenza di nuova generazione, gestito da molti ministeri diversi.", Line_WaitForInput);
+	ModPlayVoiceLS(4, 0, "ps3/s13/00/551400006", 128, TRUE);
+	OutputLine(NULL, "この中でアルファベットプロジェクトというのがあるらしい。",
+		   NULL, " Uno dei loro progetti si chiama Alphabet Project.", GetGlobalFlag(GLinemodeSp));
+	if (GetGlobalFlag(GADVMode)) { OutputLine("<color=#f5e6d3>官僚</color>", NULL, "<color=#f5e6d3>Burocrate</color>", NULL, Line_ContinueAfterTyping); }
+	ModPlayVoiceLS(4, 0, "ps3/s13/00/551400007", 128, TRUE);
+	OutputLine(NULL, "鷹野さんはご存知ですかな？」",
+		   NULL, "Ne hai mai sentito parlare, Takano-san?\"", GetGlobalFlag(GLinemodeSp));
+	if (GetGlobalFlag(GADVMode)) { ClearMessage(); } else { OutputLineAll(NULL, "\n", Line_ContinueAfterTyping); }
+
+	if (GetGlobalFlag(GADVMode) == 0) { OutputLineAll(NULL, "\n", Line_ContinueAfterTyping); }
+
+
+	if (GetGlobalFlag(GADVMode)) { OutputLineAll("", NULL, Line_ContinueAfterTyping); }
+	OutputLine(NULL, "　一個人に過ぎない鷹野が知るわけもない。",
+		   NULL, "Ai non addetti ai lavori questo nome non dice nulla.", GetGlobalFlag(GLinemodeSp));
+	if (GetGlobalFlag(GADVMode)) { ClearMessage(); } else { OutputLineAll(NULL, "\n", Line_ContinueAfterTyping); }
+
+	if (GetGlobalFlag(GADVMode)) { OutputLineAll("", NULL, Line_ContinueAfterTyping); }
+	OutputLine(NULL, "　……だが、日本社会の中核に紛れ込む、国粋主義者の超党派勢力が、国民の与り知らぬところで物騒な研究をしていても、それはありえないことではなかった。",
+		   NULL, "Ma non è difficile pensare che un gruppo di nazionalisti impegnati nella ricerca scientifica abbia sviluppato qualcosa di simile senza che la cittadinanza ne venisse a conoscenza.", Line_Normal);
+	ClearMessage();
+
+	DrawSceneWithMask( "black", "maskdown", 1, 0, 300 );
+
+	if (GetGlobalFlag(GADVMode)) { OutputLineAll("", NULL, Line_ContinueAfterTyping); }
+	OutputLine(NULL, "　社会とは、人と人のつながりで編まれた網のようなものだ。",
+		   NULL, "La società è come una grande ragnatela composta da legami tra individui.", GetGlobalFlag(GLinemodeSp));
+	if (GetGlobalFlag(GADVMode)) { ClearMessage(); } else { OutputLineAll(NULL, "\n", Line_ContinueAfterTyping); }
+
+	if (GetGlobalFlag(GADVMode)) { OutputLineAll("", NULL, Line_ContinueAfterTyping); }
+	OutputLine(NULL, "　人は、同調する人間と手をつなぎ、同じ思想を持つ「網」を作り上げていく。",
+		   NULL, "I nodi di questa rete si formano quando due persone che condividono le stesse idee si danno la mano.", GetGlobalFlag(GLinemodeSp));
+	if (GetGlobalFlag(GADVMode)) { ClearMessage(); } else { OutputLineAll(NULL, "\n", Line_ContinueAfterTyping); }
+
+	if (GetGlobalFlag(GADVMode) == 0) { OutputLineAll(NULL, "\n", Line_ContinueAfterTyping); }
+
+
+	if (GetGlobalFlag(GADVMode)) { OutputLineAll("", NULL, Line_ContinueAfterTyping); }
+	OutputLine(NULL, "　それは世間によく知られているものもあれば、誰もその存在を知らない秘密のものだってある。",
+		   NULL, "Alcuni livelli della rete sono ben conosciuti, mentre altri sono rivolti a una cerchia più ristretta.", GetGlobalFlag(GLinemodeSp));
+	if (GetGlobalFlag(GADVMode)) { ClearMessage(); } else { OutputLineAll(NULL, "\n", Line_ContinueAfterTyping); }
+
+	if (GetGlobalFlag(GADVMode)) { OutputLineAll("", NULL, Line_ContinueAfterTyping); }
+	OutputLine(NULL, "　今日のこの会合に参加している面々だって、個々の肩書きではまったくその関係を想像できないに違いない……。",
+		   NULL, "L'incontro di oggi in questo ristorante è proprio uno di quelli più esclusivi, di cui mai nessun altro potrebbe conoscerne l'argomento.", Line_Normal);
+	ClearMessage();
+
+	DrawScene( "background/mati12", 1000 );
+
+	if (GetGlobalFlag(GADVMode)) { OutputLineAll("", NULL, Line_ContinueAfterTyping); }
+	OutputLine(NULL, "　次世代抑止兵器の研究会。",
+		   NULL, "Una società che si occupa di studiare armi di deterrenza da utilizzare nell'immediato futuro.", GetGlobalFlag(GLinemodeSp));
+	if (GetGlobalFlag(GADVMode)) { ClearMessage(); } else { OutputLineAll(NULL, "\n", Line_ContinueAfterTyping); }
+
+	if (GetGlobalFlag(GADVMode)) { OutputLineAll("", NULL, Line_ContinueAfterTyping); }
+	OutputLine(NULL, "　そこで研究されている、アルファベットプロジェクト。",
+		   NULL, "Sono il cosiddetto Alphabet Project.", Line_Normal);
+	ClearMessage();
+
+	if (GetGlobalFlag(GADVMode)) { OutputLineAll("", NULL, Line_ContinueAfterTyping); }
+	OutputLine(NULL, "　この単語の羅列だけでも、おおよその想像は可能だった。",
+		   NULL, "Il nome di per sé è criptico.", GetGlobalFlag(GLinemodeSp));
+	if (GetGlobalFlag(GADVMode)) { ClearMessage(); } else { OutputLineAll(NULL, "\n", Line_ContinueAfterTyping); }
+
+	if (GetGlobalFlag(GADVMode) == 0) { OutputLineAll(NULL, "\n", Line_ContinueAfterTyping); }
+
+	DrawSceneWithMask( "black", "maskdown", 1, 0, 400 );
+
+	if (GetGlobalFlag(GADVMode)) { OutputLineAll("", NULL, Line_ContinueAfterTyping); }
+	OutputLine(NULL, "　まず、抑止兵器という単語。",
+		   NULL, "Armi di deterrenza.", Line_WaitForInput);
+	OutputLine(NULL, "抑止兵器は普通、核兵器のことを指す。",
+		   NULL, " Di solito è un modo per riferirsi alla tecnologia nucleare.", Line_Normal);
+	ClearMessage();
+
+	if (GetGlobalFlag(GADVMode)) { OutputLineAll("", NULL, Line_ContinueAfterTyping); }
+	OutputLine(NULL, "　兵器というものは普通、敵に対して使用し、打ち滅ぼすことを目的とする。",
+		   NULL, "Le armi, per loro definizione, sono un qualcosa che serve a sconfiggere i propri nemici.", GetGlobalFlag(GLinemodeSp));
+	if (GetGlobalFlag(GADVMode)) { ClearMessage(); } else { OutputLineAll(NULL, "\n", Line_ContinueAfterTyping); }
+
+	if (GetGlobalFlag(GADVMode) == 0) { OutputLineAll(NULL, "\n", Line_ContinueAfterTyping); }
+
+
+	if (GetGlobalFlag(GADVMode)) { OutputLineAll("", NULL, Line_ContinueAfterTyping); }
+	OutputLine(NULL, "　だが、抑止兵器の概念はまったく異なるのだ。",
+		   NULL, "Il concetto di arma di deterrenza, invece, è assai diverso.", Line_WaitForInput);
+	OutputLine(NULL, "それは敵に対して使用することを前提にしない。",
+		   NULL, " L'idea è che si tratti di armi che non verranno mai usate contro nessuno.", GetGlobalFlag(GLinemodeSp));
+	if (GetGlobalFlag(GADVMode)) { ClearMessage(); } else { OutputLineAll(NULL, "\n", Line_ContinueAfterTyping); }
+
+	if (GetGlobalFlag(GADVMode)) { OutputLineAll("", NULL, Line_ContinueAfterTyping); }
+	OutputLine(NULL, "　使用したら大変なことになるぞ、と脅すことによって、相手の侵攻そのものを抑止する。",
+		   NULL, "Quelle nucleari sono da sempre implicate per convincere i nemici delle ripercussioni a cui andrebbero incontro in caso di attacco.", Line_Normal);
+	ClearMessage();
+
+
+	if (GetGlobalFlag(GADVMode)) { OutputLineAll("", NULL, Line_ContinueAfterTyping); }
+	OutputLine(NULL, "　米ソは大量の核兵器を持ち合い、互いを牽制している。",
+		   NULL, "Gli Stati Uniti e l'Unione Sovietica sono in possesso di moltissime testate nucleari, in modo da stabilire un equilibrio.", GetGlobalFlag(GLinemodeSp));
+	if (GetGlobalFlag(GADVMode)) { ClearMessage(); } else { OutputLineAll(NULL, "\n", Line_ContinueAfterTyping); }
+
+	if (GetGlobalFlag(GADVMode)) { OutputLineAll("", NULL, Line_ContinueAfterTyping); }
+	OutputLine(NULL, "　だが、双方ともそれを使用することはない。",
+		   NULL, "Equilibrio che permane finché nessuno dei due le utilizza.", GetGlobalFlag(GLinemodeSp));
+	if (GetGlobalFlag(GADVMode)) { ClearMessage(); } else { OutputLineAll(NULL, "\n", Line_ContinueAfterTyping); }
+
+	if (GetGlobalFlag(GADVMode)) { OutputLineAll("", NULL, Line_ContinueAfterTyping); }
+	OutputLine(NULL, "　そうなれば全面核戦争となり、共倒れになるからだ。",
+		   NULL, "Perché, se uno dei due prendesse l'iniziativa, inizierebbe una guerra nucleare ed entrambi i paesi verrebbero distrutti.", GetGlobalFlag(GLinemodeSp));
+	if (GetGlobalFlag(GADVMode)) { ClearMessage(); } else { OutputLineAll(NULL, "\n", Line_ContinueAfterTyping); }
+
+	if (GetGlobalFlag(GADVMode) == 0) { OutputLineAll(NULL, "\n", Line_ContinueAfterTyping); }
+
+
+	if (GetGlobalFlag(GADVMode)) { OutputLineAll("", NULL, Line_ContinueAfterTyping); }
+	OutputLine(NULL, "　ゆえに、抜かない伝家の宝刀となるのだ。",
+		   NULL, "Sono una specie di spada leggendaria che non viene mai sguainata.", Line_Normal);
+	ClearMessage();
+
+	if (GetGlobalFlag(GADVMode)) { OutputLineAll("", NULL, Line_ContinueAfterTyping); }
+	OutputLine(NULL, "　もちろん、この伝家の宝刀は互いが持ち合うから意味がある。",
+		   NULL, "Ma la situazione rimane di stallo solo se entrambi gli schieramenti sono armati con armi nucleari.", GetGlobalFlag(GLinemodeSp));
+	if (GetGlobalFlag(GADVMode)) { ClearMessage(); } else { OutputLineAll(NULL, "\n", Line_ContinueAfterTyping); }
+
+	if (GetGlobalFlag(GADVMode)) { OutputLineAll("", NULL, Line_ContinueAfterTyping); }
+	OutputLine(NULL, "　もし、片方しか持たなかったら、そこに軍事的交渉の余地は一切なくなる。",
+		   NULL, "Se uno di essi ne è privo, perde subito qualsiasi potere di negoziazione.", GetGlobalFlag(GLinemodeSp));
+	if (GetGlobalFlag(GADVMode)) { ClearMessage(); } else { OutputLineAll(NULL, "\n", Line_ContinueAfterTyping); }
+
+	if (GetGlobalFlag(GADVMode) == 0) { OutputLineAll(NULL, "\n", Line_ContinueAfterTyping); }
+
+
+	if (GetGlobalFlag(GADVMode)) { OutputLineAll("", NULL, Line_ContinueAfterTyping); }
+	OutputLine(NULL, "　つまり、核を持たぬ国は核武装国の前にまったく無力なのだ…。",
+		   NULL, "Per farla breve, i paesi sprovvisti di atomica sono impotenti di fronte a quelli che ne dispongono.", Line_Normal);
+	ClearMessage();
+
+	if (GetGlobalFlag(GADVMode)) { OutputLineAll("", NULL, Line_ContinueAfterTyping); }
+	OutputLine(NULL, "　そんなはずはない、日本は核を放棄していても国として今日も成立しているではないか、",
+		   NULL, "\"Com'è possibile? Il Giappone ha abbandonato le armi atomiche e funziona benissimo anche ai giorni nostri.\"", Line_WaitForInput);
+	OutputLine(NULL, "と考える方もおられるかもしれないが、それは間違っている。",
+		   NULL, " Questa è una delle risposte più comuni, ma non è così.", Line_Normal);
+	ClearMessage();
+
+	if (GetGlobalFlag(GADVMode)) { OutputLineAll("", NULL, Line_ContinueAfterTyping); }
+	OutputLine(NULL, "　日本は核を放棄したが、アメリカとの同盟によって、その核の傘に入っている。",
+		   NULL, "Sebbene senza armi atomiche, il Giappone vive sotto la protezione dell'ombrello americano.", GetGlobalFlag(GLinemodeSp));
+	if (GetGlobalFlag(GADVMode)) { ClearMessage(); } else { OutputLineAll(NULL, "\n", Line_ContinueAfterTyping); }
+
+	if (GetGlobalFlag(GADVMode)) { OutputLineAll("", NULL, Line_ContinueAfterTyping); }
+	OutputLine(NULL, "　つまり、アメリカの核によって国を成立させているのだ…。",
+		   NULL, "E il paese funziona grazie alle testate nucleari americane.", GetGlobalFlag(GLinemodeSp));
+	if (GetGlobalFlag(GADVMode)) { ClearMessage(); } else { OutputLineAll(NULL, "\n", Line_ContinueAfterTyping); }
+
+	if (GetGlobalFlag(GADVMode) == 0) { OutputLineAll(NULL, "\n", Line_ContinueAfterTyping); }
+
+
+	if (GetGlobalFlag(GADVMode)) { OutputLineAll("", NULL, Line_ContinueAfterTyping); }
+	OutputLine(NULL, "　だが、それはつまり、永遠にアメリカの属国であることを甘んじなければならないことでもある。",
+		   NULL, "Al tempo stesso, significa che il Giappone ha dovuto rassegnarsi a diventare uno stato vassallo degli Stati Uniti.", GetGlobalFlag(GLinemodeSp));
+	if (GetGlobalFlag(GADVMode)) { ClearMessage(); } else { OutputLineAll(NULL, "\n", Line_ContinueAfterTyping); }
+
+	if (GetGlobalFlag(GADVMode) == 0) { OutputLineAll(NULL, "\n", Line_ContinueAfterTyping); }
+
+
+	if (GetGlobalFlag(GADVMode)) { OutputLineAll("", NULL, Line_ContinueAfterTyping); }
+	OutputLine(NULL, "　……それを脱却し、アメリカと対等な関係の強い国家に生まれ変わるためには、その核の傘を出て、日本独自の抑止兵器を持たなければならない。",
+		   NULL, "... per sfuggire alla loro sfera di influenza e contrattare sullo stesso piano, anche i giapponesi devono armarsi di nucleare.", GetGlobalFlag(GLinemodeSp));
+	if (GetGlobalFlag(GADVMode)) { OutputLineAll("", NULL, Line_ContinueAfterTyping); }
+	OutputLine(NULL, "……そう考える有識者たちの会合に違いなかった。",
+		   NULL, "Ecco qual è l'ideale che muove i distinti signori riuniti al tavolo.", Line_Normal);
+	ClearMessage();
+
+	DrawScene( "background/tk_ryou1", 400 );
+
+	if (GetGlobalFlag(GADVMode)) { OutputLineAll("", NULL, Line_ContinueAfterTyping); }
+	OutputLine(NULL, "　そこまで至れば、アルファベットプロジェクトという言葉も何となく察しがついた。",
+		   NULL, "Seguendo questa logica, il nome \"Alphabet Project\" inizia ad assumere un senso.", Line_Normal);
+	ClearMessage();
+
+	if (GetGlobalFlag(GADVMode)) { OutputLineAll("", NULL, Line_ContinueAfterTyping); }
+	OutputLine(NULL, "　核兵器は大量破壊兵器とも呼ばれる。",
+		   NULL, "Le armi nucleari sono armi di distruzione di massa.", GetGlobalFlag(GLinemodeSp));
+	if (GetGlobalFlag(GADVMode)) { ClearMessage(); } else { OutputLineAll(NULL, "\n", Line_ContinueAfterTyping); }
+
+	if (GetGlobalFlag(GADVMode) == 0) { OutputLineAll(NULL, "\n", Line_ContinueAfterTyping); }
+
+
+	if (GetGlobalFlag(GADVMode)) { OutputLineAll("", NULL, Line_ContinueAfterTyping); }
+	OutputLine(NULL, "　だが、大量破壊兵器と言った場合、核兵器だけのことを指したりはしない。",
+		   NULL, "Ma queste ultime non sono per forza solo nucleari.", GetGlobalFlag(GLinemodeSp));
+	if (GetGlobalFlag(GADVMode)) { ClearMessage(); } else { OutputLineAll(NULL, "\n", Line_ContinueAfterTyping); }
+
+	if (GetGlobalFlag(GADVMode)) { OutputLineAll("", NULL, Line_ContinueAfterTyping); }
+	OutputLine(NULL, "　その内訳は、核兵器を筆頭に、生物兵器、化学兵器と続く。",
+		   NULL, "Ne esistono anche di tipo biologico, oppure chimico.", Line_Normal);
+	ClearMessage();
+
+	if (GetGlobalFlag(GADVMode)) { OutputLineAll("", NULL, Line_ContinueAfterTyping); }
+	OutputLine(NULL, "　これら、核（Atomic）",
+		   NULL, "Atomico,", Line_ContinueAfterTyping);
+	Wait( 1000 );
+	OutputLine(NULL, "・生物（Biological）",
+		   NULL, " biologico,", Line_ContinueAfterTyping);
+	Wait( 1000 );
+	OutputLine(NULL, "・化学（Chemical）の３つ頭文字を取り、ＡＢＣ。",
+		   NULL, " chimico: le iniziali di queste parole danno ABC.", Line_WaitForInput);
+	OutputLine(NULL, "その為、大量破壊兵器をＡＢＣ兵器と呼ぶこともある。",
+		   NULL, " Che è anche il modo con cui spesso ci si riferisce alle armi di distruzione di massa.", GetGlobalFlag(GLinemodeSp));
+	if (GetGlobalFlag(GADVMode)) { OutputLineAll("", NULL, Line_ContinueAfterTyping); }
+	OutputLine(NULL, "（この３区分に入らない大量破壊兵器も存在するが説明は割愛する）",
+		   NULL, "(Non entrerò nel merito delle armi che non rientrano in queste tre categorie.)", GetGlobalFlag(GLinemodeSp));
+	if (GetGlobalFlag(GADVMode)) { ClearMessage(); } else { OutputLineAll(NULL, "\n", Line_ContinueAfterTyping); }
+
+	if (GetGlobalFlag(GADVMode) == 0) { OutputLineAll(NULL, "\n", Line_ContinueAfterTyping); }
+
+
+	if (GetGlobalFlag(GADVMode)) { OutputLineAll("", NULL, Line_ContinueAfterTyping); }
+	OutputLine(NULL, "　そのＡＢＣで、アルファベット。",
+		   NULL, "ABC, le prime lettere dell'alfabeto.", GetGlobalFlag(GLinemodeSp));
+	if (GetGlobalFlag(GADVMode)) { ClearMessage(); } else { OutputLineAll(NULL, "\n", Line_ContinueAfterTyping); }
+
+	if (GetGlobalFlag(GADVMode)) { OutputLineAll("", NULL, Line_ContinueAfterTyping); }
+	OutputLine(NULL, "　つまり、アルファベットプロジェクトとは大量破壊兵器研究の隠語ということに違いない…。",
+		   NULL, "E \"Alphabet Project\" è un nome in codice per riferirsi alle armi di distruzione di massa.", Line_Normal);
+	ClearMessage();
+
+	if (GetGlobalFlag(GADVMode)) { OutputLineAll("", NULL, Line_ContinueAfterTyping); }
+	OutputLine(NULL, "　鷹野のその想像はどうやら正解のようだった。",
+		   NULL, "L'intuizione di Takano era giusta.", Line_Normal);
+	ClearMessage();
+
+
+	if (GetGlobalFlag(GADVMode)) { OutputLine("<color=#f5e6d3>官僚</color>", NULL, "<color=#f5e6d3>Burocrate</color>", NULL, Line_ContinueAfterTyping); }
+	ModPlayVoiceLS(4, 0, "org/mob8g7006", 128, TRUE);
+	OutputLine(NULL, "「本来は、日本が核武装をするのが正しいのです。",
+		   NULL, "\"Il Giappone deve riappropriarsi delle armi nucleari.", Line_WaitForInput);
+	ModPlayVoiceLS(4, 0, "org/mob8g7007", 128, TRUE);
+	OutputLine(NULL, "戦後、平和国家として確立し、多大な国際貢献を果たした我が国は、常任理事国入りを果たし、",
+		   NULL, " Dopo la resa, ci siamo definiti un paese pacifista e anti-nuclearista, i cui contributi ci hanno valso un riconoscimento internazionale quali membri permanenti delle Nazioni Unite.", GetGlobalFlag(GLinemodeSp));
+	if (GetGlobalFlag(GADVMode)) { OutputLine("<color=#f5e6d3>官僚</color>", NULL, "<color=#f5e6d3>Burocrate</color>", NULL, Line_ContinueAfterTyping); }
+	ModPlayVoiceLS(4, 0, "org/mob8g7008", 128, TRUE);
+	OutputLine(NULL, "核武装してこそ初めて一人前の国家として認められる。",
+		   NULL, "Ciononostante, finché non possederemo armi nucleari, non saremo mai visti come loro pari.", Line_WaitForInput);
+	ModPlayVoiceLS(4, 0, "org/mob8g7009", 128, TRUE);
+	OutputLine(NULL, "それこそが、戦後日本百年の悲願なのです。」",
+		   NULL, " È questo il tanto agognato desiderio del Giappone post-bellico.\"", GetGlobalFlag(GLinemodeSp));
+	if (GetGlobalFlag(GADVMode)) { ClearMessage(); } else { OutputLineAll(NULL, "\n", Line_ContinueAfterTyping); }
+
+	if (GetGlobalFlag(GADVMode)) { OutputLine("<color=#f5e6d3>官僚</color>", NULL, "<color=#f5e6d3>Burocrate</color>", NULL, Line_ContinueAfterTyping); }
+	ModPlayVoiceLS(4, 0, "org/mob8f7009", 128, TRUE);
+	OutputLine(NULL, "「左様です。",
+		   NULL, "\"Esattamente.", Line_WaitForInput);
+	ModPlayVoiceLS(4, 0, "org/mob8f7010", 128, TRUE);
+	OutputLine(NULL, "だが、現実には核不拡散条約により、核は大国だけが独占。",
+		   NULL, " Tuttavia, a causa del Trattato di Non Proliferazione Nucleare, solo alcuni paesi hanno il monopolio sulle armi atomiche.", GetGlobalFlag(GLinemodeSp));
+	if (GetGlobalFlag(GADVMode)) { OutputLine("<color=#f5e6d3>官僚</color>", NULL, "<color=#f5e6d3>Burocrate</color>", NULL, Line_ContinueAfterTyping); }
+	ModPlayVoiceLS(4, 0, "org/mob8f7011", 128, TRUE);
+	OutputLine(NULL, "また、国内世論は核アレルギーに染まり、内外からの締め付けで実現を不可能にしております。」",
+		   NULL, "In più, la nostra opinione pubblica è sempre più avversa alle armi atomiche, al punto che le pressioni interne ed esterne ci rendono impossibile implementarle.\"", Line_Normal);
+	ClearMessage();
+
+	if (GetGlobalFlag(GADVMode)) { OutputLine("<color=#f5e6d3>官僚</color>", NULL, "<color=#f5e6d3>Burocrate</color>", NULL, Line_ContinueAfterTyping); }
+	ModPlayVoiceLS(4, 0, "org/mob8g7010", 128, TRUE);
+	OutputLine(NULL, "「生物化学兵器は、別名、貧者の核兵器とも呼ばれる。",
+		   NULL, "\"Le armi biologiche e chimiche sono spesso ridicolizzate e definite 'le atomiche dei poveri'.", Line_WaitForInput);
+	ModPlayVoiceLS(4, 0, "org/mob8g7011", 128, TRUE);
+	OutputLine(NULL, "核を持てない小国はすでに熱心に研究を進めているという話です。」",
+		   NULL, " I paesi più piccoli che non dispongono di testate atomiche hanno già iniziato da tempo a sviluppare questo genere di armi.\"", Line_Normal);
+	ClearMessage();
+
+	if (GetGlobalFlag(GADVMode)) { OutputLine("<color=#f5e6d3>官僚</color>", NULL, "<color=#f5e6d3>Burocrate</color>", NULL, Line_ContinueAfterTyping); }
+	ModPlayVoiceLS(4, 0, "org/mob8f7012", 128, TRUE);
+	OutputLine(NULL, "「はっはっは、鷹野さん、誤解しないでくださいよ？",
+		   NULL, "\"Ahahah, Takano-san, non fraintendere, ti prego.", Line_WaitForInput);
+	ModPlayVoiceLS(4, 0, "org/mob8f7013", 128, TRUE);
+	OutputLine(NULL, "　この度の研究は細菌兵器の保有が目的ではありません。",
+		   NULL, " Lo scopo della nostra ricerca non è quello di ottenere un'arma biologica.", Line_WaitForInput);
+	ModPlayVoiceLS(4, 0, "org/mob8f7014", 128, TRUE);
+	OutputLine(NULL, "同種の兵器が他国によって国内に持ち込まれる危険性について、事前に充分な対処を行なうための研究です。",
+		   NULL, " Anzi, l'obiettivo è quello di impedire che tali armi arrivino in Giappone da altri stati.", GetGlobalFlag(GLinemodeSp));
+	if (GetGlobalFlag(GADVMode)) { OutputLine("<color=#f5e6d3>官僚</color>", NULL, "<color=#f5e6d3>Burocrate</color>", NULL, Line_ContinueAfterTyping); }
+	ModPlayVoiceLS(4, 0, "org/mob8f7015", 128, TRUE);
+	OutputLine(NULL, "自衛のための研究であることを誤解しないようにお願いいたしますよ。」",
+		   NULL, "Quindi si tratta soltanto di una manovra di autodifesa. Spero che sia chiaro.\"", Line_Normal);
+	ClearMessage();
+
+	if (GetGlobalFlag(GADVMode)) { OutputLine("<color=#f6d9a8>鷹野</color>", NULL, "<color=#f6d9a8>Takano</color>", NULL, Line_ContinueAfterTyping); }
+	ModPlayVoiceLS(4, 9, "org/takano7002", 128, TRUE);
+	OutputLine(NULL, "「はい。",
+		   NULL, "\"Certo.", Line_WaitForInput);
+	ModPlayVoiceLS(4, 9, "org/takano7003", 128, TRUE);
+	OutputLine(NULL, "存じております。」",
+		   NULL, " Ne sono ben consapevole.\"", GetGlobalFlag(GLinemodeSp));
+	if (GetGlobalFlag(GADVMode)) { ClearMessage(); } else { OutputLineAll(NULL, "\n", Line_ContinueAfterTyping); }
+
+	if (GetGlobalFlag(GADVMode)) { OutputLineAll("", NULL, Line_ContinueAfterTyping); }
+	OutputLine(NULL, "　日本人のこういう方便を鷹野は嫌っていた。",
+		   NULL, "Takano detesta l'abitudine dei giapponesi a inventarsi scuse,", Line_WaitForInput);
+	OutputLine(NULL, "だが、それを表情には出さない。",
+		   NULL, " ma non è il caso di farglielo notare.", GetGlobalFlag(GLinemodeSp));
+	if (GetGlobalFlag(GADVMode)) { ClearMessage(); } else { OutputLineAll(NULL, "\n", Line_ContinueAfterTyping); }
+
+	if (GetGlobalFlag(GADVMode) == 0) { OutputLineAll(NULL, "\n", Line_ContinueAfterTyping); }
+
+
+	if (GetGlobalFlag(GADVMode)) { OutputLineAll("", NULL, Line_ContinueAfterTyping); }
+	OutputLine(NULL, "　彼らは何だかんだと言いながら、この研究に生物兵器の価値を見出した、ということなのだろう。",
+		   NULL, "Qualunque cosa dicano, è palese come abbiamo visto del potenziale bellico nella sua ricerca.", Line_Normal);
+	ClearMessage();
+
+	DrawSceneWithMask( "black", "maskdown", 1, 0, 300 );
+
+	if (GetGlobalFlag(GADVMode)) { OutputLineAll("", NULL, Line_ContinueAfterTyping); }
+	OutputLine(NULL, "　だが、実はそれすらも方便だった。",
+		   NULL, "A suo modo, però, anche questa è una scusa.", GetGlobalFlag(GLinemodeSp));
+	if (GetGlobalFlag(GADVMode)) { ClearMessage(); } else { OutputLineAll(NULL, "\n", Line_ContinueAfterTyping); }
+
+	if (GetGlobalFlag(GADVMode) == 0) { OutputLineAll(NULL, "\n", Line_ContinueAfterTyping); }
+
+
+	if (GetGlobalFlag(GADVMode)) { OutputLineAll("", NULL, Line_ContinueAfterTyping); }
+	OutputLine(NULL, "　生物兵器研究をするなら、雛見沢症候群などという未知の奇病を研究するよりは、",
+		   NULL, "Se avessero davvero voluto ottenere in fretta delle armi biologiche,", Line_WaitForInput);
+	OutputLine(NULL, "天然痘や炭疽菌などを研究した方がよっぽど手っ取り早い。",
+		   NULL, " allora sarebbe stato più semplice puntare sul vaiolo o sull'antrace, invece di una strana malattia non meglio identificata come la Sindrome di Hinamizawa.", GetGlobalFlag(GLinemodeSp));
+	if (GetGlobalFlag(GADVMode)) { ClearMessage(); } else { OutputLineAll(NULL, "\n", Line_ContinueAfterTyping); }
+
+	if (GetGlobalFlag(GADVMode) == 0) { OutputLineAll(NULL, "\n", Line_ContinueAfterTyping); }
+
+
+	if (GetGlobalFlag(GADVMode)) { OutputLineAll("", NULL, Line_ContinueAfterTyping); }
+	OutputLine(NULL, "　だから実は、防衛庁が生物兵器として興味を持った、というのは正しくないのである。",
+		   NULL, "Perciò non è esatto dire che il Ministero della Difesa sia ineressato allo studio di un'arma biologica.", Line_Normal);
+	ClearMessage();
+
+	if (GetGlobalFlag(GADVMode)) { OutputLineAll("", NULL, Line_ContinueAfterTyping); }
+	OutputLine(NULL, "　つまり……。",
+		   NULL, "In parole povere...", Line_WaitForInput);
+	OutputLine(NULL, "……鷹野が研究するためには、予算や人材、施設などのバックアップが欠かせず、強力なスポンサーが必要となる。",
+		   NULL, " Takano necessita di uno sponsor dalle spalle larghe che le fornisca fondi, personale e strutture dove condurre i suoi studi.", GetGlobalFlag(GLinemodeSp));
+	if (GetGlobalFlag(GADVMode)) { ClearMessage(); } else { OutputLineAll(NULL, "\n", Line_ContinueAfterTyping); }
+
+	if (GetGlobalFlag(GADVMode)) { OutputLineAll("", NULL, Line_ContinueAfterTyping); }
+	OutputLine(NULL, "　それへの渡りを鷹野は政財界の裏の長老に頼み、",
+		   NULL, "Sfruttando i suoi contatti e rivolgendo l'attenzione alla vecchia guardia che governa l'economia del paese...", GetGlobalFlag(GLinemodeSp));
+	if (GetGlobalFlag(GADVMode)) { OutputLineAll("", NULL, Line_ContinueAfterTyping); }
+	OutputLine(NULL, "方々への根回しをして、生物兵器転用を口実に防衛庁から無理やり予算を引っ張った、というのが本当のところだった。",
+		   NULL, "è riuscita a estorcere al Ministero della Difesa tutto il denaro necessario con la scusa dell'imminente sviluppo di un'arma biologica.", GetGlobalFlag(GLinemodeSp));
+	if (GetGlobalFlag(GADVMode)) { ClearMessage(); } else { OutputLineAll(NULL, "\n", Line_ContinueAfterTyping); }
+
+	if (GetGlobalFlag(GADVMode) == 0) { OutputLineAll(NULL, "\n", Line_ContinueAfterTyping); }
+
+
+	if (GetGlobalFlag(GADVMode)) { OutputLineAll("", NULL, Line_ContinueAfterTyping); }
+	OutputLine(NULL, "　だから、この話が防衛庁公認というわけではない。",
+		   NULL, "Dunque, il suo progetto non è ufficialmente riconosciuto dal Ministero.", GetGlobalFlag(GLinemodeSp));
+	if (GetGlobalFlag(GADVMode)) { ClearMessage(); } else { OutputLineAll(NULL, "\n", Line_ContinueAfterTyping); }
+
+	if (GetGlobalFlag(GADVMode)) { OutputLineAll("", NULL, Line_ContinueAfterTyping); }
+	OutputLine(NULL, "　…正確には、防衛庁を牛耳る黒幕たちに認めてもらった、ということなのだ…。",
+		   NULL, "... ma sono coloro che lo controllano da dietro le quinte a sapere di cosa si tratti.", Line_Normal);
+	ClearMessage();
+
+	if (GetGlobalFlag(GADVMode)) { OutputLineAll("", NULL, Line_ContinueAfterTyping); }
+	OutputLine(NULL, "　黒幕たちは、防衛庁からアルファベットプロジェクトに予算を落とす。",
+		   NULL, "Questi burattinai hanno mosso le fila del Ministero della Difesa per finanziare l'Alphabet Project.", GetGlobalFlag(GLinemodeSp));
+	if (GetGlobalFlag(GADVMode)) { ClearMessage(); } else { OutputLineAll(NULL, "\n", Line_ContinueAfterTyping); }
+
+	if (GetGlobalFlag(GADVMode) == 0) { OutputLineAll(NULL, "\n", Line_ContinueAfterTyping); }
+
+
+	if (GetGlobalFlag(GADVMode)) { OutputLineAll("", NULL, Line_ContinueAfterTyping); }
+	OutputLine(NULL, "　黒幕たちはそこへ鷹野の研究を推薦して割り込ませる。",
+		   NULL, "Al tempo stesso, hanno convinto Takano e la sua ricerca a farne parte.", GetGlobalFlag(GLinemodeSp));
+	if (GetGlobalFlag(GADVMode)) { ClearMessage(); } else { OutputLineAll(NULL, "\n", Line_ContinueAfterTyping); }
+
+	if (GetGlobalFlag(GADVMode) == 0) { OutputLineAll(NULL, "\n", Line_ContinueAfterTyping); }
+
+
+	if (GetGlobalFlag(GADVMode)) { OutputLineAll("", NULL, Line_ContinueAfterTyping); }
+	OutputLine(NULL, "　鷹野は予算を得、黒幕たちはリベートを得ることで公金を吸い上げていく。",
+		   NULL, "Takano ottiene ciò che vuole e alcuni signori influenti si intascano le tasse dei cittadini che dovrebbero finanziare il Ministero.", Line_Normal);
+	ClearMessage();
+
+	if (GetGlobalFlag(GADVMode)) { OutputLineAll("", NULL, Line_ContinueAfterTyping); }
+	OutputLine(NULL, "　……こうして考えると、このプロジェクトが本当に真剣に次世代抑止兵器を研究しているか疑わしい。",
+		   NULL, "... tutto sommato, non è sbagliato dire che questa ricerca abbia davvero a cuore lo studio di armi di deterrenza di nuova generazione.", GetGlobalFlag(GLinemodeSp));
+	if (GetGlobalFlag(GADVMode)) { ClearMessage(); } else { OutputLineAll(NULL, "\n", Line_ContinueAfterTyping); }
+
+	if (GetGlobalFlag(GADVMode)) { OutputLineAll("", NULL, Line_ContinueAfterTyping); }
+	OutputLine(NULL, "　単に、黒幕たちが公金を吸いだすために使っているトンネルプロジェクトなのかもしれないのだから。",
+		   NULL, "Si tratta soltanto di un sotterfugio ordito da queste persone per ingrossare i loro già gonfi portafogli.", GetGlobalFlag(GLinemodeSp));
+	if (GetGlobalFlag(GADVMode)) { ClearMessage(); } else { OutputLineAll(NULL, "\n", Line_ContinueAfterTyping); }
+
+	if (GetGlobalFlag(GADVMode) == 0) { OutputLineAll(NULL, "\n", Line_ContinueAfterTyping); }
+
+
+	if (GetGlobalFlag(GADVMode)) { OutputLineAll("", NULL, Line_ContinueAfterTyping); }
+	OutputLine(NULL, "　まぁ、そんな難しいことは、鷹野にとってどうでもいいことだった。",
+		   NULL, "Comunque sia, questi giri di denaro non interessano affatto a Takano.", GetGlobalFlag(GLinemodeSp));
+	if (GetGlobalFlag(GADVMode)) { ClearMessage(); } else { OutputLineAll(NULL, "\n", Line_ContinueAfterTyping); }
+
+	if (GetGlobalFlag(GADVMode)) { OutputLineAll("", NULL, Line_ContinueAfterTyping); }
+	OutputLine(NULL, "　黒幕や長老たちの思惑など知ったことではない。",
+		   NULL, "Ciò che quei vecchiacci hanno in mente non è affar suo.", Line_WaitForInput);
+	OutputLine(NULL, "自分の研究のために予算を引き出せればそれで充分なのだ。",
+		   NULL, " A lei basta poter ricevere i soldi che le servono per proseguire la ricerca.", Line_Normal);
+	ClearMessage();
+
+	if (GetGlobalFlag(GADVMode)) { OutputLineAll("", NULL, Line_ContinueAfterTyping); }
+	OutputLine(NULL, "　どちらにせよ。",
+		   NULL, "A questo punto,", Line_WaitForInput);
+	OutputLine(NULL, "鷹野はもっとも欲しかったスポンサーを得た。",
+		   NULL, " Takano ha trovato il suo sponsor.", GetGlobalFlag(GLinemodeSp));
+	if (GetGlobalFlag(GADVMode)) { ClearMessage(); } else { OutputLineAll(NULL, "\n", Line_ContinueAfterTyping); }
+
+	if (GetGlobalFlag(GADVMode)) { OutputLineAll("", NULL, Line_ContinueAfterTyping); }
+	OutputLine(NULL, "　しかも、自分に思いつく組織の中でも最大の機関からだ。",
+		   NULL, "Senza contare che si tratta di una delle più grandi organizzazioni del settore.", Line_WaitForInput);
+	OutputLine(NULL, "それはまさに、祖父にとっての念願でもあった。",
+		   NULL, " È sempre stato questo il sogno di suo nonno.", GetGlobalFlag(GLinemodeSp));
+	if (GetGlobalFlag(GADVMode)) { ClearMessage(); } else { OutputLineAll(NULL, "\n", Line_ContinueAfterTyping); }
+
+	if (GetGlobalFlag(GADVMode) == 0) { OutputLineAll(NULL, "\n", Line_ContinueAfterTyping); }
+
+
+	if (GetGlobalFlag(GADVMode)) { OutputLineAll("", NULL, Line_ContinueAfterTyping); }
+	OutputLine(NULL, "　彼女は努めて冷静を装っていたが、内心は躍り上がりたいくらいの気持ちだった。",
+		   NULL, "Takano sta facendo tutto il possibile per mantenere la calma, ma dentro di sé potrebbe saltare fin sul soffitto dalla gioia.", Line_Normal);
+	ClearMessage();
+
+	DrawSceneWithMask( "background/tk_ryou1", "maskup", 1, 0, 300 );
+
+	if (GetGlobalFlag(GADVMode)) { OutputLine("<color=#f5e6d3>官僚</color>", NULL, "<color=#f5e6d3>Burocrate</color>", NULL, Line_ContinueAfterTyping); }
+	ModPlayVoiceLS(4, 0, "ps3/s13/00/551400008", 128, TRUE);
+	OutputLine(NULL, "「中川くんとしては今回の件、充分に研究が進んだら、丸ごと買い取って構わないと言ってくれてる。",
+		   NULL, "\"Nakagawa-kun dice che non avrebbe problemi a comprare i risultati della ricerca una volta che sarà completata.", Line_WaitForInput);
+	ModPlayVoiceLS(4, 0, "ps3/s13/00/551400009", 128, TRUE);
+	OutputLine(NULL, "まだまだ未完の研究だが、その未来性については充分に理解できてるようだ。」",
+		   NULL, " Sebbene incompleta, ne riconosce benissimo il potenziale.\"", GetGlobalFlag(GLinemodeSp));
+	if (GetGlobalFlag(GADVMode)) { ClearMessage(); } else { OutputLineAll(NULL, "\n", Line_ContinueAfterTyping); }
+
+	if (GetGlobalFlag(GADVMode)) { OutputLine("<color=#f6d9a8>鷹野</color>", NULL, "<color=#f6d9a8>Takano</color>", NULL, Line_ContinueAfterTyping); }
+	ModPlayVoiceLS(4, 9, "ps3/s13/09/550500065", 128, TRUE);
+	OutputLine(NULL, "「仰るとおりです。",
+		   NULL, "\"Ne sono lieta.", Line_WaitForInput);
+	ModPlayVoiceLS(4, 9, "ps3/s13/09/550500066", 128, TRUE);
+	OutputLine(NULL, "この研究はまだ道半ばで、充分な資金と施設、人材が欠かせません。」",
+		   NULL, " Per completare un simile percorso, avrò bisogno di fondi, strutture e personale qualificato.\"", GetGlobalFlag(GLinemodeSp));
+	if (GetGlobalFlag(GADVMode)) { ClearMessage(); } else { OutputLineAll(NULL, "\n", Line_ContinueAfterTyping); }
+
+	if (GetGlobalFlag(GADVMode)) { OutputLine("<color=#f5e6d3>官僚</color>", NULL, "<color=#f5e6d3>Burocrate</color>", NULL, Line_ContinueAfterTyping); }
+	ModPlayVoiceLS(4, 0, "ps3/s13/00/551400010", 128, TRUE);
+	OutputLine(NULL, "「それでだね。",
+		   NULL, "\"A tal proposito...", Line_WaitForInput);
+	ModPlayVoiceLS(4, 0, "ps3/s13/00/551400011", 128, TRUE);
+	OutputLine(NULL, "ここからが交渉になるんだが……、",
+		   NULL, " diciamo che urge una piccola negoziazione...", Line_Continue);
+	OutputLine(NULL, "向こうとしては、この研究、丸ごと抱えてしまいたいのが希望らしいんだ。",
+		   NULL, " a quanto pare, desiderano che la ricerca passi totalmente in mano loro.", Line_WaitForInput);
+	ModPlayVoiceLS(4, 0, "ps3/s13/00/551400012", 128, TRUE);
+	OutputLine(NULL, "…こう言っちゃ悪いんだが、君一人に任せるには荷が重いと考えてる。」",
+		   NULL, " Mi duole ammetterlo, ma ritengono che sia un fardello troppo pesante per una persona sola.\"", GetGlobalFlag(GLinemodeSp));
+	if (GetGlobalFlag(GADVMode)) { ClearMessage(); } else { OutputLineAll(NULL, "\n", Line_ContinueAfterTyping); }
+
+	if (GetGlobalFlag(GADVMode)) { OutputLineAll("", NULL, Line_ContinueAfterTyping); }
+	OutputLine(NULL, "　鷹野の有頂天は、そこで少しだけ醒めた。",
+		   NULL, "L'emozione di Takano incontra una parete.", Line_Normal);
+	ClearMessage();
+
+	if (GetGlobalFlag(GADVMode)) { OutputLine("<color=#f6d9a8>鷹野</color>", NULL, "<color=#f6d9a8>Takano</color>", NULL, Line_ContinueAfterTyping); }
+	ModPlayVoiceLS(4, 9, "ps3/s13/09/550500067", 128, TRUE);
+	OutputLine(NULL, "「わ、私はお金が欲しくて研究しているのではありません。",
+		   NULL, "\"N-Non sono i soldi che mi interessano.", Line_WaitForInput);
+	ModPlayVoiceLS(4, 9, "ps3/s13/09/550500068", 128, TRUE);
+	OutputLine(NULL, "ひとりの研究者としての知的探究心からです。",
+		   NULL, " La mia ricerca è mossa dall'interesse scientifico.", Line_WaitForInput);
+	ModPlayVoiceLS(4, 9, "ps3/s13/09/550500069", 128, TRUE);
+	OutputLine(NULL, "私に必要なのはスポンサー。",
+		   NULL, " Mi serve solo uno sponsor.", Line_WaitForInput);
+	ModPlayVoiceLS(4, 9, "ps3/s13/09/550500070", 128, TRUE);
+	OutputLine(NULL, "先方が求めるのは成果。",
+		   NULL, " E loro vogliono i risultati.", GetGlobalFlag(GLinemodeSp));
+	if (GetGlobalFlag(GADVMode)) { OutputLine("<color=#f6d9a8>鷹野</color>", NULL, "<color=#f6d9a8>Takano</color>", NULL, Line_ContinueAfterTyping); }
+	ModPlayVoiceLS(4, 9, "ps3/s13/09/550500071", 128, TRUE);
+	OutputLine(NULL, "そういう関係に期待したかったのですが。」",
+		   NULL, "Speravo fosse questa la relazione alla base dei nostri rapporti.\"", GetGlobalFlag(GLinemodeSp));
+	if (GetGlobalFlag(GADVMode)) { ClearMessage(); } else { OutputLineAll(NULL, "\n", Line_ContinueAfterTyping); }
+
+	if (GetGlobalFlag(GADVMode)) { OutputLineAll("", NULL, Line_ContinueAfterTyping); }
+	OutputLine(NULL, "　少し興奮し過ぎたことにすぐ気付き、鷹野は自分の胸を撫でて心臓を落ち着かせた。",
+		   NULL, "Takano si rende conto che sta parlando con voce affaticata, quindi cerca di ricomporsi.", Line_Normal);
+	ClearMessage();
+
+	if (GetGlobalFlag(GADVMode)) { OutputLineAll("", NULL, Line_ContinueAfterTyping); }
+	OutputLine(NULL, "　……仮にも、研究助成ということになっている。",
+		   NULL, "... in entrambi i casi, si offriranno di aiutarla.", GetGlobalFlag(GLinemodeSp));
+	if (GetGlobalFlag(GADVMode)) { ClearMessage(); } else { OutputLineAll(NULL, "\n", Line_ContinueAfterTyping); }
+
+	if (GetGlobalFlag(GADVMode)) { OutputLineAll("", NULL, Line_ContinueAfterTyping); }
+	OutputLine(NULL, "　予算に見合った成果を期待しようと思えば、彼らにとって、鷹野はまだまだ若輩に感じられた、ということなのだろう。",
+		   NULL, "Considerando il fatto che si aspettano dei risultati all'altezza delle spese sostenute, staranno pensando che Takano sia troppo giovane per riuscirci.", Line_Normal);
+	ClearMessage();
+
+
+	if (GetGlobalFlag(GADVMode)) { OutputLine("<color=#f5e6d3>官僚</color>", NULL, "<color=#f5e6d3>Burocrate</color>", NULL, Line_ContinueAfterTyping); }
+	ModPlayVoiceLS(4, 0, "ps3/s13/00/551500001", 128, TRUE);
+	OutputLine(NULL, "「わかってますわかってます。",
+		   NULL, "\"Lo so, lo so.", Line_WaitForInput);
+	ModPlayVoiceLS(4, 0, "ps3/s13/00/551500002", 128, TRUE);
+	OutputLine(NULL, "鷹野さんが今日まで積み上げて来た研究を、横から掻っ攫われたんじゃそれはあんまりですからね。",
+		   NULL, " Hai lavorato per lungo tempo a questo studio e non vuoi che qualcun altro ci metta le mani, giusto?", Line_WaitForInput);
+	ModPlayVoiceLS(4, 0, "ps3/s13/00/551500003", 128, TRUE);
+	OutputLine(NULL, "そこは私もよ〜くわかってます。",
+		   NULL, " Ti capisco perfettamente.", Line_WaitForInput);
+	ModPlayVoiceLS(4, 0, "ps3/s13/00/551500004", 128, TRUE);
+	OutputLine(NULL, "もちろん、向こうにもそれは伝えました。",
+		   NULL, " Abbiamo già informato gli interessati.", GetGlobalFlag(GLinemodeSp));
+	if (GetGlobalFlag(GADVMode)) { OutputLine("<color=#f5e6d3>官僚</color>", NULL, "<color=#f5e6d3>Burocrate</color>", NULL, Line_ContinueAfterTyping); }
+	ModPlayVoiceLS(4, 0, "ps3/s13/00/551500005", 128, TRUE);
+	OutputLine(NULL, "それで出てきた折衷案がこれです。」",
+		   NULL, "E questo è il compromesso che abbiamo raggiunto.\"", Line_Normal);
+	ClearMessage();
+
+	if (GetGlobalFlag(GADVMode)) { OutputLine("<color=#f5e6d3>官僚</color>", NULL, "<color=#f5e6d3>Burocrate</color>", NULL, Line_ContinueAfterTyping); }
+	ModPlayVoiceLS(4, 0, "org/mob8g7012", 128, TRUE);
+	OutputLine(NULL, "「まず、アルファベットプロジェクト内の新規事業として鷹野さんの研究を立ち上げます。",
+		   NULL, "\"Per prima cosa, inizierai l'opera come ramo dell'Alphabet Project.", Line_WaitForInput);
+	ModPlayVoiceLS(4, 0, "org/mob8g7013", 128, TRUE);
+	OutputLine(NULL, "理事会の承認を経れば正式に予算をつけることができますからね。",
+		   NULL, " Una volta che avrai ottenuto l'approvazione del consiglio di direzione, riceverai ufficialmente dei fondi.", GetGlobalFlag(GLinemodeSp));
+	if (GetGlobalFlag(GADVMode)) { OutputLine("<color=#f5e6d3>官僚</color>", NULL, "<color=#f5e6d3>Burocrate</color>", NULL, Line_ContinueAfterTyping); }
+	ModPlayVoiceLS(4, 0, "org/mob8g7014", 128, TRUE);
+	OutputLine(NULL, "鷹野さんには客員という形でプロジェクトに参加していただき、研究に携わるという形になります。」",
+		   NULL, "All'inizio, parteciperai al progetto in qualità di 'assistente ricercatore', e sarà questo il livello a cui lavorerai.\"", GetGlobalFlag(GLinemodeSp));
+	if (GetGlobalFlag(GADVMode)) { ClearMessage(); } else { OutputLineAll(NULL, "\n", Line_ContinueAfterTyping); }
+
+	if (GetGlobalFlag(GADVMode)) { OutputLineAll("", NULL, Line_ContinueAfterTyping); }
+	OutputLine(NULL, "　資金を得ようとしたら、相手の傘下に入るのは当然だろう。",
+		   NULL, "Se desidera dei finanziamenti, allora dovrò abbassare la testa di fronte alla loro autorità.", Line_WaitForInput);
+	OutputLine(NULL, "ここまでは異論はない。",
+		   NULL, " Su questo non ci piove.", Line_Normal);
+	ClearMessage();
+
+	if (GetGlobalFlag(GADVMode)) { OutputLine("<color=#f5e6d3>官僚</color>", NULL, "<color=#f5e6d3>Burocrate</color>", NULL, Line_ContinueAfterTyping); }
+	ModPlayVoiceLS(4, 0, "org/mob8g7015", 128, TRUE);
+	OutputLine(NULL, "「ただ、研究会は今回の研究に予算をつけるに当たり、いくつかの条件を挙げています。",
+		   NULL, "\"Tuttavia, la società di ricerca ha stilato alcune condizioni in cambio del suo supporto finanziario.", GetGlobalFlag(GLinemodeSp));
+	if (GetGlobalFlag(GADVMode)) { OutputLine("<color=#f5e6d3>官僚</color>", NULL, "<color=#f5e6d3>Burocrate</color>", NULL, Line_ContinueAfterTyping); }
+	ModPlayVoiceLS(4, 0, "org/mob8g7016", 128, TRUE);
+	OutputLine(NULL, "ひとつは、先ほど先生が申し上げた、この度の研究に関する分野で優秀な才能を持つ人物に研究筆頭を委ねることです。」",
+		   NULL, "Per prima cosa, come ti dicevo, vogliono che la posizione di responsabile della ricerca sia affidata a un individuo esperto e da tempo inserito in questo ambito.\"", GetGlobalFlag(GLinemodeSp));
+	if (GetGlobalFlag(GADVMode)) { ClearMessage(); } else { OutputLineAll(NULL, "\n", Line_ContinueAfterTyping); }
+
+	if (GetGlobalFlag(GADVMode)) { OutputLine("<color=#f6d9a8>鷹野</color>", NULL, "<color=#f6d9a8>Takano</color>", NULL, Line_ContinueAfterTyping); }
+	ModPlayVoiceLS(4, 9, "org/s13/09/550500072_org", 128, TRUE);
+	OutputLine(NULL, "「お言葉を返すようですが、私以上にこの研究に詳しい人物が、故高野先生を除いて存在するとお思いですか？」",
+		   NULL, "\"Scusi se la interrompo, ma chi sarebbe più esperto di me su questo argomento? Forse solo l'ormai defunto dottor Takano, non trova...?\"", GetGlobalFlag(GLinemodeSp));
+	if (GetGlobalFlag(GADVMode)) { ClearMessage(); } else { OutputLineAll(NULL, "\n", Line_ContinueAfterTyping); }
+
+	if (GetGlobalFlag(GADVMode)) { OutputLine("<color=#f5e6d3>官僚</color>", NULL, "<color=#f5e6d3>Burocrate</color>", NULL, Line_ContinueAfterTyping); }
+	ModPlayVoiceLS(4, 0, "ps3/s13/00/551500006", 128, TRUE);
+	OutputLine(NULL, "「まままま！",
+		   NULL, "\"Calma, calma!", Line_Continue);
+	OutputLine(NULL, "　そこは鷹野さん、抑えて抑えて！",
+		   NULL, " Non dire così, Takano-san!", Line_WaitForInput);
+	ModPlayVoiceLS(4, 0, "ps3/s13/00/551500007", 128, TRUE);
+	OutputLine(NULL, "　お気持ちはごもっともです。」",
+		   NULL, " La tua risposta è più che comprensibile.\"", Line_Normal);
+	ClearMessage();
+
+	if (GetGlobalFlag(GADVMode)) { OutputLine("<color=#f6d9a8>鷹野</color>", NULL, "<color=#f6d9a8>Takano</color>", NULL, Line_ContinueAfterTyping); }
+	ModPlayVoiceLS(4, 9, "ps3/s13/09/550500074", 128, TRUE);
+	OutputLine(NULL, "「それでは、その人物に私が研究を売り渡すのと何も変らないではありませんか。",
+		   NULL, "\"Se anche fosse, affidare la mia ricerca a un'altra persona sarebbe alla stregua di vendergliela.", Line_WaitForInput);
+	ModPlayVoiceLS(4, 9, "ps3/s13/09/550500075", 128, TRUE);
+	OutputLine(NULL, "まったく話が違います。」",
+		   NULL, " Non erano questi i patti.\"", GetGlobalFlag(GLinemodeSp));
+	if (GetGlobalFlag(GADVMode)) { ClearMessage(); } else { OutputLineAll(NULL, "\n", Line_ContinueAfterTyping); }
+
+	if (GetGlobalFlag(GADVMode)) { OutputLine("<color=#f5e6d3>官僚</color>", NULL, "<color=#f5e6d3>Burocrate</color>", NULL, Line_ContinueAfterTyping); }
+	ModPlayVoiceLS(4, 0, "ps3/s13/00/551400013", 128, TRUE);
+	OutputLine(NULL, "「わっはっはっは。",
+		   NULL, "\"Wahahahah.", Line_Continue);
+	OutputLine(NULL, "落ち着きなさい、鷹野さん。」",
+		   NULL, " Non agitarti, Takano-san.\"", Line_Normal);
+	ClearMessage();
+
+	if (GetGlobalFlag(GADVMode)) { OutputLineAll("", NULL, Line_ContinueAfterTyping); }
+	OutputLine(NULL, "　鷹野の表情からわずかに零れた怒りの表情を、老獪な彼らは見逃さなかった。",
+		   NULL, "Gli anziani non si sono lasciati sfuggire l'accenno di nervosismo che è balenato sul volto di Takano.", GetGlobalFlag(GLinemodeSp));
+	if (GetGlobalFlag(GADVMode)) { ClearMessage(); } else { OutputLineAll(NULL, "\n", Line_ContinueAfterTyping); }
+
+	if (GetGlobalFlag(GADVMode)) { OutputLineAll("", NULL, Line_ContinueAfterTyping); }
+	OutputLine(NULL, "　そして、この程度のことで表情に出してしまうようでは、やはりまだまだお若いなぁとでも言うかのように、はぐらかす笑いをする。",
+		   NULL, "La loro risata è fin troppo eloquente: infatti, stanno ridendo della sua immaturità nell'aver lasciato che i suoi sentimenti trovassero sfogo.", GetGlobalFlag(GLinemodeSp));
+	if (GetGlobalFlag(GADVMode)) { ClearMessage(); } else { OutputLineAll(NULL, "\n", Line_ContinueAfterTyping); }
+
+	if (GetGlobalFlag(GADVMode) == 0) { OutputLineAll(NULL, "\n", Line_ContinueAfterTyping); }
+
+
+	if (GetGlobalFlag(GADVMode)) { OutputLineAll("", NULL, Line_ContinueAfterTyping); }
+	OutputLine(NULL, "　もっとも、その笑いは鷹野を見下したものではない。",
+		   NULL, "Dall'altra parte, non la stanno affatto deridendo.", GetGlobalFlag(GLinemodeSp));
+	if (GetGlobalFlag(GADVMode)) { ClearMessage(); } else { OutputLineAll(NULL, "\n", Line_ContinueAfterTyping); }
+
+	if (GetGlobalFlag(GADVMode)) { OutputLineAll("", NULL, Line_ContinueAfterTyping); }
+	OutputLine(NULL, "　どちらかというと、話は最後まで聞きなさいというような、少し頼もしさを感じさせるものだった。",
+		   NULL, "Si tratta anzi di un modo carino per chiederle di aspettare che finiscano il discorso.", Line_Normal);
+	ClearMessage();
+
+
+	if (GetGlobalFlag(GADVMode)) { OutputLine("<color=#f5e6d3>官僚</color>", NULL, "<color=#f5e6d3>Burocrate</color>", NULL, Line_ContinueAfterTyping); }
+	ModPlayVoiceLS(4, 0, "org/mob8f7016", 128, TRUE);
+	OutputLine(NULL, "「もちろん、そこはあなたのやりやすいように手を打ちます。",
+		   NULL, "\"Naturalmente, faremo in modo che vada tutto come desideri.", Line_WaitForInput);
+	ModPlayVoiceLS(4, 0, "org/mob8f7017", 128, TRUE);
+	OutputLine(NULL, "小泉先生から、あなたをよろしく頼むと念を押されているんです。",
+		   NULL, " Koizumi-sensei mi ha chiesto di prendermi cura di te.", Line_WaitForInput);
+	ModPlayVoiceLS(4, 0, "org/mob8f7018", 128, TRUE);
+	OutputLine(NULL, "大恩ある小泉先生に託されたあなたを、私が蔑ろにするとお思いですか…？",
+		   NULL, " Credi forse che lascerei correre una simile richiesta da una persona del suo calibro?", Line_WaitForInput);
+	ModPlayVoiceLS(4, 0, "org/mob8f7019", 128, TRUE);
+	OutputLine(NULL, "　大丈夫です。",
+		   NULL, " Sta' tranquilla.", Line_WaitForInput);
+	ModPlayVoiceLS(4, 0, "org/mob8f7020", 128, TRUE);
+	OutputLine(NULL, "ここはひとつ、私に任せてください。",
+		   NULL, " Penserò io al resto.", GetGlobalFlag(GLinemodeSp));
+	if (GetGlobalFlag(GADVMode)) { OutputLine("<color=#f5e6d3>官僚</color>", NULL, "<color=#f5e6d3>Burocrate</color>", NULL, Line_ContinueAfterTyping); }
+	ModPlayVoiceLS(4, 0, "org/mob8f7021", 128, TRUE);
+	OutputLine(NULL, "あなたも、そして連中も納得するうまい妥結点を用意します。」",
+		   NULL, "Sono sicuro che riuscirò a soddisfare i bisogni di entrambe le parti.\"", GetGlobalFlag(GLinemodeSp));
+	if (GetGlobalFlag(GADVMode)) { ClearMessage(); } else { OutputLineAll(NULL, "\n", Line_ContinueAfterTyping); }
+
+	if (GetGlobalFlag(GADVMode)) { OutputLine("<color=#f6d9a8>鷹野</color>", NULL, "<color=#f6d9a8>Takano</color>", NULL, Line_ContinueAfterTyping); }
+	ModPlayVoiceLS(4, 9, "ps3/s13/09/550500076", 128, TRUE);
+	OutputLine(NULL, "「と、申しますと…？」",
+		   NULL, "\"In che senso?\"", Line_Normal);
+	ClearMessage();
+
+	if (GetGlobalFlag(GADVMode)) { OutputLine("<color=#f5e6d3>官僚</color>", NULL, "<color=#f5e6d3>Burocrate</color>", NULL, Line_ContinueAfterTyping); }
+	ModPlayVoiceLS(4, 0, "org/mob8f7022", 128, TRUE);
+	OutputLine(NULL, "「その人物の人選は私が握っているということですよ。",
+		   NULL, "\"Nel senso che sarò io a scegliere il nuovo responsabile.", Line_WaitForInput);
+	ModPlayVoiceLS(4, 0, "org/mob8f7022", 128, TRUE);
+	OutputLine(NULL, "わはははははは！」",
+		   NULL, " Wahahahahahah!\"", Line_Normal);
+	ClearMessage();
+
+	if (GetGlobalFlag(GADVMode)) { OutputLineAll("", NULL, Line_ContinueAfterTyping); }
+	OutputLine(NULL, "　鷹野を除く一同はげらげらと大笑いした。",
+		   NULL, "Tutti, Takano esclusa, scoppiano a ridere con aria soddisfatta.", Line_WaitForInput);
+	OutputLine(NULL, "鷹野も遅れて笑いに混じる。",
+		   NULL, " Un attimo dopo, anche lei si unisce al coro.", GetGlobalFlag(GLinemodeSp));
+	if (GetGlobalFlag(GADVMode)) { ClearMessage(); } else { OutputLineAll(NULL, "\n", Line_ContinueAfterTyping); }
+
+	if (GetGlobalFlag(GADVMode) == 0) { OutputLineAll(NULL, "\n", Line_ContinueAfterTyping); }
+
+
+	if (GetGlobalFlag(GADVMode)) { OutputLineAll("", NULL, Line_ContinueAfterTyping); }
+	OutputLine(NULL, "　つまり、これはその、骨抜きということだ。",
+		   NULL, "A quanto pare il responsabile della ricerca non sarà un problema.", Line_Normal);
+	ClearMessage();
+
+	DrawSceneWithMask( "black", "maskleft", 1, 0, 300 );
+
+	if (GetGlobalFlag(GADVMode)) { OutputLineAll("", NULL, Line_ContinueAfterTyping); }
+	OutputLine(NULL, "　防衛庁側は、鷹野ひとりでは少々心細いので、専門家をリーダーに据えろと提案した。",
+		   NULL, "Il Ministero della Difesa ha richiesto esplicitamente un esperto solo perché non si sente sicuro di affidare l'opera soltanto a Takano.", GetGlobalFlag(GLinemodeSp));
+	if (GetGlobalFlag(GADVMode)) { ClearMessage(); } else { OutputLineAll(NULL, "\n", Line_ContinueAfterTyping); }
+
+	if (GetGlobalFlag(GADVMode)) { OutputLineAll("", NULL, Line_ContinueAfterTyping); }
+	OutputLine(NULL, "　だが、そのリーダーの人選は、鷹野の後ろ盾の人物が掌握していたのだから。",
+		   NULL, "Sarà poi lo sponsor di Takano stessa a scegliere il suo successore.", GetGlobalFlag(GLinemodeSp));
+	if (GetGlobalFlag(GADVMode)) { ClearMessage(); } else { OutputLineAll(NULL, "\n", Line_ContinueAfterTyping); }
+
+	if (GetGlobalFlag(GADVMode) == 0) { OutputLineAll(NULL, "\n", Line_ContinueAfterTyping); }
+
+
+	if (GetGlobalFlag(GADVMode)) { OutputLineAll("", NULL, Line_ContinueAfterTyping); }
+	OutputLine(NULL, "　鷹野は実感する。",
+		   NULL, "Takano tira un sospiro di sollievo...", Line_WaitForInput);
+	OutputLine(NULL, "……あぁ、これが後ろ盾を持つことの頼もしさなのだな、と。",
+		   NULL, " ah, che meraviglia essere circondata da persone influenti.", Line_Normal);
+	ClearMessage();
+
+	if (GetGlobalFlag(GADVMode)) { OutputLine("<color=#f5e6d3>官僚</color>", NULL, "<color=#f5e6d3>Burocrate</color>", NULL, Line_ContinueAfterTyping); }
+	ModPlayVoiceLS(4, 0, "org/mob8f7024", 128, TRUE);
+	OutputLine(NULL, "「万事、私に任せてください。",
+		   NULL, "\"Lascia fare a me.", Line_WaitForInput);
+	ModPlayVoiceLS(4, 0, "org/mob8f7025", 128, TRUE);
+	OutputLine(NULL, "あなたがやりやすい候補者をこちらで探します。",
+		   NULL, " Troverò dei candidati più che degni.", Line_WaitForInput);
+	ModPlayVoiceLS(4, 0, "org/mob8f7026", 128, TRUE);
+	OutputLine(NULL, "鷹野さんはその中から、組みやすいと思う相手を選べばいいということです。」",
+		   NULL, " Tutto ciò che dovrai fare sarà scegliere quello che ritieni più indicato.\"", GetGlobalFlag(GLinemodeSp));
+	if (GetGlobalFlag(GADVMode)) { ClearMessage(); } else { OutputLineAll(NULL, "\n", Line_ContinueAfterTyping); }
+
+	if (GetGlobalFlag(GADVMode) == 0) { OutputLineAll(NULL, "\n", Line_ContinueAfterTyping); }
+
+
+	if (GetGlobalFlag(GADVMode)) { OutputLineAll("", NULL, Line_ContinueAfterTyping); }
+	OutputLine(NULL, "　これならば何の不安もない。",
+		   NULL, "Bastano queste parole per far tornare a Takano il buonumore.", GetGlobalFlag(GLinemodeSp));
+	if (GetGlobalFlag(GADVMode)) { ClearMessage(); } else { OutputLineAll(NULL, "\n", Line_ContinueAfterTyping); }
+
+	if (GetGlobalFlag(GADVMode)) { OutputLineAll("", NULL, Line_ContinueAfterTyping); }
+	OutputLine(NULL, "　表向きの代表は私ではないが、研究の実質は私の手元に残る。",
+		   NULL, "Anche se non sarà lei la direttrice ufficiale dei lavori, si occuperà di tutto nell'ombra.", GetGlobalFlag(GLinemodeSp));
+	if (GetGlobalFlag(GADVMode)) { ClearMessage(); } else { OutputLineAll(NULL, "\n", Line_ContinueAfterTyping); }
+
+	if (GetGlobalFlag(GADVMode) == 0) { OutputLineAll(NULL, "\n", Line_ContinueAfterTyping); }
+
+
+	if (GetGlobalFlag(GADVMode)) { OutputLineAll("", NULL, Line_ContinueAfterTyping); }
+	OutputLine(NULL, "　……もちろん私とて権威ではない。",
+		   NULL, "... di per sé, Takano non è una scienziata esperta.", GetGlobalFlag(GLinemodeSp));
+	if (GetGlobalFlag(GADVMode)) { ClearMessage(); } else { OutputLineAll(NULL, "\n", Line_ContinueAfterTyping); }
+
+	if (GetGlobalFlag(GADVMode)) { OutputLineAll("", NULL, Line_ContinueAfterTyping); }
+	OutputLine(NULL, "　研究の上で頼れるパートナーがいてくれればそれに越したことはないのだ。",
+		   NULL, "Avere un compagno di ricerca che possa indirizzarla le sarà soltanto di aiuto.", Line_Normal);
+	ClearMessage();
+
+	if (GetGlobalFlag(GADVMode)) { OutputLine("<color=#f5e6d3>官僚</color>", NULL, "<color=#f5e6d3>Burocrate</color>", NULL, Line_ContinueAfterTyping); }
+	ModPlayVoiceLS(4, 0, "org/mob8f7027", 128, TRUE);
+	OutputLine(NULL, "「この件、しばらく先方と私の方で調整します。",
+		   NULL, "\"Dammi solo un po' di tempo per fare le telefonate giuste.", Line_WaitForInput);
+	ModPlayVoiceLS(4, 0, "org/mob8f7028", 128, TRUE);
+	OutputLine(NULL, "もちろん、鷹野さんの満足の行く形で決着できるようにしますので、しばらく朗報を待ってください。」",
+		   NULL, " Ti assicuro che sarai più che soddisfatta del risultato. Abbi solo un po' di pazienza.\"", GetGlobalFlag(GLinemodeSp));
+	if (GetGlobalFlag(GADVMode)) { ClearMessage(); } else { OutputLineAll(NULL, "\n", Line_ContinueAfterTyping); }
+
+	if (GetGlobalFlag(GADVMode)) { OutputLine("<color=#f6d9a8>鷹野</color>", NULL, "<color=#f6d9a8>Takano</color>", NULL, Line_ContinueAfterTyping); }
+	ModPlayVoiceLS(4, 9, "ps3/s13/09/550500077", 128, TRUE);
+	OutputLine(NULL, "「はい。",
+		   NULL, "\"D'accordo.", Line_WaitForInput);
+	ModPlayVoiceLS(4, 9, "ps3/s13/09/550500078", 128, TRUE);
+	OutputLine(NULL, "お世話になりますが、どうかよろしくお願いいたします…！」",
+		   NULL, " Grazie ancora dell'aiuto...!\"", Line_Normal);
+	ClearMessage();
+
+	if (GetGlobalFlag(GADVMode)) { OutputLine("<color=#f5e6d3>官僚</color>", NULL, "<color=#f5e6d3>Burocrate</color>", NULL, Line_ContinueAfterTyping); }
+	ModPlayVoiceLS(4, 0, "ps3/s13/00/551400014", 128, TRUE);
+	OutputLine(NULL, "「そうだそうだ、防衛庁の話だけじゃないよ。",
+		   NULL, "\"A proposito, qui non parliamo solo del Ministero della Difesa.", Line_WaitForInput);
+	ModPlayVoiceLS(4, 0, "ps3/s13/00/551400015", 128, TRUE);
+	OutputLine(NULL, "厚生省の永田くんも一枚噛んでくれるそうだよ。",
+		   NULL, " Anche Nagata-kun del Ministero della Salute ha detto di volerti aiutare.", Line_WaitForInput);
+	ModPlayVoiceLS(4, 0, "ps3/s13/00/551400016", 128, TRUE);
+	OutputLine(NULL, "国立感染症予防研究所の伊藤くんを紹介してくれてね。",
+		   NULL, " Mi ha presentato a Itou-kun dell'Istituto Nazionale per le Malattie Infettive.", GetGlobalFlag(GLinemodeSp));
+	if (GetGlobalFlag(GADVMode)) { OutputLine("<color=#f5e6d3>官僚</color>", NULL, "<color=#f5e6d3>Burocrate</color>", NULL, Line_ContinueAfterTyping); }
+	ModPlayVoiceLS(4, 0, "ps3/s13/00/551400017", 128, TRUE);
+	OutputLine(NULL, "機材や技術についてのバックアップを名乗り出てくれてる。」",
+		   NULL, "Si occuperà lui di fornirti l'equipaggiamento e le tecnologie necessarie.\"", GetGlobalFlag(GLinemodeSp));
+	if (GetGlobalFlag(GADVMode)) { ClearMessage(); } else { OutputLineAll(NULL, "\n", Line_ContinueAfterTyping); }
+
+	if (GetGlobalFlag(GADVMode)) { OutputLine("<color=#f6d9a8>鷹野</color>", NULL, "<color=#f6d9a8>Takano</color>", NULL, Line_ContinueAfterTyping); }
+	ModPlayVoiceLS(4, 9, "ps3/s13/09/550500079", 128, TRUE);
+	OutputLine(NULL, "「ほ、本当ですか…！",
+		   NULL, "\"D-Dice sul serio...?", Line_WaitForInput);
+	ModPlayVoiceLS(4, 9, "ps3/s13/09/550500080", 128, TRUE);
+	OutputLine(NULL, "　あ、ありがとうございます…！」",
+		   NULL, " N-Non so come ringraziarla!\"", Line_Normal);
+	ClearMessage();
+
+	DrawSceneWithMask( "background/tk_ryou1", "maskleft", 1, 0, 300 );
+
+	if (GetGlobalFlag(GADVMode)) { OutputLine("<color=#f5e6d3>官僚</color>", NULL, "<color=#f5e6d3>Burocrate</color>", NULL, Line_ContinueAfterTyping); }
+	ModPlayVoiceLS(4, 0, "ps3/s13/00/551500008", 128, TRUE);
+	OutputLine(NULL, "「わっはっはっは！",
+		   NULL, "\"Wahahah!", Line_WaitForInput);
+	ModPlayVoiceLS(4, 0, "ps3/s13/00/551500009", 128, TRUE);
+	OutputLine(NULL, "　もうこれは立派な国家プロジェクトですなぁ。",
+		   NULL, " Si tratta pur sempre di un progetto nazionale, dico bene?", Line_WaitForInput);
+	ModPlayVoiceLS(4, 0, "ps3/s13/00/551500010", 128, TRUE);
+	OutputLine(NULL, "おめでとう、鷹野さん！",
+		   NULL, " I miei complimenti, Takano-san!", Line_WaitForInput);
+	ModPlayVoiceLS(4, 0, "ps3/s13/00/551500011", 128, TRUE);
+	OutputLine(NULL, "　これも今日までのあなたと、そして故高野先生の地道な研究が評価された結果です。」",
+		   NULL, " Tutto merito dei tuoi sforzi e della costante ricerca perseguita dal dottor Takano.\"", GetGlobalFlag(GLinemodeSp));
+	if (GetGlobalFlag(GADVMode)) { ClearMessage(); } else { OutputLineAll(NULL, "\n", Line_ContinueAfterTyping); }
+
+	if (GetGlobalFlag(GADVMode)) { OutputLine("<color=#f6d9a8>鷹野</color>", NULL, "<color=#f6d9a8>Takano</color>", NULL, Line_ContinueAfterTyping); }
+	ModPlayVoiceLS(4, 9, "ps3/s13/09/550500080_01", 128, TRUE);
+	OutputLine(NULL, "「い、いえ！",
+		   NULL, "\"S-Si sbaglia!", Line_WaitForInput);
+	ModPlayVoiceLS(4, 9, "ps3/s13/09/550500080_02", 128, TRUE);
+	OutputLine(NULL, "　全て高野先生の努力の成果です。",
+		   NULL, " È solo merito del dottor Takano.", Line_WaitForInput);
+	ModPlayVoiceLS(4, 9, "ps3/s13/09/550500080_03", 128, TRUE);
+	OutputLine(NULL, "私などまだ何も…！」",
+		   NULL, " Io non ho ancora ottenuto niente...!\"", Line_Normal);
+	ClearMessage();
+
+	if (GetGlobalFlag(GADVMode)) { OutputLine("<color=#f5e6d3>官僚</color>", NULL, "<color=#f5e6d3>Burocrate</color>", NULL, Line_ContinueAfterTyping); }
+	ModPlayVoiceLS(4, 0, "org/mob8f7029", 128, TRUE);
+	OutputLine(NULL, "「はっはっはっは。",
+		   NULL, "\"Ahahahah.", Line_WaitForInput);
+	ModPlayVoiceLS(4, 0, "org/mob8f7030", 128, TRUE);
+	OutputLine(NULL, "謙虚なのは実に良いことです。",
+		   NULL, " L'umiltà è una gran virtù.", Line_WaitForInput);
+	ModPlayVoiceLS(4, 0, "org/mob8f7031", 128, TRUE);
+	OutputLine(NULL, "小泉先生も仰っておられましたが、本当に鷹野さんは良い方ですなぁ。",
+		   NULL, " Sei una persona per bene, proprio come ha detto Koizumi-sensei.", Line_WaitForInput);
+	ModPlayVoiceLS(4, 0, "org/mob8f7032", 128, TRUE);
+	OutputLine(NULL, "可愛がられているというのも頷けます。」",
+		   NULL, " Non mi sorprende che ti abbia accolta sotto la sua ala!\"", GetGlobalFlag(GLinemodeSp));
+	if (GetGlobalFlag(GADVMode)) { ClearMessage(); } else { OutputLineAll(NULL, "\n", Line_ContinueAfterTyping); }
+
+	if (GetGlobalFlag(GADVMode)) { OutputLine("<color=#f5e6d3>官僚</color>", NULL, "<color=#f5e6d3>Burocrate</color>", NULL, Line_ContinueAfterTyping); }
+	ModPlayVoiceLS(4, 0, "org/mob8g7017", 128, TRUE);
+	OutputLine(NULL, "「それでですね、向こうとしては鷹野さんの身分を防衛庁で預かってしまいたいようです。",
+		   NULL, "\"A questo punto, il Ministero della Difesa vuole che tu lavori per loro.", Line_WaitForInput);
+	ModPlayVoiceLS(4, 0, "org/mob8g7018", 128, TRUE);
+	OutputLine(NULL, "幸い、鷹野さんは医師免許をお持ちですからね。",
+		   NULL, " Per fortuna hai l'abilitazione alla professione medica, giusto?", Line_WaitForInput);
+	ModPlayVoiceLS(4, 0, "org/mob8g7019", 128, TRUE);
+	OutputLine(NULL, "研究本部の医官として身分を保証するようです。」",
+		   NULL, " Ti assegneremo in qualità di medico preposto alla struttura di ricerca.\"", GetGlobalFlag(GLinemodeSp));
+	if (GetGlobalFlag(GADVMode)) { ClearMessage(); } else { OutputLineAll(NULL, "\n", Line_ContinueAfterTyping); }
+
+	if (GetGlobalFlag(GADVMode)) { OutputLine("<color=#f6d9a8>鷹野</color>", NULL, "<color=#f6d9a8>Takano</color>", NULL, Line_ContinueAfterTyping); }
+	ModPlayVoiceLS(4, 9, "org/s13/09/550500081_org", 128, TRUE);
+	OutputLine(NULL, "「それは、えっと……、公務員になれということですか？",
+		   NULL, "\"Sta dicendo... ecco... che diventerò un dipendente pubblico?", Line_WaitForInput);
+	ModPlayVoiceLS(4, 9, "ps3/s13/09/550500083", 128, TRUE);
+	OutputLine(NULL, "　これは意外な話ですね…。」",
+		   NULL, " Non me lo aspettavo...\"", Line_Normal);
+	ClearMessage();
+
+	if (GetGlobalFlag(GADVMode)) { OutputLine("<color=#f5e6d3>官僚</color>", NULL, "<color=#f5e6d3>Burocrate</color>", NULL, Line_ContinueAfterTyping); }
+	ModPlayVoiceLS(4, 0, "ps3/s13/00/551500012", 128, TRUE);
+	OutputLine(NULL, "「アルファベットプロジェクトに携わる研究機関のほとんどは公的機関です。",
+		   NULL, "\"Tutte le parti coinvolte nell'Alphabet Project sono istituzioni pubbliche.", GetGlobalFlag(GLinemodeSp));
+	if (GetGlobalFlag(GADVMode)) { OutputLine("<color=#f5e6d3>官僚</color>", NULL, "<color=#f5e6d3>Burocrate</color>", NULL, Line_ContinueAfterTyping); }
+	ModPlayVoiceLS(4, 0, "ps3/s13/00/551500013", 128, TRUE);
+	OutputLine(NULL, "今回の研究は陸自も強い関心を寄せており、職員を陸自から派遣したいと強く要望してきています。",
+		   NULL, "Anche l'Esercito di Auto-Difesa ha detto di essere interessato alla ricerca, ragion per cui vogliono far partecipare alcuni dei loro militari.", Line_WaitForInput);
+	ModPlayVoiceLS(4, 0, "ps3/s13/00/551500014", 128, TRUE);
+	OutputLine(NULL, "ですので、場合によっては身分は陸自の扱いになるかもしれません。」",
+		   NULL, " A seconda delle circostanze, potresti essere trattata persino come un membro dell'esercito.\"", GetGlobalFlag(GLinemodeSp));
+	if (GetGlobalFlag(GADVMode)) { ClearMessage(); } else { OutputLineAll(NULL, "\n", Line_ContinueAfterTyping); }
+
+	if (GetGlobalFlag(GADVMode)) { OutputLine("<color=#f5e6d3>官僚</color>", NULL, "<color=#f5e6d3>Burocrate</color>", NULL, Line_ContinueAfterTyping); }
+	ModPlayVoiceLS(4, 0, "org/mob8g7020", 128, TRUE);
+	OutputLine(NULL, "「まぁ、この辺は役人の縄張り争いだと思ってください。",
+		   NULL, "\"Ma queste non sono altro che quisquilie burocratiche tra le varie giurisdizioni.", Line_WaitForInput);
+	ModPlayVoiceLS(4, 0, "org/mob8g7021", 128, TRUE);
+	OutputLine(NULL, "その役人たちの上に立つには、役人の身分が必要になってくると、そういうわけですな。",
+		   NULL, " Per poterti ergere al di sopra di tutti, avrai bisogno di una posizione di riguardo.", GetGlobalFlag(GLinemodeSp));
+	if (GetGlobalFlag(GADVMode)) { OutputLine("<color=#f5e6d3>官僚</color>", NULL, "<color=#f5e6d3>Burocrate</color>", NULL, Line_ContinueAfterTyping); }
+	ModPlayVoiceLS(4, 0, "org/mob8g7022", 128, TRUE);
+	OutputLine(NULL, "もちろん、どういう形になろうとも、鷹野さんが不快に思うようなことにはしませんから、安心してください。」",
+		   NULL, "In ogni caso, penseremo noi al metodo migliore per soddisfare le tue esigenze. Non hai niente da temere.\"", Line_Normal);
+	ClearMessage();
+
+	if (GetGlobalFlag(GADVMode)) { OutputLine("<color=#f6d9a8>鷹野</color>", NULL, "<color=#f6d9a8>Takano</color>", NULL, Line_ContinueAfterTyping); }
+	ModPlayVoiceLS(4, 9, "ps3/s13/09/550500084", 128, TRUE);
+	OutputLine(NULL, "「わかりました。",
+		   NULL, "\"Capisco.", Line_WaitForInput);
+	ModPlayVoiceLS(4, 9, "ps3/s13/09/550500085", 128, TRUE);
+	OutputLine(NULL, "その辺りはお任せいたします。",
+		   NULL, " Sono nelle vostre mani.", Line_WaitForInput);
+	ModPlayVoiceLS(4, 9, "org/takano7006", 128, TRUE);
+	OutputLine(NULL, "…しかし、高野先生がかつて旧日本軍にこの研究の援助を求めた時には断られたことを思うと、",
+		   NULL, " Ma il pensiero che siano stati proprio i piani alti dell'esercito a rifiutare la ricerca del dottor Takano...", Line_WaitForInput);
+	ModPlayVoiceLS(4, 9, "org/takano7007", 128, TRUE);
+	OutputLine(NULL, "自衛隊が興味を示されたのが意外と言うか、遅いというか、複雑な気持ちですね。」",
+		   NULL, " in un certo senso, mi è difficile credere che l'Esercito di Auto-Difesa sia tornato a interessarsene.\"", GetGlobalFlag(GLinemodeSp));
+	if (GetGlobalFlag(GADVMode)) { ClearMessage(); } else { OutputLineAll(NULL, "\n", Line_ContinueAfterTyping); }
+
+	if (GetGlobalFlag(GADVMode)) { OutputLine("<color=#f5e6d3>官僚</color>", NULL, "<color=#f5e6d3>Burocrate</color>", NULL, Line_ContinueAfterTyping); }
+	ModPlayVoiceLS(4, 0, "org/mob8f7033", 128, TRUE);
+	OutputLine(NULL, "「それは……仕方ありますまいな。",
+		   NULL, "\"Ecco... c'è poco da fare.", Line_WaitForInput);
+	ModPlayVoiceLS(4, 0, "org/mob8f7034", 128, TRUE);
+	OutputLine(NULL, "戦況が悪化していた日本軍が求めていたのは、即効性があり、瞬時に戦局を引っくり返せるものだったのでしょう。",
+		   NULL, " Con l'aggravarsi della situazione bellica, l'esercito giapponese aveva bisogno di una soluzione immediata che potesse volgere la guerra a loro vantaggio.", GetGlobalFlag(GLinemodeSp));
+	if (GetGlobalFlag(GADVMode)) { OutputLine("<color=#f5e6d3>官僚</color>", NULL, "<color=#f5e6d3>Burocrate</color>", NULL, Line_ContinueAfterTyping); }
+	ModPlayVoiceLS(4, 0, "org/mob8f7035", 128, TRUE);
+	OutputLine(NULL, "決して、高野先生の研究を見下していたわけではないはずです。」",
+		   NULL, "Non credo fosse loro intento denigrare la sua ricerca.\"", GetGlobalFlag(GLinemodeSp));
+	if (GetGlobalFlag(GADVMode)) { ClearMessage(); } else { OutputLineAll(NULL, "\n", Line_ContinueAfterTyping); }
+
+	if (GetGlobalFlag(GADVMode) == 0) { OutputLineAll(NULL, "\n", Line_ContinueAfterTyping); }
+
+
+	if (GetGlobalFlag(GADVMode)) { OutputLineAll("", NULL, Line_ContinueAfterTyping); }
+	OutputLine(NULL, "　それは真実ではない。",
+		   NULL, "E invece andò proprio così.", Line_WaitForInput);
+	OutputLine(NULL, "そのことをすでに鷹野は長老の告白から聞いている。",
+		   NULL, " Koizumi ha già confessato la verità a Takano.", Line_Normal);
+	ClearMessage();
+
+
+	FadeOutBGM( 0, 1000, FALSE );
+	DrawScene( "background/greyscale/tk_ryou1", 1000 );
+	ModPlayBGM( 0, "msys06", 120, 0, 0 );
+	ModPlayBGM( 0, "tsutaetaikoto", 120, 0, 1 );
+
+	if (GetGlobalFlag(GADVMode)) { OutputLineAll("", NULL, Line_ContinueAfterTyping); }
+	OutputLine(NULL, "　鷹野はふっと意識が途切れるような気分を味わうと、目の前の会合が遠くの世界の出来事のように感じるのだった。",
+		   NULL, "Takano sospira con aria delusa, come se la discussione che sta prendendo forma davanti ai suoi occhi fosse solo un miraggio in lontananza.", Line_Normal);
+	ClearMessage();
+
+	if (GetGlobalFlag(GADVMode)) { OutputLineAll("", NULL, Line_ContinueAfterTyping); }
+	OutputLine(NULL, "　この日を望み、こうなるように努力してついに至った今日なのだ。",
+		   NULL, "Aveva desiderato così tanto questo giorno, soprattutto se ripensa a tutto quel che ha dovuto fare per raggiungerlo.", GetGlobalFlag(GLinemodeSp));
+	if (GetGlobalFlag(GADVMode)) { ClearMessage(); } else { OutputLineAll(NULL, "\n", Line_ContinueAfterTyping); }
+
+	if (GetGlobalFlag(GADVMode)) { OutputLineAll("", NULL, Line_ContinueAfterTyping); }
+	OutputLine(NULL, "　ついに私と祖父の研究は認められ、第一歩を記す。",
+		   NULL, "Finalmente, gli sforzi di suo nonno stanno ricevendo le attenzioni che meritavano.", Line_WaitForInput);
+	OutputLine(NULL, "それは夢にまで見た日なのだ。",
+		   NULL, " Era il suo sogno da una vita.", Line_Normal);
+	ClearMessage();
+
+	if (GetGlobalFlag(GADVMode)) { OutputLineAll("", NULL, Line_ContinueAfterTyping); }
+	OutputLine(NULL, "　だから、実はこれが夢なのではないかと想像することが恐ろしかった。",
+		   NULL, "Ma, per qualche motivo, l'atmosfera che la circonda non è quella di un sogno realizzato.", GetGlobalFlag(GLinemodeSp));
+	if (GetGlobalFlag(GADVMode)) { ClearMessage(); } else { OutputLineAll(NULL, "\n", Line_ContinueAfterTyping); }
+
+	if (GetGlobalFlag(GADVMode) == 0) { OutputLineAll(NULL, "\n", Line_ContinueAfterTyping); }
+
+
+	if (GetGlobalFlag(GADVMode)) { OutputLineAll("", NULL, Line_ContinueAfterTyping); }
+	OutputLine(NULL, "　本当に嬉しいという喜びは、すぐその場では理解できず、時間が経ってから初めて理解できるということも少なくない。",
+		   NULL, "A volte la vera felicità non è un qualcosa che si carpisce immediatamente, ma piuttosto un momento che può rivelarsi anche dopo molto tempo.", GetGlobalFlag(GLinemodeSp));
+	if (GetGlobalFlag(GADVMode)) { ClearMessage(); } else { OutputLineAll(NULL, "\n", Line_ContinueAfterTyping); }
+
+	if (GetGlobalFlag(GADVMode)) { OutputLineAll("", NULL, Line_ContinueAfterTyping); }
+	OutputLine(NULL, "　……鷹野は、まさにこれがそういう気持ちなのだろうと思っていた…。",
+		   NULL, "\"... forse è questa la spiegazione al vuoto che sento dentro.\"", Line_Normal);
+	ClearMessage();
+
+	DrawScene( "background/tk_ryou1", 400 );
+
+	if (GetGlobalFlag(GADVMode)) { OutputLine("<color=#f5e6d3>官僚</color>", NULL, "<color=#f5e6d3>Burocrate</color>", NULL, Line_ContinueAfterTyping); }
+	ModPlayVoiceLS(4, 0, "ps3/s13/00/551500015", 128, TRUE);
+	OutputLine(NULL, "「…ると思います。",
+		   NULL, "\"... credo.", Line_WaitForInput);
+	ModPlayVoiceLS(4, 0, "ps3/s13/00/551500016", 128, TRUE);
+	OutputLine(NULL, "多分、佐官クラスの階級が与えられるのではないでしょうか。",
+		   NULL, " Probabilmente riceverai un incarico in linea con quello di un luogotenente.", Line_WaitForInput);
+	ModPlayVoiceLS(4, 0, "ps3/s13/00/551500017", 128, TRUE);
+	OutputLine(NULL, "となると鷹野さんは副隊長の地位になりますから、恐らく、三佐ではないかと。」",
+		   NULL, " E visto che sarai il secondo grado più alto, ti nomineranno Maggiore.\"", GetGlobalFlag(GLinemodeSp));
+	if (GetGlobalFlag(GADVMode)) { ClearMessage(); } else { OutputLineAll(NULL, "\n", Line_ContinueAfterTyping); }
+
+	if (GetGlobalFlag(GADVMode)) { OutputLine("<color=#f5e6d3>官僚</color>", NULL, "<color=#f5e6d3>Burocrate</color>", NULL, Line_ContinueAfterTyping); }
+	ModPlayVoiceLS(4, 0, "org/mob8g7023", 128, TRUE);
+	OutputLine(NULL, "「これは素晴らしい…！",
+		   NULL, "\"Splendido!!", Line_WaitForInput);
+	ModPlayVoiceLS(4, 0, "org/mob8g7024", 128, TRUE);
+	OutputLine(NULL, "　鷹野三佐ですか。",
+		   NULL, " Maggiore Takano, eh?", Line_WaitForInput);
+	ModPlayVoiceLS(4, 0, "org/mob8g7025", 128, TRUE);
+	OutputLine(NULL, "いやいや、羨ましいですなぁ！",
+		   NULL, " Cielo, che invidia!!", Line_WaitForInput);
+	ModPlayVoiceLS(4, 0, "org/mob8g7026", 128, TRUE);
+	OutputLine(NULL, "　男に生まれたからには、一度くらいは自分のことを階級で呼ばれてみたいものですが。",
+		   NULL, " Per uno come me che ha vissuto entrambe le guerre mondiali, avere un rango militare sarebbe stato un onore...", Line_WaitForInput);
+	ModPlayVoiceLS(4, 0, "org/mob8g7027", 128, TRUE);
+	OutputLine(NULL, "いやはやいやはや、鷹野三佐ですか、ふむふむ！」",
+		   NULL, " non riesco a crederci! Maggiore Takano! Già!\"", Line_Normal);
+	ClearMessage();
+
+	if (GetGlobalFlag(GADVMode)) { OutputLine("<color=#f6d9a8>鷹野</color>", NULL, "<color=#f6d9a8>Takano</color>", NULL, Line_ContinueAfterTyping); }
+	ModPlayVoiceLS(4, 9, "ps3/s13/09/550500088", 128, TRUE);
+	OutputLine(NULL, "「三佐？",
+		   NULL, "\"Maggiore?", Line_Continue);
+	Wait( 2400 );
+	OutputLine(NULL, "　何ですか？」",
+		   NULL, " Cosa significa, esattamente?\"", Line_Normal);
+	ClearMessage();
+
+
+	if (GetGlobalFlag(GADVMode)) { OutputLine("<color=#f5e6d3>官僚</color>", NULL, "<color=#f5e6d3>Burocrate</color>", NULL, Line_ContinueAfterTyping); }
+	ModPlayVoiceLS(4, 0, "ps3/s13/00/551500018", 128, TRUE);
+	OutputLine(NULL, "「あぁ、自衛隊の階級のことで、三等陸佐のことです。",
+		   NULL, "\"Diciamo che si tratta di un alto rango dell'esercito.", Line_WaitForInput);
+	ModPlayVoiceLS(4, 0, "ps3/s13/00/551500019", 128, TRUE);
+	OutputLine(NULL, "企業でいうところの、副部長くらいでしょうね。",
+		   NULL, " Una specie di vice-direttore, se devo fare un paragone.", Line_WaitForInput);
+	ModPlayVoiceLS(4, 0, "ps3/s13/00/551500020", 128, TRUE);
+	OutputLine(NULL, "おそらくその階級が、プロジェクト発足時に鷹野さんに与えられることになるかと思います。」",
+		   NULL, " Sarà questa la carica con cui il personale ti riconoscerà una volta che il progetto avrà inizio.\"", GetGlobalFlag(GLinemodeSp));
+	if (GetGlobalFlag(GADVMode)) { ClearMessage(); } else { OutputLineAll(NULL, "\n", Line_ContinueAfterTyping); }
+
+	if (GetGlobalFlag(GADVMode)) { OutputLine("<color=#f5e6d3>官僚</color>", NULL, "<color=#f5e6d3>Burocrate</color>", NULL, Line_ContinueAfterTyping); }
+	ModPlayVoiceLS(4, 0, "org/mob8f7036", 128, TRUE);
+	OutputLine(NULL, "「旧日本軍で言うところの少佐ですよ。",
+		   NULL, "\"Secondo il vecchio ordinamento, equivale a tenente comandante.", Line_WaitForInput);
+	ModPlayVoiceLS(4, 0, "org/mob8f7037", 128, TRUE);
+	OutputLine(NULL, "……そう言えば奇遇ですなぁ。",
+		   NULL, " Che coincidenza.", Line_WaitForInput);
+	ModPlayVoiceLS(4, 0, "org/mob8f7038", 128, TRUE);
+	OutputLine(NULL, "高野先生も、旧軍では少佐の階級にあられたそうではありませんか。」",
+		   NULL, " Anche il dottor Takano era un tenente comandante dei vecchi corpi militari.\"", GetGlobalFlag(GLinemodeSp));
+	if (GetGlobalFlag(GADVMode)) { ClearMessage(); } else { OutputLineAll(NULL, "\n", Line_ContinueAfterTyping); }
+
+	if (GetGlobalFlag(GADVMode)) { OutputLineAll("", NULL, Line_ContinueAfterTyping); }
+	OutputLine(NULL, "　はっとする。",
+		   NULL, "Takano ha un'epifania.", GetGlobalFlag(GLinemodeSp));
+	if (GetGlobalFlag(GADVMode)) { ClearMessage(); } else { OutputLineAll(NULL, "\n", Line_ContinueAfterTyping); }
+
+	if (GetGlobalFlag(GADVMode)) { OutputLineAll("", NULL, Line_ContinueAfterTyping); }
+	OutputLine(NULL, "　そうだ。",
+		   NULL, "Ha ragione.", Line_WaitForInput);
+	OutputLine(NULL, "…祖父もかつて日本軍にあって、少佐の階級を持っていた…。",
+		   NULL, " Suo nonno era stato un tenente comandante per l'esercito giapponese.", Line_Normal);
+	ClearMessage();
+
+	if (GetGlobalFlag(GADVMode)) { OutputLineAll("", NULL, Line_ContinueAfterTyping); }
+	OutputLine(NULL, "　祖父が果たせなかった研究を自分が引き継ぐため、今日まで重ねてきた努力。",
+		   NULL, "Tutto quel che ha fatto finora è stato perché potesse ereditare e proseguire la sua ricerca.", GetGlobalFlag(GLinemodeSp));
+	if (GetGlobalFlag(GADVMode)) { ClearMessage(); } else { OutputLineAll(NULL, "\n", Line_ContinueAfterTyping); }
+
+	if (GetGlobalFlag(GADVMode) == 0) { OutputLineAll(NULL, "\n", Line_ContinueAfterTyping); }
+
+
+	if (GetGlobalFlag(GADVMode)) { OutputLineAll("", NULL, Line_ContinueAfterTyping); }
+	OutputLine(NULL, "　そして揃ったお膳立て。",
+		   NULL, "Ogni pezzo del puzzle è al suo posto.", Line_WaitForInput);
+	OutputLine(NULL, "……そしてその末に私に与えられるだろう階級が、当時で言うところの少佐で、祖父と同じもの。",
+		   NULL, " Takano ha ottenuto lo stesso grado che aveva suo nonno.", Line_Normal);
+	ClearMessage();
+
+	if (GetGlobalFlag(GADVMode)) { OutputLineAll("", NULL, Line_ContinueAfterTyping); }
+	OutputLine(NULL, "　祖父の研究を引き継ぐことが、血のつながっていない自分にとっての、血縁にも勝る関係だと信じて頑張ってきた。",
+		   NULL, "Portare sulle spalle il peso degli sforzi del dottor Takano è per lei una dimostrazione d'affetto più profonda di qualsiasi legame di sangue.", GetGlobalFlag(GLinemodeSp));
+	if (GetGlobalFlag(GADVMode)) { ClearMessage(); } else { OutputLineAll(NULL, "\n", Line_ContinueAfterTyping); }
+
+	if (GetGlobalFlag(GADVMode)) { OutputLineAll("", NULL, Line_ContinueAfterTyping); }
+	OutputLine(NULL, "　そして与えられた階級がおじいちゃんと同じだなんて。",
+		   NULL, "E adesso ne ha persino eguagliato il rango.", Line_WaitForInput);
+	OutputLine(NULL, "まるで運命か何かのよう。",
+		   NULL, " Per Takano non può non trattarsi del destino.", GetGlobalFlag(GLinemodeSp));
+	if (GetGlobalFlag(GADVMode)) { ClearMessage(); } else { OutputLineAll(NULL, "\n", Line_ContinueAfterTyping); }
+
+	if (GetGlobalFlag(GADVMode) == 0) { OutputLineAll(NULL, "\n", Line_ContinueAfterTyping); }
+
+
+	if (GetGlobalFlag(GADVMode)) { OutputLineAll("", NULL, Line_ContinueAfterTyping); }
+	OutputLine(NULL, "　………これは、おじいちゃんのメッセージなの…？",
+		   NULL, "... forse si tratta di un messaggio da parte sua?", Line_Normal);
+	ClearMessage();
+
+	DrawScene( "black", 400 );
+
+	if (GetGlobalFlag(GADVMode)) { OutputLineAll("", NULL, Line_ContinueAfterTyping); }
+	OutputLine(NULL, "　それはきっと、天国の祖父からのエール。",
+		   NULL, "Ma certo. È il suo grido di incitamento che arriva fin dal Paradiso.", GetGlobalFlag(GLinemodeSp));
+	if (GetGlobalFlag(GADVMode)) { ClearMessage(); } else { OutputLineAll(NULL, "\n", Line_ContinueAfterTyping); }
+
+	if (GetGlobalFlag(GADVMode)) { OutputLineAll("", NULL, Line_ContinueAfterTyping); }
+	OutputLine(NULL, "　そして、研究だけでなく、その想いも継承したことを示す証。",
+		   NULL, "È la dimostrazione che ha ereditato non solo la sua ricerca, ma anche le sue volontà.", GetGlobalFlag(GLinemodeSp));
+	if (GetGlobalFlag(GADVMode)) { ClearMessage(); } else { OutputLineAll(NULL, "\n", Line_ContinueAfterTyping); }
+
+	if (GetGlobalFlag(GADVMode) == 0) { OutputLineAll(NULL, "\n", Line_ContinueAfterTyping); }
+
+
+	if (GetGlobalFlag(GADVMode)) { OutputLineAll("", NULL, Line_ContinueAfterTyping); }
+	OutputLine(NULL, "　鷹野は、三佐という階級に、何か運命めいたものを感じずにはいられなかった。",
+		   NULL, "Il rango di Maggiore assume subito una connotazione quasi divina e ineluttabile nella testa di Takano.", Line_Normal);
+	ClearMessage();
+
+	DrawSceneWithMask( "background/moon", "maskup", 1, 0, 300 );
+
+	if (GetGlobalFlag(GADVMode)) { OutputLine("<color=#f6d9a8>鷹野</color>", NULL, "<color=#f6d9a8>Takano</color>", NULL, Line_ContinueAfterTyping); }
+	ModPlayVoiceLS(4, 9, "ps3/s13/09/550500089", 128, TRUE);
+	OutputLine(NULL, "「……おじいちゃん。",
+		   NULL, "\"... nonno...", Line_WaitForInput);
+	ModPlayVoiceLS(4, 9, "ps3/s13/09/550500090", 128, TRUE);
+	OutputLine(NULL, "………私、……ようやくここまで来たよ。」",
+		   NULL, " ce l'ho... fatta.\"", GetGlobalFlag(GLinemodeSp));
+	if (GetGlobalFlag(GADVMode)) { ClearMessage(); } else { OutputLineAll(NULL, "\n", Line_ContinueAfterTyping); }
+
+	if (GetGlobalFlag(GADVMode) == 0) { OutputLineAll(NULL, "\n", Line_ContinueAfterTyping); }
+
+
+	if (GetGlobalFlag(GADVMode)) { OutputLineAll("", NULL, Line_ContinueAfterTyping); }
+	OutputLine(NULL, "　その独り言は、男たちの笑い声の中では誰の耳にも届かない。",
+		   NULL, "Sussurra Takano a bassa voce, senza che nessuno possa sentirla.", GetGlobalFlag(GLinemodeSp));
+	if (GetGlobalFlag(GADVMode)) { ClearMessage(); } else { OutputLineAll(NULL, "\n", Line_ContinueAfterTyping); }
+
+	if (GetGlobalFlag(GADVMode)) { OutputLineAll("", NULL, Line_ContinueAfterTyping); }
+	OutputLine(NULL, "　でも、祖父の眠る国にはきっと届く。",
+		   NULL, "Solo una persona può averla sentita lassù, oltre le nuvole.", Line_WaitForInput);
+	OutputLine(NULL, "そう信じての呟きだった。",
+		   NULL, " Non c'è alcun dubbio.", Line_Normal);
+	ClearMessage();
+
+	if (GetGlobalFlag(GADVMode)) { OutputLineAll("", NULL, Line_ContinueAfterTyping); }
+	OutputLine(NULL, "　まだまだ、道半ばに過ぎない。",
+		   NULL, "La strada è ancora lunga.", Line_WaitForInput);
+	OutputLine(NULL, "この研究が偉業となるには、これから長く険しい道を乗り越えなくてはならない。",
+		   NULL, " Ci sono ancora molte cose da fare affinché lo studio sulla Sindrome di Hinamizawa venga accolto come deve.", GetGlobalFlag(GLinemodeSp));
+	if (GetGlobalFlag(GADVMode)) { ClearMessage(); } else { OutputLineAll(NULL, "\n", Line_ContinueAfterTyping); }
+
+	if (GetGlobalFlag(GADVMode)) { OutputLineAll("", NULL, Line_ContinueAfterTyping); }
+	OutputLine(NULL, "　そうでなければ、祖父は神にはなれないのだ。",
+		   NULL, "Altrimenti, suo nonno non potrà mai diventare un dio.", Line_WaitForInput);
+	OutputLine(NULL, "私も神になれないのだ。",
+		   NULL, " E nemmeno Takano stessa.", Line_Normal);
+	ClearMessage();
+
+	if (GetGlobalFlag(GADVMode)) { OutputLineAll("", NULL, Line_ContinueAfterTyping); }
+	OutputLine(NULL, "　……………。",
+		   NULL, "............", GetGlobalFlag(GLinemodeSp));
+	if (GetGlobalFlag(GADVMode)) { ClearMessage(); } else { OutputLineAll(NULL, "\n", Line_ContinueAfterTyping); }
+
+	if (GetGlobalFlag(GADVMode)) { OutputLineAll("", NULL, Line_ContinueAfterTyping); }
+	OutputLine(NULL, "　祖父の残した遺書にあった、お前は神になりなさいの一文。",
+		   NULL, "L'ultimo desiderio di suo nonno era che Takano diventasse un dio.", GetGlobalFlag(GLinemodeSp));
+	if (GetGlobalFlag(GADVMode)) { ClearMessage(); } else { OutputLineAll(NULL, "\n", Line_ContinueAfterTyping); }
+
+	if (GetGlobalFlag(GADVMode) == 0) { OutputLineAll(NULL, "\n", Line_ContinueAfterTyping); }
+
+
+	if (GetGlobalFlag(GADVMode)) { OutputLineAll("", NULL, Line_ContinueAfterTyping); }
+	OutputLine(NULL, "　そして、その一文の前にあった、私は神になれなかったの一文。",
+		   NULL, "Perché lui non ce l'aveva fatta.", GetGlobalFlag(GLinemodeSp));
+	if (GetGlobalFlag(GADVMode)) { ClearMessage(); } else { OutputLineAll(NULL, "\n", Line_ContinueAfterTyping); }
+
+	if (GetGlobalFlag(GADVMode) == 0) { OutputLineAll(NULL, "\n", Line_ContinueAfterTyping); }
+
+
+	if (GetGlobalFlag(GADVMode)) { OutputLineAll("", NULL, Line_ContinueAfterTyping); }
+	OutputLine(NULL, "　それこそが、唯一の祖父の遺志。",
+		   NULL, "L'ultimo desiderio sul letto di morte.", GetGlobalFlag(GLinemodeSp));
+	if (GetGlobalFlag(GADVMode)) { ClearMessage(); } else { OutputLineAll(NULL, "\n", Line_ContinueAfterTyping); }
+
+	if (GetGlobalFlag(GADVMode)) { OutputLineAll("", NULL, Line_ContinueAfterTyping); }
+	OutputLine(NULL, "　祖父は、私に託したのだ。",
+		   NULL, "Che adesso ha affidato a lei.", Line_WaitForInput);
+	OutputLine(NULL, "自分の研究の全てを。",
+		   NULL, " Insieme alla sua ricerca.", Line_Normal);
+	ClearMessage();
+
+	if (GetGlobalFlag(GADVMode)) { OutputLineAll("", NULL, Line_ContinueAfterTyping); }
+	OutputLine(NULL, "　神の復活は、肉体が蘇ることではない。",
+		   NULL, "Un dio non risorge mai nel suo corpo fisico.", GetGlobalFlag(GLinemodeSp));
+	if (GetGlobalFlag(GADVMode)) { ClearMessage(); } else { OutputLineAll(NULL, "\n", Line_ContinueAfterTyping); }
+
+	if (GetGlobalFlag(GADVMode)) { OutputLineAll("", NULL, Line_ContinueAfterTyping); }
+	OutputLine(NULL, "　…残された人間の心に蘇ることなのだ。",
+		   NULL, "Ma risorge nei cuori delle persone che restano dopo di lui.", GetGlobalFlag(GLinemodeSp));
+	if (GetGlobalFlag(GADVMode)) { ClearMessage(); } else { OutputLineAll(NULL, "\n", Line_ContinueAfterTyping); }
+
+	if (GetGlobalFlag(GADVMode) == 0) { OutputLineAll(NULL, "\n", Line_ContinueAfterTyping); }
+
+
+	if (GetGlobalFlag(GADVMode)) { OutputLineAll("", NULL, Line_ContinueAfterTyping); }
+	OutputLine(NULL, "　祖父はまず私の心に蘇るだろう。",
+		   NULL, "Suo nonno continua a vivere dentro al suo cuore.", GetGlobalFlag(GLinemodeSp));
+	if (GetGlobalFlag(GADVMode)) { ClearMessage(); } else { OutputLineAll(NULL, "\n", Line_ContinueAfterTyping); }
+
+	if (GetGlobalFlag(GADVMode)) { OutputLineAll("", NULL, Line_ContinueAfterTyping); }
+	OutputLine(NULL, "　そして、その偉業を知られ、学会の人間たちは争って祖父の資料を読むだろう。",
+		   NULL, "I suoi contributi raggiungeranno ogni angolo del mondo, portando numerosi scienziati ad approfondirli.", Line_WaitForInput);
+	OutputLine(NULL, "それこそ奪い合うように。",
+		   NULL, " Come se volessero rubarseli a vicenda.", GetGlobalFlag(GLinemodeSp));
+	if (GetGlobalFlag(GADVMode)) { ClearMessage(); } else { OutputLineAll(NULL, "\n", Line_ContinueAfterTyping); }
+
+	if (GetGlobalFlag(GADVMode)) { OutputLineAll("", NULL, Line_ContinueAfterTyping); }
+	OutputLine(NULL, "　そして、このような研究がすでに戦時中から行なわれていて、",
+		   NULL, "Tutti sapranno chi era stato davvero Hifumi Takano, che intraprese questa ricerca già durante la guerra.", Line_WaitForInput);
+	OutputLine(NULL, "誰の理解も得られずに孤独に研究に生涯を捧げた高野一二三の生涯を知り、",
+		   NULL, " Scopriranno che nessuno l'aveva mai capito, e di come avesse consacrato la sua povera anima soltanto alla ricerca.", GetGlobalFlag(GLinemodeSp));
+	if (GetGlobalFlag(GADVMode)) { OutputLineAll("", NULL, Line_ContinueAfterTyping); }
+	OutputLine(NULL, "その偉業をようやく讃えるのだ…。",
+		   NULL, "Solo allora comprenderanno la grandezza della sua opera.", Line_Normal);
+	ClearMessage();
+
+	CallScript( "&eyeCamp" );
+	FadeOutBGM( 0, 1000, TRUE );
+
+}

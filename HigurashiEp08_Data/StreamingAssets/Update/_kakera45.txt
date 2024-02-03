@@ -1,0 +1,98 @@
+void main()
+{
+	DrawScene( "black", 400 );
+
+	PlayBGM( 0, "instict2", 120, 0 );
+
+	DrawScene( "background/fure2", 1000 );
+//	DrawFragment("minacubemap", "FragmentDiamondNarrow", 1000);
+	DrawScene( "background/kakera", 400 );
+	StopFragment(1000);
+	DrawScene( "white", 1000 );
+	ModSetLayerFilter(1, 256, "sunset");
+	ModDrawCharacter(1, 2, "sprite/renasen2_muhyokaku_", "0", 0, 0, 0, FALSE, 0, 0, 0, 0, 0, 0, 0, 8, 0, FALSE );
+	DrawScene( "background/gy3_01", 400 );
+
+	ClearMessage();
+	if (GetGlobalFlag(GADVMode)) { OutputLineAll("", NULL, Line_ContinueAfterTyping); }
+	OutputLine(NULL, "　このカケラは私たちにとって、とても重要な意味を持つ。",
+		   NULL, "Questo Frammento ha un significato molto importante per noi.", GetGlobalFlag(GLinemodeSp));
+	if (GetGlobalFlag(GADVMode)) { ClearMessage(); } else { OutputLineAll(NULL, "\n", Line_ContinueAfterTyping); }
+
+	if (GetGlobalFlag(GADVMode) == 0) { OutputLineAll(NULL, "\n", Line_ContinueAfterTyping); }
+
+	DrawScene( "black", 400 );
+
+	if (GetGlobalFlag(GADVMode)) { OutputLineAll("", NULL, Line_ContinueAfterTyping); }
+	OutputLine(NULL, "　それは、抗えない運命と諦めていた昭和５８年６月に、風穴を開けられるのではないかという可能性を初めて見せてくれたからだ。",
+		   NULL, "Ci ha mostrato per la prima volta che era possibile trovare una feritoria nel destino all'apparenza ineluttabile del giugno 1983.", Line_Normal);
+	ClearMessage();
+
+	if (GetGlobalFlag(GADVMode)) { OutputLineAll("", NULL, Line_ContinueAfterTyping); }
+	OutputLine(NULL, "　結論から言えば、最後にはルールＹに取り込まれ、全ては台無しとなる。",
+		   NULL, "Se vogliamo parlare di risultati, la Regola Y ci ha privati di ogni cosa e ha reso vani i nostri sforzi.", GetGlobalFlag(GLinemodeSp));
+	if (GetGlobalFlag(GADVMode)) { ClearMessage(); } else { OutputLineAll(NULL, "\n", Line_ContinueAfterTyping); }
+
+	if (GetGlobalFlag(GADVMode) == 0) { OutputLineAll(NULL, "\n", Line_ContinueAfterTyping); }
+
+
+	if (GetGlobalFlag(GADVMode)) { OutputLineAll("", NULL, Line_ContinueAfterTyping); }
+	OutputLine(NULL, "　でも、このゲーム盤を支配する大きな法則であるルールＸに真正面から挑み、",
+		   NULL, "Tuttavia, abbiamo intenzione di sfidare faccia a faccia la regola massima che governa questo gioco: la Regola X.", Line_WaitForInput);
+	OutputLine(NULL, "…これまでのカケラで学んできたことを活かし、打ち勝てることを証明した。",
+		   NULL, " Sfrutteremo tutto ciò che abbiamo imparato dai Frammenti e decreteremo la sua sconfitta.", GetGlobalFlag(GLinemodeSp));
+	if (GetGlobalFlag(GADVMode)) { ClearMessage(); } else { OutputLineAll(NULL, "\n", Line_ContinueAfterTyping); }
+
+	if (GetGlobalFlag(GADVMode)) { OutputLineAll("", NULL, Line_ContinueAfterTyping); }
+	OutputLine(NULL, "　学ぶことで、私たちは成長できる。",
+		   NULL, "Imparare significa crescere.", GetGlobalFlag(GLinemodeSp));
+	if (GetGlobalFlag(GADVMode)) { ClearMessage(); } else { OutputLineAll(NULL, "\n", Line_ContinueAfterTyping); }
+
+	if (GetGlobalFlag(GADVMode)) { OutputLineAll("", NULL, Line_ContinueAfterTyping); }
+	OutputLine(NULL, "　勝ち目のないゲームに、わずかの勝ち目を見出すことができる。",
+		   NULL, "Ci permette di scoprire nuove strategie nonostante le speranze di vincere siano pari a zero.", GetGlobalFlag(GLinemodeSp));
+	if (GetGlobalFlag(GADVMode)) { ClearMessage(); } else { OutputLineAll(NULL, "\n", Line_ContinueAfterTyping); }
+
+	if (GetGlobalFlag(GADVMode) == 0) { OutputLineAll(NULL, "\n", Line_ContinueAfterTyping); }
+
+
+	if (GetGlobalFlag(GADVMode)) { OutputLineAll("", NULL, Line_ContinueAfterTyping); }
+	OutputLine(NULL, "　それを、教えてくれたとても大切なカケラ…。",
+		   NULL, "È stato questo Frammento a mostrarcelo.", Line_Normal);
+	ClearMessage();
+
+	DrawScene( "background/fure2", 1000 );
+//	DrawFragment("minacubemap", "FragmentDiamondNarrow", 1000);
+	DrawScene( "background/kakera", 400 );
+
+	if (GetGlobalFlag(GADVMode)) { OutputLineAll("", NULL, Line_ContinueAfterTyping); }
+	OutputLine(NULL, "　このカケラで、ルールＸはほぼ完全に打ち破られた。",
+		   NULL, "Qui la Regola X è stata sconfitta quasi completamente.", GetGlobalFlag(GLinemodeSp));
+	if (GetGlobalFlag(GADVMode)) { ClearMessage(); } else { OutputLineAll(NULL, "\n", Line_ContinueAfterTyping); }
+
+	if (GetGlobalFlag(GADVMode)) { OutputLineAll("", NULL, Line_ContinueAfterTyping); }
+	OutputLine(NULL, "　前原圭一たちが、雛見沢症候群などという下らないものに惑わされ、惨劇に踊ることは、二度とない…。",
+		   NULL, "Keiichi Maebara e i nostri amici non si faranno più sviare da una simile sciocchezza come la Sindrome di Hinamizawa.", Line_Normal);
+	ClearMessage();
+
+	if (GetGlobalFlag(GADVMode)) { OutputLineAll("", NULL, Line_ContinueAfterTyping); }
+	OutputLine(NULL, "　ルールは無敵の存在ではなく、打ち破れることも教えてくれた。",
+		   NULL, "Le Regole non sono invincibili. Anzi, tutt'altro: possiamo infrangerle.", GetGlobalFlag(GLinemodeSp));
+	if (GetGlobalFlag(GADVMode)) { ClearMessage(); } else { OutputLineAll(NULL, "\n", Line_ContinueAfterTyping); }
+
+	if (GetGlobalFlag(GADVMode)) { OutputLineAll("", NULL, Line_ContinueAfterTyping); }
+	OutputLine(NULL, "　それはつまり、ゲーム盤の外にいる私たちに希望を与えてくれたわけでもある。",
+		   NULL, "In parole semplici, è stata donata la speranza anche a noi che ci troviamo all'esterno della scacchiera.", GetGlobalFlag(GLinemodeSp));
+	if (GetGlobalFlag(GADVMode)) { ClearMessage(); } else { OutputLineAll(NULL, "\n\n", Line_ContinueAfterTyping); }
+
+
+	if (GetGlobalFlag(GADVMode)) { OutputLineAll("", NULL, Line_ContinueAfterTyping); }
+	OutputLine(NULL, "　…全てのきっかけと、そしてターニングポイントとなる、重要なカケラ…。",
+		   NULL, "... questo Frammento rappresenta il punto di svolta che darà vita al cambiamento.", Line_Normal);
+	ClearMessage();
+
+	CallScript( "&eyefragment" );
+	FadeOutBGM( 0, 1000, FALSE );
+	DrawScene( "black", 1000 );
+
+}

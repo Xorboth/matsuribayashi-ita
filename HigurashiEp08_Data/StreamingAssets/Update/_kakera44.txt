@@ -1,0 +1,128 @@
+void main()
+{
+	DrawScene( "black", 400 );
+
+	PlayBGM( 0, "Instict", 120, 0 );
+
+	DrawScene( "background/fure2", 1000 );
+	DrawScene( "white", 1000 );
+	ModSetLayerFilter(0, 256, "none");
+	ModDrawCharacter(0, 1, "sprite/kei1_def2_", "0", 0, 0, 0, FALSE, 0, 0, 0, 0, 0, 0, 0, 9, 0, FALSE );
+	DrawSceneWithMask( "background/gk3", "maskc", 1, 0, 1000 );
+
+	ClearMessage();
+	if (GetGlobalFlag(GADVMode)) { OutputLineAll("", NULL, Line_ContinueAfterTyping); }
+	OutputLine(NULL, "　前原圭一が、みんなを率いる駒に成長してくれるために、…まず学ばなければならない、",
+		   NULL, "C'è una cosa che Keiichi Maebara deve sapere prima di diventare un pezzo in grado di guidare tutta la plancia di gioco.", Line_WaitForInput);
+	OutputLine(NULL, "痛く、辛く、悲しいカケラ。",
+		   NULL, " Si tratta di un Frammento triste, frustrante e doloroso.", Line_Normal);
+	ClearMessage();
+
+	if (GetGlobalFlag(GADVMode)) { OutputLineAll("", NULL, Line_ContinueAfterTyping); }
+	OutputLine(NULL, "　仲間を学び、疑わないことを学ぶ。",
+		   NULL, "Deve scoprire tutto sui suoi amici e imparare a non dubitare di loro.", GetGlobalFlag(GLinemodeSp));
+	if (GetGlobalFlag(GADVMode)) { ClearMessage(); } else { OutputLineAll(NULL, "\n", Line_ContinueAfterTyping); }
+
+	if (GetGlobalFlag(GADVMode) == 0) { OutputLineAll(NULL, "\n", Line_ContinueAfterTyping); }
+
+
+	if (GetGlobalFlag(GADVMode)) { OutputLineAll("", NULL, Line_ContinueAfterTyping); }
+	OutputLine(NULL, "　彼は仲間を信じるという言葉の重さを、",
+		   NULL, "Lui non conosce l'importanza della fiducia.", Line_ContinueAfterTyping);
+	SetValidityOfInput( FALSE );
+	Wait( 800 );
+	SetValidityOfInput( TRUE );
+	OutputLine(NULL, "まだ、",
+		   NULL, " Ancora", Line_ContinueAfterTyping);
+	SetValidityOfInput( FALSE );
+	Wait( 800 );
+	SetValidityOfInput( TRUE );
+	OutputLine(NULL, "知らない。",
+		   NULL, " non l'ha vissuta.", GetGlobalFlag(GLinemodeSp));
+	if (GetGlobalFlag(GADVMode)) { ClearMessage(); } else { OutputLineAll(NULL, "\n", Line_ContinueAfterTyping); }
+
+	if (GetGlobalFlag(GADVMode) == 0) { OutputLineAll(NULL, "\n", Line_ContinueAfterTyping); }
+
+
+	DrawScene( "black", 400 );
+
+	if (GetGlobalFlag(GADVMode)) { OutputLineAll("", NULL, Line_ContinueAfterTyping); }
+	OutputLine(NULL, "　わずかの不信感から疑心暗鬼を育て、ルールＸに囚われる前原圭一。",
+		   NULL, "Un accenno di sfiducia si trasforma in ossessione, condannando Keiichi Maebara alla Regola X.", GetGlobalFlag(GLinemodeSp));
+	if (GetGlobalFlag(GADVMode)) { ClearMessage(); } else { OutputLineAll(NULL, "\n", Line_ContinueAfterTyping); }
+
+	if (GetGlobalFlag(GADVMode) == 0) { OutputLineAll(NULL, "\n", Line_ContinueAfterTyping); }
+
+
+	if (GetGlobalFlag(GADVMode)) { OutputLineAll("", NULL, Line_ContinueAfterTyping); }
+	OutputLine(NULL, "　圭一は悲しい遺書を残し、",
+		   NULL, "Alla fine della Regola X,", Line_ContinueAfterTyping);
+	SetValidityOfInput( FALSE );
+	Wait( 900 );
+	SetValidityOfInput( TRUE );
+	OutputLine(NULL, "ルールＸの果てに、",
+		   NULL, " Keiichi lascia una nota straziante", Line_ContinueAfterTyping);
+	SetValidityOfInput( FALSE );
+	Wait( 800 );
+	SetValidityOfInput( TRUE );
+	OutputLine(NULL, "死ぬ。",
+		   NULL, " e muore.", Line_Normal);
+	ClearMessage();
+
+	DrawSceneWithMask( "background/fure2", "maskup", 1, 0, 300 );
+
+	if (GetGlobalFlag(GADVMode)) { OutputLineAll("", NULL, Line_ContinueAfterTyping); }
+	OutputLine(NULL, "　それは辛く悲しいことだけど、",
+		   NULL, "Triste, frustrante, dolorosa,", Line_ContinueAfterTyping);
+	SetValidityOfInput( FALSE );
+	Wait( 1000 );
+	SetValidityOfInput( TRUE );
+	OutputLine(NULL, "………でも、大切なことを学ぶための大切なプロセス。",
+		   NULL, " ma che gli permette di scoprire qualcosa di importante.", Line_Normal);
+	ClearMessage();
+
+	DrawScene( "background/fure1", 1000 );
+
+	if (GetGlobalFlag(GADVMode)) { OutputLineAll("", NULL, Line_ContinueAfterTyping); }
+	OutputLine(NULL, "　…ねぇ、羽入。",
+		   NULL, "... Hanyuu.", Line_Normal);
+	ClearMessage();
+
+	if (GetGlobalFlag(GADVMode)) { OutputLineAll("", NULL, Line_ContinueAfterTyping); }
+	OutputLine(NULL, "　やっぱりあなたは謝らなくてよかったのよ。",
+		   NULL, "Non c'è bisogno che tu chieda scusa.", Line_Normal);
+	ClearMessage();
+
+	if (GetGlobalFlag(GADVMode)) { OutputLineAll("", NULL, Line_ContinueAfterTyping); }
+	OutputLine(NULL, "　彼が親類のお葬式で雛見沢を離れたわずか数日。",
+		   NULL, "Nei pochi giorni in cui si allontana da Hinamizawa per presenziare a quel funerale...", GetGlobalFlag(GLinemodeSp));
+	if (GetGlobalFlag(GADVMode)) { ClearMessage(); } else { OutputLineAll(NULL, "\n", Line_ContinueAfterTyping); }
+
+	if (GetGlobalFlag(GADVMode)) { OutputLineAll("", NULL, Line_ContinueAfterTyping); }
+	OutputLine(NULL, "　…その間に彼が発症してしまったことは確かに悲劇的だけれど。",
+		   NULL, "Ecco che ha una crisi irreversibile.", GetGlobalFlag(GLinemodeSp));
+	if (GetGlobalFlag(GADVMode)) { ClearMessage(); } else { OutputLineAll(NULL, "\n", Line_ContinueAfterTyping); }
+
+	if (GetGlobalFlag(GADVMode)) { OutputLineAll("", NULL, Line_ContinueAfterTyping); }
+	OutputLine(NULL, "　でもそれは、彼が大切なことを学ぶための第一歩として必要なことだったんじゃないかって思う。",
+		   NULL, "Però ritengo che sia stata necessaria per compiere il primo passo verso la verità.", GetGlobalFlag(GLinemodeSp));
+	if (GetGlobalFlag(GADVMode)) { ClearMessage(); } else { OutputLineAll(NULL, "\n", Line_ContinueAfterTyping); }
+
+	if (GetGlobalFlag(GADVMode) == 0) { OutputLineAll(NULL, "\n", Line_ContinueAfterTyping); }
+
+
+	if (GetGlobalFlag(GADVMode)) { OutputLineAll("", NULL, Line_ContinueAfterTyping); }
+	OutputLine(NULL, "　ルールＸをあぶり出し、やがては打ち勝つための最初の第一歩として。",
+		   NULL, "Quello stesso passo che gli permetterà di scoprire la Regola X e di distruggerla.", GetGlobalFlag(GLinemodeSp));
+	if (GetGlobalFlag(GADVMode)) { ClearMessage(); } else { OutputLineAll(NULL, "\n", Line_ContinueAfterTyping); }
+
+	if (GetGlobalFlag(GADVMode)) { OutputLineAll("", NULL, Line_ContinueAfterTyping); }
+	OutputLine(NULL, "　このカケラしかなかった頃は、そんなこと、考えもしなかったけれどね……。",
+		   NULL, "Non ci avevo mai pensato mentre ero in possesso di solo questo Frammento...", Line_Normal);
+	ClearMessage();
+
+	CallScript( "&eye" );
+	FadeOutBGM( 0, 1000, FALSE );
+	DrawScene( "black", 1000 );
+
+}

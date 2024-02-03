@@ -1,0 +1,903 @@
+void main()
+{
+	DrawScene( "black", 400 );
+
+	PlayBGM( 1, "yorumushi", 120, 0 );
+
+	DrawSceneWithMask( "background/hu_r1", "maskc", 1, 0, 1300 );
+
+	ClearMessage();
+	if (GetGlobalFlag(GADVMode)) { OutputLineAll("", NULL, Line_ContinueAfterTyping); }
+	OutputLine(NULL, "　その夜。",
+		   NULL, "La notte stessa,", Line_WaitForInput);
+	OutputLine(NULL, "古手家頭首である神主は、家族会議があるといって妻と梨花を和室に集めた。",
+		   NULL, " il capofamiglia dei Furude, il sacerdote, chiede a Rika e a sua moglie di raggiungerlo.", Line_Normal);
+	ClearMessage();
+
+	if (GetGlobalFlag(GADVMode)) { OutputLineAll("", NULL, Line_ContinueAfterTyping); }
+	OutputLine(NULL, "　御三家が集まり、村について合議するのが雛見沢の伝統だ。",
+		   NULL, "A Hinamizawa è tradizione che le Tre Famiglie si radunino per discutere dei problemi del villaggio.", GetGlobalFlag(GLinemodeSp));
+	if (GetGlobalFlag(GADVMode)) { ClearMessage(); } else { OutputLineAll(NULL, "\n", Line_ContinueAfterTyping); }
+
+	if (GetGlobalFlag(GADVMode)) { OutputLineAll("", NULL, Line_ContinueAfterTyping); }
+	OutputLine(NULL, "　それに伴い、園崎家や公由家のような大所帯なら、意見調整のために予め親族会議や家族会議をすることもありえるだろう。",
+		   NULL, "Quindi non deve sorprendere che le altre grandi famiglie, ovvero i Sonozaki e i Kimiyoshi, facciano delle riunioni in privato prima di partecipare a quelle plenarie.", GetGlobalFlag(GLinemodeSp));
+	if (GetGlobalFlag(GADVMode)) { ClearMessage(); } else { OutputLineAll(NULL, "\n", Line_ContinueAfterTyping); }
+
+	if (GetGlobalFlag(GADVMode) == 0) { OutputLineAll(NULL, "\n", Line_ContinueAfterTyping); }
+
+
+	if (GetGlobalFlag(GADVMode)) { OutputLineAll("", NULL, Line_ContinueAfterTyping); }
+	OutputLine(NULL, "　……だが、古手家は分家筋が途絶え、今や本家の一家族３人しかいない。",
+		   NULL, "... i Furude, tuttavia, hanno un solo ramo di discendenza e sono rimasti solo in tre.", GetGlobalFlag(GLinemodeSp));
+	if (GetGlobalFlag(GADVMode)) { ClearMessage(); } else { OutputLineAll(NULL, "\n", Line_ContinueAfterTyping); }
+
+	if (GetGlobalFlag(GADVMode)) { OutputLineAll("", NULL, Line_ContinueAfterTyping); }
+	OutputLine(NULL, "　だからこれまで一度も、家族会議なるものを開いたことはなかった。",
+		   NULL, "Fino a oggi non hanno mai avuto bisogno di una riunione di famiglia.", Line_Normal);
+	ClearMessage();
+
+	if (GetGlobalFlag(GADVMode)) { OutputLine("<color=#f5e6d3>梨花の母</color>", NULL, "<color=#f5e6d3>Mamma di Rika</color>", NULL, Line_ContinueAfterTyping); }
+	ModPlayVoiceLS(4, 0, "ps3/s20/00/vtk1_rikam1033", 128, TRUE);
+	OutputLine(NULL, "「どうしたんですか、改まって。",
+		   NULL, "\"Come mai questa formalità?", Line_WaitForInput);
+	ModPlayVoiceLS(4, 0, "ps3/s20/00/vtk1_rikam1034", 128, TRUE);
+	OutputLine(NULL, "……ひょっとして、ダムに関わるお話ですか？」",
+		   NULL, " Si tratta della diga?\"", GetGlobalFlag(GLinemodeSp));
+	if (GetGlobalFlag(GADVMode)) { ClearMessage(); } else { OutputLineAll(NULL, "\n", Line_ContinueAfterTyping); }
+
+	if (GetGlobalFlag(GADVMode) == 0) { OutputLineAll(NULL, "\n", Line_ContinueAfterTyping); }
+
+
+	if (GetGlobalFlag(GADVMode)) { OutputLineAll("", NULL, Line_ContinueAfterTyping); }
+	OutputLine(NULL, "　今この村で一番重要な問題はダム問題しかない。",
+		   NULL, "La diga è l'argomento sulla bocca di tutto il villaggio.", GetGlobalFlag(GLinemodeSp));
+	if (GetGlobalFlag(GADVMode)) { ClearMessage(); } else { OutputLineAll(NULL, "\n", Line_ContinueAfterTyping); }
+
+	if (GetGlobalFlag(GADVMode)) { OutputLineAll("", NULL, Line_ContinueAfterTyping); }
+	OutputLine(NULL, "　妻は神主が切り出そうとしている話は、それに絡むものに違いないと思った。",
+		   NULL, "La moglie è convinta che sia questo il motivo della riunione.", Line_Normal);
+	ClearMessage();
+
+	if (GetGlobalFlag(GADVMode)) { OutputLineAll("", NULL, Line_ContinueAfterTyping); }
+	OutputLine(NULL, "　…そして、家族を集めてまで話すのだから、きっとそれは大きな決意を伴うもの。",
+		   NULL, "Averli chiamati tutti intorno al tavolo deve riguardare una grande decisione all'orizzonte.", GetGlobalFlag(GLinemodeSp));
+	if (GetGlobalFlag(GADVMode)) { ClearMessage(); } else { OutputLineAll(NULL, "\n", Line_ContinueAfterTyping); }
+
+	if (GetGlobalFlag(GADVMode)) { OutputLineAll("", NULL, Line_ContinueAfterTyping); }
+	OutputLine(NULL, "　……例えば、立ち退きに応じるとか、そういう話になるだろうと思っていた。",
+		   NULL, "Forse parlerà di come ha intenzione di passare alla fazione pro-evacuazione.", Line_Normal);
+	ClearMessage();
+
+	DrawSceneWithMask( "background/heya6", "maskdown", 1, 0, 300 );
+
+	if (GetGlobalFlag(GADVMode)) { OutputLine("<color=#f5e6d3>梨花の父</color>", NULL, "<color=#f5e6d3>Papà di Rika</color>", NULL, Line_ContinueAfterTyping); }
+	ModPlayVoiceLS(4, 0, "ps3/s20/00/vtk1_rikaf1024", 128, TRUE);
+	OutputLine(NULL, "「……いや、ダムの話ではない。",
+		   NULL, "\"...... no, la diga non c'entra...", Line_WaitForInput);
+	ModPlayVoiceLS(4, 0, "ps3/s20/00/vtk1_rikaf1025", 128, TRUE);
+	OutputLine(NULL, "…………だがこの村に関わる、いや、この村のご先祖さまたちにも関わるとてもとても大事な問題だ。」",
+		   NULL, " ma si tratta di qualcosa che riguarda l'intero villaggio, e probabilmente anche tutti i nostri antenati.\"", Line_Normal);
+	ClearMessage();
+
+	if (GetGlobalFlag(GADVMode)) { OutputLineAll("", NULL, Line_ContinueAfterTyping); }
+	OutputLine(NULL, "　古手家は代々、神職にあり、村の守り神であるオヤシロさまを祀ってきた。",
+		   NULL, "La famiglia Furude è consacrata da generazioni a Oyashiro-sama, la divinità guardiana del villaggio.", GetGlobalFlag(GLinemodeSp));
+	if (GetGlobalFlag(GADVMode)) { ClearMessage(); } else { OutputLineAll(NULL, "\n", Line_ContinueAfterTyping); }
+
+	if (GetGlobalFlag(GADVMode) == 0) { OutputLineAll(NULL, "\n", Line_ContinueAfterTyping); }
+
+
+	if (GetGlobalFlag(GADVMode)) { OutputLineAll("", NULL, Line_ContinueAfterTyping); }
+	OutputLine(NULL, "　…その頭首がこう切り出すのだから、それはよっぽどの話に違いなかった。",
+		   NULL, "Perciò il fatto che il capofamiglia esordisca in questo modo deve riguardare un tema veramente spinoso.", GetGlobalFlag(GLinemodeSp));
+	if (GetGlobalFlag(GADVMode)) { ClearMessage(); } else { OutputLineAll(NULL, "\n", Line_ContinueAfterTyping); }
+
+	if (GetGlobalFlag(GADVMode)) { OutputLineAll("", NULL, Line_ContinueAfterTyping); }
+	OutputLine(NULL, "　にもかかわらず、ダムの話ではないというなら、一体何の話なのか…。",
+		   NULL, "Ma se non si tratta della diga... allora che altro?", Line_Normal);
+	ClearMessage();
+
+	DrawSceneWithMask( "background/hu_r1", "maskup", 1, 0, 300 );
+
+	if (GetGlobalFlag(GADVMode)) { OutputLine("<color=#f5e6d3>梨花の父</color>", NULL, "<color=#f5e6d3>Papà di Rika</color>", NULL, Line_ContinueAfterTyping); }
+	ModPlayVoiceLS(4, 0, "ps3/s20/00/vtk1_rikaf1026", 128, TRUE);
+	OutputLine(NULL, "「…私は入り婿だ。",
+		   NULL, "\"Sono entrato a far parte della famiglia tramite il matrimonio,", Line_WaitForInput);
+	ModPlayVoiceLS(4, 0, "ps3/s20/00/vtk1_rikaf1027", 128, TRUE);
+	OutputLine(NULL, "だから、古手家の本当の血を受け継ぐ、お前と梨花にはよく聞いてほしい。",
+		   NULL, " perciò voglio che tu e Rika, che portate nelle vene il sangue puro della famiglia Furude, mi ascoltiate con attenzione.", Line_WaitForInput);
+	ModPlayVoiceLS(4, 0, "ps3/s20/00/vtk1_rikaf1028", 128, TRUE);
+	OutputLine(NULL, "……………お前たちは普通の人間ではないのだ。」",
+		   NULL, " ......... voi due non siete comuni esseri umani.\"", GetGlobalFlag(GLinemodeSp));
+	if (GetGlobalFlag(GADVMode)) { ClearMessage(); } else { OutputLineAll(NULL, "\n", Line_ContinueAfterTyping); }
+
+	DisableWindow();
+	ModSetLayerFilter(1, 256, "none");
+	ModDrawCharacterWithFiltering(1, 5, "sprite/ri2_niko_a1_", "2", "maskleft", 1, -160, 0, FALSE, 0, 0, 0, 0, 0, 8, 300, TRUE );
+
+	if (GetGlobalFlag(GADVMode)) { OutputLine("<color=#6972c1>梨花</color>", NULL, "<color=#6972c1>Rika</color>", NULL, Line_ContinueAfterTyping); }
+	ModPlayVoiceLS(4, 5, "ps3/s20/05/vtk1_rika1049", 128, TRUE);
+	OutputLine(NULL, "「……ボクはオヤシロさまの生まれ変わりなのですよ？」",
+		   NULL, "\"...... io sono la reincarnazione di Oyashiro-sama, giusto?\"", Line_Normal);
+	ClearMessage();
+
+	DisableWindow();
+	FadeBustshotWithFiltering( 1, "maskright" , 1, FALSE, 0, 0, 300, TRUE );
+
+	if (GetGlobalFlag(GADVMode)) { OutputLine("<color=#f5e6d3>梨花の母</color>", NULL, "<color=#f5e6d3>Mamma di Rika</color>", NULL, Line_ContinueAfterTyping); }
+	ModPlayVoiceLS(4, 0, "ps3/s20/00/vtk1_rikam1035", 128, TRUE);
+	OutputLine(NULL, "「梨花、そういうのは口にしてはいけません！",
+		   NULL, "\"Rika, smettila di dire certe cose!", Line_WaitForInput);
+	ModPlayVoiceLS(4, 0, "ps3/s20/00/vtk1_rikam1036", 128, TRUE);
+	OutputLine(NULL, "　…あなた、そういう話は梨花のいないところでしましょう。",
+		   NULL, " Tesoro, meglio se ne parliamo senza di lei.", Line_WaitForInput);
+	ModPlayVoiceLS(4, 0, "ps3/s20/00/vtk1_rikam1037", 128, TRUE);
+	OutputLine(NULL, "それでなくっても集会所のお年寄りたちが梨花に妙なことばかり吹き込んで、」",
+		   NULL, " Gli anziani le raccontano già frottole a sufficienza lì nella sala riunioni.\"", Line_Normal);
+	ClearMessage();
+
+	FadeOutBGM( 1, 300, FALSE );
+	PlayBGM( 0, "Nazo", 120, 0 );
+
+	if (GetGlobalFlag(GADVMode)) { OutputLine("<color=#f5e6d3>梨花の父</color>", NULL, "<color=#f5e6d3>Papà di Rika</color>", NULL, Line_ContinueAfterTyping); }
+	ModPlayVoiceLS(4, 0, "ps3/s20/00/vtk1_rikaf1029", 128, TRUE);
+	OutputLine(NULL, "「その、オヤシロさまの生まれ変わりというのが、",
+		   NULL, "\"In verità, quel che Rika ha appena detto...", Line_Continue);
+	OutputLine(NULL, "……どうも本当らしいのだ。」",
+		   NULL, " corrisponde a verità.\"", GetGlobalFlag(GLinemodeSp));
+	if (GetGlobalFlag(GADVMode)) { ClearMessage(); } else { OutputLineAll(NULL, "\n", Line_ContinueAfterTyping); }
+
+	if (GetGlobalFlag(GADVMode)) { OutputLine("<color=#f5e6d3>梨花の母</color>", NULL, "<color=#f5e6d3>Mamma di Rika</color>", NULL, Line_ContinueAfterTyping); }
+	ModPlayVoiceLS(4, 0, "ps3/s20/00/vtk1_rikam1038", 128, TRUE);
+	OutputLine(NULL, "「はぁ…？！」",
+		   NULL, "\"Eh...?!\"", Line_Normal);
+	ClearMessage();
+
+	if (GetGlobalFlag(GADVMode)) { OutputLine("<color=#f5e6d3>梨花の父</color>", NULL, "<color=#f5e6d3>Papà di Rika</color>", NULL, Line_ContinueAfterTyping); }
+	ModPlayVoiceLS(4, 0, "ps3/s20/00/vtk1_rikaf1030", 128, TRUE);
+	OutputLine(NULL, "「……少し長い話になる。",
+		   NULL, "\"... è una lunga storia.", Line_WaitForInput);
+	ModPlayVoiceLS(4, 0, "ps3/s20/00/vtk1_rikaf1031", 128, TRUE);
+	OutputLine(NULL, "二人ともしばらく黙って私の話を聞きなさい。」",
+		   NULL, " Ora ascoltatemi senza fiatare.\"", GetGlobalFlag(GLinemodeSp));
+	if (GetGlobalFlag(GADVMode)) { ClearMessage(); } else { OutputLineAll(NULL, "\n", Line_ContinueAfterTyping); }
+
+	if (GetGlobalFlag(GADVMode) == 0) { OutputLineAll(NULL, "\n", Line_ContinueAfterTyping); }
+
+
+	if (GetGlobalFlag(GADVMode)) { OutputLineAll("", NULL, Line_ContinueAfterTyping); }
+	OutputLine(NULL, "　妻は何の話が始まるのかと怪訝な表情を浮かべていたが、梨花はいつものきょとんとした表情で、まったく平静だった。",
+		   NULL, "La madre di Rika, ignara dell'argomento, ha un'espressione stupefatta sul volto, a differenza di sua figlia che sembra abituata a questo genere di eventi.", Line_Normal);
+	ClearMessage();
+
+	if (GetGlobalFlag(GADVMode)) { OutputLineAll("", NULL, Line_ContinueAfterTyping); }
+	OutputLine(NULL, "　神主は、妻が落ち着きを取り戻すまで待った後、語り始めた…。",
+		   NULL, "Il sacerdote inizia a parlare dopo che sua moglie ha recuperato la calma.", Line_Normal);
+	ClearMessage();
+
+	if (GetGlobalFlag(GADVMode)) { OutputLine("<color=#f5e6d3>梨花の父</color>", NULL, "<color=#f5e6d3>Papà di Rika</color>", NULL, Line_ContinueAfterTyping); }
+	ModPlayVoiceLS(4, 0, "ps3/s20/00/vtk1_rikaf1032", 128, TRUE);
+	OutputLine(NULL, "「この村には、大昔からある病気があるのだ。",
+		   NULL, "\"Questo villaggio è vittima di una malattia che non è mai stata estirpata.", Line_WaitForInput);
+	ModPlayVoiceLS(4, 0, "ps3/s20/00/vtk1_rikaf1033", 128, TRUE);
+	OutputLine(NULL, "……それはこの地にだけある特別な病気、風土病というものらしい。",
+		   NULL, " Si tratta di una patologia endemica che non esiste altrove.", Line_WaitForInput);
+	ModPlayVoiceLS(4, 0, "ps3/s20/00/vtk1_rikaf1034", 128, TRUE);
+	OutputLine(NULL, "…それには、この村に住むものが全員かかっている。",
+		   NULL, " Tutti gli abitanti ne sono affetti.", GetGlobalFlag(GLinemodeSp));
+	if (GetGlobalFlag(GADVMode)) { OutputLine("<color=#f5e6d3>梨花の父</color>", NULL, "<color=#f5e6d3>Papà di Rika</color>", NULL, Line_ContinueAfterTyping); }
+	ModPlayVoiceLS(4, 0, "ps3/s20/00/vtk1_rikaf1035", 128, TRUE);
+	OutputLine(NULL, "今、この村に住んでいる者だけではない。",
+		   NULL, "Non solo chi vive qui oggi,", Line_WaitForInput);
+	ModPlayVoiceLS(4, 0, "ps3/s20/00/vtk1_rikaf1036", 128, TRUE);
+	OutputLine(NULL, "大昔から住んでいたご先祖さまたちも、みんなみんな、ずーっとこの病気にかかってきたのだ。」",
+		   NULL, " ma anche tutti coloro che ci hanno vissuto e che mai ci vivranno.\"", GetGlobalFlag(GLinemodeSp));
+	if (GetGlobalFlag(GADVMode)) { ClearMessage(); } else { OutputLineAll(NULL, "\n", Line_ContinueAfterTyping); }
+
+	if (GetGlobalFlag(GADVMode)) { OutputLine("<color=#f5e6d3>梨花の母</color>", NULL, "<color=#f5e6d3>Mamma di Rika</color>", NULL, Line_ContinueAfterTyping); }
+	ModPlayVoiceLS(4, 0, "ps3/s20/00/vtk1_rikam1039", 128, TRUE);
+	OutputLine(NULL, "「そんな…。",
+		   NULL, "\"Cosa...?", Line_WaitForInput);
+	ModPlayVoiceLS(4, 0, "ps3/s20/00/vtk1_rikam1040", 128, TRUE);
+	OutputLine(NULL, "だって、私たちはみんな普通に生活していますよ。",
+		   NULL, " Ma stiamo benissimo.", Line_WaitForInput);
+	ModPlayVoiceLS(4, 0, "ps3/s20/00/vtk1_rikam1041", 128, TRUE);
+	OutputLine(NULL, "この村だけの病気なんて、聞いたこともない…！」",
+		   NULL, " Non ho mai sentito parlare di una cosa simile...!\"", Line_Normal);
+	ClearMessage();
+
+	if (GetGlobalFlag(GADVMode)) { OutputLine("<color=#f5e6d3>梨花の父</color>", NULL, "<color=#f5e6d3>Papà di Rika</color>", NULL, Line_ContinueAfterTyping); }
+	ModPlayVoiceLS(4, 0, "ps3/s20/00/vtk1_rikaf1037", 128, TRUE);
+	OutputLine(NULL, "「落ち着きなさい。",
+		   NULL, "\"Sta' calma.", Line_WaitForInput);
+	ModPlayVoiceLS(4, 0, "ps3/s20/00/vtk1_rikaf1038", 128, TRUE);
+	OutputLine(NULL, "……その病気はな、この村にいる限り、何も問題はないのだ。",
+		   NULL, " Finché rimaniamo qui, non svilupperemo alcun sintomo.", Line_WaitForInput);
+	ModPlayVoiceLS(4, 0, "ps3/s20/00/vtk1_rikaf1039", 128, TRUE);
+	OutputLine(NULL, "だが、この村を出て遠くの地へ行くと発病してしまう。",
+		   NULL, " Ciò accade solo quando una persona se ne va lontano dal villaggio.", Line_WaitForInput);
+	ModPlayVoiceLS(4, 0, "ps3/s20/00/vtk1_rikaf1040", 128, TRUE);
+	OutputLine(NULL, "…わかるか？」",
+		   NULL, " Mi seguite?\"", GetGlobalFlag(GLinemodeSp));
+	if (GetGlobalFlag(GADVMode)) { ClearMessage(); } else { OutputLineAll(NULL, "\n", Line_ContinueAfterTyping); }
+
+	if (GetGlobalFlag(GADVMode)) { OutputLine("<color=#f5e6d3>梨花の母</color>", NULL, "<color=#f5e6d3>Mamma di Rika</color>", NULL, Line_ContinueAfterTyping); }
+	ModPlayVoiceLS(4, 0, "ps3/s20/00/vtk1_rikam1042", 128, TRUE);
+	OutputLine(NULL, "「わ、…わかるわけないでしょう、何のことだかさっぱり！」",
+		   NULL, "\"C... come speri che creda a una storia simile?!\"", Line_Normal);
+	ClearMessage();
+
+	DisableWindow();
+	ModDrawCharacterWithFiltering(1, 5, "sprite/ri2_def_a1_", "0", "maskleft", 1, -160, 0, FALSE, 0, 0, 0, 0, 0, 8, 300, TRUE );
+
+	if (GetGlobalFlag(GADVMode)) { OutputLine("<color=#6972c1>梨花</color>", NULL, "<color=#6972c1>Rika</color>", NULL, Line_ContinueAfterTyping); }
+	ModPlayVoiceLS(4, 5, "ps3/s20/05/vtk1_rika1050", 128, TRUE);
+	OutputLine(NULL, "「……オヤシロさまの祟りと同じなのです。」",
+		   NULL, "\"...... è identica alla maledizione di Oyashiro-sama.\"", GetGlobalFlag(GLinemodeSp));
+	if (GetGlobalFlag(GADVMode)) { ClearMessage(); } else { OutputLineAll(NULL, "\n", Line_ContinueAfterTyping); }
+
+	if (GetGlobalFlag(GADVMode)) { OutputLineAll("", NULL, Line_ContinueAfterTyping); }
+	OutputLine(NULL, "　取り乱しかける妻とは正反対に、落ち着いた声で梨花が言った。",
+		   NULL, "Aggiunge Rika senza tante storie, diversamente da sua madre che ha di nuovo perso la calma.", Line_Normal);
+	ClearMessage();
+
+	DrawSceneWithMask( "background/heya6", "maskdown", 1, 0, 300 );
+
+	if (GetGlobalFlag(GADVMode)) { OutputLine("<color=#f5e6d3>梨花の父</color>", NULL, "<color=#f5e6d3>Papà di Rika</color>", NULL, Line_ContinueAfterTyping); }
+	ModPlayVoiceLS(4, 0, "ps3/s20/00/vtk1_rikaf1041", 128, TRUE);
+	OutputLine(NULL, "「そうだ。",
+		   NULL, "\"Esatto.", Line_WaitForInput);
+	ModPlayVoiceLS(4, 0, "ps3/s20/00/vtk1_rikaf1042", 128, TRUE);
+	OutputLine(NULL, "この村から離れると祟りがあるのと同じなのだ。",
+		   NULL, " La maledizione colpisce quando si abbandona il villaggio.", GetGlobalFlag(GLinemodeSp));
+	if (GetGlobalFlag(GADVMode)) { OutputLine("<color=#f5e6d3>梨花の父</color>", NULL, "<color=#f5e6d3>Papà di Rika</color>", NULL, Line_ContinueAfterTyping); }
+	ModPlayVoiceLS(4, 0, "ps3/s20/00/vtk1_rikaf1043", 128, TRUE);
+	OutputLine(NULL, "……つまり、オヤシロさまの祟りだとご先祖さまたちが代々恐れてきたのは、この村だけにしかない風土病のせいだったのだ。」",
+		   NULL, "Per farla breve, la maledizione di Oyashiro-sama che i nostri antenati hanno temuto per generazioni altro non è che una malattia endemica di quest'area.\"", GetGlobalFlag(GLinemodeSp));
+	if (GetGlobalFlag(GADVMode)) { ClearMessage(); } else { OutputLineAll(NULL, "\n", Line_ContinueAfterTyping); }
+
+	if (GetGlobalFlag(GADVMode)) { OutputLine("<color=#f5e6d3>梨花の母</color>", NULL, "<color=#f5e6d3>Mamma di Rika</color>", NULL, Line_ContinueAfterTyping); }
+	ModPlayVoiceLS(4, 0, "ps3/s20/00/vtk1_rikam1043", 128, TRUE);
+	OutputLine(NULL, "「そんなことあるわけないです。",
+		   NULL, "\"Non è possibile.", Line_WaitForInput);
+	ModPlayVoiceLS(4, 0, "ps3/s20/00/vtk1_rikam1044", 128, TRUE);
+	OutputLine(NULL, "だって、私たちだって時には村を離れることもあるじゃないですか。",
+		   NULL, " Insomma, siamo già andati in altri posti in passato.", Line_WaitForInput);
+	ModPlayVoiceLS(4, 0, "ps3/s20/00/vtk1_rikam1045", 128, TRUE);
+	OutputLine(NULL, "村の人だって、仕事で遠くへ出掛ける人だっているし、海外に出掛ける人だって！」",
+		   NULL, " Lo stesso vale per gli altri abitanti. Chi in viaggio per lavoro, chi di nozze, chi all'estero!\"", Line_Normal);
+	ClearMessage();
+
+	if (GetGlobalFlag(GADVMode)) { OutputLine("<color=#f5e6d3>梨花の父</color>", NULL, "<color=#f5e6d3>Papà di Rika</color>", NULL, Line_ContinueAfterTyping); }
+	ModPlayVoiceLS(4, 0, "ps3/s20/00/vtk1_rikaf1044", 128, TRUE);
+	OutputLine(NULL, "「うむ。",
+		   NULL, "\"È vero.", Line_WaitForInput);
+	ModPlayVoiceLS(4, 0, "ps3/s20/00/vtk1_rikaf1045", 128, TRUE);
+	OutputLine(NULL, "それは長い長い時間を経て、病気が徐々に弱まってきたかららしい。",
+		   NULL, " Dev'essere perché la malattia si è fatta meno grave nel corso degli anni.", Line_WaitForInput);
+	ModPlayVoiceLS(4, 0, "ps3/s20/00/vtk1_rikaf1046", 128, TRUE);
+	OutputLine(NULL, "だから、このままさらに長い時間を掛ければ、消えてなくなってしまうものだったのだ。",
+		   NULL, " Ecco perché sparirà completamente, prima o poi...", Line_WaitForInput);
+	ModPlayVoiceLS(4, 0, "ps3/s20/00/vtk1_rikaf1047", 128, TRUE);
+	OutputLine(NULL, "……だがそれが、ダム戦争のせいでおかしくなったらしい。",
+		   NULL, " ma la faccenda della diga ha alterato questo procedimento.", GetGlobalFlag(GLinemodeSp));
+	if (GetGlobalFlag(GADVMode)) { OutputLine("<color=#f5e6d3>梨花の父</color>", NULL, "<color=#f5e6d3>Papà di Rika</color>", NULL, Line_ContinueAfterTyping); }
+	ModPlayVoiceLS(4, 0, "ps3/s20/00/vtk1_rikaf1048", 128, TRUE);
+	OutputLine(NULL, "……ダム戦争で、今、村中が熱に浮かされたように興奮している状態にあるのは、みんなもわかっているだろう。",
+		   NULL, "... abbiamo visto come le proteste abbiano fatto pervadere rabbia e nervosismo per tutte le case.", Line_WaitForInput);
+	ModPlayVoiceLS(4, 0, "ps3/s20/00/vtk1_rikaf1049", 128, TRUE);
+	OutputLine(NULL, "…そういう興奮状態や情緒不安定な状態は、この病気を悪化させてしまうらしいのだ。」",
+		   NULL, " Situazioni di stress simili a questa irrobustiscono gli agenti che causano i sintomi.\"", GetGlobalFlag(GLinemodeSp));
+	if (GetGlobalFlag(GADVMode)) { ClearMessage(); } else { OutputLineAll(NULL, "\n", Line_ContinueAfterTyping); }
+
+	if (GetGlobalFlag(GADVMode)) { OutputLine("<color=#f5e6d3>梨花の母</color>", NULL, "<color=#f5e6d3>Mamma di Rika</color>", NULL, Line_ContinueAfterTyping); }
+	ModPlayVoiceLS(4, 0, "ps3/s20/00/vtk1_rikam1046", 128, TRUE);
+	OutputLine(NULL, "「よく…話がわかりませんけど。",
+		   NULL, "\"Non ho capito bene...", Line_WaitForInput);
+	ModPlayVoiceLS(4, 0, "ps3/s20/00/vtk1_rikam1047", 128, TRUE);
+	OutputLine(NULL, "…つまり、この大昔から祟りだと呼んできたものは全て、…その病気の仕業だと仰るんですね？」",
+		   NULL, " ma quella che credevamo fosse una maledizione è in realtà una malattia?\"", GetGlobalFlag(GLinemodeSp));
+	if (GetGlobalFlag(GADVMode)) { ClearMessage(); } else { OutputLineAll(NULL, "\n", Line_ContinueAfterTyping); }
+
+	if (GetGlobalFlag(GADVMode)) { OutputLine("<color=#f5e6d3>梨花の父</color>", NULL, "<color=#f5e6d3>Papà di Rika</color>", NULL, Line_ContinueAfterTyping); }
+	ModPlayVoiceLS(4, 0, "ps3/s20/00/vtk1_rikaf1050", 128, TRUE);
+	OutputLine(NULL, "「そうだ。",
+		   NULL, "\"Esatto.", Line_WaitForInput);
+	ModPlayVoiceLS(4, 0, "ps3/s20/00/vtk1_rikaf1051", 128, TRUE);
+	OutputLine(NULL, "オヤシロさまの作った決まりは全て、この病気から村人を守るための決まりだったのだ。」",
+		   NULL, " E tutte le regole dettate da Oyashiro-sama servivano solo a evitare di ammalarci.\"", Line_Normal);
+	ClearMessage();
+
+	if (GetGlobalFlag(GADVMode)) { OutputLine("<color=#f5e6d3>梨花の母</color>", NULL, "<color=#f5e6d3>Mamma di Rika</color>", NULL, Line_ContinueAfterTyping); }
+	ModPlayVoiceLS(4, 0, "ps3/s20/00/vtk1_rikam1048", 128, TRUE);
+	OutputLine(NULL, "「……そんな…！",
+		   NULL, "\"... è impossibile...!", Line_WaitForInput);
+	ModPlayVoiceLS(4, 0, "ps3/s20/00/vtk1_rikam1049", 128, TRUE);
+	OutputLine(NULL, "　それじゃオヤシロさまは神さまではなく、…病気が正体なんですか！",
+		   NULL, " Significa che Oyashiro-sama non è una divinità... ma una malattia?!", Line_WaitForInput);
+	ModPlayVoiceLS(4, 0, "ps3/s20/00/vtk1_rikam1050", 128, TRUE);
+	OutputLine(NULL, "　そんなこと！！",
+		   NULL, " Come?!", Line_WaitForInput);
+	ModPlayVoiceLS(4, 0, "ps3/s20/00/vtk1_rikam1051", 128, TRUE);
+	OutputLine(NULL, "　古手家代々のご先祖さまたちに説明できますか！！」",
+		   NULL, " Come posso spiegarlo agli antenati della famiglia Furude?!\"", Line_Normal);
+	ClearMessage();
+
+	if (GetGlobalFlag(GADVMode)) { OutputLine("<color=#f5e6d3>梨花の父</color>", NULL, "<color=#f5e6d3>Papà di Rika</color>", NULL, Line_ContinueAfterTyping); }
+	ModPlayVoiceLS(4, 0, "ps3/s20/00/vtk1_rikaf1052", 128, TRUE);
+	OutputLine(NULL, "「落ち着きなさい。",
+		   NULL, "\"Sta' calma.", Line_WaitForInput);
+	ModPlayVoiceLS(4, 0, "ps3/s20/00/vtk1_rikaf1053", 128, TRUE);
+	OutputLine(NULL, "オヤシロさまの信仰は変わらない。",
+		   NULL, " La fede in Oyashiro-sama non svanirà.", Line_WaitForInput);
+	ModPlayVoiceLS(4, 0, "ps3/s20/00/vtk1_rikaf1054", 128, TRUE);
+	OutputLine(NULL, "オヤシロさまが雛見沢を見守ってくださることに何の変わりもない。",
+		   NULL, " La sua presenza che veglia su Hinamizawa sarà sempre la stessa.", GetGlobalFlag(GLinemodeSp));
+	if (GetGlobalFlag(GADVMode)) { OutputLine("<color=#f5e6d3>梨花の父</color>", NULL, "<color=#f5e6d3>Papà di Rika</color>", NULL, Line_ContinueAfterTyping); }
+	ModPlayVoiceLS(4, 0, "ps3/s20/00/vtk1_rikaf1055", 128, TRUE);
+	OutputLine(NULL, "……オヤシロさまの祟りを再現する病気が、この村には大昔からあったということ、それだけなんだ。」",
+		   NULL, "... l'unica cosa che cambierà sarà l'idea che Oyashiro-sama lanci non una maledizione, ma un malanno che esiste da secoli.\"", GetGlobalFlag(GLinemodeSp));
+	if (GetGlobalFlag(GADVMode)) { ClearMessage(); } else { OutputLineAll(NULL, "\n", Line_ContinueAfterTyping); }
+
+	if (GetGlobalFlag(GADVMode)) { OutputLine("<color=#f5e6d3>梨花の母</color>", NULL, "<color=#f5e6d3>Mamma di Rika</color>", NULL, Line_ContinueAfterTyping); }
+	ModPlayVoiceLS(4, 0, "ps3/s20/00/vtk1_rikam1052", 128, TRUE);
+	OutputLine(NULL, "「そんなのは認められません！！",
+		   NULL, "\"Non lo accetterò mai!!", Line_WaitForInput);
+	ModPlayVoiceLS(4, 0, "ps3/s20/00/vtk1_rikam1053", 128, TRUE);
+	OutputLine(NULL, "　そんなこと、亡くなった先代や先々代に説明できますか？！",
+		   NULL, " Con che faccia dovrei raccontarlo ai nostri antenati?!", Line_WaitForInput);
+	ModPlayVoiceLS(4, 0, "ps3/s20/00/vtk1_rikam1054", 128, TRUE);
+	OutputLine(NULL, "　古手家数百年の伝統に対する、いえ！",
+		   NULL, " In pratica, le tradizioni secolari dei Furude perderanno tutta la loro sacralità!", Line_WaitForInput);
+	ModPlayVoiceLS(4, 0, "ps3/s20/00/vtk1_rikam1055", 128, TRUE);
+	OutputLine(NULL, "　オヤシロさまに対する冒涜ですッ！！",
+		   NULL, " Anzi, Oyashiro-sama stesso non sarà più un dio!!", Line_WaitForInput);
+	ModPlayVoiceLS(4, 0, "ps3/s20/00/vtk1_rikam1056", 128, TRUE);
+	OutputLine(NULL, "　そんなことをあなたに吹き込んだのは誰ですか？",
+		   NULL, " Chi ti ha messo in testa questa idea?!", GetGlobalFlag(GLinemodeSp));
+	if (GetGlobalFlag(GADVMode)) { OutputLine("<color=#f5e6d3>梨花の母</color>", NULL, "<color=#f5e6d3>Mamma di Rika</color>", NULL, Line_ContinueAfterTyping); }
+	ModPlayVoiceLS(4, 0, "ps3/s20/00/vtk1_rikam1057", 128, TRUE);
+	OutputLine(NULL, "　失礼極まりない！！",
+		   NULL, "Mi rifiuto di crederci!!", Line_WaitForInput);
+	ModPlayVoiceLS(4, 0, "ps3/s20/00/vtk1_rikam1058", 128, TRUE);
+	OutputLine(NULL, "　第一、そんな変な病気が実在するという証拠があるんですか！！」",
+		   NULL, " Infatti, come puoi dimostrare che esista davvero questa malattia?!\"", Line_Normal);
+	ClearMessage();
+
+	if (GetGlobalFlag(GADVMode)) { OutputLine("<color=#f5e6d3>梨花の父</color>", NULL, "<color=#f5e6d3>Papà di Rika</color>", NULL, Line_ContinueAfterTyping); }
+	ModPlayVoiceLS(4, 0, "ps3/s20/00/vtk1_rikaf1056", 128, TRUE);
+	OutputLine(NULL, "「…………ある！」",
+		   NULL, "\"...... posso!\"", Line_Normal);
+	ClearMessage();
+
+	if (GetGlobalFlag(GADVMode)) { OutputLine("<color=#f5e6d3>梨花の母</color>", NULL, "<color=#f5e6d3>Mamma di Rika</color>", NULL, Line_ContinueAfterTyping); }
+	ModPlayVoiceLS(4, 0, "ps3/s20/00/vtk1_rikam1059", 128, TRUE);
+	OutputLine(NULL, "「それはどんな？",
+		   NULL, "\"Come?", Line_WaitForInput);
+	ModPlayVoiceLS(4, 0, "ps3/s20/00/vtk1_rikam1060", 128, TRUE);
+	OutputLine(NULL, "　誰が！」",
+		   NULL, " Chi te ne ha mostrato le prove?!\"", GetGlobalFlag(GLinemodeSp));
+	if (GetGlobalFlag(GADVMode)) { ClearMessage(); } else { OutputLineAll(NULL, "\n", Line_ContinueAfterTyping); }
+
+	if (GetGlobalFlag(GADVMode)) { OutputLine("<color=#f5e6d3>梨花の父</color>", NULL, "<color=#f5e6d3>Papà di Rika</color>", NULL, Line_ContinueAfterTyping); }
+	ModPlayVoiceLS(4, 0, "ps3/s20/00/vtk1_rikaf1057", 128, TRUE);
+	OutputLine(NULL, "「厚生省と国立感染症予防研究所の方からだ。",
+		   NULL, "\"I rappresentanti del Ministero della Salute e dell'Istituto Nazionale per la Prevenzione delle Malattie Infettive.", Line_WaitForInput);
+	ModPlayVoiceLS(4, 0, "ps3/s20/00/vtk1_rikaf1058", 128, TRUE);
+	OutputLine(NULL, "病原体もすでに特定され、現在、治療方法などを研究している最中だという。",
+		   NULL, " Hanno già isolato il patogeno e stanno cercando di sviluppare una cura.", GetGlobalFlag(GLinemodeSp));
+	if (GetGlobalFlag(GADVMode)) { OutputLine("<color=#f5e6d3>梨花の父</color>", NULL, "<color=#f5e6d3>Papà di Rika</color>", NULL, Line_ContinueAfterTyping); }
+	ModPlayVoiceLS(4, 0, "ps3/s20/00/vtk1_rikaf1059", 128, TRUE);
+	OutputLine(NULL, "…先週、実際にその資料や標本などを見せてもらった。",
+		   NULL, "Ho visto i loro rapporti e i risultati dei test la settimana scorsa.", Line_WaitForInput);
+	ModPlayVoiceLS(4, 0, "ps3/s20/00/vtk1_rikaf1060", 128, TRUE);
+	OutputLine(NULL, "厚生省の方はこの病気を雛見沢症候群と呼んでいるらしい。」",
+		   NULL, " Quelli del Ministero l'hanno definita 'Sindrome di Hinamizawa'.\"", GetGlobalFlag(GLinemodeSp));
+	if (GetGlobalFlag(GADVMode)) { ClearMessage(); } else { OutputLineAll(NULL, "\n", Line_ContinueAfterTyping); }
+
+	if (GetGlobalFlag(GADVMode)) { OutputLine("<color=#f5e6d3>梨花の母</color>", NULL, "<color=#f5e6d3>Mamma di Rika</color>", NULL, Line_ContinueAfterTyping); }
+	ModPlayVoiceLS(4, 0, "ps3/s20/00/vtk1_rikam1061", 128, TRUE);
+	OutputLine(NULL, "「………そんな……！！」",
+		   NULL, "\"No...!!\"", Line_Normal);
+	ClearMessage();
+
+	if (GetGlobalFlag(GADVMode)) { OutputLine("<color=#f5e6d3>梨花の父</color>", NULL, "<color=#f5e6d3>Papà di Rika</color>", NULL, Line_ContinueAfterTyping); }
+	ModPlayVoiceLS(4, 0, "ps3/s20/00/vtk1_rikaf1061", 128, TRUE);
+	OutputLine(NULL, "「雛見沢症候群は、普通に生活している分には何も影響のない無害なものらしい。",
+		   NULL, "\"La Sindrome di Hinamizawa è innocua finché viviamo in pace.", Line_WaitForInput);
+	ModPlayVoiceLS(4, 0, "ps3/s20/00/vtk1_rikaf1062", 128, TRUE);
+	OutputLine(NULL, "だが、雛見沢を遠く離れたり、精神や情緒が不安定になったりすると発病しやすくなるという。",
+		   NULL, " Ma una volta allontanatisi da Hinamizawa o diventati emotivamente instabili, è più facile che se ne mostrino i sintomi.", GetGlobalFlag(GLinemodeSp));
+	if (GetGlobalFlag(GADVMode)) { OutputLine("<color=#f5e6d3>梨花の父</color>", NULL, "<color=#f5e6d3>Papà di Rika</color>", NULL, Line_ContinueAfterTyping); }
+	ModPlayVoiceLS(4, 0, "ps3/s20/00/vtk1_rikaf1063", 128, TRUE);
+	OutputLine(NULL, "発病すると、妄想などに取り付かれ、最悪の場合、発狂したりすることもあるらしい。",
+		   NULL, "I sintomi comprendono allucinazioni che, se ignorate, rischiano di farci prendere decisioni sbagliate e di perdere la testa.", GetGlobalFlag(GLinemodeSp));
+	ClearMessage();
+	if (GetGlobalFlag(GADVMode)) { OutputLine("<color=#f5e6d3>梨花の父</color>", NULL, "<color=#f5e6d3>Papà di Rika</color>", NULL, Line_ContinueAfterTyping); }
+	ModPlayVoiceLS(4, 0, "ps3/s20/00/vtk1_rikaf1064", 128, TRUE);
+	OutputLine(NULL, "……この病気は、戦争中に発見されたんだそうだ。",
+		   NULL, "L'hanno scoperta durante la guerra.", Line_WaitForInput);
+	ModPlayVoiceLS(4, 0, "ps3/s20/00/vtk1_rikaf1065", 128, TRUE);
+	OutputLine(NULL, "戦地で雛見沢の兵隊だけ異常な病気を起こすことがあるのに偉い学者の先生が気が付いて、研究がずっと進められてきたんだと言う。",
+		   NULL, " Uno scienziato lungimirante vide che i soldati arruolati da Hinamizawa mostravano spesso comportamenti inusuali e incomprensibili, così decise di scoprirne il motivo.", GetGlobalFlag(GLinemodeSp));
+	if (GetGlobalFlag(GADVMode)) { OutputLine("<color=#f5e6d3>梨花の父</color>", NULL, "<color=#f5e6d3>Papà di Rika</color>", NULL, Line_ContinueAfterTyping); }
+	ModPlayVoiceLS(4, 0, "ps3/s20/00/vtk1_rikaf1066", 128, TRUE);
+	OutputLine(NULL, "……その辺の話はだいぶ詳しくしてもらったんだが、…すまん。",
+		   NULL, "I dettagli sono riportati tutti in quei documenti, però...", Line_WaitForInput);
+	ModPlayVoiceLS(4, 0, "ps3/s20/00/vtk1_rikaf1067", 128, TRUE);
+	OutputLine(NULL, "難しい内容だったので私の口からはこれ以上うまく説明できん。",
+		   NULL, " mi dispiace di non averli compresi, perché erano troppo complicati per me.", Line_WaitForInput);
+	ModPlayVoiceLS(4, 0, "ps3/s20/00/vtk1_rikaf1068", 128, TRUE);
+	OutputLine(NULL, "もし私の説明では納得できんというなら、お前も直接話を聞いてみればいい。",
+		   NULL, " In ogni caso, se non mi credi, va' tu in prima persona a sentire la loro versione.", GetGlobalFlag(GLinemodeSp));
+	if (GetGlobalFlag(GADVMode)) { OutputLine("<color=#f5e6d3>梨花の父</color>", NULL, "<color=#f5e6d3>Papà di Rika</color>", NULL, Line_ContinueAfterTyping); }
+	ModPlayVoiceLS(4, 0, "ps3/s20/00/vtk1_rikaf1069", 128, TRUE);
+	OutputLine(NULL, "……私だって最初は、何を馬鹿なことを、オヤシロさまを冒涜する気かと憤慨していたのだから。」",
+		   NULL, "... all'inizio anch'io mi sono indignato, chiedendomi con quale coraggio avessero osato dissacrare Oyashiro-sama con le loro storielle.\"", Line_Normal);
+	ClearMessage();
+
+	if (GetGlobalFlag(GADVMode)) { OutputLine("<color=#f5e6d3>梨花の母</color>", NULL, "<color=#f5e6d3>Mamma di Rika</color>", NULL, Line_ContinueAfterTyping); }
+	ModPlayVoiceLS(4, 0, "ps3/s20/00/vtk1_rikam1062", 128, TRUE);
+	OutputLine(NULL, "「…………………………。」",
+		   NULL, "\"............\"", Line_Normal);
+	ClearMessage();
+
+	if (GetGlobalFlag(GADVMode)) { OutputLine("<color=#f5e6d3>梨花の父</color>", NULL, "<color=#f5e6d3>Papà di Rika</color>", NULL, Line_ContinueAfterTyping); }
+	ModPlayVoiceLS(4, 0, "ps3/s20/00/vtk1_rikaf1070", 128, TRUE);
+	OutputLine(NULL, "「その病気を研究するために、入江診療所が作られたというんだ。",
+		   NULL, "\"La Clinica Irie è stata fondata per studiare la sindrome.", Line_WaitForInput);
+	ModPlayVoiceLS(4, 0, "ps3/s20/00/vtk1_rikaf1071", 128, TRUE);
+	OutputLine(NULL, "あそこは表向きはただの診療所ということになっているが、実際は病気を調べるための隠し研究所らしい。」",
+		   NULL, " Da fuori sembra una clinica come le altre, ma la verità è che si tratta di un istituto di ricerca segreto.\"", GetGlobalFlag(GLinemodeSp));
+	if (GetGlobalFlag(GADVMode)) { ClearMessage(); } else { OutputLineAll(NULL, "\n", Line_ContinueAfterTyping); }
+
+	if (GetGlobalFlag(GADVMode)) { OutputLine("<color=#f5e6d3>梨花の母</color>", NULL, "<color=#f5e6d3>Mamma di Rika</color>", NULL, Line_ContinueAfterTyping); }
+	ModPlayVoiceLS(4, 0, "ps3/s20/00/vtk1_rikam1063", 128, TRUE);
+	OutputLine(NULL, "「秘密で研究しているなんて、胡散臭いじゃないですか！",
+		   NULL, "\"Un istituto segreto? E non ti viene neanche qualche dubbio?!", Line_WaitForInput);
+	ModPlayVoiceLS(4, 0, "ps3/s20/00/vtk1_rikam1064", 128, TRUE);
+	OutputLine(NULL, "　それも厚生省がやっていることなら、堂々とやればいいじゃないですか！」",
+		   NULL, " Se hanno alle spalle il Ministero della Salute, allora perché non sono chiari in ciò che fanno?!\"", Line_Normal);
+	ClearMessage();
+
+	DrawSceneWithMask( "background/hu_r1", "maskup", 1, 0, 300 );
+
+	if (GetGlobalFlag(GADVMode)) { OutputLine("<color=#f5e6d3>梨花の父</color>", NULL, "<color=#f5e6d3>Papà di Rika</color>", NULL, Line_ContinueAfterTyping); }
+	ModPlayVoiceLS(4, 0, "ps3/s20/00/vtk1_rikaf1072", 128, TRUE);
+	OutputLine(NULL, "「いや、そうはいかんらしい。",
+		   NULL, "\"A quanto pare non possono.", Line_WaitForInput);
+	ModPlayVoiceLS(4, 0, "ps3/s20/00/vtk1_rikaf1073", 128, TRUE);
+	OutputLine(NULL, "例えば、ハンセン病の人たちが長い間誤解を受けて隔離され、今なおその誤解が解けきれず勘違いした差別を受けていることを考えなさい。",
+		   NULL, " Per esempio, pensa ai malati di lebbra che venivano fraintesi ed esiliati dalle comunità. Ancora oggi esiste una velata discriminazione nei loro confronti.", GetGlobalFlag(GLinemodeSp));
+	if (GetGlobalFlag(GADVMode)) { OutputLine("<color=#f5e6d3>梨花の父</color>", NULL, "<color=#f5e6d3>Papà di Rika</color>", NULL, Line_ContinueAfterTyping); }
+	ModPlayVoiceLS(4, 0, "ps3/s20/00/vtk1_rikaf1074", 128, TRUE);
+	OutputLine(NULL, "…雛見沢の人間は皆、怪しげな病気に掛かっていて、突然、発狂してとんでもないことをするかもしれないなどと言うことが日本中に知れ渡ったら、大変なことになってしまうだろう。",
+		   NULL, "Se il Giappone scoprisse che chi viene da Hinamizawa è affetto da una grave malattia che potrebbe farlo impazzire da un momento all'altro, si scatenerebbe il panico.", GetGlobalFlag(GLinemodeSp));
+	if (GetGlobalFlag(GADVMode)) { OutputLine("<color=#f5e6d3>梨花の父</color>", NULL, "<color=#f5e6d3>Papà di Rika</color>", NULL, Line_ContinueAfterTyping); }
+	ModPlayVoiceLS(4, 0, "ps3/s20/00/vtk1_rikaf1075", 128, TRUE);
+	OutputLine(NULL, "厚生省もそのことを反省していて、この病気については厳重に伏せた上で治療を目指すらしい。",
+		   NULL, "Il Ministero della Salute ha a cuore la nostra nomea e sta portando avanti lo studio in segreto per sviluppare un vaccino.", Line_Normal);
+	ClearMessage();
+
+	if (GetGlobalFlag(GADVMode)) { OutputLine("<color=#f5e6d3>梨花の父</color>", NULL, "<color=#f5e6d3>Papà di Rika</color>", NULL, Line_ContinueAfterTyping); }
+	ModPlayVoiceLS(4, 0, "ps3/s20/00/vtk1_rikaf1076", 128, TRUE);
+	OutputLine(NULL, "　勘違いするな、私たちを見世物にするというんじゃないぞ。",
+		   NULL, "Sia chiaro che non vogliono portarci a mo' di esperimento riuscito.", Line_WaitForInput);
+	ModPlayVoiceLS(4, 0, "ps3/s20/00/vtk1_rikaf1077", 128, TRUE);
+	OutputLine(NULL, "この病気を根絶させ、この村を病気から解放しようとしているのだ。",
+		   NULL, " Vogliono solo liberare questo villaggio dalla malattia.", GetGlobalFlag(GLinemodeSp));
+	if (GetGlobalFlag(GADVMode)) { OutputLine("<color=#f5e6d3>梨花の父</color>", NULL, "<color=#f5e6d3>Papà di Rika</color>", NULL, Line_ContinueAfterTyping); }
+	ModPlayVoiceLS(4, 0, "ps3/s20/00/vtk1_rikaf1078", 128, TRUE);
+	OutputLine(NULL, "……自給自足ができていた大昔ならともかく、現代では村から一歩も出ずに生活などなりたたん。",
+		   NULL, "Tempo fa era diverso perché non c'era bisogno di lasciare le nostre case, ma al giorno d'oggi è impossibile rimanere per sempre qui.", GetGlobalFlag(GLinemodeSp));
+	if (GetGlobalFlag(GADVMode)) { OutputLine("<color=#f5e6d3>梨花の父</color>", NULL, "<color=#f5e6d3>Papà di Rika</color>", NULL, Line_ContinueAfterTyping); }
+	ModPlayVoiceLS(4, 0, "ps3/s20/00/vtk1_rikaf1079", 128, TRUE);
+	OutputLine(NULL, "村から出るだけで発病するかもしれない病気など、村人にとってどれほど危険なものか、わかるだろう。",
+		   NULL, "Se uscire dalla regione può causare l'insorgere dei sintomi, allora capisci anche tu quanto possa essere pericoloso per gli abitanti, giusto?", GetGlobalFlag(GLinemodeSp));
+	if (GetGlobalFlag(GADVMode)) { OutputLine("<color=#f5e6d3>梨花の父</color>", NULL, "<color=#f5e6d3>Papà di Rika</color>", NULL, Line_ContinueAfterTyping); }
+	ModPlayVoiceLS(4, 0, "ps3/s20/00/vtk1_rikaf1080", 128, TRUE);
+	OutputLine(NULL, "……繰り返しになるが、昨今、反ダム闘争で村全体が強い興奮状態にあって、雛見沢症候群にとって、非常に良くない状態にあるらしい。」",
+		   NULL, "... so che mi ripeto, ma le recenti proteste per la diga hanno generato caos e fervore tra la gente, stimolando la Sindrome di Hinamizawa a uscire allo scoperto.\"", Line_Normal);
+	ClearMessage();
+
+	DisableWindow();
+	ModSetLayerFilter(2, 256, "none");
+	ModDrawCharacterWithFiltering(2, 5, "sprite/ri2_komaru_a1_", "0", "maskleft", 1, 160, 0, FALSE, 0, 0, 0, 0, 0, 10, 300, TRUE );
+
+	if (GetGlobalFlag(GADVMode)) { OutputLine("<color=#6972c1>梨花</color>", NULL, "<color=#6972c1>Rika</color>", NULL, Line_ContinueAfterTyping); }
+	ModPlayVoiceLS(4, 5, "ps3/s20/05/vtk1_rika1051", 128, TRUE);
+	OutputLine(NULL, "「……もし村人がおかしくなって大変なことをしたら、きっとマスコミがパシャパシャでいっぱいなのです。」",
+		   NULL, "\"... se qualcuno dovesse perdere la ragione e compiere un crimine grave, finiremmo dritti in prima pagina.\"", GetGlobalFlag(GLinemodeSp));
+	if (GetGlobalFlag(GADVMode)) { ClearMessage(); } else { OutputLineAll(NULL, "\n", Line_ContinueAfterTyping); }
+
+	if (GetGlobalFlag(GADVMode)) { OutputLine("<color=#f5e6d3>梨花の父</color>", NULL, "<color=#f5e6d3>Papà di Rika</color>", NULL, Line_ContinueAfterTyping); }
+	ModPlayVoiceLS(4, 0, "ps3/s20/00/vtk1_rikaf1081", 128, TRUE);
+	OutputLine(NULL, "「そうだ。",
+		   NULL, "\"Già.", Line_WaitForInput);
+	ModPlayVoiceLS(4, 0, "ps3/s20/00/vtk1_rikaf1082", 128, TRUE);
+	OutputLine(NULL, "そうなってからでは手遅れなのだ。」",
+		   NULL, " E allora sarà troppo tardi.\"", Line_Normal);
+	ClearMessage();
+
+	if (GetGlobalFlag(GADVMode)) { OutputLine("<color=#f5e6d3>梨花の母</color>", NULL, "<color=#f5e6d3>Mamma di Rika</color>", NULL, Line_ContinueAfterTyping); }
+	ModPlayVoiceLS(4, 0, "ps3/s20/00/vtk1_rikam1065", 128, TRUE);
+	OutputLine(NULL, "「……………そんな。",
+		   NULL, "\"......... non...", Line_WaitForInput);
+	ModPlayVoiceLS(4, 0, "ps3/s20/00/vtk1_rikam1066", 128, TRUE);
+	OutputLine(NULL, "…いきなり言われても信用できませんわ…。",
+		   NULL, " come faccio a crederti...?", Line_WaitForInput);
+	ModPlayVoiceLS(4, 0, "ps3/s20/00/vtk1_rikam1067", 128, TRUE);
+	OutputLine(NULL, "本当に相手は国の人？",
+		   NULL, " Sei sicuro che fossero del governo?", Line_WaitForInput);
+	ModPlayVoiceLS(4, 0, "ps3/s20/00/vtk1_rikam1068", 128, TRUE);
+	OutputLine(NULL, "　変な詐欺に騙されてるんじゃないですか？」",
+		   NULL, " Sicuro che non si tratti di una truffa?\"", Line_Normal);
+	ClearMessage();
+
+	if (GetGlobalFlag(GADVMode)) { OutputLine("<color=#f5e6d3>梨花の父</color>", NULL, "<color=#f5e6d3>Papà di Rika</color>", NULL, Line_ContinueAfterTyping); }
+	ModPlayVoiceLS(4, 0, "ps3/s20/00/vtk1_rikaf1083", 128, TRUE);
+	OutputLine(NULL, "「信用できんのも無理はない。",
+		   NULL, "\"Non ti biasimo per credere il contrario...", Line_WaitForInput);
+	ModPlayVoiceLS(4, 0, "ps3/s20/00/vtk1_rikaf1084", 128, TRUE);
+	OutputLine(NULL, "……先方は研究所はいつでも見に来ていいと言っている。",
+		   NULL, " ma hanno detto che possiamo andare alla clinica quando vogliamo.", Line_WaitForInput);
+	ModPlayVoiceLS(4, 0, "ps3/s20/00/vtk1_rikaf1085", 128, TRUE);
+	OutputLine(NULL, "私はもう見せてもらっているが、あれは詐欺とかそういうレベルではない。",
+		   NULL, " Io l'ho già visto e dubito che qualcuno elaborerebbe un simile piano solo per tentare una truffa...", GetGlobalFlag(GLinemodeSp));
+	if (GetGlobalFlag(GADVMode)) { OutputLine("<color=#f5e6d3>梨花の父</color>", NULL, "<color=#f5e6d3>Papà di Rika</color>", NULL, Line_ContinueAfterTyping); }
+	ModPlayVoiceLS(4, 0, "ps3/s20/00/vtk1_rikaf1086", 128, TRUE);
+	OutputLine(NULL, "……穀倉の大病院でもあんな大掛かりな設備はないぞ。",
+		   NULL, "Neppure gli ospedali più rinomati di Gogura hanno una tecnologia simile.", Line_WaitForInput);
+	ModPlayVoiceLS(4, 0, "ps3/s20/00/vtk1_rikaf1087", 128, TRUE);
+	OutputLine(NULL, "………お前も、私の話に納得できないなら、研究所で詳しい話を聞かせてもらうといい。",
+		   NULL, " Se non mi credi, allora dovresti andare all'istituto di ricerca e fare loro delle domande.", GetGlobalFlag(GLinemodeSp));
+	if (GetGlobalFlag(GADVMode)) { OutputLine("<color=#f5e6d3>梨花の父</color>", NULL, "<color=#f5e6d3>Papà di Rika</color>", NULL, Line_ContinueAfterTyping); }
+	ModPlayVoiceLS(4, 0, "ps3/s20/00/vtk1_rikaf1088", 128, TRUE);
+	OutputLine(NULL, "私よりもっと詳しく説明してくれるだろう。",
+		   NULL, "Sapranno spiegarti tutto meglio di me.", Line_WaitForInput);
+	ModPlayVoiceLS(4, 0, "ps3/s20/00/vtk1_rikaf1089", 128, TRUE);
+	OutputLine(NULL, "向こうは、研究所の説明でも納得できないなら、東京の国立研究所で説明してもいいし、厚生省の本庁舎で直接説明してもいいと言ってる。」",
+		   NULL, " E se ancora non sarai convinta, potranno portarti direttamente all'Istituto Nazionale di Ricerca di Tokyo o al Ministero della Salute.\"", Line_Normal);
+	ClearMessage();
+
+	if (GetGlobalFlag(GADVMode)) { OutputLine("<color=#f5e6d3>梨花の母</color>", NULL, "<color=#f5e6d3>Mamma di Rika</color>", NULL, Line_ContinueAfterTyping); }
+	ModPlayVoiceLS(4, 0, "ps3/s20/00/vtk1_rikam1069", 128, TRUE);
+	OutputLine(NULL, "「…………………………。",
+		   NULL, "\"............", Line_WaitForInput);
+	ModPlayVoiceLS(4, 0, "ps3/s20/00/vtk1_rikam1070", 128, TRUE);
+	OutputLine(NULL, "…でも、信じる信じないは別にして、…それが私たちにどういう関係があるんです？」",
+		   NULL, " che io ci creda o no... che cosa c'entriamo noi con questa storia?\"", GetGlobalFlag(GLinemodeSp));
+	if (GetGlobalFlag(GADVMode)) { ClearMessage(); } else { OutputLineAll(NULL, "\n", Line_ContinueAfterTyping); }
+
+	if (GetGlobalFlag(GADVMode)) { OutputLine("<color=#f5e6d3>梨花の父</color>", NULL, "<color=#f5e6d3>Papà di Rika</color>", NULL, Line_ContinueAfterTyping); }
+	ModPlayVoiceLS(4, 0, "ps3/s20/00/vtk1_rikaf1090", 128, TRUE);
+	OutputLine(NULL, "「古手家は代々、オヤシロさまの血を受け継ぐと言われている。",
+		   NULL, "\"Si dice che sia la famiglia Furude a ereditare il sangue di Oyashiro-sama.", GetGlobalFlag(GLinemodeSp));
+	if (GetGlobalFlag(GADVMode)) { OutputLine("<color=#f5e6d3>梨花の父</color>", NULL, "<color=#f5e6d3>Papà di Rika</color>", NULL, Line_ContinueAfterTyping); }
+	ModPlayVoiceLS(4, 0, "ps3/s20/00/vtk1_rikaf1091", 128, TRUE);
+	OutputLine(NULL, "そして、八代続いて女子が生まれれば、その八代目はオヤシロさまの生まれ変わりであるとも。」",
+		   NULL, "E che l'ottava figlia femmina nata di fila lungo le generazioni della famiglia Furude sia la reincarnazione di Oyashiro-sama.\"", GetGlobalFlag(GLinemodeSp));
+	if (GetGlobalFlag(GADVMode)) { ClearMessage(); } else { OutputLineAll(NULL, "\n", Line_ContinueAfterTyping); }
+
+	if (GetGlobalFlag(GADVMode)) { OutputLine("<color=#6972c1>梨花</color>", NULL, "<color=#6972c1>Rika</color>", NULL, Line_ContinueAfterTyping); }
+	ModPlayVoiceLS(4, 5, "ps3/s20/05/vtk1_rika1052", 128, TRUE);
+	OutputLine(NULL, "「……みー。」",
+		   NULL, "\"...... mii.\"", Line_Normal);
+	ClearMessage();
+
+	if (GetGlobalFlag(GADVMode)) { OutputLine("<color=#f5e6d3>梨花の母</color>", NULL, "<color=#f5e6d3>Mamma di Rika</color>", NULL, Line_ContinueAfterTyping); }
+	ModPlayVoiceLS(4, 0, "ps3/s20/00/vtk1_rikam1071", 128, TRUE);
+	OutputLine(NULL, "「そうですわ。",
+		   NULL, "\"Lo so.", Line_WaitForInput);
+	ModPlayVoiceLS(4, 0, "ps3/s20/00/vtk1_rikam1072", 128, TRUE);
+	OutputLine(NULL, "私が七代目。",
+		   NULL, " Io sono la settima", Line_WaitForInput);
+	ModPlayVoiceLS(4, 0, "ps3/s20/00/vtk1_rikam1073", 128, TRUE);
+	OutputLine(NULL, "梨花が八代目。",
+		   NULL, " e Rika è l'ottava.", Line_WaitForInput);
+	ModPlayVoiceLS(4, 0, "ps3/s20/00/vtk1_rikam1074", 128, TRUE);
+	OutputLine(NULL, "でも、それとその病気に何の関係があるというんです？」",
+		   NULL, " Ma cosa c'entra con questa malattia?\"", Line_Normal);
+	ClearMessage();
+
+	if (GetGlobalFlag(GADVMode)) { OutputLine("<color=#f5e6d3>梨花の父</color>", NULL, "<color=#f5e6d3>Papà di Rika</color>", NULL, Line_ContinueAfterTyping); }
+	ModPlayVoiceLS(4, 0, "ps3/s20/00/vtk1_rikaf1092", 128, TRUE);
+	OutputLine(NULL, "「うむ。",
+		   NULL, "\"Beh...", Line_WaitForInput);
+	ModPlayVoiceLS(4, 0, "ps3/s20/00/vtk1_rikaf1093", 128, TRUE);
+	OutputLine(NULL, "………この雛見沢症候群という病気は、ある種の寄生虫によるらしい。",
+		   NULL, " la Sindrome di Hinamizawa è causata da una sorta di parassita.", Line_WaitForInput);
+	ModPlayVoiceLS(4, 0, "ps3/s20/00/vtk1_rikaf1094", 128, TRUE);
+	OutputLine(NULL, "虫といってもものすごく小さい。",
+		   NULL, " Sebbene minuscoli,", Line_WaitForInput);
+	ModPlayVoiceLS(4, 0, "ps3/s20/00/vtk1_rikaf1095", 128, TRUE);
+	OutputLine(NULL, "人の目には決して見えんくらいに。",
+		   NULL, " talmente tanto da essere invisibili a occhio nudo...", Line_WaitForInput);
+	ModPlayVoiceLS(4, 0, "ps3/s20/00/vtk1_rikaf1096", 128, TRUE);
+	OutputLine(NULL, "……その虫たちには親分格がいるというのだ。」",
+		   NULL, " pare che esista una sorta di re di questi parassiti.\"", GetGlobalFlag(GLinemodeSp));
+	if (GetGlobalFlag(GADVMode)) { ClearMessage(); } else { OutputLineAll(NULL, "\n", Line_ContinueAfterTyping); }
+
+	if (GetGlobalFlag(GADVMode)) { OutputLine("<color=#f5e6d3>梨花の母</color>", NULL, "<color=#f5e6d3>Mamma di Rika</color>", NULL, Line_ContinueAfterTyping); }
+	ModPlayVoiceLS(4, 0, "ps3/s20/00/vtk1_rikam1075", 128, TRUE);
+	OutputLine(NULL, "「ま、",
+		   NULL, "\"C-", Line_Continue);
+	// (backup) SetValidityOfInput( FALSE );
+	Wait( 1600 );
+	// (backup) SetValidityOfInput( TRUE );
+	OutputLine(NULL, "…まさか、",
+		   NULL, "Cioè...", Line_Continue);
+	// (backup) SetValidityOfInput( FALSE );
+	Wait( 1600 );
+	// (backup) SetValidityOfInput( TRUE );
+	OutputLine(NULL, "それが古手家だと仰るんですか！！」",
+		   NULL, " la famiglia Furude?!\"", Line_Normal);
+	ClearMessage();
+
+	if (GetGlobalFlag(GADVMode)) { OutputLine("<color=#f5e6d3>梨花の父</color>", NULL, "<color=#f5e6d3>Papà di Rika</color>", NULL, Line_ContinueAfterTyping); }
+	ModPlayVoiceLS(4, 0, "ps3/s20/00/vtk1_rikaf1097", 128, TRUE);
+	OutputLine(NULL, "「その親分格の寄生虫は、代々古手家の直系だけに受け継がれるらしい。",
+		   NULL, "\"Questo parassita ancestrale viene ereditato dai membri della famiglia Furude, ma solo da coloro nelle cui vene scorre il sangue del ramo originale.", Line_WaitForInput);
+	ModPlayVoiceLS(4, 0, "ps3/s20/00/vtk1_rikaf1098", 128, TRUE);
+	OutputLine(NULL, "つまり、…先代はお前。",
+		   NULL, " Quindi... per la precedente generazione eri tu...", GetGlobalFlag(GLinemodeSp));
+	if (GetGlobalFlag(GADVMode)) { OutputLine("<color=#f5e6d3>梨花の父</color>", NULL, "<color=#f5e6d3>Papà di Rika</color>", NULL, Line_ContinueAfterTyping); }
+	ModPlayVoiceLS(4, 0, "ps3/s20/00/vtk1_rikaf1099", 128, TRUE);
+	OutputLine(NULL, "今は、梨花だ。」",
+		   NULL, "mentre per l'attuale è Rika.\"", GetGlobalFlag(GLinemodeSp));
+	if (GetGlobalFlag(GADVMode)) { ClearMessage(); } else { OutputLineAll(NULL, "\n", Line_ContinueAfterTyping); }
+
+	DisableWindow();
+	ModDrawCharacter(2, 5, "sprite/ri2_warai_a1_", "2", 160, 0, 0, FALSE, 0, 0, 0, 0, 0, 0, 0, 10, 300, TRUE );
+
+	if (GetGlobalFlag(GADVMode)) { OutputLine("<color=#6972c1>梨花</color>", NULL, "<color=#6972c1>Rika</color>", NULL, Line_ContinueAfterTyping); }
+	ModPlayVoiceLS(4, 5, "ps3/s20/05/vtk1_rika1053", 128, TRUE);
+	OutputLine(NULL, "「……みー。」",
+		   NULL, "\"...... mii.\"", Line_Normal);
+	ClearMessage();
+
+	DrawScene( "black", 200 );
+
+	if (GetGlobalFlag(GADVMode)) { OutputLine("<color=#f5e6d3>梨花の母</color>", NULL, "<color=#f5e6d3>Mamma di Rika</color>", NULL, Line_ContinueAfterTyping); }
+	ModPlayVoiceLS(4, 0, "ps3/s20/00/vtk1_rikam1076", 128, TRUE);
+	OutputLine(NULL, "「ば、馬鹿馬鹿しい！！",
+		   NULL, "\"S-Scempiaggini!!", Line_WaitForInput);
+	ModPlayVoiceLS(4, 0, "ps3/s20/00/vtk1_rikam1077", 128, TRUE);
+	OutputLine(NULL, "　そんな話やっぱりおかしいですわ？！",
+		   NULL, " Questa storia è ridicola!!", Line_WaitForInput);
+	ModPlayVoiceLS(4, 0, "ps3/s20/00/vtk1_rikam1078", 128, TRUE);
+	OutputLine(NULL, "　大体ですね、寄生虫なんてそんな気持ち悪いもの！！」",
+		   NULL, " E perché proprio un disgustoso parassita?!\"", Line_Normal);
+	ClearMessage();
+
+	if (GetGlobalFlag(GADVMode)) { OutputLine("<color=#f5e6d3>梨花の父</color>", NULL, "<color=#f5e6d3>Papà di Rika</color>", NULL, Line_ContinueAfterTyping); }
+	ModPlayVoiceLS(4, 0, "ps3/s20/00/vtk1_rikaf1100", 128, TRUE);
+	OutputLine(NULL, "「だから落ち着きなさい！！",
+		   NULL, "\"Non ti agitare!!", Line_WaitForInput);
+	ModPlayVoiceLS(4, 0, "ps3/s20/00/vtk1_rikaf1101", 128, TRUE);
+	OutputLine(NULL, "　私では説明が下手だ。",
+		   NULL, " Le spiegazioni non sono il mio forte.", Line_WaitForInput);
+	ModPlayVoiceLS(4, 0, "ps3/s20/00/vtk1_rikaf1102", 128, TRUE);
+	OutputLine(NULL, "専門の人に説明を受けなさい。",
+		   NULL, " Chiedi il resto agli esperti.", Line_WaitForInput);
+	ModPlayVoiceLS(4, 0, "ps3/s20/00/vtk1_rikaf1103", 128, TRUE);
+	OutputLine(NULL, "そして、彼らが言うには、この病気の治療を研究するためには、親分格の研究が不可欠だと言うのだ。」",
+		   NULL, " A detta loro, approfondire la ricerca su questo parassita-capo è d'obbligo per scoprire una cura.\"", GetGlobalFlag(GLinemodeSp));
+	if (GetGlobalFlag(GADVMode)) { ClearMessage(); } else { OutputLineAll(NULL, "\n", Line_ContinueAfterTyping); }
+
+	if (GetGlobalFlag(GADVMode)) { OutputLine("<color=#f5e6d3>梨花の母</color>", NULL, "<color=#f5e6d3>Mamma di Rika</color>", NULL, Line_ContinueAfterTyping); }
+	ModPlayVoiceLS(4, 0, "ps3/s20/00/vtk1_rikam1079", 128, TRUE);
+	OutputLine(NULL, "「嫌です！！！",
+		   NULL, "\"No!!", Line_WaitForInput);
+	ModPlayVoiceLS(4, 0, "ps3/s20/00/vtk1_rikam1080", 128, TRUE);
+	OutputLine(NULL, "　そんな怪しげな研究、まっぴらごめんですし、梨花だってそんな研究には関わりません！！」",
+		   NULL, " Non voglio avere niente a che fare con questo studio segreto, e nemmeno Rika parteciperà!!\"", Line_Normal);
+	ClearMessage();
+
+	if (GetGlobalFlag(GADVMode)) { OutputLine("<color=#f5e6d3>梨花の父</color>", NULL, "<color=#f5e6d3>Papà di Rika</color>", NULL, Line_ContinueAfterTyping); }
+	ModPlayVoiceLS(4, 0, "ps3/s20/00/vtk1_rikaf1104", 128, TRUE);
+	OutputLine(NULL, "「だから落ち着きなさいと言うのに！！",
+		   NULL, "\"Ti ho detto di non agitarti!!", Line_WaitForInput);
+	ModPlayVoiceLS(4, 0, "ps3/s20/00/vtk1_rikaf1105", 128, TRUE);
+	OutputLine(NULL, "　彼らの研究では、雛見沢症候群は、村から離れると発病するのではなく、親分格から離れると発病するということらしいのだ。",
+		   NULL, " Secondo una loro teoria, la Sindrome di Hinamizawa scaturisce quando gli infetti vengono separati da questo parassita maggiore, non dal villaggio stesso.", GetGlobalFlag(GLinemodeSp));
+	if (GetGlobalFlag(GADVMode)) { OutputLine("<color=#f5e6d3>梨花の父</color>", NULL, "<color=#f5e6d3>Papà di Rika</color>", NULL, Line_ContinueAfterTyping); }
+	ModPlayVoiceLS(4, 0, "ps3/s20/00/vtk1_rikaf1106", 128, TRUE);
+	OutputLine(NULL, "……お前も小さかった頃、村人から神通力があると言われていたことがあるだろう？",
+		   NULL, "... ricordi che, da piccola, gli anziani dicevano che possedevi poteri psichici?", Line_WaitForInput);
+	ModPlayVoiceLS(4, 0, "ps3/s20/00/vtk1_rikaf1107", 128, TRUE);
+	OutputLine(NULL, "　遠方に出掛け、偏頭痛などにかかったお年寄りが、お前に払ってもらうとたちまち頭痛が消えたという神通力。",
+		   NULL, " Eri tu che guarivi dai mal di testa le persone che tornavano al villaggio dopo aver trascorso del tempo altrove.", GetGlobalFlag(GLinemodeSp));
+	if (GetGlobalFlag(GADVMode)) { OutputLine("<color=#f5e6d3>梨花の父</color>", NULL, "<color=#f5e6d3>Papà di Rika</color>", NULL, Line_ContinueAfterTyping); }
+	ModPlayVoiceLS(4, 0, "ps3/s20/00/vtk1_rikaf1108", 128, TRUE);
+	OutputLine(NULL, "…それこそが親分格の証拠でもあるというのだ。",
+		   NULL, "Ciò dimostra che eri tu a possedere questo parassita.", Line_WaitForInput);
+	ModPlayVoiceLS(4, 0, "ps3/s20/00/vtk1_rikaf1109", 128, TRUE);
+	OutputLine(NULL, "古手の血には、発病者を救う力がある。",
+		   NULL, " La linea di sangue dei Furude ha il potere di curare i malati della sindrome.", Line_WaitForInput);
+	ModPlayVoiceLS(4, 0, "ps3/s20/00/vtk1_rikaf1110", 128, TRUE);
+	OutputLine(NULL, "それを研究するのは治療薬を見つけるためにも、とても重要なことなのだそうだ。」",
+		   NULL, " Per trovare la cura, è di vitale importanza che noi partecipiamo alla ricerca.\"", Line_Normal);
+	ClearMessage();
+
+	ModDrawCharacter(2, 5, "sprite/ri2_def_a1_", "0", 160, 0, 0, FALSE, 0, 0, 0, 0, 0, 0, 0, 10, 0, FALSE );
+	DrawScene( "background/hu_r1", 400 );
+
+	if (GetGlobalFlag(GADVMode)) { OutputLine("<color=#6972c1>梨花</color>", NULL, "<color=#6972c1>Rika</color>", NULL, Line_ContinueAfterTyping); }
+	ModPlayVoiceLS(4, 5, "ps3/s20/05/vtk1_rika1054", 128, TRUE);
+	OutputLine(NULL, "「……ボクを研究すると、村のみんなが助かるのですか？」",
+		   NULL, "\"...... se mi studieranno, gli abitanti saranno salvi?\"", GetGlobalFlag(GLinemodeSp));
+	if (GetGlobalFlag(GADVMode)) { ClearMessage(); } else { OutputLineAll(NULL, "\n", Line_ContinueAfterTyping); }
+
+	if (GetGlobalFlag(GADVMode)) { OutputLine("<color=#f5e6d3>梨花の父</color>", NULL, "<color=#f5e6d3>Papà di Rika</color>", NULL, Line_ContinueAfterTyping); }
+	ModPlayVoiceLS(4, 0, "ps3/s20/00/vtk1_rikaf1111", 128, TRUE);
+	OutputLine(NULL, "「先方はそう言っている。」",
+		   NULL, "\"Così dicono.\"", Line_Normal);
+	ClearMessage();
+
+	if (GetGlobalFlag(GADVMode)) { OutputLine("<color=#6972c1>梨花</color>", NULL, "<color=#6972c1>Rika</color>", NULL, Line_ContinueAfterTyping); }
+	ModPlayVoiceLS(4, 5, "ps3/s20/05/vtk1_rika1055", 128, TRUE);
+	OutputLine(NULL, "「……その病気は村の全員が掛かっているのですか？",
+		   NULL, "\"...... e sono tutti affetti da questa malattia?", Line_WaitForInput);
+	ModPlayVoiceLS(4, 5, "ps3/s20/05/vtk1_rika1056", 128, TRUE);
+	OutputLine(NULL, "　ボクも？",
+		   NULL, " Anch'io?", Line_WaitForInput);
+	ModPlayVoiceLS(4, 5, "ps3/s20/05/vtk1_rika1057", 128, TRUE);
+	OutputLine(NULL, "　みんなも？",
+		   NULL, " Tutti quanti?", Line_WaitForInput);
+	ModPlayVoiceLS(4, 5, "ps3/s20/05/vtk1_rika1058", 128, TRUE);
+	OutputLine(NULL, "　沙都子も？」",
+		   NULL, " Anche Satoko?\"", GetGlobalFlag(GLinemodeSp));
+	if (GetGlobalFlag(GADVMode)) { ClearMessage(); } else { OutputLineAll(NULL, "\n", Line_ContinueAfterTyping); }
+
+	if (GetGlobalFlag(GADVMode)) { OutputLine("<color=#f5e6d3>梨花の父</color>", NULL, "<color=#f5e6d3>Papà di Rika</color>", NULL, Line_ContinueAfterTyping); }
+	ModPlayVoiceLS(4, 0, "ps3/s20/00/vtk1_rikaf1112", 128, TRUE);
+	OutputLine(NULL, "「…うむ。",
+		   NULL, "\"...... sì.", Line_WaitForInput);
+	ModPlayVoiceLS(4, 0, "ps3/s20/00/vtk1_rikaf1113", 128, TRUE);
+	OutputLine(NULL, "村に住む人間全員だけでなく、興宮に住む親類なども全て含むそうだ。",
+		   NULL, " Non solo gli abitanti del villaggio, ma anche i nostri parenti che abitano a Okinomiya.", Line_WaitForInput);
+	ModPlayVoiceLS(4, 0, "ps3/s20/00/vtk1_rikaf1114", 128, TRUE);
+	OutputLine(NULL, "多分、何千人という規模になるだろう。",
+		   NULL, " Parliamo di migliaia di persone.", GetGlobalFlag(GLinemodeSp));
+	if (GetGlobalFlag(GADVMode)) { OutputLine("<color=#f5e6d3>梨花の父</color>", NULL, "<color=#f5e6d3>Papà di Rika</color>", NULL, Line_ContinueAfterTyping); }
+	ModPlayVoiceLS(4, 0, "ps3/s20/00/vtk1_rikaf1115", 128, TRUE);
+	OutputLine(NULL, "それだけの大変な病気だから、厚生省がわざわざたくさんの予算を投じて専門の研究所を作ってくれたのだ。」",
+		   NULL, "Ecco perché Il Ministero della Salute ha speso così tanti soldi per costruire il centro di ricerca.\"", GetGlobalFlag(GLinemodeSp));
+	if (GetGlobalFlag(GADVMode)) { ClearMessage(); } else { OutputLineAll(NULL, "\n", Line_ContinueAfterTyping); }
+
+	if (GetGlobalFlag(GADVMode) == 0) { OutputLineAll(NULL, "\n", Line_ContinueAfterTyping); }
+
+
+	if (GetGlobalFlag(GADVMode)) { OutputLine("<color=#f5e6d3>梨花の母</color>", NULL, "<color=#f5e6d3>Mamma di Rika</color>", NULL, Line_ContinueAfterTyping); }
+	ModPlayVoiceLS(4, 0, "ps3/s20/00/vtk1_rikam1081", 128, TRUE);
+	OutputLine(NULL, "「わ、私は反対です！",
+		   NULL, "\"N-Non sono d'accordo!", Line_WaitForInput);
+	ModPlayVoiceLS(4, 0, "ps3/s20/00/vtk1_rikam1082", 128, TRUE);
+	OutputLine(NULL, "　梨花をそんな怪しげな研究の生贄にするだなんて！！」",
+		   NULL, " Vorresti sacrificare Rika in nome di una teoria senza capo né coda?!\"", Line_Normal);
+	ClearMessage();
+
+	DisableWindow();
+	ModDrawCharacter(2, 5, "sprite/ri2_warai_a1_", "2", 160, 0, 0, FALSE, 0, 0, 0, 0, 0, 0, 0, 10, 200, TRUE );
+
+	if (GetGlobalFlag(GADVMode)) { OutputLine("<color=#6972c1>梨花</color>", NULL, "<color=#6972c1>Rika</color>", NULL, Line_ContinueAfterTyping); }
+	ModPlayVoiceLS(4, 5, "ps3/s20/05/vtk1_rika1059", 128, TRUE);
+	OutputLine(NULL, "「……ボクはいいのですよ。",
+		   NULL, "\"...... per me va bene.", Line_WaitForInput);
+	ModPlayVoiceLS(4, 5, "ps3/s20/05/vtk1_rika1060", 128, TRUE);
+	OutputLine(NULL, "ボクが生贄で沙都子が助かるなら、全然平気なのです。」",
+		   NULL, " Se servirà per aiutare Satoko, allora non m'importa.\"", Line_Normal);
+	ClearMessage();
+
+	if (GetGlobalFlag(GADVMode)) { OutputLine("<color=#f5e6d3>梨花の母</color>", NULL, "<color=#f5e6d3>Mamma di Rika</color>", NULL, Line_ContinueAfterTyping); }
+	ModPlayVoiceLS(4, 0, "ps3/s20/00/vtk1_rikam1083", 128, TRUE);
+	OutputLine(NULL, "「梨花は黙っていなさいッ！！",
+		   NULL, "\"Fa' silenzio, Rika!!", Line_WaitForInput);
+	ModPlayVoiceLS(4, 0, "ps3/s20/00/vtk1_rikam1084", 128, TRUE);
+	OutputLine(NULL, "　とにかく絶対反対です！",
+		   NULL, " Io sono contraria!", Line_WaitForInput);
+	ModPlayVoiceLS(4, 0, "ps3/s20/00/vtk1_rikam1085", 128, TRUE);
+	OutputLine(NULL, "　あなたにそんな妙なことを吹き込んだ人たちには、私が直接会ってはっきりとお断りをします。",
+		   NULL, " Andrò a parlare con quella gentaglia del centro di ricerca e dirò loro di no.", Line_WaitForInput);
+	ModPlayVoiceLS(4, 0, "ps3/s20/00/vtk1_rikam1086", 128, TRUE);
+	OutputLine(NULL, "梨花を変な実験で殺されてたまるものですか！！",
+		   NULL, " Non gli permetterò di ammazzare Rika in nome di un folle esperimento!!", Line_WaitForInput);
+	ModPlayVoiceLS(4, 0, "ps3/s20/00/vtk1_rikam1087", 128, TRUE);
+	OutputLine(NULL, "　大体、梨花は古手家のたった一人の跡継ぎなんですよ？！",
+		   NULL, " E poi, Rika è l'unica erede a capo della famiglia Furude!!", GetGlobalFlag(GLinemodeSp));
+	if (GetGlobalFlag(GADVMode)) { OutputLine("<color=#f5e6d3>梨花の母</color>", NULL, "<color=#f5e6d3>Mamma di Rika</color>", NULL, Line_ContinueAfterTyping); }
+	ModPlayVoiceLS(4, 0, "ps3/s20/00/vtk1_rikam1088", 128, TRUE);
+	OutputLine(NULL, "　もしものことがあれば古手の血はここで絶えてしまうかもしれないじゃないですか！！",
+		   NULL, "E se le succedesse qualcosa? La stirpe dei Furude finirebbe con lei! Non lo capisci?!", Line_WaitForInput);
+	ModPlayVoiceLS(4, 0, "ps3/s20/00/vtk1_rikam1089", 128, TRUE);
+	OutputLine(NULL, "　あなたはもっとですね、古手の家のことを考えていただかないと！！",
+		   NULL, " Perché non pensi di più alla tua famiglia?!", Line_WaitForInput);
+	ModPlayVoiceLS(4, 0, "ps3/s20/00/vtk1_rikam1090", 128, TRUE);
+	OutputLine(NULL, "　そんなだから村の人たちに日和見主義とか何とか言われて…！！",
+		   NULL, " Ecco perché la gente dice che sei un opportunista...!", GetGlobalFlag(GLinemodeSp));
+	if (GetGlobalFlag(GADVMode)) { OutputLine("<color=#f5e6d3>梨花の母</color>", NULL, "<color=#f5e6d3>Mamma di Rika</color>", NULL, Line_ContinueAfterTyping); }
+	ModPlayVoiceLS(4, 0, "ps3/s20/00/vtk1_rikam1091", 128, TRUE);
+	OutputLine(NULL, "　大体、おかしいじゃないですか！！",
+		   NULL, "Non vedi che c'è qualcosa sotto?!", Line_WaitForInput);
+	ModPlayVoiceLS(4, 0, "ps3/s20/00/vtk1_rikam1092", 128, TRUE);
+	OutputLine(NULL, "　建設省は村をダムに沈める。",
+		   NULL, " Il Ministero delle Infrastrutture vuole sommergere il villaggio", Line_WaitForInput);
+	ModPlayVoiceLS(4, 0, "ps3/s20/00/vtk1_rikam1093", 128, TRUE);
+	OutputLine(NULL, "厚生省は村の病気を治す。",
+		   NULL, " e quello della Salute vuole curare la malattia.", Line_WaitForInput);
+	ModPlayVoiceLS(4, 0, "ps3/s20/00/vtk1_rikam1094", 128, TRUE);
+	OutputLine(NULL, "何が何だかさっぱりわからないです！！」",
+		   NULL, " Che diavolo sta succedendo?!\"", Line_Normal);
+	ClearMessage();
+
+	if (GetGlobalFlag(GADVMode)) { OutputLine("<color=#f5e6d3>梨花の父</color>", NULL, "<color=#f5e6d3>Papà di Rika</color>", NULL, Line_ContinueAfterTyping); }
+	ModPlayVoiceLS(4, 0, "ps3/s20/00/vtk1_rikaf1116", 128, TRUE);
+	OutputLine(NULL, "「厚生省は、この病気は環境の変化で大変発病しやすいと警告していて、建設省に対しダム計画を中止するよう働きかけてくれているそうだ。",
+		   NULL, "\"Il Ministero della Salute ha avvisato quello delle Infrastrutture che uno stravolgimento del genere causerebbe lo scoppio dell'epidemia e quindi sta cercando di impedirne la costruzione.", GetGlobalFlag(GLinemodeSp));
+	if (GetGlobalFlag(GADVMode)) { OutputLine("<color=#f5e6d3>梨花の父</color>", NULL, "<color=#f5e6d3>Papà di Rika</color>", NULL, Line_ContinueAfterTyping); }
+	ModPlayVoiceLS(4, 0, "ps3/s20/00/vtk1_rikaf1117", 128, TRUE);
+	OutputLine(NULL, "…だからお前も研究所を見せてもらいなさい。",
+		   NULL, "... dovresti davvero andare all'istituto.", Line_WaitForInput);
+	ModPlayVoiceLS(4, 0, "ps3/s20/00/vtk1_rikaf1118", 128, TRUE);
+	OutputLine(NULL, "あれだけの大設備を、ダム湖に沈むかもしれない土地に建てるわけがない。」",
+		   NULL, " Perché costruire un edificio così all'avanguardia per poi farlo sparire sott'acqua?\"", Line_Normal);
+	ClearMessage();
+
+	DisableWindow();
+	ModDrawCharacter(2, 5, "sprite/ri2_komaru_a1_", "0", 160, 0, 0, FALSE, 0, 0, 0, 0, 0, 0, 0, 10, 200, TRUE );
+	FadeOutBGM( 0, 300, FALSE );
+	PlayBGM( 1, "yorumushi", 120, 0 );
+
+	if (GetGlobalFlag(GADVMode)) { OutputLine("<color=#6972c1>梨花</color>", NULL, "<color=#6972c1>Rika</color>", NULL, Line_ContinueAfterTyping); }
+	ModPlayVoiceLS(4, 5, "ps3/s20/05/vtk1_rika1061", 128, TRUE);
+	OutputLine(NULL, "「……くぁぁぁあぁぁ…。」",
+		   NULL, "\"...... yaaaaawwnnn...\"", GetGlobalFlag(GLinemodeSp));
+	if (GetGlobalFlag(GADVMode)) { ClearMessage(); } else { OutputLineAll(NULL, "\n", Line_ContinueAfterTyping); }
+
+	if (GetGlobalFlag(GADVMode) == 0) { OutputLineAll(NULL, "\n", Line_ContinueAfterTyping); }
+
+
+	if (GetGlobalFlag(GADVMode)) { OutputLineAll("", NULL, Line_ContinueAfterTyping); }
+	OutputLine(NULL, "　梨花が大きく欠伸をする。",
+		   NULL, "Rika fa un grosso sbadiglio.", GetGlobalFlag(GLinemodeSp));
+	if (GetGlobalFlag(GADVMode)) { ClearMessage(); } else { OutputLineAll(NULL, "\n", Line_ContinueAfterTyping); }
+
+	if (GetGlobalFlag(GADVMode)) { OutputLineAll("", NULL, Line_ContinueAfterTyping); }
+	OutputLine(NULL, "　梨花のような少女には、もう堪える時間なのだろう。",
+		   NULL, "È passata l'ora in cui di solito va a dormire.", Line_Normal);
+	ClearMessage();
+
+	if (GetGlobalFlag(GADVMode)) { OutputLine("<color=#6972c1>梨花</color>", NULL, "<color=#6972c1>Rika</color>", NULL, Line_ContinueAfterTyping); }
+	ModPlayVoiceLS(4, 5, "ps3/s20/05/vtk1_rika1062", 128, TRUE);
+	OutputLine(NULL, "「……ボクはもう寝ますです。",
+		   NULL, "\"...... vado a letto.", Line_WaitForInput);
+	ModPlayVoiceLS(4, 5, "ps3/s20/05/vtk1_rika1063", 128, TRUE);
+	OutputLine(NULL, "……父さん、ボクはいつでも協力すると、その人たちに言っておいてくださいなのです。」",
+		   NULL, " Papà, mi raccomando, digli che ho deciso di partecipare.\"", Line_Normal);
+	ClearMessage();
+
+	DisableWindow();
+	FadeBustshotWithFiltering( 2, "maskleft" , 1, FALSE, 0, 0, 300, TRUE );
+
+	if (GetGlobalFlag(GADVMode)) { OutputLine("<color=#f5e6d3>梨花の母</color>", NULL, "<color=#f5e6d3>Mamma di Rika</color>", NULL, Line_ContinueAfterTyping); }
+	ModPlayVoiceLS(4, 0, "ps3/s20/00/vtk1_rikam1095", 128, TRUE);
+	OutputLine(NULL, "「り、梨花！！",
+		   NULL, "\"R-Rika!!", Line_WaitForInput);
+	ModPlayVoiceLS(4, 0, "ps3/s20/00/vtk1_rikam1096", 128, TRUE);
+	OutputLine(NULL, "　そんなこと私に断りなく勝手に決めちゃいけません！！！",
+		   NULL, " Non puoi prendere queste decisioni senza di me!!", Line_WaitForInput);
+	ModPlayVoiceLS(4, 0, "ps3/s20/00/vtk1_rikam1097", 128, TRUE);
+	OutputLine(NULL, "　梨花ッ！",
+		   NULL, " Rika!", Line_WaitForInput);
+	ModPlayVoiceLS(4, 0, "ps3/s20/00/vtk1_rikam1098", 128, TRUE);
+	OutputLine(NULL, "　待ちなさい梨花！！！」",
+		   NULL, " Aspetta, Rika!!!\"", Line_Normal);
+	ClearMessage();
+
+	CallScript( "&eye" );
+	FadeOutBGM( 1, 1000, FALSE );
+	DrawScene( "black", 1000 );
+
+}
